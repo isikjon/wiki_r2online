@@ -1,0 +1,143 @@
+:root {
+    --main-color: #ECA84C;
+}
+
+.nk-app-root .card-bordered p {
+    padding: 25px;
+    text-align: right;
+    font-size: 13px;
+}
+.alert-fill {
+    width: 74%;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: left;
+    color: white;
+    font-family: Friz Quadrata;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.sign-up .alert-fill {
+    width: 70%;
+    margin: 0 auto;
+}
+.alert-danger {
+    background-color: rgba(129, 31, 31, 0.644);
+    border: 1px solid red;
+    color: #fff;
+}
+.alert-success {
+    background-color: rgba(2, 94, 3, 0.64);
+    border: 1px solid green;
+    color: #fff;
+}
+.alert.alert-icon > .icon {
+    font-size: 1.25rem;
+    left: 1.25rem;
+    line-height: 1;
+    margin-left: -1px;
+    position: absolute;
+    top: 1rem;
+    width: 2rem;
+}
+.ni-cross-circle:before {
+    content: "";
+}
+button.close {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.close {
+    color: #000;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: .5;
+    text-shadow: 0 1px 0 #fff;
+}
+.alert-dismissible .close {
+    color: inherit;
+    padding: 1rem 1.25rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.alert-dismissible .close {
+    margin-top: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s ease;
+}
+.dark-mode .close {
+    text-shadow: 0 1px 0 #141414;
+}
+.tab-content {
+    margin-left: 45px;
+    margin-right: 45px;
+}
+.invalid-feedback {
+    font-size: 14px;
+    color: red;
+    width: 64%;
+    text-align: left;
+    margin: 0 auto;
+}
+.invalid-feedback-login {
+    font-size: 14px;
+    color: red;
+    width: 78%;
+    text-align: left;
+    margin: 0 auto;
+}
+.donation-container,
+.rating-container {
+    width: 73%;
+    margin: 0 auto;
+}
+.update-date {
+    text-align: right;
+    padding: 25px;
+    color: #a4a3a3;
+}
+.overline-title {
+    color: #a4a3a3;
+}
+.donate-content {
+    color: #a4a3a3;
+}
+.stream__list {
+    display: flex;
+}
+.video-item {
+    margin-right: 22px;
+}
+iframe {
+    border: none !important;
+}
+.streamers-block {
+    margin: 65px 0px 65px 0px;
+}
+.nav__item-submenu,
+.header__lang {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.advertisement {
+    right: 10px;
+    display: block;
+    position: absolute;
+    top: 138px;
+}
+.cabinet-profile__right .alert {
+    width: 100%;
+}
+#ticketModal .alert-fill {
+    width: 100%;
+    margin-top: 20px;
+}

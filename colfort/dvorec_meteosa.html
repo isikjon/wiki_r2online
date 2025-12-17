@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Дворец Метеоса — База знаний R2 Online</title>
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fancybox.min.css" rel="stylesheet">
+    <link href="/plugins/slick/slick.css" rel="stylesheet">
+    <link href="/plugins/slick/slick-theme.css" rel="stylesheet">
+    <link href="/plugins/datatables/dataTables.min.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <link href="../images/favicon/favicon_32x32.png" rel="shortcut icon" type="image/png">
+    <link href="/libs/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet">
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    <link href="../css/alerts.css" rel="stylesheet">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper wrapper--forum">
+
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; <a href="colfort.html">Локации и монстры</a> &gt; Колфорт
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">ДВОРЕЦ МЕТЕОСА</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+
+                            <!-- Слайдер с картинками -->
+                            <div class="location-gallery">
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a href="https://r2online.ru//storage/wiki/images/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%8B%20%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%20%D0%BB%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D0%B9/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%9C%D0%B5%D1%82%D0%B5%D0%BE%D1%81%D0%B0/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B81.jpg" class="location-gallery__item" data-fancybox="gallery">
+                                            <img src="https://r2online.ru//storage/wiki/images/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%8B%20%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%20%D0%BB%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D0%B9/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%9C%D0%B5%D1%82%D0%B5%D0%BE%D1%81%D0%B0/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B81.jpg" alt="Дворец Метеоса">
+                                            <span class="location-gallery__caption">Дворец Метеоса</span>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a href="https://r2online.ru/storage/wiki//images/U7qkROwO3YDbfuDp4sXGHjrUZgMoKVe5wV3YswfB.jpg" class="location-gallery__item" data-fancybox="gallery">
+                                            <img src="https://r2online.ru/storage/wiki//images/U7qkROwO3YDbfuDp4sXGHjrUZgMoKVe5wV3YswfB.jpg" alt="Подземелье Метеоса">
+                                            <span class="location-gallery__caption">Подземелье Метеоса</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Поиск -->
+                            <div class="mobs-search">
+                                <input type="text" class="mobs-search__input" placeholder="Поиск по разделу:" id="mobsSearch">
+                            </div>
+
+                            <!-- Таблица мобов -->
+                            <div class="table-box mobs-table">
+                                <table class="table mobs-list" id="mobsTable">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50px;">Иконка</th>
+                                            <th>Название</th>
+                                            <th style="text-align: center;">Уровень</th>
+                                            <th style="text-align: center;">Агр.</th>
+                                            <th style="text-align: center; line-height: 17px;">Агр.<br>на морф</th>
+                                            <th style="text-align: center; line-height: 17px;">Агр.<br>на инвиз</th>
+                                            <th style="min-width: 100px;">Дроп</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//images/zgpehDaB3LrCMJHMpJaSxJJZKiyaZeWHTzMTqEjp.jpg" alt="Владыка Ноктур"></td>
+                                            <td><a href="#">Владыка Ноктур</a></td>
+                                            <td style="text-align:center;">БОСС</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/7fa732b517cbed14a48843d74526c11a.jpg" title="Камень телепортации (эпический)">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d045c59a90d7587d8d671b5f5aec4e7c.jpg" title="Камень перевоплощения (эпический)">
+                                                <img src="https://r2online.ru/storage/wiki//images/BobG0Ubv7UOqWCAaSzeuu9NxLsRhn3pGZKXajjuC.jpg" title="Камень невидимости (эпический)">
+                                                <img src="https://r2online.ru/storage/wiki//images/l8LzkOt5ikrTb2nWnLajPbeRaLrZ8y2QePHwv8uC.jpg" title="Камень смотрителя (эпический)">
+                                                <img src="https://r2online.ru/storage/wiki//images/QV7XDNTP0Q2EtuDQGWxlJIl4TpkBbb8JnbkDO0Qk.webp" title="Оружейная сталь">
+                                                <img src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией">
+                                                <img src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)">
+                                                <img src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов">
+                                                <img src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия">
+                                                <img src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия">
+                                                <img src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki/images/twkayrSIwFR9dZbkpKddkLdsDMrDb5Eb5n5X8cKs.jpg" alt="Тамплиер"></td>
+                                            <td><a href="#">Тамплиер</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki/images/hsdF9LDlgJGHNNXsJYxmL5aioGyd67puCaH5CwIi.jpg" title="Обрывок эскиза серег (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/YjaXdEUBLPNdKQopzy2oDex9Rl6yAfL1rr7ynNfs.jpg" title="Обрывок эскиза серег (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/7PejWgUEeyAzZcifnBWP06CWFwRYKHRkO8GIlqPq.jpg" title="Обрывок эскиза серег (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/FHluK51H5Lek7xBwaaGDGuGeGDRo9vLUdIRcvtKE.jpg" title="Обрывок эскиза серег (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki/images/kw30I214ZV1Fj6g4L36BpO0aRTQbfwvsjdGnt1Fg.jpg" alt="Верховный тамплиер"></td>
+                                            <td><a href="#">Верховный тамплиер</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki/images/hsdF9LDlgJGHNNXsJYxmL5aioGyd67puCaH5CwIi.jpg" title="Обрывок эскиза серег (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/YjaXdEUBLPNdKQopzy2oDex9Rl6yAfL1rr7ynNfs.jpg" title="Обрывок эскиза серег (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/7PejWgUEeyAzZcifnBWP06CWFwRYKHRkO8GIlqPq.jpg" title="Обрывок эскиза серег (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki/images/FHluK51H5Lek7xBwaaGDGuGeGDRo9vLUdIRcvtKE.jpg" title="Обрывок эскиза серег (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//images/wXfQueG7Xl3dNCRJoZEsDqUCkkBD1tHMAEraMAk2.jpg" alt="Подземный змей"></td>
+                                            <td><a href="#">Подземный змей</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2019/09/02/88cdab6fbc2dd3b7b82640cb4a209205.png" alt="Королевский гвардеец"></td>
+                                            <td><a href="#">Королевский гвардеец</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok7.jpg" title="Обрывок эскиза кольца (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok8.jpg" title="Обрывок эскиза кольца (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok1.jpg" title="Обрывок эскиза кольца (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok2.jpg" title="Обрывок эскиза кольца (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2019/09/02/aa14aeb29c91865dc6957a811c31a40c.png" alt="Гвардеец"></td>
+                                            <td><a href="#">Гвардеец</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok7.jpg" title="Обрывок эскиза кольца (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok8.jpg" title="Обрывок эскиза кольца (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok1.jpg" title="Обрывок эскиза кольца (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok2.jpg" title="Обрывок эскиза кольца (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/4018e8a181adba6b4578a5e3919bcce9.png" alt="Хранитель земли"></td>
+                                            <td><a href="#">Хранитель земли</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok3.jpg" title="Обрывок эскиза ремня (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok4.jpg" title="Обрывок эскиза ремня (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok5.jpg" title="Обрывок эскиза ремня (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok6.jpg" title="Обрывок эскиза ремня (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/7900b75458d15f3de0fbc98ef578fce6.png" alt="Небесный хранитель"></td>
+                                            <td><a href="#">Небесный хранитель</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok3.jpg" title="Обрывок эскиза ремня (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok4.jpg" title="Обрывок эскиза ремня (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok5.jpg" title="Обрывок эскиза ремня (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok6.jpg" title="Обрывок эскиза ремня (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/19de5bbe324b159cac7f57c59a68505d.png" alt="Священный рыцарь"></td>
+                                            <td><a href="#">Священный рыцарь</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok7.jpg" title="Обрывок эскиза ожерелья (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok8.jpg" title="Обрывок эскиза ожерелья (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok9.jpg" title="Обрывок эскиза ожерелья (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok10.jpg" title="Обрывок эскиза ожерелья (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/98b6945c387ee46e19c0317c7ca30d56.png" alt="Рыцарь"></td>
+                                            <td><a href="#">Рыцарь</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td style="text-align:center;"><span class="agr-no">✗</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok7.jpg" title="Обрывок эскиза ожерелья (1/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok8.jpg" title="Обрывок эскиза ожерелья (2/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok9.jpg" title="Обрывок эскиза ожерелья (3/4)">
+                                                <img src="https://r2online.ru/storage/wiki//images/obryvok10.jpg" title="Обрывок эскиза ожерелья (4/4)">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//images/fwiOKpECAHIu3pGOb6FIscksqYJ1BBtSJHmBaxj7.jpg" alt="Тварь метеоса"></td>
+                                            <td><a href="#">Тварь метеоса</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/items/9039.jpg" title="Тяжёлый рогатый шлем">
+                                                <img src="https://r2online.ru/storage/wiki//images/b73v9uwSu3bGzYcyEV5AnzxhrRFxBhXLXGpYZU7j.webp" title="Самоцвет критического удара">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/2614943173156096d7f2d15006eda8e9.png" alt="Ловец тьмы"></td>
+                                            <td><a href="#">Ловец тьмы</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/items/9038.jpg" title="Изогнутый костяной ноготь">
+                                                <img src="https://r2online.ru/storage/wiki//images/b73v9uwSu3bGzYcyEV5AnzxhrRFxBhXLXGpYZU7j.webp" title="Самоцвет критического удара">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//upload/full/2021/03/25/ea2ba566f8854b155690c51812be7cee.png" alt="Ужас метеоса"></td>
+                                            <td><a href="#">Ужас метеоса</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/items/9039.jpg" title="Тяжёлый рогатый шлем">
+                                                <img src="https://r2online.ru/storage/wiki/images/JeH3A2J9QAyXf3n8TdoRiYG0jlyHr1xdmrNBDR3S.jpg" title="Самоцвет атаки">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://r2online.ru/storage/wiki//images/Oh6DfsNFRmg2kjOunNm1vFAAM0H98EttznWlarip.jpg" alt="Четырехглазый пожиратель"></td>
+                                            <td><a href="#">Четырехглазый пожиратель</a></td>
+                                            <td style="text-align:center;">МОНСТР</td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td style="text-align:center;"><span class="agr-yes">✓</span></td>
+                                            <td class="mob-droplist">
+                                                <img src="https://r2online.ru/storage/wiki//images/items/9038.jpg" title="Изогнутый костяной ноготь">
+                                                <img src="https://r2online.ru/storage/wiki/images/JeH3A2J9QAyXf3n8TdoRiYG0jlyHr1xdmrNBDR3S.jpg" title="Самоцвет атаки">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Пагинация -->
+                            <div class="mobs-pagination">
+                                <span class="mobs-pagination__item active">1</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/libs/js/addition.js" defer=""></script>
+    <script src="/libs/js/MVisionToggleClass.js" defer=""></script>
+    <script src="/libs/js/navigation.js" defer=""></script>
+    <script src="/libs/js/scripts.js" defer=""></script>
+    <script src="/libs/js/tether.min.js"></script>
+    <script src="/libs/js/bootstrap.min.js"></script>
+    <script src="/libs/js/core.js"></script>
+    <script src="/libs/js/fancybox.min.js"></script>
+    <script src="/plugins/slick/slick.min.js"></script>
+    <script src="/libs/js/locations.js"></script>
+    <script src="/libs/plugins/datatables/dataTables.min.js"></script>
+    <script src="/libs/plugins/datatables/dataTables.bootstrap.min.js"></script>
+</body>
+
+</html>

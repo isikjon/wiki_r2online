@@ -1,0 +1,1182 @@
+#warning-mobile{
+    font-size: 16px;
+    color: #f00;
+    display: none;
+
+    margin-top: 25px;
+}
+
+
+
+@media(min-width: 992px){
+
+
+    .pet-layout.col-lg-3{
+        min-height: 210px;
+    }
+
+    .blog-sidebar {
+        float: left;
+        width: 20%;
+    }
+
+    .blog-content-page {
+        float: left;
+        width: 80%;
+    }
+
+}
+
+@media(max-width: 1200px){
+    .mobs-list .item-description{
+        width: 35%;
+    }
+
+    .sidebar-sections li.subsection{
+        padding: 3px 11px 0px 28px;
+        cursor: pointer;
+        border-bottom: 1px solid #c3c3c3;
+    }
+
+    .page-container .top-menu ul li{
+        margin: 0 5px;
+    }
+}
+
+@media(max-width: 1024px){
+    .prt-1{
+        background-image: url('/upload/pctb/2.jpg');
+    }
+
+    .sdr-part.revolgc .prt-1{
+        width: 100%;
+        height: 65px;
+        background-image: url('/upload/pctb/rev/700.jpg') !important;
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .sdr-part.revolgc .mb-only{
+        background-color: #050402;
+    }
+
+
+    .pets .pet h3 {
+        font-size: 15px;
+    }
+
+    .pets .pet h4 {
+        font-size: 13px;
+        margin-bottom: 13px;
+    }
+
+    .pets .pet ul {
+        margin: 15px 9px;
+    }
+
+    .bg-version{
+        height: 517px;
+    }
+
+    .ended-streams .stream-picture div {
+        height: 150px;
+    }
+}
+
+@media(max-width: 992px){
+
+    .wiki .main-left-menu{
+
+        padding-bottom: 0px;
+    }
+
+    .ds-only{
+        display: none;
+    }
+
+    .mb-only{
+        display: block;
+    }
+
+    .prt-1{
+        width: 700px;
+        height: 100px;
+        background-image: url('/upload/pctb/3.jpg');
+    }
+
+    .video-filter, .stream-filter-title{
+        display: none;
+    }
+
+    .ended-streams .stream-picture div {
+        height: 188px;
+    }
+
+    .wiki .blog-content-page{
+        width: 100%;
+    }
+
+    .wiki .sbar{
+        padding-bottom: 0px;
+        padding-top: 1px !important;
+    }
+
+    .wiki .sidebar-icon{
+        width: 13px;
+        opacity: 0;
+        height: 28px;
+    }
+
+    .sidebar-sections li.section{
+        margin: -1px 0 0 0;
+    }
+
+    .wiki .section-sidebar{
+        margin-bottom: 0;
+    }
+
+    .wiki .section-sidebar .subsections{
+        display: none;
+    }
+
+    .wiki .blog-sidebar{
+        min-height: 0;
+    }
+
+    .wiki .blog-sidebar.col-xs-3{
+        float: none;
+        width: 100%;
+    }
+
+    .wiki .blog-sidebar .sidebar-sections li{
+        width: 49.5%;
+    }
+
+    .sidebar-sections li.section{
+        min-height: 30px;
+        display: inline-block;
+    }
+
+    .sidebar-sections li.section a{
+        padding:  0;
+    }
+
+    .wiki .title-sections {
+        font-size: 15px;
+        color: #777;
+        font-weight: 600;
+        margin-top: 12px;
+        margin-bottom: 13px;
+        padding-left: 9px;
+    }
+
+
+
+
+
+
+    .pets-all-list{
+        display: none;
+    }
+    .type-attack-layout{
+        margin-bottom: 0px;
+        margin-top: -10px;
+    }
+    .mobile-filter{
+        display: block;
+    }
+    .title-block .fa-chevron-down{
+        display: none;
+    }
+
+    .wiki .blog-content-page{
+        box-shadow: none;
+    }
+
+    .post-description{
+        min-height: 50px;
+    }
+
+    .post-layout{
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .location-detail .territory-detail {
+        margin-bottom: 128px;
+    }
+
+    .page-container .top-menu ul li a{
+        font-size: 14px;
+    }
+
+    .timeline {
+        margin: 0 !important;
+        margin-left: 78px !important;
+        max-width: 100% !important;
+        padding-left: 30px !important;
+    }
+
+    .timeline li{
+        font-size: 14px;
+    }
+
+    .timeline ul{
+        padding-left: 0;
+    }
+
+    .timeline .event:after {
+        left: -37.85px !important;
+    }
+
+    .timeline .event:before {
+        left: -200.5px !important;
+    }
+
+    .hidden-sc{
+        display: block;
+    }
+
+    .pet-detail .personal-card {
+        margin-top: 120px;
+    }
+
+    .pets .pet img {
+        width: 150px;
+        height: auto;
+    }
+
+    .pets .pet h4{
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .pet-detail .pets .pet ul li{
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+    }
+
+    .pet-detail .pets .bg-pet-picture-detail {
+        padding: 1px;
+    }
+
+    .body-content {
+        margin-top: 10px;
+    }
+
+    .pet-detail .line-full {
+        height: 115px;
+    }
+
+    .bg-version{
+        height: 390px;
+    }
+}
+
+@media(max-width: 768px){
+    .video-youtube{
+        height: 385px;
+    }
+
+    .prt-1{
+        width: 345px;
+        height: 100px;
+        background-image: url('/upload/pctb/2.jpg') !important;
+    }
+
+    .sdr-part.revolgc .prt-1{
+        width: 100%;
+        height: 65px;
+        background-image: url('/upload/pctb/rev/345.jpg') !important;
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .sdr-part.revolgc .mb-only{
+        background-color: #180f06;
+    }
+
+    .revolgc-parent{
+        padding-bottom: 5px !important;
+    }
+
+    .page-container .top-menu .top-menu-element {
+        height: auto;
+    }
+
+    .videos .type-video .stream-picture div, .videos .type-video .stream-picture{
+        height: 190px;
+    }
+
+    .video-frame{
+        height: 450px;
+    }
+
+    .stream {
+        max-width: 100%;
+    }
+
+    .col-md-12.properties-layout{
+        height: 128px;
+    }
+
+    .no-pad-show{
+        display: none !important;
+    }
+
+
+    .pad-show{
+        display: block !important;
+    }
+
+    .layout-morph-card{
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .morphs-list .col-md-12 .morph-card{
+        display: block;
+        float: none;
+        margin: 0 auto 12px;
+    }
+
+    .ext-info{
+        position: absolute;
+        bottom: 12px;
+        font-size: 13px;
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+
+    .table-respawn.table td b, .table-respawn.table td, .table-mob-line .no-active{
+        font-size: 12px;
+    }
+
+    .detail-map{
+        margin-bottom: 25px;
+    }
+
+    .bg-location{
+        height: 250px;
+    }
+
+    .type-mobs-list li{
+        padding: 3px 9px;
+        font-size: 13px;
+    }
+
+
+    .prev-level{
+        font-size: 14px;
+    }
+
+    .actual-level{
+        font-size: 16px;
+    }
+
+    .next-level{
+        font-size: 14px;
+    }
+
+    .location-detail .territory-detail {
+        margin-bottom: 100px;
+    }
+
+    .breadcrumb {
+        float: none;
+    }
+
+
+    .social{
+        margin-right: 0;
+    }
+
+    .row-top-menu{
+        margin-right: 0;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before{
+        padding-right: .3rem;
+        padding-left: .3rem;
+    }
+
+    .breadcrumb-parent{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .row-top-menu .container{
+        padding-right: 0;
+    }
+
+    .wiki .blog-content-page{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .other-level{
+        margin-bottom: 25px;
+    }
+
+    .other-level a{
+        text-align: center;
+        width: 53px;
+        padding: 0 0 5px;
+    }
+
+    .item-info h4{
+        font-size: 16px;
+    }
+
+    .morph-sidebar li{
+        height: 60px;
+    }
+
+    .morph-sidebar li a{
+        padding: 13px 10px;
+    }
+
+    .morphs-list .col-md-12 .morph-card, .morphs-list .col-md-4 .morph-card{
+        height: 170px;
+    }
+
+    .morphs-list .col-md-6 .morph-card{
+        height: 270px;
+    }
+
+    .morph-detail .detail-picture{
+        height: 300px;
+    }
+
+    .morphs-list .properties-table td{
+        padding: 1px 3px;
+    }
+
+    .submenu .submenu-layout{
+        margin: 0px;
+    }
+
+    .pet-main-tabs .nav-tabs {
+        margin-top: 5px;
+    }
+
+    /* MOBILE MENU BEGIN*/
+    .large-search {
+        bottom: auto;
+        top: 0;
+    }
+
+    .search-simple{
+        bottom: auto;
+        top: 0;
+    }
+
+    .top-menu .menu-main-list{
+        padding-top: 35px !important;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+
+    .page-container{
+        margin-top: 50px;
+    }
+
+    .logo-center{
+        display: none;
+    }
+
+    .header-layout{
+        background-image: none;
+    }
+
+    .page-container .top-menu{
+        display: none;
+        position: absolute;
+        right: -0px;
+        top: 41px;
+        height: 100% !important;
+        width: auto;
+        bottom: 0;
+        background: #242426;
+        z-index: 100;
+        border: none;
+    }
+
+    .page-container .top-menu ul{
+        margin: 20px 0 40px;
+    }
+
+    .page-container .top-menu ul li{
+        display: block;
+        width: 100%;
+        float: none;
+        height: auto;
+        text-align: left;
+        padding: 3px 0px 5px;
+    }
+
+    .page-container .top-menu ul i.fa{
+        display: none;
+    }
+
+    .page-container .top-menu .title-block{
+        color: #818181;
+        padding-left: 20px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .page-container .top-menu ul li a{
+        position: relative;
+        top: 0;
+        font-size: 14px;
+    }
+
+    .page-container .top-menu ul li .submenu{
+        display: block;
+        position: relative;
+        right: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .page-container .top-menu ul li .submenu .submenu-layout{
+        background-color: transparent;
+        padding: 0;
+        margin: 6px 0 0 0;
+    }
+
+    .page-container .top-menu ul li .submenu .submenu-layout ul{
+        margin: 0;
+    }
+
+    .page-container .top-menu ul li .submenu .submenu-layout ul li{
+        padding: 3px 0px 10px;
+        margin: 0;
+        background-color: #2f2f31;
+        border-radius: 0;
+        padding-top: 6px;
+        border-bottom: 1px solid #242426;
+        padding-left: 40px;
+        position: relative;
+        min-height: 40px;
+    }
+
+    .page-container .top-menu ul li .submenu .submenu-layout ul li:focus,
+    .page-container .top-menu ul li .submenu .submenu-layout ul li:active,
+    .page-container .top-menu ul li .submenu .submenu-layout ul li:hover{
+        background-color: #474748;
+    }
+
+    .page-container .top-menu ul li .submenu .submenu-layout ul li a{
+        font-size: 14px;
+
+        position: absolute;
+        top: 14px;
+        left: 32px;
+        right: 0;
+        bottom: 0;
+    }
+
+    .page-container .top-menu .submenu ul li a{
+        left: 18px;
+        top: 14px;
+        padding: 0;
+    }
+    /* MOBILE MENU END*/
+
+}
+
+@media(max-width: 515px){
+
+    .videos .type-video .stream-picture div, .videos .type-video .stream-picture{
+        height: 230px;
+    }
+
+    .video-frame{
+        height: 290px;
+    }
+
+    #page-content{
+        padding: 0;
+    }
+
+    .list-description-tree{
+        margin-top: 6px;
+    }
+
+    .evolution-tables.active-skills p, .evolution-tables.active-skills b{
+        font-size: 12px !important;
+    }
+
+    .pet-detail .evolution-tables th{
+        font-size: 12px;
+    }
+
+    .evolution-tables.active-skills .skill-img img{
+        width: 30px;
+    }
+
+    .pet-morph h6{
+        font-size: 12px;
+    }
+
+    .pet-detail a{
+        font-size: 13px;
+    }
+
+    .pet-detail .pet-morph-header a{
+        font-weight: 600;
+    }
+
+    .tree-type h5{
+        font-size: 15px;
+    }
+
+    .tree-type h5 span{
+        font-size: 13px;
+    }
+
+    .pet-detail .pet-main-tabs .nav-tabs .nav-item.open .pet-nav-link, .nav-tabs .nav-item.open .pet-nav-link:focus, .pet-detail .pet-main-tabs .nav-tabs .nav-item.open .pet-nav-link:hover, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active:focus, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active:hover{
+        font-size: 13px;
+    }
+
+    h4.section-title{
+        font-size: 16px;
+    }
+
+    .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link{
+        font-size: 13px;
+    }
+
+    .pet-layout.col-xs-12{
+        min-height: 215px;
+    }
+
+    .pets .pet.no-minheight .bg-pet-picture img{
+        width: 150px;
+    }
+
+    .morph-card-info h4 a{
+        font-size: 14px;
+    }
+
+    .morphs-list .type-attack{
+        font-size: 12px;
+    }
+
+    .morphs-list .first-column{
+        min-width: 50px;
+    }
+
+    .morphs-list .first-column img{
+        width: 30px;
+    }
+
+    .morphs-list .properties-table td{
+        font-size: 10px;
+    }
+
+
+    .table.info-description td{
+        padding-left: 0;
+    }
+
+    .pets-merger .table td, .table th{
+        font-size: 12px;
+    }
+
+    .dataTables_length label{
+        width: 100%;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td{
+        padding: 4px !important;
+    }
+
+    .item-info h4{
+        margin-top: 22px;
+        font-weight: 600;
+    }
+
+    .row.catalog-subsections{
+        border: none;
+    }
+
+    .row.catalog-subsections .section-item{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .no-mobile-show{
+        display: none !important;
+    }
+
+    .mobile-show{
+        display: block !important;
+    }
+
+    .layout-lexicon{
+        padding: 15px;
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    table.dataTable thead th, table.dataTable thead td{
+        padding: 4px 6px !important;
+    }
+
+    .sub-item-link{
+        max-width: 100%;
+    }
+
+    .layout-symbol{
+        height: auto;
+        min-height: 150px;
+    }
+
+    .bg-version{
+        height: 270px;
+    }
+
+    .title-page {
+        font-size: 17px;
+    }
+
+    .catalog-subsections{
+        border-bottom: 1px solid #c5c5c5;
+    }
+
+    .catalog-subsections .col-3{
+        min-height: 60px !important;
+    }
+
+    .catalog-subsections .col-3{
+        font-size: 13px !important;
+    }
+
+    .header-layout{
+        min-height: 200px;
+        background-size: 130%;
+    }
+}
+
+@media(max-width: 425px){
+    .video-youtube{
+        height: 285px;
+    }
+
+    .wiki .blog-sidebar .sidebar-sections li{
+        width: 49.2%;
+    }
+
+    .sidebar-sections li.section a .tab{
+        height: 30px;
+    }
+
+    .morphs-list .mods.fixed {
+        top: 18px;
+        left: 14px !important;
+        right: 14px;
+    }
+
+    .button-up{
+        display: none !important;
+    }
+
+    .morphs-list .first-column{
+        width: 78px;
+    }
+
+    .morphs-list .other-level{
+        margin-bottom: 25px;
+    }
+
+    #page-content.hide{
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .page-container.index{
+        margin-top: 140px;
+    }
+
+    header{
+        min-height: 136px;
+    }
+
+    .header-layout{
+        min-height: 200px;
+    }
+
+    .pet-detail .content-appear{
+        padding-top: 15px;
+    }
+
+    .pet-detail .pets .bg-pet-picture-detail {
+        padding: 1px;
+        margin-top: -1px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .content-appear{
+        border-radius: 0;
+    }
+
+    .container.boxed-wrapper{
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .view-mode {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pets .pet h3{
+        font-size: 16px;
+    }
+
+    .pets .pet h4 {
+        font-size: 14px;
+    }
+
+    .body-info-pet{
+        margin-bottom: 29px;
+    }
+
+    h2.main-title-page {
+        margin-top: 7px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    h4{
+        font-size: 14px;
+    }
+
+    .pet-detail .personal-card {
+        margin-top: 0px;
+    }
+
+    #warning-mobile{
+        display: block;
+    }
+
+    .pet-detail .container {
+        margin-top: 0;
+    }
+
+    .pet-main-tabs .nav-tabs {
+        margin-top: 5px;
+    }
+
+    .content-appear {
+        padding: 15px;
+    }
+
+    .pet-detail .evolution-tables.active-skills .skill-img {
+        padding-left: 0px;
+    }
+
+    .pet-detail .evolution-tables td {
+        padding-right: 6px;
+    }
+
+    .help{
+        font-size: 17px;
+    }
+
+    .pet-detail .evolution-tables .evolution-title {
+        min-width: 107px;
+        width: 107px;
+        font-size: 16px;
+    }
+
+    .pet-detail .evolution-tables .evolution-title span {
+        font-size: 12px;
+    }
+
+    .pet-detail .evolution-tables td {
+        padding-top: 13px;
+        padding-bottom: 8px;
+        padding-right: 2px;
+        font-size: 12px;
+    }
+
+    .pet-morph h4{
+        position: relative;
+        font-size: 17px;
+        margin-top: 25px;
+    }
+
+    .pet-morph-header{
+        height: 100%;
+    }
+
+    .pet-morph hr{
+        display: block;
+    }
+
+    .header-layout {
+        background-size: 200%;
+        background-position: 50% 0;
+    }
+
+    header {
+        margin-top: 6px;
+    }
+
+}
+
+
+
+@media(max-width: 375px){
+    .prt-1{
+        width: 100%;
+        height: 100px;
+        background-image: url('/upload/pctb/2.jpg') !important;
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .sdr-part.revolgc .prt-1{
+        width: 100%;
+        height: 65px;
+        background-image: url('/upload/pctb/rev/345.jpg') !important;
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .sdr-part.revolgc .mb-only{
+        background-color: #2e1e0e;
+    }
+
+    .revolgc-parent{
+        padding-bottom: 5px;
+    }
+}
+
+
+
+
+
+@media(max-width: 375px){
+
+    .wiki .blog-sidebar .sidebar-sections li{
+        width: 49%;
+    }
+
+    .pet-detail .craft-trees .craft-item {
+        display: inline-block;
+        padding: 5px 8px 5px 6px;
+        position: relative;
+    }
+
+    .pet-detail .craft-trees .horiz-sepor {
+        width: 25px;
+    }
+
+    .pet-detail .craft-trees .craft-item span {
+        right: 9px;
+    }
+}
+
+
+/* Header */
+
+@media(min-width: 1999px){
+    .header-layout.main{
+        min-height: 1230px;
+    }
+
+}
+
+@media(max-width: 1454px){
+    .page-container.index {
+        margin-top: 520px;
+    }
+    .layout-morph-card.col-md-12 .morph-card-info {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+
+
+@media(max-width: 1024px){
+    .header-layout.main{
+        min-height: 850px;
+    }
+
+    .header-layout{
+        background-size: 130%;
+    }
+
+    .page-container.index {
+        margin-top: 490px;
+    }
+    .wiki h2,
+    .wiki h3,
+    .wiki h4,
+    .wiki h5,
+    .wiki h6 {
+        margin-bottom: 20px !important;
+    }
+    .wiki .blog-content-page {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .col-xs-3 {
+        width: 50% !important;
+    }
+    .info-description {
+        margin-left: 15px;
+    }
+    .wiki .col-sm-12,
+    .wiki .col-lg-3,
+    .wiki .col-lg-6,
+    .wiki .col-md-12,
+    .wiki .col-lg-8,
+    .wiki .col-lg-4,
+    .pg-bottom {
+        width: 100%;
+    }
+    .dataTables_wrapper {
+        width: 100%;
+    }
+
+    .table td, .table th {
+        padding: 0.25rem;
+    }
+    .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link {
+        font-size: 12px;
+    }
+    .body-content {
+        margin-top: 115px;
+    }
+
+    .pet-detail .pet-main-tabs .nav-tabs .nav-item.open .pet-nav-link, .nav-tabs .nav-item.open .pet-nav-link:focus, .pet-detail .pet-main-tabs .nav-tabs .nav-item.open .pet-nav-link:hover, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active:focus, .pet-detail .pet-main-tabs .nav-tabs .pet-nav-link.active:hover {
+        font-size: 12px;
+    }
+    .wiki .layout-morphs-list {
+        width: 100%;
+    }
+
+    .morphs-list .col-md-12 .morph-card, .morphs-list .col-md-4 .morph-card {
+        margin-bottom: 50px;
+    }
+    .wiki .layout-symbol {
+        margin-bottom: 60px;
+    }
+    .wiki .btn-slider {
+        margin-right: 30px;
+    }
+    .table td, .table th {
+        font-size: 12px;
+    }
+    .row.pet-detail .col-md-12 {
+        width: auto;
+    }
+    .row.pet-detail {
+        overflow-x: auto;
+    }
+}
+
+
+@media(max-width: 768px){
+    .header-layout.main{
+        min-height: 850px;
+    }
+
+    .header-layout{
+        background-size: 165%;
+    }
+
+    .page-container.index {
+        margin-top: 390px;
+    }
+}
+
+@media(max-width: 425px){
+    .header-layout.main{
+        min-height: 750px;
+    }
+
+    .header-layout{
+        background-size: 230%;
+        background-position-x: 30%
+    }
+
+    .page-container.index {
+        margin-top: 245px;
+    }
+    .pet-detail .wrapper,
+    .title-pet-tabs.pet-main-tabs .row {
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 992px){
+    .table-full-resp{
+        /*overflow: auto;*/
+    }
+}
+
+@media(max-width: 992px){
+    .table-full-resp img{
+        display: none;
+    }
+
+    .table-full-resp .table-resp-img{
+        display: none;
+    }
+
+    .table-full-resp .table-resp-desc{
+
+    }
+}
