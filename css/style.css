@@ -6779,3 +6779,61 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #d7b263;
 }
 
+/* Location map */
+.location-map {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #302a23;
+}
+
+.location-map__title {
+    font-family: 'Albertus Nova';
+    font-size: 18px;
+    color: #d7b263;
+    margin-bottom: 15px;
+}
+
+.location-map__link {
+    display: block;
+    max-width: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.location-map__link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.location-map__link:hover img {
+    transform: scale(1.02);
+}
+
+/* Gallery next button */
+.location-gallery__item--next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1614;
+    border: 1px solid #302a23;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.location-gallery__next-overlay {
+    text-align: center;
+}
+
+.location-gallery__next-overlay span {
+    font-family: 'Albertus Nova';
+    font-size: 16px;
+    color: #d7b263;
+    transition: color 0.3s ease-in-out;
+}
+
+.location-gallery__item--next:hover .location-gallery__next-overlay span {
+    color: #f7bf66;
+}
+
