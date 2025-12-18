@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функционал клиента — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .guide-card { 
+            background: rgba(255,255,255,0.03); 
+            border-radius: 8px; 
+            overflow: hidden; 
+            width: calc(50% - 10px);
+            transition: all 0.3s;
+        }
+        .guide-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+        .guide-card a { display: flex; text-decoration: none; color: inherit; }
+        .guide-card__img { width: 200px; min-height: 120px; flex-shrink: 0; }
+        .guide-card__img img { width: 100%; height: 100%; object-fit: cover; }
+        .guide-card__content { padding: 15px; flex: 1; }
+        .guide-card__title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .guide-card__desc { font-size: 13px; color: #aaa; line-height: 1.4; }
+        @media (max-width: 900px) {
+            .guide-card { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">ФУНКЦИОНАЛ КЛИЕНТА</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-grid">
+                                <div class="guide-card">
+                                    <a href="kontroller_effektov.html">
+                                        <div class="guide-card__img">
+                                            <img src="https://r2online.ru/storage/wiki/images/Pl8GKBbatPie7pOTQbPZYZwr771Ze424zMCUnYw6.png" alt="Контроллер эффектов">
+                                        </div>
+                                        <div class="guide-card__content">
+                                            <div class="guide-card__title">Контроллер эффектов</div>
+                                            <div class="guide-card__desc"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="guide-card">
+                                    <a href="markery.html">
+                                        <div class="guide-card__img">
+                                            <img src="https://r2online.ru/storage/wiki/images/2DLI0tA6Ggm8Cq1EFCiilVPA83LLSl7P7DNF4S20.jpg" alt="Маркеры">
+                                        </div>
+                                        <div class="guide-card__content">
+                                            <div class="guide-card__title">Маркеры</div>
+                                            <div class="guide-card__desc"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

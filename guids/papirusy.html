@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Папирусы — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="unique-items.html">Уникальные предметы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Папирусы</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2>Что такое папирусы</h2> <p>Использовав папирус ваш персонаж навсегда получит пассивное умение увеличивающее параметры:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12942/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Папирус ярости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/AsDlMpHshZGYdlfquyAgzJLZImI4YaGlF8Cwz68a.jpg" title="Папирус ярости"/>
+</span>
+<span class="item-text"> Папирус ярости</span>
+</a>
+ – уровень всех атак +1<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12941/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Папирус стража" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/pbUvEmK6MfSPYY1mXQLdFlBdYYUtza41zr4xXiob.jpg" title="Папирус стража"/>
+</span>
+<span class="item-text"> Папирус стража</span>
+</a>
+ – защита +2<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12943/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Папирус выживания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/l6RuYKk9nEdFK9RlxdREZzYbzOL7NmkvuHo7tmg2.jpg" title="Папирус выживания"/>
+</span>
+<span class="item-text"> Папирус выживания</span>
+</a>
+ – HP +100</p> <blockquote>Каждый вид папируса можно изучить только 1 раз. После изучения папируса – параметр прибавляется сразу, дополнительно использовать умение не нужно.</blockquote> <h2>Как получить папирус</h2> <p>Папирус изготовляется через меню создания предметов. Существует два варианта крафта:<br/>  1. Безопасный, требующий большое количество ресурсов.<br/>  2. С некоторым шансом, необходимо немного ресурсов, при этом при создании папируса возможна неудача.</p> <div class="spoiler"> <div class="spoiler__title">Создание папируса ярости</div> <div class="spoiler__content"> <div class="text-box">Безопасное создание папируса:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 1000 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+, 300 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+, 400 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+, 100 шт.<br/> <br/>  Создание папируса с некоторым шансом:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 20 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+, 6 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+, 8 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+, 2 шт.</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Создание папируса стража</div> <div class="spoiler__content"> <div class="text-box">Безопасное создание папируса:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 1000 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+, 300 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+, 400 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+, 100 шт.<br/> <br/>  Создание папируса с некоторым шансом:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 20 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+, 6 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+, 8 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+, 2 шт.</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Создание папируса выживания</div> <div class="spoiler__content"> <div class="text-box">Безопасное создание папируса:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 1000 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+, 200 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+, 200 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 100 шт.<br/> <br/>  Создание папируса с некоторым шансом:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 20 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+, 4 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+, 4 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 2 шт.</div> </div> </div> <p> </p> <p><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+ – необходим для создания Папирусов, добывается с <a class="catalog-item" href="https://r2online.ru/wiki/locations/1341/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блэр" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/09/f98b695be8b6b306c16f45c9f9281f4f.png" title="Блэр"/>
+</span>
+<span class="item-text"> Блэр</span>
+</a>
+ в Пещере пиратов ур. 2.</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

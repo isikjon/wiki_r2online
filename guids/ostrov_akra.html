@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Остров Акра — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Остров Акра</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Обзор острова Акра</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Карта сокровищ и клад – особая механика</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Часы Хроноса</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Печати телепортации</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Боссы</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Задания</a></li> </ol> <h2 id="id-1">Обзор острова Акра</h2> <p>  			Остров Акра открыт для всех классов. Это обширный остров, разделенный на различные зоны охоты, где можно встретить как слабых, так и очень сильных монстров. Попасть на остров можно с помощью любого NPC &lt;Мастер перемещений&gt;.  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-map.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-map.jpg" style="max-width: 70%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p> <strong>Зеленый цвет</strong> – место обитания слабых монстров: <a class="catalog-item" href="https://r2online.ru/wiki/locations/5102/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капитан акрионцев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RrrVx9okGxcLK5AEIAi9QzUrfviNqa81ekwT6deV.jpg" title="Капитан акрионцев"/>
+</span>
+<span class="item-text"> Капитан акрионцев</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5103/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Солдат акрионцев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/u8VNr6a0jo7qK8bIdehWoBOsase87b6hN0vtnRZc.jpg" title="Солдат акрионцев"/>
+</span>
+<span class="item-text"> Солдат акрионцев</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5104/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лучница акрионцев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RbKVlxMATlcwuGkk0pA5zGV6ldjVaI1dM1x6i2gx.jpg" title="Лучница акрионцев"/>
+</span>
+<span class="item-text"> Лучница акрионцев</span>
+</a>
+, их сила сравнима с монстрами <a href="https://r2online.ru/wiki/locations/illumina/" target="_blank">Святых земель Иллюмина</a>. С них выпадает: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ оружие мага для магических атак <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+</a>
+ снаряжение мага<a class="catalog-item" href="https://r2online.ru/wiki/base/view/100226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/rIkQxANBaNxMuNlohc2JHoZrMocQRe8cR9UvpCYy.jpg" title="Фолиант"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13311/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Карта сокровищ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/HZPm9MWjsX6kDs8IbnAATQsVgXy7ju66LoECp5ys.jpg" title="Карта сокровищ"/>
+</span>
+<span class="item-text"> Карта сокровищ</span>
+</a>
+.  		</p><p> </p> <strong>Желтый цвет</strong> – место обитания средних по силе монстров: <a class="catalog-item" href="https://r2online.ru/wiki/locations/5105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Арканобот" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/lQxanrOCis0vjy8k98kocWyIJoHM2zJpwvqXMZHR.jpg" title="Арканобот"/>
+</span>
+<span class="item-text"> Арканобот</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5106/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Арконикс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/FQH6GsIZQbRk4RbnXYMLcUl8e90pkFLj5Kd35ZFJ.jpg" title="Арконикс"/>
+</span>
+<span class="item-text"> Арконикс</span>
+</a>
+, их сила сравнима с монстрами <a href="https://r2online.ru/wiki/guids/locations/baalber-jupiter/" target="_blank">Подземелья Юпитер или Баалбек ур. 2</a>. С них выпадает: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ ресурсы для создания серьг <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13288/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/aiOPlabSibCbgvXcqRkwyq7XGp6tmC3C6kQXGBOk.jpg" title="Золотой слиток"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13289/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/jAPebUZu4S8fh3HITBYHJV7hrcqRNOBkWZU79ZC8.jpg" title="Алхимический лак"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13290/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/7Gr1ALGIu493xUAKugUw9YjG9vDGXCPxL2GMzBGm.jpg" title="Кварц"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13312/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Карта сокровищ (редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Qa2pH6abuWKqXrefxsk24hipQNLOfyVqXzuwuHHT.jpg" title="Карта сокровищ (редкая)"/>
+</span>
+<span class="item-text"> Карта сокровищ (редкая)</span>
+</a>
+.  		<p> </p> <strong>Оранжевый цвет</strong> – место обитания средних по силе монстров: <a class="catalog-item" href="https://r2online.ru/wiki/locations/5118/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаман акрионцев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/pm7IIdvNa1UMfzAdqbgnZDRb8ZKIiL1rM1j78ru2.jpg" title="Шаман акрионцев"/>
+</span>
+<span class="item-text"> Шаман акрионцев</span>
+</a>
+, их сила сравнима с монстрами <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">Горизонта полнолуния</a>. С них выпадает: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ оружие мага магических атак <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13311/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Карта сокровищ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/HZPm9MWjsX6kDs8IbnAATQsVgXy7ju66LoECp5ys.jpg" title="Карта сокровищ"/>
+</span>
+<span class="item-text"> Карта сокровищ</span>
+</a>
+.  		<p> </p> <br/><strong>Красный цвет</strong> – место обитания сильных монстров: <a class="catalog-item" href="https://r2online.ru/wiki/locations/5113/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядовитый ложноног" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OleLbW9ci5G5NYKb9sxrahUQSQ41j17bU8K7WLNN.jpg" title="Ядовитый ложноног"/>
+</span>
+<span class="item-text"> Ядовитый ложноног</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5114/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Прысник" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/ljXJadTOrJJCUXukrybxNWT5wByD0hoMNfENN42o.jpg" title="Прысник"/>
+</span>
+<span class="item-text"> Прысник</span>
+</a>
+, их сила сравнима с монстрами <a href="https://r2online.ru/wiki/guids/locations/hram-temnyh-jrecov/" target="_blank">Храма Темных жрецов</a>. С них выпадает: ресурсы для создания умений 60 уровня <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11121/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/pbzvjzdD5vyQbHiFnMMySFsKV1ZBZKpOO71Nnmdq.jpg" title="Жемчуг импульса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11123/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/l5P5hW1NUjfBkfruGTpqm3UG3xui1uCvNG2rp1l6.jpg" title="Эссенция змеиного яда"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13313/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Карта сокровищ (эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/y3puQ7NzXv6SIej0g3eOpTSVbfZ6VlIfxsB8gFHF.jpg" title="Карта сокровищ (эпическая)"/>
+</span>
+<span class="item-text"> Карта сокровищ (эпическая)</span>
+</a>
+.  		<p> </p> <strong>Темно-красный цвет</strong> – место обитания очень сильных монстров: <a class="catalog-item" href="https://r2online.ru/wiki/locations/5110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Прислужник Темных клыков" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/GdKUMv6nKJ2ClFqyi1d5efmuSr2nlTlvjQvxrz5p.jpg" title="Прислужник Темных клыков"/>
+</span>
+<span class="item-text"> Прислужник Темных клыков</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5111/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаман Темных клыков" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/dlUATleYqYRQsHNk80nPtHyjbY7qAwbG5lJts2ja.jpg" title="Шаман Темных клыков"/>
+</span>
+<span class="item-text"> Шаман Темных клыков</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/5112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Воин Темных клыков" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/7XFDOftb2m1BifvSdzzX4v2MaWu7DdmnHqtjzCFi.jpg" title="Воин Темных клыков"/>
+</span>
+<span class="item-text"> Воин Темных клыков</span>
+</a>
+. С них выпадает ресурсы: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11125/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/V4FNW20O7QgCnqVY56T4bKZafYVzEbYfwfani65L.jpg" title="Настой ангельской крови"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11127/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/lr3UHRBB39OilVJeJ25mDf0ogrkCHft1MpcYSpNl.jpg" title="Сердце чудовища"/>
+</span>
+</a>
+ для создания <a class="catalog-item" href="https://r2online.ru/wiki/base/view/354/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Святая вода" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/2B1dVyFr7DpVKjPhbmzyM35UU8LjQxMM4AHALAxO.jpg" title="Святая вода"/>
+</span>
+<span class="item-text"> Святая вода</span>
+</a>
+, которая делает любой предмет <a href="https://r2online.ru/wiki/guids/craft/item-enchant/#id-5">благословенным</a>, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13314/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Карта сокровищ (легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/lOPM65TLo8RcVyuQdTUPgYUPDBTbanOzCjJIfuz0.jpg" title="Карта сокровищ (легендарная)"/>
+</span>
+<span class="item-text"> Карта сокровищ (легендарная)</span>
+</a>
+.  		<p></p> <p></p> <p> <strong>Голубой цвет</strong> – монстры легкого еженедельного задания.  			<br/><strong>Синий цвет</strong> – монстры среднего еженедельного задания.  			<br/><strong>Фиолетовый цвет</strong> – монстры тяжелого еженедельного задания.  			<br/>Со всех монстров еженедельных заданий выпадают ресурсы для создания книг магии стихий, которые использует маг для магических атак: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/OZoPXtVxFAqxQdVzSzTNneUEKxLauTlYzeNVYURo.jpg" title="Огненный сгусток (I)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/11U4PCMkGLX8GcDtMSclIExNx0sK9zyWpy8jHchb.jpg" title="Ледяной осколок (I)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/4QL47o1o7xb1UZfwJamhlvgaBITkJZoKBY7GDCCy.jpg" title="Кислотная сфера (I)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/jnmLVY2XGTOZESegNRS6zGHli6bMkeQTHWgJ0vga.jpg" title="Шаровая молния (I)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13336/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/MiyBgGyzbjadEuwAGSs4DYpRjeL6mpZ8NOTtiYQA.jpg" title="Стихийные чернила"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13337/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/jsWrBEbD1YIPCNkminRzBQcdedTsFbXtBm6sJChw.jpg" title="Огненный камень"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13338/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/nOHS2xBN8It07AyYKV9nkpRKL0vNZTjvGPrkcsPW.jpg" title="Ледяной камень"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13339/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/rrp7YKlSkSpQBNm5ZKHyUdXFoUDOsKpfC9EpGS55.jpg" title="Кислотный камень"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/Nakcsn4JxYWE14k5jFM1bPd9zU7LDdDO2p8DIjMu.jpg" title="Грозовой камень"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13311/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/HZPm9MWjsX6kDs8IbnAATQsVgXy7ju66LoECp5ys.jpg" title="Карта сокровищ"/>
+</span>
+</a>
+.    		</p> <h2 id="id-2">Карта сокровищ и клад – особая механика</h2> <p>  			Со всех монстров на острове Акра можно добыть карту сокровищ: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13311/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/HZPm9MWjsX6kDs8IbnAATQsVgXy7ju66LoECp5ys.jpg" title="Карта сокровищ"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13312/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/Qa2pH6abuWKqXrefxsk24hipQNLOfyVqXzuwuHHT.jpg" title="Карта сокровищ (редкая)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13313/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/y3puQ7NzXv6SIej0g3eOpTSVbfZ6VlIfxsB8gFHF.jpg" title="Карта сокровищ (эпическая)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13314/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/lOPM65TLo8RcVyuQdTUPgYUPDBTbanOzCjJIfuz0.jpg" title="Карта сокровищ (легендарная)"/>
+</span>
+</a>
+.  			<br/>Используя <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13310/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Компас" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/QLpogWbOeZf80RsQVMKMVVn0ohJioRgMmrWY0nL8.jpg" title="Компас"/>
+</span>
+<span class="item-text"> Компас</span>
+</a>
+, вы сможете узнать, насколько близко находитесь к кладу.  		</p> <div class="spoiler"> <div class="spoiler__title">Изготовление компаса</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/751/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Адамантит" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/adamantit.jpg" title="Адамантит"/>
+</span>
+<span class="item-text"> Адамантит</span>
+</a>
+, 1 шт.  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 10 шт.  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+, 40 шт.  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+, 40 шт.  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 300,000 шт.  				</div> </div> </div> <p>Компас не имеет срока действия и не исчезает после использования.</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-klad.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-klad.jpg" style="max-width: 70%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			После нахождения клада с помощью Лопаты вы можете выкопать сундук сокровищ. Лопата имеет прочность 50 и продается у NPC &lt;Продавец материалов&gt; Лютор за 90,000 серебра.  		</p> <blockquote>Будьте осторожны: если вы начнете копать клад, его может выкопать любой другой игрок.</blockquote> <p>В зависимости от редкости карты, состав сундука будет разным</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-sunduk.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-sunduk.jpg" style="max-width: 70%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="spoiler"> <div class="spoiler__title">Сундук сокровищ</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр Мудрости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+<span class="item-text"> Скипетр Мудрости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Литейн" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+<span class="item-text"> Посох Литейн</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Аллатариэль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+<span class="item-text"> Посох Аллатариэль</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Югенеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+<span class="item-text"> Посох Югенеса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+<span class="item-text"> Скипетр жреца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13336/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийные чернила" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/MiyBgGyzbjadEuwAGSs4DYpRjeL6mpZ8NOTtiYQA.jpg" title="Стихийные чернила"/>
+</span>
+<span class="item-text"> Стихийные чернила</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13337/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jsWrBEbD1YIPCNkminRzBQcdedTsFbXtBm6sJChw.jpg" title="Огненный камень"/>
+</span>
+<span class="item-text"> Огненный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13338/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/nOHS2xBN8It07AyYKV9nkpRKL0vNZTjvGPrkcsPW.jpg" title="Ледяной камень"/>
+</span>
+<span class="item-text"> Ледяной камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13339/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rrp7YKlSkSpQBNm5ZKHyUdXFoUDOsKpfC9EpGS55.jpg" title="Кислотный камень"/>
+</span>
+<span class="item-text"> Кислотный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Грозовой камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Nakcsn4JxYWE14k5jFM1bPd9zU7LDdDO2p8DIjMu.jpg" title="Грозовой камень"/>
+</span>
+<span class="item-text"> Грозовой камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный сгусток (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OZoPXtVxFAqxQdVzSzTNneUEKxLauTlYzeNVYURo.jpg" title="Огненный сгусток (I)"/>
+</span>
+<span class="item-text"> Огненный сгусток (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной осколок (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/11U4PCMkGLX8GcDtMSclIExNx0sK9zyWpy8jHchb.jpg" title="Ледяной осколок (I)"/>
+</span>
+<span class="item-text"> Ледяной осколок (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотная сфера (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/4QL47o1o7xb1UZfwJamhlvgaBITkJZoKBY7GDCCy.jpg" title="Кислотная сфера (I)"/>
+</span>
+<span class="item-text"> Кислотная сфера (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаровая молния (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jnmLVY2XGTOZESegNRS6zGHli6bMkeQTHWgJ0vga.jpg" title="Шаровая молния (I)"/>
+</span>
+<span class="item-text"> Шаровая молния (I)</span>
+</a>
+</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Сундук сокровищ (редкий)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13200/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги ярости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/BaC54YvUfzxZylI5eXG7TGX6HTXhwL3bbNNjk4DW.jpg" title="Серьги ярости"/>
+</span>
+<span class="item-text"> Серьги ярости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13203/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги расправы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/8Vn5WPq1QkBYNxEp6BBDklyzDEl2JHqaMg1Kv3IG.jpg" title="Серьги расправы"/>
+</span>
+<span class="item-text"> Серьги расправы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13206/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги гармонии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/BLjdwv0z2r3PLVAoPUlo1zu6AXkeJUgtlHHza0lI.jpg" title="Серьги гармонии"/>
+</span>
+<span class="item-text"> Серьги гармонии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13209/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги восстановления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Jpw0reGnCZZuBwsxmJIt48XZrVW6ruKJfBqeor67.jpg" title="Серьги восстановления"/>
+</span>
+<span class="item-text"> Серьги восстановления</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13212/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги поглощения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/QFMfvCWMwmxC5JmWou9jswjix62aM31848b67RoS.jpg" title="Серьги поглощения"/>
+</span>
+<span class="item-text"> Серьги поглощения</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13215/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серьги уклонения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/qtcSBy3fgxUvAKe6TZYSxFb2MJB6S1I0eLNTCEBj.jpg" title="Серьги уклонения"/>
+</span>
+<span class="item-text"> Серьги уклонения</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13297/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ювелирная заготовка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RrSVdOkS40yf2LCKa6Hu0m3babl736xRygR17rYG.jpg" title="Ювелирная заготовка"/>
+</span>
+<span class="item-text"> Ювелирная заготовка</span>
+</a>
+ (необходима для создания серьг)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр Мудрости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+<span class="item-text"> Скипетр Мудрости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Литейн" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+<span class="item-text"> Посох Литейн</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Аллатариэль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+<span class="item-text"> Посох Аллатариэль</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Югенеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+<span class="item-text"> Посох Югенеса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+<span class="item-text"> Скипетр жреца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13336/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийные чернила" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/MiyBgGyzbjadEuwAGSs4DYpRjeL6mpZ8NOTtiYQA.jpg" title="Стихийные чернила"/>
+</span>
+<span class="item-text"> Стихийные чернила</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13337/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jsWrBEbD1YIPCNkminRzBQcdedTsFbXtBm6sJChw.jpg" title="Огненный камень"/>
+</span>
+<span class="item-text"> Огненный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13338/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/nOHS2xBN8It07AyYKV9nkpRKL0vNZTjvGPrkcsPW.jpg" title="Ледяной камень"/>
+</span>
+<span class="item-text"> Ледяной камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13339/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rrp7YKlSkSpQBNm5ZKHyUdXFoUDOsKpfC9EpGS55.jpg" title="Кислотный камень"/>
+</span>
+<span class="item-text"> Кислотный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Грозовой камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Nakcsn4JxYWE14k5jFM1bPd9zU7LDdDO2p8DIjMu.jpg" title="Грозовой камень"/>
+</span>
+<span class="item-text"> Грозовой камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный сгусток (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OZoPXtVxFAqxQdVzSzTNneUEKxLauTlYzeNVYURo.jpg" title="Огненный сгусток (I)"/>
+</span>
+<span class="item-text"> Огненный сгусток (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной осколок (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/11U4PCMkGLX8GcDtMSclIExNx0sK9zyWpy8jHchb.jpg" title="Ледяной осколок (I)"/>
+</span>
+<span class="item-text"> Ледяной осколок (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотная сфера (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/4QL47o1o7xb1UZfwJamhlvgaBITkJZoKBY7GDCCy.jpg" title="Кислотная сфера (I)"/>
+</span>
+<span class="item-text"> Кислотная сфера (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаровая молния (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jnmLVY2XGTOZESegNRS6zGHli6bMkeQTHWgJ0vga.jpg" title="Шаровая молния (I)"/>
+</span>
+<span class="item-text"> Шаровая молния (I)</span>
+</a>
+</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Сундук сокровищ (эпический)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11122/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Манускрипт" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/6TQuA7UmWy8CtDszclXdzrmO6fiiuIIzkI0e0GBW.jpg" title="Манускрипт"/>
+</span>
+<span class="item-text"> Манускрипт</span>
+</a>
+ (необходим для создания умений 60 уровня)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр Мудрости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+<span class="item-text"> Скипетр Мудрости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Литейн" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+<span class="item-text"> Посох Литейн</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Аллатариэль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+<span class="item-text"> Посох Аллатариэль</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Югенеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+<span class="item-text"> Посох Югенеса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+<span class="item-text"> Скипетр жреца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13336/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийные чернила" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/MiyBgGyzbjadEuwAGSs4DYpRjeL6mpZ8NOTtiYQA.jpg" title="Стихийные чернила"/>
+</span>
+<span class="item-text"> Стихийные чернила</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13337/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jsWrBEbD1YIPCNkminRzBQcdedTsFbXtBm6sJChw.jpg" title="Огненный камень"/>
+</span>
+<span class="item-text"> Огненный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13338/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/nOHS2xBN8It07AyYKV9nkpRKL0vNZTjvGPrkcsPW.jpg" title="Ледяной камень"/>
+</span>
+<span class="item-text"> Ледяной камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13339/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rrp7YKlSkSpQBNm5ZKHyUdXFoUDOsKpfC9EpGS55.jpg" title="Кислотный камень"/>
+</span>
+<span class="item-text"> Кислотный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Грозовой камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Nakcsn4JxYWE14k5jFM1bPd9zU7LDdDO2p8DIjMu.jpg" title="Грозовой камень"/>
+</span>
+<span class="item-text"> Грозовой камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный сгусток (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OZoPXtVxFAqxQdVzSzTNneUEKxLauTlYzeNVYURo.jpg" title="Огненный сгусток (I)"/>
+</span>
+<span class="item-text"> Огненный сгусток (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной осколок (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/11U4PCMkGLX8GcDtMSclIExNx0sK9zyWpy8jHchb.jpg" title="Ледяной осколок (I)"/>
+</span>
+<span class="item-text"> Ледяной осколок (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотная сфера (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/4QL47o1o7xb1UZfwJamhlvgaBITkJZoKBY7GDCCy.jpg" title="Кислотная сфера (I)"/>
+</span>
+<span class="item-text"> Кислотная сфера (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаровая молния (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jnmLVY2XGTOZESegNRS6zGHli6bMkeQTHWgJ0vga.jpg" title="Шаровая молния (I)"/>
+</span>
+<span class="item-text"> Шаровая молния (I)</span>
+</a>
+</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Сундук сокровищ (легендарный)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капля чистоты" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/8vd3TVVGmsA68o8MIvGwcrcXJeNe2jZMgmkY5bsA.png" title="Капля чистоты"/>
+</span>
+<span class="item-text"> Капля чистоты</span>
+</a>
+ (необходим для создания <a class="catalog-item" href="https://r2online.ru/wiki/base/view/354/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Святая вода" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/2B1dVyFr7DpVKjPhbmzyM35UU8LjQxMM4AHALAxO.jpg" title="Святая вода"/>
+</span>
+<span class="item-text"> Святая вода</span>
+</a>
+)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр Мудрости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+<span class="item-text"> Скипетр Мудрости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Литейн" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+<span class="item-text"> Посох Литейн</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Аллатариэль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+<span class="item-text"> Посох Аллатариэль</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Югенеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+<span class="item-text"> Посох Югенеса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Скипетр жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+<span class="item-text"> Скипетр жреца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13336/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийные чернила" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/MiyBgGyzbjadEuwAGSs4DYpRjeL6mpZ8NOTtiYQA.jpg" title="Стихийные чернила"/>
+</span>
+<span class="item-text"> Стихийные чернила</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13337/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jsWrBEbD1YIPCNkminRzBQcdedTsFbXtBm6sJChw.jpg" title="Огненный камень"/>
+</span>
+<span class="item-text"> Огненный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13338/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/nOHS2xBN8It07AyYKV9nkpRKL0vNZTjvGPrkcsPW.jpg" title="Ледяной камень"/>
+</span>
+<span class="item-text"> Ледяной камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13339/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотный камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rrp7YKlSkSpQBNm5ZKHyUdXFoUDOsKpfC9EpGS55.jpg" title="Кислотный камень"/>
+</span>
+<span class="item-text"> Кислотный камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Грозовой камень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Nakcsn4JxYWE14k5jFM1bPd9zU7LDdDO2p8DIjMu.jpg" title="Грозовой камень"/>
+</span>
+<span class="item-text"> Грозовой камень</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный сгусток (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OZoPXtVxFAqxQdVzSzTNneUEKxLauTlYzeNVYURo.jpg" title="Огненный сгусток (I)"/>
+</span>
+<span class="item-text"> Огненный сгусток (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11105/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ледяной осколок (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/11U4PCMkGLX8GcDtMSclIExNx0sK9zyWpy8jHchb.jpg" title="Ледяной осколок (I)"/>
+</span>
+<span class="item-text"> Ледяной осколок (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11110/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кислотная сфера (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/4QL47o1o7xb1UZfwJamhlvgaBITkJZoKBY7GDCCy.jpg" title="Кислотная сфера (I)"/>
+</span>
+<span class="item-text"> Кислотная сфера (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шаровая молния (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jnmLVY2XGTOZESegNRS6zGHli6bMkeQTHWgJ0vga.jpg" title="Шаровая молния (I)"/>
+</span>
+<span class="item-text"> Шаровая молния (I)</span>
+</a>
+</div> </div> </div> <h2 id="id-3">Часы Хроноса</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ – уникальный предмет. Когда он находится в инвентаре, он замораживает все другие временные предметы с сроком действия более одной минуты, которые нельзя экипировать. Это означает, что время использования таких предметов не будет истекать. Кроме того, пока часы находятся в инвентаре, предметы <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3472/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ключ от пиратского сундука" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1697923cfbad778a36d06238a1941f61.jpg" title="Ключ от пиратского сундука"/>
+</span>
+<span class="item-text"> Ключ от пиратского сундука</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3471/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кнут надзирателя" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/d52b7fa22f6a0d141cabd38f5a4ef17e.jpg" title="Кнут надзирателя"/>
+</span>
+<span class="item-text"> Кнут надзирателя</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3470/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ожерелье Блэра" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/02b5737799f5d5ffee649c06ede9563c.jpg" title="Ожерелье Блэра"/>
+</span>
+<span class="item-text"> Ожерелье Блэра</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3468/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо ликанов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/e92e41128768cad330384ce8b76dbdb9.jpg" title="Кольцо ликанов"/>
+</span>
+<span class="item-text"> Кольцо ликанов</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3469/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо Каспер" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1abe1845224308078a98279a16ffcfaa.jpg" title="Кольцо Каспер"/>
+</span>
+<span class="item-text"> Кольцо Каспер</span>
+</a>
+ не будут исчезать, даже если вы покинете пещеру пиратов.  		</p> <h2 id="id-2">Печати телепортации</h2> <p>  			Сохранение с помощью кольца на всей территории острова, кроме деревни, запрещено. Однако существуют печати, которые позволяют это сделать.  		</p> <p>  			Для легендарного кольца телепортации:  		</p> <div class="spoiler"> <div class="spoiler__title">Море чудовищ</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-leg-more.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-leg-more.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Змеиный берег</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-leg-zmeya.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-leg-zmeya.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <p>  			Для эпического кольца телепортации:  		</p> <div class="spoiler"> <div class="spoiler__title">Море чудовищ Начало</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-epic-more.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-epic-more.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Лес Валефора</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-epic-valefor.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-epic-valefor.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Ледовитый берег</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-epic-ledovity.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-epic-ledovity.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <p>  			Для редкого кольца телепортации:  		</p> <div class="spoiler"> <div class="spoiler__title">Первобытный лес</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-red-pervobyt.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-red-pervobyt.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Лес измерений</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-pechat-red-izmereny.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-pechat-red-izmereny.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <h2 id="id-4">Боссы</h2> <p>  			На острове обитают три босса.  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/3200/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель времени" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/ecGMvvmf7lLGPaXJ6DiGDtlNfGlOKTv5v4wJxSXS.jpg" title="Хранитель времени"/>
+</span>
+<span class="item-text"> Хранитель времени</span>
+</a>
+<br/>Длительность возрождения: от 10 до 14 часов.  			<br/>Когда Хранитель возрождается, все персонажи, находящиеся на острове, получают эффект "Эхо времени", который оповещает их о возвращении босса.  			<br/>Хранитель времени может наложить эффект "Возвращение в прошлое" на тех, кто посмеет на него напасть, возвращая их на некоторое время в прошлое.  		</p> <div class="spoiler"> <div class="spoiler__title">Место возрождения и дроп-лист Хранителя времени</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-hranitelvremenires.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-hranitelvremenires.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов)  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/cbb6a3b884f4f88b3a8e3d44c636cbd8.jpg" title="Камень телепортации (легендарный)"/>
+</span>
+<span class="item-text"> Камень телепортации (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/0d0871f0806eae32d30983b62252da50.jpg" title="Камень перевоплощения (легендарный)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/72lrb2aqXJD0ATnr1TbbbAL1yLjSEcj6sT1ubNfs.jpg" title="Камень невидимости (легендарный)"/>
+</span>
+<span class="item-text"> Камень невидимости (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12059/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/AiZACntH07V5biQ6fXdlhdcRFzlujsPDyxmjz1DS.jpg" title="Камень смотрителя (легендарный)"/>
+</span>
+<span class="item-text"> Камень смотрителя (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7223/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/bea5955b308361a1b07bc55042e25e54.jpg" title="Камень телепортации (редкий)"/>
+</span>
+<span class="item-text"> Камень телепортации (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/1f4477bad7af3616c1f933a02bfabe4e.jpg" title="Камень перевоплощения (редкий)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12054/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H4FNvuOQ9NA9tSfmhPCAFqhPucsZnbmaAlIkydQp.jpg" title="Камень невидимости (редкий)"/>
+</span>
+<span class="item-text"> Камень невидимости (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12067/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12069/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шкатулка с бижутерией" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией"/>
+</span>
+<span class="item-text"> Шкатулка с бижутерией</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Оружейная сталь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/QV7XDNTP0Q2EtuDQGWxlJIl4TpkBbb8JnbkDO0Qk.webp" title="Оружейная сталь"/>
+</span>
+<span class="item-text"> Оружейная сталь</span>
+</a>
+</div> </div> </div> <p></p> <p><a class="catalog-item" href="https://r2online.ru/wiki/locations/1021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лорд акрионцев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/dc7eef21cbb324d86627402892271ef3.png" title="Лорд акрионцев"/>
+</span>
+<span class="item-text"> Лорд акрионцев</span>
+</a>
+<br/>Длительность возрождения: 32 часа.  		</p> <div class="spoiler"> <div class="spoiler__title">Место возрождения и дроп-лист Лорда Акрионцев</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/photos/5/Akra-lordakrionecres.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-lordakrionecres.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/cbb6a3b884f4f88b3a8e3d44c636cbd8.jpg" title="Камень телепортации (легендарный)"/>
+</span>
+<span class="item-text"> Камень телепортации (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/72lrb2aqXJD0ATnr1TbbbAL1yLjSEcj6sT1ubNfs.jpg" title="Камень невидимости (легендарный)"/>
+</span>
+<span class="item-text"> Камень невидимости (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12059/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/AiZACntH07V5biQ6fXdlhdcRFzlujsPDyxmjz1DS.jpg" title="Камень смотрителя (легендарный)"/>
+</span>
+<span class="item-text"> Камень смотрителя (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7224/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/7fa732b517cbed14a48843d74526c11a.jpg" title="Камень телепортации (эпический)"/>
+</span>
+<span class="item-text"> Камень телепортации (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d045c59a90d7587d8d671b5f5aec4e7c.jpg" title="Камень перевоплощения (эпический)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12055/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/BobG0Ubv7UOqWCAaSzeuu9NxLsRhn3pGZKXajjuC.jpg" title="Камень невидимости (эпический)"/>
+</span>
+<span class="item-text"> Камень невидимости (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12058/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/l8LzkOt5ikrTb2nWnLajPbeRaLrZ8y2QePHwv8uC.jpg" title="Камень смотрителя (эпический)"/>
+</span>
+<span class="item-text"> Камень смотрителя (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7223/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/bea5955b308361a1b07bc55042e25e54.jpg" title="Камень телепортации (редкий)"/>
+</span>
+<span class="item-text"> Камень телепортации (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12054/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H4FNvuOQ9NA9tSfmhPCAFqhPucsZnbmaAlIkydQp.jpg" title="Камень невидимости (редкий)"/>
+</span>
+<span class="item-text"> Камень невидимости (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12057/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/eyjiqCY2SoqKu7zcL5xPpYd9RnnZ2BCptetcbn7c.jpg" title="Камень смотрителя (редкий)"/>
+</span>
+<span class="item-text"> Камень смотрителя (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12067/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12069/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шкатулка с бижутерией" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией"/>
+</span>
+<span class="item-text"> Шкатулка с бижутерией</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Оружейная сталь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/QV7XDNTP0Q2EtuDQGWxlJIl4TpkBbb8JnbkDO0Qk.webp" title="Оружейная сталь"/>
+</span>
+<span class="item-text"> Оружейная сталь</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Югенеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+<span class="item-text"> Посох Югенеса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Посох Аллатариэль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+<span class="item-text"> Посох Аллатариэль</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+</div> </div> </div> <p></p> <p><a class="catalog-item" href="https://r2online.ru/wiki/locations/1018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Командующий копейщиков" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/babd54b10b8476aae57cf7cb62750194.png" title="Командующий копейщиков"/>
+</span>
+<span class="item-text"> Командующий копейщиков</span>
+</a>
+<br/>Длительность возрождения: от 1 минуты до 24 часов.  		</p> <div class="spoiler"> <div class="spoiler__title">Место возрождения и дроп-лист Командующиего копейщиков</div> <div class="spoiler__content"> <div class="text-box">  					Босс возрождается в случайной точке и патрулирует весь остров Акра.  					<a data-fancybox="gallery" href="/storage/photos/5/Akra-kopeishikres.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-kopeishikres.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7224/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/7fa732b517cbed14a48843d74526c11a.jpg" title="Камень телепортации (эпический)"/>
+</span>
+<span class="item-text"> Камень телепортации (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d045c59a90d7587d8d671b5f5aec4e7c.jpg" title="Камень перевоплощения (эпический)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12055/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/BobG0Ubv7UOqWCAaSzeuu9NxLsRhn3pGZKXajjuC.jpg" title="Камень невидимости (эпический)"/>
+</span>
+<span class="item-text"> Камень невидимости (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12058/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/l8LzkOt5ikrTb2nWnLajPbeRaLrZ8y2QePHwv8uC.jpg" title="Камень смотрителя (эпический)"/>
+</span>
+<span class="item-text"> Камень смотрителя (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12069/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шкатулка с бижутерией" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией"/>
+</span>
+<span class="item-text"> Шкатулка с бижутерией</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Оружейная сталь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/QV7XDNTP0Q2EtuDQGWxlJIl4TpkBbb8JnbkDO0Qk.webp" title="Оружейная сталь"/>
+</span>
+<span class="item-text"> Оружейная сталь</span>
+</a>
+</div> </div> </div> <h2 id="id-5">Задания</h2> <p> <strong>Еженедельные (Викли) задания</strong> – можно выполнить раз в неделю, обновление заданий в понедельник в 06:00. Награда: очки опыта, фиксированные в зависимости от уровня персонажа.  		</p> <div class="spoiler"> <div class="spoiler__title">Еженедельные задания</div> <div class="spoiler__content"> <div class="text-box"> <p>  			Мандрил и Манкута – 250 шт.  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-weekly1.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-weekly1.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			Ледовитый берег – 250 шт.  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-weekly2.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-weekly2.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			Море чудовищ – 200 шт.  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-weekly3.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-weekly3.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Эпические задания</div> <div class="spoiler__content"> <div class="text-box"> <p>  			Акрионец рыцарь 60+  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-akrionec.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-akrionec.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			Огненный демон 80+  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-ogndemon.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-ogndemon.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			Астарот 80+  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-astarot.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-astarot.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			Улучшенный Астарот 90+  		</p> <a data-fancybox="gallery" href="/storage/photos/5/Akra-q-ulastarot.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/Akra-q-ulastarot.jpg" style="max-width: 50%; cursor: zoom-in; margin-bottom: 15px"/> </a> </div> </div> </div> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

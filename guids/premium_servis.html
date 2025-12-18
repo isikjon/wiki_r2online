@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Премиум-сервис — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="other.html">Другое</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Премиум-сервис</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2>Что такое премиум сервис</h2> <p>NPC Премиум сервис Кристина за серебро накладывает эффекты на персонажа. Чтобы использовать услуги Кристины нужен <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2735/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Билет премиум-сервиса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/bcAUGg4IxOycTHEqJhcVrzOdtvMCAlRcJpKKjDnO.webp" title="Билет премиум-сервиса"/>
+</span>
+<span class="item-text"> Билет премиум-сервиса</span>
+</a>
+, он покупается в премиум магазине [B], входит в <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7602/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Делюкс набор +200% (30 дней)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/littZzbC5SoAVjFLVOvFRondU0n1cJ4ykRmMGS7k.png" title="Делюкс набор +200% (30 дней)"/>
+</span>
+<span class="item-text"> Делюкс набор +200% (30 дней)</span>
+</a>
+</p> <h2>Какие бонусы дает премиум сервис</h2> <p>Все эффекты накладываются на 1 час и их нельзя развеить. Кристина не продает предметов.</p> <div class="table-container"> <div class="text-box"> <table class="table table-quest" style="width: 100%;"> <thead> <tr> <th rowspan="2" style="color: #d7b263; width: 25%; text-align:center;">  						Название  					</th> <th rowspan="2" style="color: #d7b263; width: 25%; text-align:center;">  						Эффект  					</th> <th colspan="5" style="color: #d7b263; text-align:center;">  						Стоимость  					</th> </tr> <tr> <!-- Подзаголовки для стоимости по уровням --> <th style="color: #d7b263; text-align:center;">  						0-79 ур.  					</th> <th style="color: #d7b263; text-align:center;">  						80-89 ур.  					</th> <th style="color: #d7b263; text-align:center;">  						90-99 ур.  					</th> <th style="color: #d7b263; text-align:center;">  						100-109 ур.  					</th> <th style="color: #d7b263; text-align:center;">  						110+ ур.  					</th> </tr> </thead> <tbody> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410205/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение восстановление HP (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/9AfUDazsV12NrGCGTe5vo1DHQAp0CqSyXCuCSd3Q.webp" title="Увеличение восстановление HP (премиум)"/>
+</span>
+<span class="item-text"> Увеличение восстановление HP (премиум)</span>
+</a>
+</td> <td>  						Особое восстановление HP +0,4  					</td> <td style="text-align:center;">  						5,000  					</td> <td style="text-align:center;">  						8,000  					</td> <td style="text-align:center;">  						10,000  					</td> <td style="text-align:center;">  						13,000  					</td> <td style="text-align:center;">  						15,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410206/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение уровня защиты (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wOymypWWD10gfTieAi6K86CQJqqgAmwoDqJSFaDX.webp" title="Увеличение уровня защиты (премиум)"/>
+</span>
+<span class="item-text"> Увеличение уровня защиты (премиум)</span>
+</a>
+</td> <td>  						Защита +1  					</td> <td style="text-align:center;">  						5,000  					</td> <td style="text-align:center;">  						8,000  					</td> <td style="text-align:center;">  						10,000  					</td> <td style="text-align:center;">  						13,000  					</td> <td style="text-align:center;">  						15,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410207/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение уровня всех атак (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/gKEIIbtCdMcnjGkIVaMaP924YUSJXcIj91TkaopA.webp" title="Увеличение уровня всех атак (премиум)"/>
+</span>
+<span class="item-text"> Увеличение уровня всех атак (премиум)</span>
+</a>
+</td> <td>  						Уровень всех атак +1  					</td> <td style="text-align:center;">  						5,000  					</td> <td style="text-align:center;">  						8,000  					</td> <td style="text-align:center;">  						10,000  					</td> <td style="text-align:center;">  						13,000  					</td> <td style="text-align:center;">  						15,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410208/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье скорости премиум" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/7CVdz2kgSuW05OLSxUFXFaKh2mBgTdarJ9ZV0W63.webp" title="Зелье скорости премиум"/>
+</span>
+<span class="item-text"> Зелье скорости премиум</span>
+</a>
+</td> <td>  						Зелье скорости (премиум)  					</td> <td style="text-align:center;">  						15,000  					</td> <td style="text-align:center;">  						23,000  					</td> <td style="text-align:center;">  						30,000  					</td> <td style="text-align:center;">  						40,000  					</td> <td style="text-align:center;">  						45,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410209/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение скорости атаки (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/iVUUDWHpv2RxgjF4QH9dI1D5uTQN3702GfVPiAj2.webp" title="Увеличение скорости атаки (премиум)"/>
+</span>
+<span class="item-text"> Увеличение скорости атаки (премиум)</span>
+</a>
+</td> <td>  						Скорость атаки +5%  					</td> <td style="text-align:center;">  						15,000  					</td> <td style="text-align:center;">  						23,000  					</td> <td style="text-align:center;">  						30,000  					</td> <td style="text-align:center;">  						40,000  					</td> <td style="text-align:center;">  						45,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410210/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение уровня HP и MP (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/1EwbTD0SOqU88NtDGz3cNRqh1NS8jc5ju6qsuZux.webp" title="Увеличение уровня HP и MP (премиум)"/>
+</span>
+<span class="item-text"> Увеличение уровня HP и MP (премиум)</span>
+</a>
+</td> <td>  						HP +100  						<br/>MP +100  					</td> <td style="text-align:center;">  						15,000  					</td> <td style="text-align:center;">  						23,000  					</td> <td style="text-align:center;">  						30,000  					</td> <td style="text-align:center;">  						40,000  					</td> <td style="text-align:center;">  						45,000  					</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/47511410211/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Всемогущество нарциссов (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/5P1eDZ4VZURSRq0bcdG7nbpTp28pxQizrxw0gPNN.webp" title="Всемогущество нарциссов (премиум)"/>
+</span>
+<span class="item-text"> Всемогущество нарциссов (премиум)</span>
+</a>
+</td> <td>  						Опыт +7%  						<br/>Трофеи +7%  						<br/>Вес +1000  						<br/>Уровень всех атак против монстров +1  					</td> <td style="text-align:center;">  						30,000  					</td> <td style="text-align:center;">  						40,000  					</td> <td style="text-align:center;">  						50,000  					</td> <td style="text-align:center;">  						65,000  					</td> <td style="text-align:center;">  						75,000  					</td> </tr> <tr> <td>  						Получение всех благословений  					</td> <td>  						Суммарный бонус всех эффектов  					</td> <td style="text-align:center;">  						65,000  					</td> <td style="text-align:center;">  						100,000  					</td> <td style="text-align:center;">  						120,000  					</td> <td style="text-align:center;">  						165,000  					</td> <td style="text-align:center;">  						190,000  					</td> </tr> <tr> <td>  						Восстановление HP  					</td> <td>  						Мгновенно восстановить 500 HP  					</td> <td style="text-align:center;">  						2,500  					</td> <td style="text-align:center;">  						2,500  					</td> <td style="text-align:center;">  						2,500  					</td> <td style="text-align:center;">  						2,500  					</td> <td style="text-align:center;">  						2,500  					</td> </tr> </tbody> </table> </div> </div> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

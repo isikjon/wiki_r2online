@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дерево гильдии — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="guilds.html">Гильдии</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Дерево гильдии</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2 style="font-size: 1rem;">Разделы дерева гильдии</h2> <ol> <li><strong><span style="font-weight: bold;">Базовое</span></strong> - постоянные базовые умения.</li> <li><strong><span style="font-weight: bold;">Крепостей</span></strong> - постоянные умения для владельцев контрольной точки и/или крепости.</li> <li><strong><span style="font-weight: bold;">Особое</span></strong> - временные умения (срок действия 10 дней), не расходуют очки умений.</li> </ol> <div class="spoiler"> <div class="spoiler__title">Внешний вид дерева гильдии</div> <div class="spoiler__content"> <div class="text-box"> <div class="row"><a data-fancybox="gallery" href="/storage/wiki/images/guids/guilds/tree-guild/1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/1.webp" style="max-width: 100%"/> </a></div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Базовое дерево</div> <div class="spoiler__content"> <div class="text-box"> <div class="row"> <p> <img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/2.webp"/> <strong>Клятва души и тела (1-5 ур.)</strong> <br/>HP: +5/+10/+15/+20/+25  	<br/>MP: +5/+10/+15/+20/+25    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/3.webp"/> <strong>Благословение тела (1-5 ур.)</strong> <br/>Вес: +200/+400/+600/+800/+1000    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/4.webp"/> <strong>Божественность души (1-5 ур.)</strong> <br/>Особое восстановление MP: +0.1/+0.1/+0.2/+0.2/+0.3    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/5.webp"/> <strong>Объединение силы (1-3 ур.)</strong> <br/>Сила +1/+2/+3    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/6.webp"/> <strong>Объединение ловкости (1-3 ур.)</strong> <br/>Ловкость +1/+2/+3    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/7.webp"/> <strong>Объединение интеллекта (1-3 ур.)</strong> <br/>Интеллект +1/+2/+3    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/8.webp"/> <strong>Коготь свирепого тигра (1-3 ур.)</strong> <br/>Шанс нанести крит. удар: +1/+2/+3    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/9.webp"/> <strong>Сила свирепого тигра (1-3 ур.)</strong> <br/>Доп. урон при крит. ударе: +1/+3/+5    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/10.webp"/> <strong>Гильдийное уклонение (1-5 ур.)</strong> <br/>Уклонение +1/+1/+2/+2/+3  </p> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Дерево крепостей</div> <div class="spoiler__content"> <div class="text-box"> <div class="row"> <p> <img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/11.webp"/> <strong>Осадная защита (1-5 ур.)</strong> <br/>Защита: +1/+1/+1/+1/+2  	<br/>Защита от монстров: +0/+0/+1/+1/+2    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/12.webp"/> <strong>Крепость души и тела (1-5 ур.)</strong> <br/>HP: +30/+60/+90/+120/+150  	<br/>MP: +30/+60/+90/+120/+150    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/13.webp"/> <strong>Осадная сила атаки (1-5 ур.)</strong> <br/>Уровень всех атак: +1/+1/+1/+1/+1  	<br/>Точность всех атак: +0/+1/+1/+1/+1  	<br/>Урон по монстрам: +0/+0/+1/+1/+1  	<br/>Точность по монстрам: +0/+0/+0/+1/+2    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/14.webp"/> <strong>Крепостная сила атаки (1-5 ур.)</strong> <br/>Уровень всех атак: +1/+1/+1/+1/+1  	<br/>Точность всех атак: +0/+0/+1/+1/+1  	<br/>Урон по монстрам: +0/+0/+0/+0/+1    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/15.webp"/> <strong>Секретная мудрость (1-3 ур.)</strong> <br/>Особое восстановление HP: +0.2/+0.4/+0.6/+0.8/+1  	<br/>Особое восстановление MP: +0.2/+0.4/+0.6/+0.8/+1  </p> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Особое дерево</div> <div class="spoiler__content"> <div class="text-box"> <div class="row"> <p> <img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/16.webp"/> <strong>Гильдийная гармония (1-5 ур.)</strong> <br/>Все параметры: +1/+2/+3/+4/+5    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/17.webp"/> <strong>Мудрецы гильдии (1-5 ур.)</strong> <br/>Особое восстановление MP: +0.1/+0.2/+0.3/+0.4/+0,5    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/18.webp"/> <strong>Отдых души (1-2 ур.)</strong> <br/>Выходя из игры в доме гильдии, любому персонажу начисляются <a href="https://r2online.ru/wiki/characters/rest-point/" target="_blank">очки отдыха</a>.  	<br/>С <a href="https://r2online.ru/wiki/characters/rest-point/" target="_blank">очками отдыха</a> персонаж получается в 2 раза больше опыта с монстров.    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/19.webp"/> <strong>Гильдийная защита (1-5 ур.)</strong> <br/>Защита: +1/+2/+3/+4/+5    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/20.webp"/> <strong>Секретная мудрость (1-3 ур.)</strong> <br/>Уменьшает количество теряемых <a href="https://r2online.ru/wiki/characters/deathpersons/" target="_blank">очков рейтинга</a>.  	<br/>Увеличивает количество получаемых <a href="https://r2online.ru/wiki/characters/deathpersons/" target="_blank">очков рейтинга</a>.    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/22.webp"/> <strong>Справедливость (1-2 ур.)</strong> <br/>Увеличивается количество создаваемых <a href="https://r2online.ru/wiki/guids/guilds/rewards-for-master/" target="_blank">наград за справедливость</a>.    	<br/><br/><img alt="" src="https://r2online.ru/storage/wiki/images/guids/guilds/tree-guild/21.webp"/> <strong>Гильдийный натиск (1-5 ур.)</strong> <br/>Уровень всех атак: +1/+1/+1/+1/+2  	<br/>Точность всех атак: +0/+0/+1/+1/+2  </p> </div> </div> </div> </div> <div style="float: right; margin-right: 25px;"> <div class="clearfix"> </div> <img align="middle" alt="" src="https://r2online.ru/source/Guild-quest.jpg" style="max-width: 300px; margin-bottom: 5px; height: auto;"/> <div class="clearfix"> </div> </div> <h2 style="font-size: 1rem;"><br/>  Изучение дерева гильдии</h2> <p>Изучение гильдийного дерева схоже с изучением личного дерева. Изучение гильдийного дерева доступно только <strong><span style="font-weight: bold;">главе гильдии</span></strong> и <a href="https://r2online.ru/wiki/guids/guilds/guildrule#id-1/" target="_blank">заместителю главы гильдии</a>.<br/>  Для изучения каждого умения требуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/4825/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искра мироздания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d554f7bb7be44a7267068a7df88ddd20.jpg" title="Искра мироздания"/>
+</span>
+<span class="item-text"> Искра мироздания</span>
+</a>
+.     <br/>Изначально доступно 35 очков, захватив контрольную точку прибавится 10 очков, крепость – 15 очков. Количество очков неограничено.</p> <p><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4825/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искра мироздания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d554f7bb7be44a7267068a7df88ddd20.jpg" title="Искра мироздания"/>
+</span>
+<span class="item-text"> Искра мироздания</span>
+</a>
+ дается в награду за <a href="https://r2online.ru/wiki/quests/daily/guild" target="_blank">Ежедневные квесты гильдии</a>, 10 штук за простое и 20 за сложное. Искры без срока действия, и их нельзя передать другим игрокам. Дополнительно искры можно изготовить в окне изготовления предметов [J]:  <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 6 шт.  <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 4 шт.  <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 30,000 шт.  </p> <p>Для сброса гильдийного дерева можно использовать <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5689/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок иллюзии (Гильдия)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3Eg4qi2WumrR5HSd3GmYI1Hc0GryjpVmLd07GlEA.png" title="Порошок иллюзии (Гильдия)"/>
+</span>
+<span class="item-text"> Порошок иллюзии (Гильдия)</span>
+</a>
+. Искры мироздания при этом не возвращаются.</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

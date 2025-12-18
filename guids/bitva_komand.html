@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Битва команд — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="events.html">Мероприятия</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Битва команд</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О Битвах команд (БК)</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Правила Битвы Команд</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Очки чести и система поиска соперника</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Награды и бонусы за топ</a></li> </ol> <h2 id="id-1">О Битвах команд (БК)</h2> <p>  		Битва команд — это PvP-сражение на арене в наиболее равных условиях. За участие игроки получают награды, а заняв место в рейтинге, персонаж получит бонусы к характеристикам и визуальный эффект. Битва команд, как и <a href="https://r2online.ru/wiki/guids/events/bg" target="_blank">Битва Гильдий</a>, является сезонным мероприятием – каждый сезон обнуляется рейтинг. В зависимости от сезона может быть два формата битв: первый формат состоит из одной дуэли, второй формат – из нескольких дуэлей.  	</p> <h2 id="id-2">Правила Битвы Команд</h2> <ol> <li>Битва команд проводится в понедельник, вторник, среду и четверг с 18:00 до 21:00, за исключением завершения сезона, когда проводится <a href="https://r2online.ru/wiki/guids/events/bg" target="_blank">битва титанов</a>.</li> <li>Участвовать в битве можно персонажем <strong>выше 55 уровня</strong>.</li> <li><strong>Формат битвы команд в апреле: 1vs1, 3vs3</strong>. В случае ничьи проводится решающая третья дуэль 4vs4 среди участников двух первых дуэлей. Формат битвы может меняться в зависимости от сезона. Следите за новостями перед началом нового сезона.</li> <li>Регистрация проходит у NPC «Битва команд». Участвовать могут персонажи <strong>выше 60 уровня</strong>. Если в сезоне дуэли только 1v1 - просто нажмите «Регистрация». Если в сезоне соревнование команд - нужно собрать группу, а главе группе расставить дуэли.</li> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">NPC «Битва команд»</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/battle-commands.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/battle-commands.webp" style="max-width: 100%"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Окно регистрации в случае группого формата</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window_register.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window_register.webp" style="max-width: 100%"/> </a> </div> </div> <li>После регистрации сразу же начинается поиск противника. Когда он будет найден – через NPC «Битва команд» нужно войти на арену.</li> <li>На арене работает только базовое дерево гильдии (включая базовые скиллы из особого дерева).</li> <li>Некоторые предметы не переносятся на арену — например, расходники с контрольных точек и крепостей.</li> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Расходники, которые переносится на арену</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/358/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье скорости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/4311359ed4969e8401880e3c1836fbe1.jpg" title="Зелье скорости"/>
+</span>
+<span class="item-text"> Зелье скорости</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/359/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье боевого духа" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/92977ae4d2ba21425a59afb269c2a14e.jpg" title="Зелье боевого духа"/>
+</span>
+<span class="item-text"> Зелье боевого духа</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2416/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье скорости (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/20/5d34a580875af9946eca191bdc970c67.png" title="Зелье скорости (премиум)"/>
+</span>
+<span class="item-text"> Зелье скорости (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2417/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье боевого духа (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/6zHFbdr6maAUVtWaRootcaThFBDxHrpLM1D6xokf.jpg" title="Зелье боевого духа (премиум)"/>
+</span>
+<span class="item-text"> Зелье боевого духа (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2418/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье ловкости (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Orib8AFb0y08NomSioXRzz9v2wbCO0ogl8Newnv8.jpg" title="Зелье ловкости (премиум)"/>
+</span>
+<span class="item-text"> Зелье ловкости (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2419/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье точности (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/i5cUV9avMw4myglmIoaiy5MqMnYrEO9ZW5lDBisn.jpg" title="Зелье точности (премиум)"/>
+</span>
+<span class="item-text"> Зелье точности (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье критического удара (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/CNUnD92EZeZArw49pnuyR7C2pMQt5Q44hEyzgSxN.jpg" title="Зелье критического удара (премиум)"/>
+</span>
+<span class="item-text"> Зелье критического удара (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2421/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье защиты (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/6709e8d64a5f47269ed5cea9f625f7ab.jpg" title="Зелье защиты (премиум)"/>
+</span>
+<span class="item-text"> Зелье защиты (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2422/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье интеллекта (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/2HRF5MQPMCfNAxNsWaeTTpImR82ocAnF0FFNNImM.jpg" title="Зелье интеллекта (премиум)"/>
+</span>
+<span class="item-text"> Зелье интеллекта (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2424/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье силы (премиум)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3iSHXOJQMqcV9e9u7Apy163kdHFbqADvx7jQo2rg.jpg" title="Зелье силы (премиум)"/>
+</span>
+<span class="item-text"> Зелье силы (премиум)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2445/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Манговая конфета" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/20/3abc47e680e0716a9d301dc4de7c075f.png" title="Манговая конфета"/>
+</span>
+<span class="item-text"> Манговая конфета</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2446/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Манговый сок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/12/3380ac33a59d5ac6ed52c098c4bfc2f9.png" title="Манговый сок"/>
+</span>
+<span class="item-text"> Манговый сок</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5571/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Улучшенная манговая конфета" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/B3TiKpq8fOKWvGBuidtox6vb88QhC294t34JiZik.jpg" title="Улучшенная манговая конфета"/>
+</span>
+<span class="item-text"> Улучшенная манговая конфета</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5556/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Улучшенный манговый сок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/0J9W74D0OAHbXx0ysyndb9kKv4uSme54l45gSwPz.jpg" title="Улучшенный манговый сок"/>
+</span>
+<span class="item-text"> Улучшенный манговый сок</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/744/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленная манговая конфета" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/nS51pBLgxCHqEEjDfnosVHRf2figgyqbbq7fnKEb.png" title="Усиленная манговая конфета"/>
+</span>
+<span class="item-text"> Усиленная манговая конфета</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/745/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленный манговый сок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Xth2fzYAKm6w6hzUKXJBZrqZurua3DKyaRzN5Sqx.png" title="Усиленный манговый сок"/>
+</span>
+<span class="item-text"> Усиленный манговый сок</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5574/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Фейерверк героя" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1d61af15784ef91e3602afff7c2b6272.jpg" title="Фейерверк героя"/>
+</span>
+<span class="item-text"> Фейерверк героя</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5575/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Фейерверк охотника" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/23aa0bd91893285abbf126b84a23b9ca.jpg" title="Фейерверк охотника"/>
+</span>
+<span class="item-text"> Фейерверк охотника</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5576/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Фейерверк мудреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/faea1e94f07d55d7d86bd78c5b42b39d.jpg" title="Фейерверк мудреца"/>
+</span>
+<span class="item-text"> Фейерверк мудреца</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1289/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный яд [Кинжал]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/db2b4182156b2f1f817860ac9f409ad7.jpg" title="Черный яд [Кинжал]"/>
+</span>
+<span class="item-text"> Черный яд [Кинжал]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1290/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Яд тарантула [Кинжал]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/a5e0ff62be0b08456fc7f1e88812af3d.jpg" title="Яд тарантула [Кинжал]"/>
+</span>
+<span class="item-text"> Яд тарантула [Кинжал]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5244/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный яд [Катары]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/c6bff625bdb0393992c9d4db0c6bbe45.jpg" title="Черный яд [Катары]"/>
+</span>
+<span class="item-text"> Черный яд [Катары]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5245/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Яд тарантула [Катары]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/c667d53acd899a97a85de0c201ba99be.jpg" title="Яд тарантула [Катары]"/>
+</span>
+<span class="item-text"> Яд тарантула [Катары]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5517/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зеленый яд [Лук/Ружье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/2bd7f907b7f5b6bbd91822c0c7b835f6.jpg" title="Зеленый яд [Лук/Ружье]"/>
+</span>
+<span class="item-text"> Зеленый яд [Лук/Ружье]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5516/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный яд [Лук/Ружье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/af21d0c97db2e27e13572cbf59eb343d.jpg" title="Черный яд [Лук/Ружье]"/>
+</span>
+<span class="item-text"> Черный яд [Лук/Ружье]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5519/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зеленый яд [Орб]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/c9f95a0a5af052bffce5c89917335f67.jpg" title="Зеленый яд [Орб]"/>
+</span>
+<span class="item-text"> Зеленый яд [Орб]</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5520/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный яд [Орб]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/e58cc5ca94270acaceed13bc82dfedf7.jpg" title="Черный яд [Орб]"/>
+</span>
+<span class="item-text"> Черный яд [Орб]</span>
+</a>
+</div> </div> </div> </div> <li>Время от начала битвы (захода персонажей) до первой дуэли составляет 1 минуту (в случае 1vs1) или 2 минуты (в других форматах), что дает возможность оценить соперника, запастись зельями здоровья и использовать расходники.</li> <li>Окончательная подготовка к дуэли в проходе ожидания – 10 секунд.</li> <li>Дуэль длится 3 минуты.</li> <li>Если за 3 минуты персонажи не погибли – победитель определяется по нанесенному урону.</li> </ol> <h2 id="id-3">Очки чести и система поиска соперника</h2> <p>  		Очки чести представляют собой рейтинг персонажа в PvP, определяя место игрока в рейтинговой таблице и помогая в подборе равного соперника. В начале сезона у всех персонажей <strong>0 очков чести</strong>. За победу в дуэле дается <strong>100 очков чести + 1%</strong> от очков соперника. Если у вашего <strong>соперника меньше очков чести</strong>, чем у вас, то начинает действовать <strong>понижающий коэффициент</strong>. Он зависит от разницы между вашими очками и соперника – чем она больше, тем меньше очков вы получите.  		<br/>За победу в решающей дуэли – все дуэлянты получают <strong>0,5%</strong> от очков соперника. Решаюшая дуэль проводится в случае ничьи. Например: в формате битвы команд из 4 игроков дуэли будут: 1vs1, 3vs3, решающая 4vs4.          <br/><strong>Система поиска</strong> соперника будет искать наиболее подходящего по вашему рейтингу игрока. Если сезон с битвами группового формата, то учитывается количество очков чести каждого игрока в группе относительно своей дуэли  	</p> <h2 id="id-4">Награды и бонусы за топ</h2> <ol> <li>За победу 200 очков хаоса и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук Битвы Команд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ppzjnmhNbiyaQ4uQXBn4p6SYBl1IHcKDTprDj0Ej.webp" title="Сундук Битвы Команд"/>
+</span>
+<span class="item-text"> Сундук Битвы Команд</span>
+</a>
+, 5 шт. </li> <li>За поражение 70 очков хаоса и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук Битвы Команд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ppzjnmhNbiyaQ4uQXBn4p6SYBl1IHcKDTprDj0Ej.webp" title="Сундук Битвы Команд"/>
+</span>
+<span class="item-text"> Сундук Битвы Команд</span>
+</a>
+, 2 шт. </li> </ol> <div class="spoiler"> <div class="spoiler__title">Наполнение сундука битвы команд</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <span><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10706/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нестабильная душа редкого монстра" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/biPkk9XRfYH1wa8Q8y9jh1GbfrVq0CYgN2CLjCsj.webp" title="Нестабильная душа редкого монстра"/>
+</span>
+<span class="item-text"> Нестабильная душа редкого монстра</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10707/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-10707.webp" title="Частица особой сферы"/>
+</span>
+<span class="item-text"> Частица особой сферы</span>
+</a>
+, 3 шт.   						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10707/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-10707.webp" title="Частица особой сферы"/>
+</span>
+<span class="item-text"> Частица особой сферы</span>
+</a>
+, 2 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10707/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-10707.webp" title="Частица особой сферы"/>
+</span>
+<span class="item-text"> Частица особой сферы</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12165/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Мешочек монет для трофеев (4 шт.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/11/12/64b9ea707067fc87895e48cfa693ab6a.png" title="Мешочек монет для трофеев (4 шт.)"/>
+</span>
+<span class="item-text"> Мешочек монет для трофеев (4 шт.)</span>
+</a>
+, 1 шт   						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7423/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Мешочек монет для трофеев (1 шт.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/02/10/6b0a3afb605b02f21d5cbebea63b1716.png" title="Мешочек монет для трофеев (1 шт.)"/>
+</span>
+<span class="item-text"> Мешочек монет для трофеев (1 шт.)</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2725/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Знак PvP" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-2725.webp" title="Знак PvP"/>
+</span>
+<span class="item-text"> Знак PvP</span>
+</a>
+, 1 шт. (нужен для вкладов при прокачке <a href="https://r2online.ru/wiki/guids/guilds/lvl/" target="_blank">уровня гильдии</a>. Можно обменять на сундуки битвы команд или гильдий.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4902/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Награда за завоевание" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/be4456933044a2195590a5b1ce8d25fe.jpg" title="Награда за завоевание"/>
+</span>
+<span class="item-text"> Награда за завоевание</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Маленькое секретное зелье" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/23efc5dcac43f8b7cef8860efed1ec91.png" title="Маленькое секретное зелье"/>
+</span>
+<span class="item-text"> Маленькое секретное зелье</span>
+</a>
+, 5 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1210/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Зелье высокой скорости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/fec8d47d412bcbeece3d9128ae855a7a.jpg" title="Зелье высокой скорости"/>
+</span>
+<span class="item-text"> Зелье высокой скорости</span>
+</a>
+, 10 шт.  					</span> </div> </div> </div> </div> <p> </p> <div class="spoiler"> <div class="spoiler__title">Бонусы от топ мест в рейтинге</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest" style=" width: 70%;"> <tbody><tr class="tr-header tr-odd"> <td style="text-align: left; width: 10%;">  									Место  								</td> <td style="text-align: left; width: 30%;">  									Бонус  								</td> <td align="center">  									Свечение  								</td> </tr> <tr class="tr-even"> <td>  									1  								</td> <td>  									Уровень всех атак +4  									<br/>Все параметры +3  									<br/>Защита +3  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-1.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-1.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td>  									2  								</td> <td>  									Уровень всех атак +3  									<br/>Все параметры +3  									<br/>Защита +3  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-2.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-2.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-even"> <td>  									3  								</td> <td>  									Уровень всех атак +2  									<br/>Все параметры +3  									<br/>Защита +3  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-3.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-3.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td>  									4-5  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +3  									<br/>Защита +3  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-4.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-4.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-4.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-5.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-even"> <td>  									6-7  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +2  									<br/>Защита +3  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-5.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-6.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-5.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-7.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td>  									8-9  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +2  									<br/>Защита +2  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-8.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-9.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-even"> <td>  									10-11  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +2  									<br/>Защита +1  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-10.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-11.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td>  									12-13  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +2  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-12.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-13.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-even"> <td>  									14-15  								</td> <td>  									Уровень всех атак +1  									<br/>Все параметры +1  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-14.webp" style="max-width: 60%;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/bk-6.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/bk-15.webp" style="max-width: 60%;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td>  									16-21  								</td> <td>  									Все параметры +1  									<br/>Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-even"> <td>  									22-26  								</td> <td>  									Урон по монстрам +3  									<br/>Защита от монстров +3  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-alt-even"> <td>  									27-29  								</td> <td>  									Урон по монстрам +3  									<br/>Защита от монстров +2  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-even"> <td>  									30-32  								</td> <td>  									Урон по монстрам +3  									<br/>Защита от монстров +2  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-alt-even"> <td>  									33-35  								</td> <td>  									Урон по монстрам +2  									<br/>Защита от монстров +2  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-even"> <td>  									36-38  								</td> <td>  									Урон по монстрам +2  									<br/>Защита от монстров +1  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-alt-even"> <td>  									39-41  								</td> <td>  									Урон по монстрам +2  									<br/>Защита от монстров +1  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-even"> <td>  									42-44  								</td> <td>  									Урон по монстрам +1  									<br/>Защита от монстров +1  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-alt-even"> <td>  									45-47  								</td> <td>  									Урон по монстрам +1  									<br/>Точность по монстрам +1  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> <tr class="tr-even"> <td>  									48-50  								</td> <td>  									Урон по монстрам +1  								</td> <td align="center">  									Визаульной анимации нет  								</td> </tr> </tbody></table> </div> </div> </div> </div> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Награды главы гильдии — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="guilds.html">Гильдии</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Награды главы гильдии</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<style type="text/css">.table.table-quest {      width: 250px;    }  </style> <div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О награде главы гильдии</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Эквивалентность опыта от свитков</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Механика начисления наград</a></li> </ol> <h2 id="id-1">О награде главы гильдии</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10917/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток опыта" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/T4Y5fzSkeGqdgDXXZvSv8xlDB37IkD2UUEy2tXyE.webp" title="Свиток опыта"/>
+</span>
+<span class="item-text"> Свиток опыта</span>
+</a>
+ – уникальная награда, доступная для главы гильдии. При использовании прибавляет опыт персонажу. Такие свитки может получать только глава гильдии. Чем больше получают опыта согильдийцы, тем больше свитков получает глава.  	</p> <h2 id="id-2">Эквивалентность опыта от свитков</h2> <p>  		Десять таких свитков эквивалентны одному ежедневному заданию в <a href="https://r2online.ru/wiki/quests/daily/exp/rpd1/" target="_blank">Руинах Полнолуния</a> или <a href="https://r2online.ru/wiki/quests/daily/exp/elterbek1/" target="_blank">Эльтера</a>.  	</p> <div class="spoiler"><div class="spoiler__title">Количество процентов</div><div class="spoiler__content"><div class="text-box"> <div class="table-container"> <table class="table table-quest"> <tbody><tr class="tr-header tr-odd"> <td style="width: 15%">Уровень</td> <td>Количество процентов</td> </tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">1</td><td>1,6018%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">2</td><td>1,5255%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">3</td><td>1,4529%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">4</td><td>1,3837%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">5</td><td>1,3178%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">6</td><td>1,2550%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">7</td><td>1,1953%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">8</td><td>1,1384%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">9</td><td>1,0842%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">10</td><td>1,0325%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">11</td><td>0,9834%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">12</td><td>0,9365%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">13</td><td>0,8919%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">14</td><td>0,8495%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">15</td><td>0,8090%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">16</td><td>0,7705%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">17</td><td>0,7338%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">18</td><td>0,6989%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">19</td><td>0,6656%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">20</td><td>0,6339%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">21</td><td>0,6037%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">22</td><td>0,5750%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">23</td><td>0,5476%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">24</td><td>0,5215%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">25</td><td>0,4967%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">26</td><td>0,4730%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">27</td><td>0,4505%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">28</td><td>0,4290%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">29</td><td>0,4086%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">30</td><td>0,3891%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">31</td><td>0,3706%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">32</td><td>0,3530%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">33</td><td>0,3362%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">34</td><td>0,3202%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">35</td><td>0,3049%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">36</td><td>0,2904%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">37</td><td>0,2766%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">38</td><td>0,2634%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">39</td><td>0,2508%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">40</td><td>0,2389%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">41</td><td>0,2275%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">42</td><td>0,2167%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">43</td><td>0,2064%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">44</td><td>0,1965%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">45</td><td>0,1872%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">46</td><td>0,1783%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">47</td><td>0,1698%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">48</td><td>0,1617%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">49</td><td>0,1540%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">50</td><td>0,1467%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">51</td><td>0,1397%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">52</td><td>0,1330%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">53</td><td>0,1267%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">54</td><td>0,1207%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">55</td><td>0,1149%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">56</td><td>0,1094%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">57</td><td>0,1042%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">58</td><td>0,0993%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">59</td><td>0,0945%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">60</td><td>0,0900%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">61</td><td>0,0858%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">62</td><td>0,0817%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">63</td><td>0,0778%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">64</td><td>0,0741%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">65</td><td>0,0705%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">66</td><td>0,0672%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">67</td><td>0,0640%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">68</td><td>0,0609%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">69</td><td>0,0580%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">70</td><td>0,0553%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">71</td><td>0,0526%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">72</td><td>0,0501%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">73</td><td>0,0478%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">74</td><td>0,0455%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">75</td><td>0,0433%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">76</td><td>0,0412%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">77</td><td>0,0393%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">78</td><td>0,0374%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">79</td><td>0,0356%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">80</td><td>0,0339%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">81</td><td>0,0323%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">82</td><td>0,0308%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">83</td><td>0,0293%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">84</td><td>0,0279%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">85</td><td>0,0266%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">86</td><td>0,0253%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">87</td><td>0,0241%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">88</td><td>0,0230%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">89</td><td>0,0219%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">90</td><td>0,0208%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">91</td><td>0,0188%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">92</td><td>0,0169%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">93</td><td>0,0152%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">94</td><td>0,0137%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">95</td><td>0,0123%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">96</td><td>0,0111%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">97</td><td>0,0100%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">98</td><td>0,0090%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">99</td><td>0,0081%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">100</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">101</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">102</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">103</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">104</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">105</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">106</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">107</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">108</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">109</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">110</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">111</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">112</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">113</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">114</td><td>0,0073%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">115</td><td>0,0058%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">116</td><td>0,0046%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">117</td><td>0,0037%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">118</td><td>0,0030%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">119</td><td>0,0024%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">120</td><td>0,0019%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">121</td><td>0,0015%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">122</td><td>0,0012%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">123</td><td>0,0011%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">124</td><td>0,0010%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">125</td><td>0,0010%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">126</td><td>0,0009%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">127</td><td>0,0009%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">128</td><td>0,0008%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">129</td><td>0,0008%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">130</td><td>0,0008%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">131</td><td>0,0007%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">132</td><td>0,0007%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">133</td><td>0,0007%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">134</td><td>0,0006%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">135</td><td>0,0006%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">136</td><td>0,0006%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">137</td><td>0,0005%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">138</td><td>0,0005%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">139</td><td>0,0005%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">140</td><td>0,0004%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">141</td><td>0,0004%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">142</td><td>0,0004%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">143</td><td>0,0003%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">144</td><td>0,0003%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">145</td><td>0,0003%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">146</td><td>0,0002%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">147</td><td>0,0002%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">148</td><td>0,0002%</td></tr> <tr><td class="key-title" style="color: #d7b263; font-weight: normal;">149</td><td>0,0001%</td></tr> </tbody></table> </div> </div></div></div> <h2 id="id-3">Механика начисления наград</h2> <p>  		Опыт, который получают члены гильдии, напрямую влияет на количество свитков, выдаваемых лидеру. Однако учитывается только опыт, накопленный от монстров. С каждым новым свитком условия его получения усложняются, но на следующий день они сбрасываются до исходного уровня. Максимум на счете может быть 50 наград. Снятие награды доступно в окне «Сообщество» [C], вкладка «Гильдия».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/nagrady2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/nagrady2.webp" style="margin-bottom: 15px; max-width: 100%; cursor: zoom-in;"/> </a> <p>  		На примере:  		<br/>Вся гильдия убивает монстров только в подземелье Юпитера ур.2. Убив 1000 монстров – глава получил награду. Чтобы глава получил следующую награду нужно будет убить 1100 монстров, третью награду 1250, четвертую 1400. Не важно снимал глава награды или нет. На следующий день для первой награды нужно будет убить снова 1000 монстров.  	</p> <p>  	Пример условный – учитывается получаемый опыт, а не количество монстров. То есть влияют все модификаторы на опыт: <a href="https://r2online.ru/wiki/characters/rest-point" target="_blank">отдых</a>, <a href="https://r2online.ru/wiki/guids/events/day-morphs/" target="_blank">день повышенного опыта</a>, бонус от <a href="https://r2online.ru/wiki/pets/types" target="_blank">питомца</a> и другое.  	</p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

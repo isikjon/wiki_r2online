@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сад Херакена — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Сад Херакена</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list"><br/>Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Вход в локацию</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Обитатели сада Херакена</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Босс Херакен</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Буйные обитатели сада Херакена</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Эликсир Херакена</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Магическая сумка</a></li> <li><a class="link-in-top" href="#id-7" style="font-size: 14px;">Перевоплощение Талирии</a></li> </ol> <p>  		На острове Акра, среди руин древних святилищ, есть врата, ведущие в иное измерение – Сад Херакена. Говорят, их сотворил великий маг-отшельник, много веков назад удалившийся от людей ради поисков истины. Он стремился постичь гармонию природы и вечной жизни, но вместо этого обрёл облик зверя – льва с крыльями и рогами, символа силы и безумия. Сам сад стал отражением его души: величественный и прекрасный, но полный искажённой энергии. Здесь цветы источают свет, деревья шепчут древние заклятия, а звери – порождения магии – защищают тайну своего хозяина.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/9.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/9.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <h2 id="id-1">Вход в локацию</h2> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/1.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/1.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p>  		Чтобы попасть в Сад, прикоснитесь к порталу на <a href="https://r2online.ru/wiki/guids/locations/akra/" target="_blank">Острове Акра</a>, рядом с Лесом Валефора.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Месторасположение на карте</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/2.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/2.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <p>  		Стоимость входа: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 50,000 серебра  	</p> <h2 id="id-2">Обитатели сада Херакена</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6037/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Всадница Талирия" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/1CBbvdGENLxRlL3jMrtdTkqunEXvtar6tSVaE7Vr.jpg" title="Всадница Талирия"/>
+</span>
+<span class="item-text"> Всадница Талирия</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/3.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/3.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+ (предмет необходим для починки <a href="https://r2online.ru/wiki/guids/unique-items/runes/#id-10" target="_blank">Рун Херакена</a>)  					</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6039/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Олень ветвистой рощи" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/cFHEwZ41sdY1CAiRH8RikHWTtHFMpubK5LjOkoOs.jpg" title="Олень ветвистой рощи"/>
+</span>
+<span class="item-text"> Олень ветвистой рощи</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/4.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/4.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+</p> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6041/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лиса сияющих искр" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/k5gKf0Ysxq87XF40ptK4AQRE9hLrFQoBM3F3NQZp.jpg" title="Лиса сияющих искр"/>
+</span>
+<span class="item-text"> Лиса сияющих искр</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/5.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/5.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+</p> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6043/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кролик кристальных осколков" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/kFDBUAV6jrS9VZtBxx5iaXpoR5oTAyPpBpUAt9B1.jpg" title="Кролик кристальных осколков"/>
+</span>
+<span class="item-text"> Кролик кристальных осколков</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/6.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/6.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+ (предмет необходим для починки <a href="https://r2online.ru/wiki/guids/unique-items/runes/#id-10" target="_blank">Рун Херакена</a>)  					</p> </div> </div> </div> <h2 id="id-3">Босс Херакен</h2> <p>  		В центре Сада растёт магическое дерево. При пробуждении Херакена дерево исчезает – об этом сообщается в системном чате. После исчезновения дерева Херакен возрождается в том же месте через 30–60 минут.   	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/7.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/7.png" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Херакен" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/xhNMy9id9ywkt91veJtM8qV321WP1B9vcSjfY3G1.jpg" title="Херакен"/>
+</span>
+<span class="item-text"> Херакен</span>
+</a>
+ (время возрождения: от 18 до 30 часов)  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12067/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Оружейная сталь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/QV7XDNTP0Q2EtuDQGWxlJIl4TpkBbb8JnbkDO0Qk.webp" title="Оружейная сталь"/>
+</span>
+<span class="item-text"> Оружейная сталь</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12069/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шкатулка с бижутерией" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией"/>
+</span>
+<span class="item-text"> Шкатулка с бижутерией</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца людей III (эффект гильдии)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/rXml1dY3YhWnno4Pl5hC76u8GpwAy3d08QexKujh.jpg" title="Убийца людей III (эффект гильдии)"/>
+</span>
+<span class="item-text"> Убийца людей III (эффект гильдии)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12182/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца монстров III (эффект гильдии)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/lobEgesS2ldlo6e1VuAH96WkxdjN6JAgCpIeyqV6.jpg" title="Убийца монстров III (эффект гильдии)"/>
+</span>
+<span class="item-text"> Убийца монстров III (эффект гильдии)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца монстров II (эффект гильдии)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/S7YkRhXSJSvUTn3nBg51oVt4z3AqeVxqBP5q8MNR.jpg" title="Убийца монстров II (эффект гильдии)"/>
+</span>
+<span class="item-text"> Убийца монстров II (эффект гильдии)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца людей II (эффект гильдии)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/tHBZZa81XdkLM8iB76cJgpA6CoZXXadkHYROkHAX.jpg" title="Убийца людей II (эффект гильдии)"/>
+</span>
+<span class="item-text"> Убийца людей II (эффект гильдии)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/0d0871f0806eae32d30983b62252da50.jpg" title="Камень перевоплощения (легендарный)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/cbb6a3b884f4f88b3a8e3d44c636cbd8.jpg" title="Камень телепортации (легендарный)"/>
+</span>
+<span class="item-text"> Камень телепортации (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/72lrb2aqXJD0ATnr1TbbbAL1yLjSEcj6sT1ubNfs.jpg" title="Камень невидимости (легендарный)"/>
+</span>
+<span class="item-text"> Камень невидимости (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12059/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/AiZACntH07V5biQ6fXdlhdcRFzlujsPDyxmjz1DS.jpg" title="Камень смотрителя (легендарный)"/>
+</span>
+<span class="item-text"> Камень смотрителя (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d045c59a90d7587d8d671b5f5aec4e7c.jpg" title="Камень перевоплощения (эпический)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7224/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/7fa732b517cbed14a48843d74526c11a.jpg" title="Камень телепортации (эпический)"/>
+</span>
+<span class="item-text"> Камень телепортации (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12055/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/BobG0Ubv7UOqWCAaSzeuu9NxLsRhn3pGZKXajjuC.jpg" title="Камень невидимости (эпический)"/>
+</span>
+<span class="item-text"> Камень невидимости (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12058/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/l8LzkOt5ikrTb2nWnLajPbeRaLrZ8y2QePHwv8uC.jpg" title="Камень смотрителя (эпический)"/>
+</span>
+<span class="item-text"> Камень смотрителя (эпический)</span>
+</a>
+</p> </div> </div> <p>  		Все персонажи, находящиеся в Саду Херакена в момент смерти Херакена, получают эффект на 60 минут, который повышает получаемый опыт и шанс выпадения трофеев. Эффект нельзя развеять.  	</p> <h2 id="id-4">Буйные обитатели сада Херакена</h2> <p>  		Через 60–90 минут после смерти Херакена все монстры Сада Херакена становятся буйными на 60 минут.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/8.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/8.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p>  		Буйные монстры ощутимо сильнее обычных.  	</p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6038/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Буйство] Всадница Талирия" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/d8QtAAeTu8hBcSju29XvexeLLtRleq0fUEvfJz9u.jpg" title="[Буйство] Всадница Талирия"/>
+</span>
+<span class="item-text"> [Буйство] Всадница Талирия</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/10.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/10.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+ (предмет необходим для починки <a href="https://r2online.ru/wiki/guids/unique-items/runes/#id-10" target="_blank">Рун Херакена</a>)  						</p><blockquote>  							Имеет повышенный шанс выпадения по сравнению с обычным монстром  						</blockquote> <p></p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6040/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Буйство] Олень ветвистой рощи" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/CsSfg1iYinRL8XpOfOBVLWJujJVFLVMIePmzUDGF.jpg" title="[Буйство] Олень ветвистой рощи"/>
+</span>
+<span class="item-text"> [Буйство] Олень ветвистой рощи</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/11.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/11.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Талирии" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11301.png" title="Свиток Талирии"/>
+</span>
+<span class="item-text"> Свиток Талирии</span>
+</a>
+</p> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6042/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Буйство] Лиса сияющих искр" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/rHrHsz6RP4rS1KZS8foG9NO24Z6CnEFyDJ00Rins.jpg" title="[Буйство] Лиса сияющих искр"/>
+</span>
+<span class="item-text"> [Буйство] Лиса сияющих искр</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/12.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/12.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Талирии" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11301.png" title="Свиток Талирии"/>
+</span>
+<span class="item-text"> Свиток Талирии</span>
+</a>
+</p> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6044/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Буйство] Кролик кристальных осколков" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/g7e9hGoRwm1lCa45ynJTH2V1WpfEDkmrag0Puj2O.jpg" title="[Буйство] Кролик кристальных осколков"/>
+</span>
+<span class="item-text"> [Буйство] Кролик кристальных осколков</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/13.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/13.jpg" style="max-width: 50%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+ (предмет необходим для починки <a href="https://r2online.ru/wiki/guids/unique-items/runes/#id-10" target="_blank">Рун Херакена</a>)  						</p><blockquote>  							Имеет повышенный шанс выпадения по сравнению с обычным монстром  						</blockquote> <p></p> </div> </div> </div> <h2 id="id-5">Эликсир Херакена</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11529/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Эликсир Херакена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/5LMkk9HoRaStXGl3ypImS5eSQAG6yagyzGrG8OeI.jpg" title="Эликсир Херакена"/>
+</span>
+<span class="item-text"> Эликсир Херакена</span>
+</a>
+ значительно упрощает охоту на монстров в Саду Херакена.  	</p> <blockquote>  			Мутный настой, пропитанный силой Сада Херакена.  			<br/>Против монстров Сада Херакена:  			<br/>Уровень всех атак +5  			<br/>Время действия эффекта: 20 минут  		</blockquote> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9801/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пустая бутылка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/Pkov3AuSFOE2NZig4aD75qYaidvGOGKivkraKZQy.png" title="Пустая бутылка"/>
+</span>
+<span class="item-text"> Пустая бутылка</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000 шт.  					</p> </div> </div> </div> <h2 id="id-6">Магическая сумка</h2> <p>  		С некоторых монстров Сада Херакена выпадает особый предмет <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+. Семяна нельзя держать в обычном инвентаре, для хранения требуется магическая сумка.  	</p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11248/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Маленькая магическая сумка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11248.png" title="Маленькая магическая сумка"/>
+</span>
+<span class="item-text"> Маленькая магическая сумка</span>
+</a>
+ выдаётся за выполнение <a href="https://r2online.ru/wiki/quests/epic/hard/heraken/" target="_blank">тяжелого эпического задания</a> (Вместимость: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+</a>
+ 2,000 семян)  		<br/><br/>Сумку <strong>можно улучшить безопасно</strong> с помощью крафта:  		<br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средняя магическая сумка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11249.png" title="Средняя магическая сумка"/>
+</span>
+<span class="item-text"> Средняя магическая сумка</span>
+</a>
+ (Вместимость: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+</a>
+ 4,000 семян)  		</p><div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11248/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Маленькая магическая сумка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11248.png" title="Маленькая магическая сумка"/>
+</span>
+<span class="item-text"> Маленькая магическая сумка</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+, 100 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15027/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения высокого качества" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15027.jpg" title="Средство для смешения высокого качества"/>
+</span>
+<span class="item-text"> Средство для смешения высокого качества</span>
+</a>
+, 3 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 10 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 500,000 шт.  					</p> </div> </div> </div> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11250/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Большая магическая сумка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11250.png" title="Большая магическая сумка"/>
+</span>
+<span class="item-text"> Большая магическая сумка</span>
+</a>
+ (Вместимость: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+</a>
+ 6,000 семян)  		<div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Средняя магическая сумка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11249.png" title="Средняя магическая сумка"/>
+</span>
+<span class="item-text"> Средняя магическая сумка</span>
+</a>
+, 1 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11305/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок природы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11305.png" title="Порошок природы"/>
+</span>
+<span class="item-text"> Порошок природы</span>
+</a>
+, 300 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15027/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения высокого качества" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15027.jpg" title="Средство для смешения высокого качества"/>
+</span>
+<span class="item-text"> Средство для смешения высокого качества</span>
+</a>
+, 9 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+, 30 шт.  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 1,500,000 шт.  					</p> </div> </div> </div> <p></p> <h2 id="id-7">Перевоплощение Талирии</h2> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/heraken/14.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/heraken/14.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 10px"/> </a> <p>  		С помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Талирии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11301.png" title="Свиток Талирии"/>
+</span>
+<span class="item-text"> Свиток Талирии</span>
+</a>
+, которые выпадают из некоторых буйных монстров, можно изготовить <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11281/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Талирии (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11281.png" title="Книга Талирии (легендарное)"/>
+</span>
+<span class="item-text"> Книга Талирии (легендарное)</span>
+</a>
+. При улучшении <a href="https://r2online.ru/wiki/morphs/show/6060/" target="_blank">перевоплощения Талирии</a>, персонаж <a href="https://r2online.ru/wiki/morphs/improved" target="_blank">получит пассивный бонус</a>, который увеличит урон против монстров Сада Херакена на +5.		  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток Талирии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11301.png" title="Свиток Талирии"/>
+</span>
+<span class="item-text"> Свиток Талирии</span>
+</a>
+, 1500 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13438/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Письмена о трансформации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13438.jpg" title="Письмена о трансформации"/>
+</span>
+<span class="item-text"> Письмена о трансформации</span>
+</a>
+, 30 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11304/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Природная обложка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11304.png" title="Природная обложка"/>
+</span>
+<span class="item-text"> Природная обложка</span>
+</a>
+, 30 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13440/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ониксовая инкрустация" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13440.jpg" title="Ониксовая инкрустация"/>
+</span>
+<span class="item-text"> Ониксовая инкрустация</span>
+</a>
+, 1 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000,000 шт.  					</p> </div> </div> </div> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Именные — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="boss.html">Боссы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Именные</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<style>    .table.table-quest td {      vertical-align: top;      text-align: left;    }      .table.table-quest td:first-child {      text-align: left;    }      .table.table-quest td:not(:first-child) {      text-align: left;    }  </style> <div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-101" style="font-size: 14px;">Именные мини и миди-боссы</a></li> <li><a class="link-in-top" href="#id-102" style="font-size: 14px;">Время возрождения</a></li> <li><a class="link-in-top" href="#id-103" style="font-size: 14px;">Дроп</a></li> <li><a class="link-in-top" href="#id-104" style="font-size: 14px;">Места возрождения миди-боссов</a></li> <li><a class="link-in-top" href="#id-105" style="font-size: 14px;">Места возрождения мини-боссов</a></li> </ol> <h2 id="id-101">Именные мини и миди-боссы</h2> <p>  		Именные боссы – это самые слабые боссы в игре. Их можно убить в одиночку, но начальная экипировка может не позволить вам легко одолеть их. Поэтому на первых шагах стоит позвать на помощь других игроков. Эти боссы не умеют восстанавливать здоровье.  	</p> <h2 id="id-102">Время возрождения</h2> <p>  		Мини-боссы возрождаются от 1 минуты до 4 часов. Даже если вы только что убили босса, через 1 минуту он может появиться.  		<br/>Миди-боссы возрождаются через 2-4 часа, после смерти.  	</p> <h2 id="id-103">Дроп</h2> <div class="spoiler"> <div class="spoiler__title">Дроп-лист мини-боссов</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <strong>Представлены предметы, которые составляют основную ценность мини-боссов.</strong> <br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Маленький амулет" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/r5yHqSUJ8cUBtk00gmn2CAtmeaXzTFnNJrd4eM2F.webp" title="Маленький амулет"/>
+</span>
+<span class="item-text"> Маленький амулет</span>
+</a>
+ – для завершения <a href="https://r2online.ru/wiki/quests/noob" target="_blank">начальной цепочки</a> и изучения умения «50+».  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Золотой ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1848c69f9b5e750222354a850cad3937.jpg" title="Золотой ключ"/>
+</span>
+<span class="item-text"> Золотой ключ</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12064/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук материалов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/wq6BvZlvlKtOGyptdyZA602l43BhsCdk9zPSPxuX.jpg" title="Сундук материалов"/>
+</span>
+<span class="item-text"> Сундук материалов</span>
+</a>
+<div class="spoiler" style="margin-bottom:-10px"> <div class="spoiler__title">Состав сундука материалов</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/922/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бриллиант" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/c21cffbecc25b4856b93e23e37579635.jpg" title="Бриллиант"/>
+</span>
+<span class="item-text"> Бриллиант</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/923/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рубин" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/0ffgty382dba999ae1c7d47egbq0aa7d.jpg" title="Рубин"/>
+</span>
+<span class="item-text"> Рубин</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/924/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Изумруд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/de2cc26409a7d3a4945e8aad08f050e5.gif" title="Изумруд"/>
+</span>
+<span class="item-text"> Изумруд</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/925/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапфир" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/74e2ba4d6d4accb05dcc91c224bcbbbf.jpg" title="Сапфир"/>
+</span>
+<span class="item-text"> Сапфир</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/918/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Жемчужина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/619212dfc0704141f8c0b834f140ab20.gif" title="Жемчужина"/>
+</span>
+<span class="item-text"> Жемчужина</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/919/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Аметист" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/bf8766986c6525845393ab9e7062d5e8.jpg" title="Аметист"/>
+</span>
+<span class="item-text"> Аметист</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/920/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Топаз" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/3f566688be2cdc67e160c4fed0ec711e.jpg" title="Топаз"/>
+</span>
+<span class="item-text"> Топаз</span>
+</a>
+</div> </div> </div> </div> <br/>Разные кондитерские ингредиенты в зависимости от места обитания босса:  									<br/>Черные земли:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/708/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/3cef96dcc9b8035d23f69e30bb19218a.jpg" title="Медвежья желчь [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/429/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/4b6538a44a1dfdc2b83477cd76dee98e.jpg" title="Яйцо [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/428/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/64223ccf70bbb65a3a4aceac37e21016.jpg" title="Дыня [Еда]"/>
+</span>
+</a>
+<br/>Фуриэ:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/422/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/b55ec28c52d5f6205684a473a2193564.jpg" title="Яблоко [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/10/23/13abcded7173607c2673dbb44809cd2b.png" title="Морковь [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/43142/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/rkBDjECCIwH2uM22LNNcm8XHvXuBjc1D7A05h33b.jpg" title="Банан [Еда]"/>
+</span>
+</a>
+<br/>Байрон:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/708/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/3cef96dcc9b8035d23f69e30bb19218a.jpg" title="Медвежья желчь [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/429/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/4b6538a44a1dfdc2b83477cd76dee98e.jpg" title="Яйцо [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/428/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/64223ccf70bbb65a3a4aceac37e21016.jpg" title="Дыня [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/422/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/b55ec28c52d5f6205684a473a2193564.jpg" title="Яблоко [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/10/23/13abcded7173607c2673dbb44809cd2b.png" title="Морковь [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/43142/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/rkBDjECCIwH2uM22LNNcm8XHvXuBjc1D7A05h33b.jpg" title="Банан [Еда]"/>
+</span>
+</a>
+<br/>Роден:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12169/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QjvjWHnsZnDkJfY60peotrMOUG65jSQ9earWxLNv.jpg" title="Лимон [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12171/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/mkH0VB415dVeX4tVNbHzHzNjnWvTVdyAvPOhBgpp.jpg" title="Сахар [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12170/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/okurf9WfDBgtqzzykqcOhoTC4gEFyL42hkTJzGOU.jpg" title="Лайм [Еда]"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12172/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/z7vgoUwwAf0q7YLmYbneY7crOCaRCuBazL6mKyF2.jpg" title="Тростниковый сахар [Еда]"/>
+</span>
+</a>
+<br/>Уникальные книги мага:  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/20014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Дикий орк" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/SwHntj80AI1J63pQSregySJTHTPziMylKUXu9ORv.jpg" title="Дикий орк"/>
+</span>
+<span class="item-text"> Дикий орк</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/828/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Развеивание магии (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/c31e21127bcb915df4ff14547faa74a6.jpg" title="Развеивание магии (I)"/>
+</span>
+<span class="item-text"> Развеивание магии (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/20009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рарог" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/To4Xe2D6NgZGBPcKBn4NVIs3Xzw159o982EJktuJ.jpg" title="Рарог"/>
+</span>
+<span class="item-text"> Рарог</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1246/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Обнаружение (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/30/fd624c09096f6e4d9e473df20d523f82.png" title="Обнаружение (I)"/>
+</span>
+<span class="item-text"> Обнаружение (I)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/20008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сибарида" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/LSM1OVvL36DGlfv6rKRinL7JYF5UvfK7t4VSuStU.jpg" title="Сибарида"/>
+</span>
+<span class="item-text"> Сибарида</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/418/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Паутина(I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/76b11cbd047b9da37398fa166534af1d.jpg" title="Паутина(I)"/>
+</span>
+<span class="item-text"> Паутина(I)</span>
+</a>
+</div> </div> </div> </div> <div class="spoiler" style="margin-bottom:15px"> <div class="spoiler__title">Дроп-лист миди-боссов</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <strong>Представлены предметы, которые составляют основную ценность миди-боссов.</strong> <br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Маленький амулет" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/r5yHqSUJ8cUBtk00gmn2CAtmeaXzTFnNJrd4eM2F.webp" title="Маленький амулет"/>
+</span>
+<span class="item-text"> Маленький амулет</span>
+</a>
+ – для завершения <a href="https://r2online.ru/wiki/quests/noob" target="_blank">начальной цепочки</a> и изучения умения «50+».  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1478/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Книга манговых рецептов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/5f68fa8c48cab1482ec861899f192108.jpg" title="Книга манговых рецептов"/>
+</span>
+<span class="item-text"> Книга манговых рецептов</span>
+</a>
+ – для <a href="https://r2online.ru/wiki/quests/simple/konditer" target="_blank">задания кондитера</a>.  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Золотой ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1848c69f9b5e750222354a850cad3937.jpg" title="Золотой ключ"/>
+</span>
+<span class="item-text"> Золотой ключ</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12064/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук материалов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/wq6BvZlvlKtOGyptdyZA602l43BhsCdk9zPSPxuX.jpg" title="Сундук материалов"/>
+</span>
+<span class="item-text"> Сундук материалов</span>
+</a>
+<div class="spoiler" style="margin-bottom:-10px"> <div class="spoiler__title">Состав сундука материалов</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/922/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бриллиант" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/c21cffbecc25b4856b93e23e37579635.jpg" title="Бриллиант"/>
+</span>
+<span class="item-text"> Бриллиант</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/923/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рубин" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/0ffgty382dba999ae1c7d47egbq0aa7d.jpg" title="Рубин"/>
+</span>
+<span class="item-text"> Рубин</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/924/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Изумруд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/de2cc26409a7d3a4945e8aad08f050e5.gif" title="Изумруд"/>
+</span>
+<span class="item-text"> Изумруд</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/925/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапфир" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/74e2ba4d6d4accb05dcc91c224bcbbbf.jpg" title="Сапфир"/>
+</span>
+<span class="item-text"> Сапфир</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/918/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Жемчужина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/619212dfc0704141f8c0b834f140ab20.gif" title="Жемчужина"/>
+</span>
+<span class="item-text"> Жемчужина</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/919/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Аметист" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/bf8766986c6525845393ab9e7062d5e8.jpg" title="Аметист"/>
+</span>
+<span class="item-text"> Аметист</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/920/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Топаз" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/3f566688be2cdc67e160c4fed0ec711e.jpg" title="Топаз"/>
+</span>
+<span class="item-text"> Топаз</span>
+</a>
+</div> </div> </div> </div> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12065/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/rHRIOd01lB09PmAeVgtdBVjpgDsSl94alE4txAVy.jpg" title="Сундук сокровищ"/>
+</span>
+<span class="item-text"> Сундук сокровищ</span>
+</a>
+   						<div class="spoiler" style="margin-bottom:-10px"> <div class="spoiler__title">Состав сундука сокровищ</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+ <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12072/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мешок древних монет" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/l194jB9sN8nXgXn1Wh6zX9kFmmFE19R1Bx10Ngfe.jpg" title="Мешок древних монет"/>
+</span>
+<span class="item-text"> Мешок древних монет</span>
+</a>
+</div> </div> </div> </div> <br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12057/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень смотрителя (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/eyjiqCY2SoqKu7zcL5xPpYd9RnnZ2BCptetcbn7c.jpg" title="Камень смотрителя (редкий)"/>
+</span>
+<span class="item-text"> Камень смотрителя (редкий)</span>
+</a>
+   					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12054/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень невидимости (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H4FNvuOQ9NA9tSfmhPCAFqhPucsZnbmaAlIkydQp.jpg" title="Камень невидимости (редкий)"/>
+</span>
+<span class="item-text"> Камень невидимости (редкий)</span>
+</a>
+   					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7223/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень телепортации (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/bea5955b308361a1b07bc55042e25e54.jpg" title="Камень телепортации (редкий)"/>
+</span>
+<span class="item-text"> Камень телепортации (редкий)</span>
+</a>
+   					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/1f4477bad7af3616c1f933a02bfabe4e.jpg" title="Камень перевоплощения (редкий)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (редкий)</span>
+</a>
+<br/>Уникальные книги мага:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/93/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огр" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/t8GR6tHAUA9lTTDzczdKGN6MJMqF6limtgdOoCJG.jpg" title="Огр"/>
+</span>
+<span class="item-text"> Огр</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/829/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Создание еды" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/m8iHikX0jPfwgsRXTqbfEbwDhDOiLrfi9ohQ5Ai1.webp" title="Создание еды"/>
+</span>
+<span class="item-text"> Создание еды</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/401/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный демон" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/3ddaf61e244cba558242061b27d81871.png" title="Огненный демон"/>
+</span>
+<span class="item-text"> Огненный демон</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/706/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проклятье" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3071932065839bcb3e9b3ea94688833d.jpg" title="Проклятье"/>
+</span>
+<span class="item-text"> Проклятье</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/99/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огр-маг" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/31fb3bd4f88f67d6a86899d9db7f592f.png" title="Огр-маг"/>
+</span>
+<span class="item-text"> Огр-маг</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/705/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Тишина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/62a58f5edf5793332c412e116807fd16.jpg" title="Тишина"/>
+</span>
+<span class="item-text"> Тишина</span>
+</a>
+</div> </div> </div> </div> <h2 id="id-104">Места возрождения миди-боссов</h2> <p>  	Миди-боссы – чуть сильнее, находятся на предпоследних уровнях начальных подземелий. Могут возродиться в любой точке.  </p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/95/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горгулья" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/06a4b8e39f49ebc782a4b1cd310bb761.png" title="Горгулья"/>
+</span>
+<span class="item-text"> Горгулья</span>
+</a>
+ –   								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/temnye-peshchery/3/" target="_blank">Темные пещеры ур. 3</a><br/> <a class="catalog-item" href="https://r2online.ru/wiki/locations/401/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный демон" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/3ddaf61e244cba558242061b27d81871.png" title="Огненный демон"/>
+</span>
+<span class="item-text"> Огненный демон</span>
+</a>
+ –   								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/bashnya-ognya/3/" target="_blank">Башня огня ур. 3</a><br/> <a class="catalog-item" href="https://r2online.ru/wiki/locations/102/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный единорог" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/6a9ac357f4c7839cfe0aed42c3cfaadd.png" title="Черный единорог"/>
+</span>
+<span class="item-text"> Черный единорог</span>
+</a>
+ –   								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podzemele-nejiti/2/" target="_blank">Подземелье нежити ур. 2</a><br/> <a class="catalog-item" href="https://r2online.ru/wiki/locations/408/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Виверна" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/eb6832a85ce613f44d5ee054ff3e63b7.png" title="Виверна"/>
+</span>
+<span class="item-text"> Виверна</span>
+</a>
+ –   								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/boloto-chernogo-drakona/3/" target="_blank">Болото Черного дракона ур. 3</a><br/> <a class="catalog-item" href="https://r2online.ru/wiki/locations/93/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огр" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/t8GR6tHAUA9lTTDzczdKGN6MJMqF6limtgdOoCJG.jpg" title="Огр"/>
+</span>
+<span class="item-text"> Огр</span>
+</a>
+ –   								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/logovo-jukov/2/" target="_blank">Логово жуков ур. 2</a><br/> <a class="catalog-item" href="https://r2online.ru/wiki/locations/99/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огр-маг" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/31fb3bd4f88f67d6a86899d9db7f592f.png" title="Огр-маг"/>
+</span>
+<span class="item-text"> Огр-маг</span>
+</a>
+ –  								  								  									<a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podvodnaya-peshchera-egira/2/" target="_blank">Пещера Эгира ур. 2</a> </p> <h2 id="id-105" style="margin-top:20px">Места возрождения мини-боссов</h2> <p>  					Мини-боссы обитают на поверхности Колфорта. Представлена общая карта всех именных мини-боссов. Все боссы пронумерованы, на общей карте показывается примерное место обитания, а в <a class="link-in-top" href="#id-1" style="font-size: 14px;">таблице</a> – конкретные точки. Нажмите на картинку, чтобы ее увеличить.  				</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/full-map.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/full-map.jpg" style="max-width: 60%;"/> </a> <div class="table-container" id="list" style="margin-top: 15px"> <table class="table table-quest not-bordered"> <tbody><tr> <td>  									1. <a class="link-in-top" href="#id-1" style="font-size: 14px;">▼ Огр-воин</a> </td> <td>  									11. <a class="link-in-top" href="#id-11" style="font-size: 14px;">▼ Сибарида</a> </td> <td>  									21. <a class="link-in-top" href="#id-21" style="font-size: 14px;">▼ Командир кобольдов</a> </td> </tr> <tr> <td>  									2. <a class="link-in-top" href="#id-2" style="font-size: 14px;">▼ Стальной жук</a> </td> <td>  									12. <a class="link-in-top" href="#id-12" style="font-size: 14px;">▼ Гигантский тритон</a> </td> <td>  									22. <a class="link-in-top" href="#id-22" style="font-size: 14px;">▼ Владычица Озера</a> </td> </tr> <tr> <td>  									3. <a class="link-in-top" href="#id-3" style="font-size: 14px;">▼ Адская гончая</a> </td> <td>  									13. <a class="link-in-top" href="#id-13" style="font-size: 14px;">▼ Руум</a> </td> <td>  									23. <a class="link-in-top" href="#id-23" style="font-size: 14px;">▼ Крепкий скелет</a> </td> </tr> <tr> <td>  									4. <a class="link-in-top" href="#id-4" style="font-size: 14px;">▼ Кабалло</a> </td> <td>  									14. <a class="link-in-top" href="#id-14" style="font-size: 14px;">▼ Финфолк</a> </td> <td>  									24. <a class="link-in-top" href="#id-24" style="font-size: 14px;">▼ Мудрый Древень</a> </td> </tr> <tr> <td>  									5. <a class="link-in-top" href="#id-5" style="font-size: 14px;">▼ Шрам</a> </td> <td>  									15. <a class="link-in-top" href="#id-15" style="font-size: 14px;">▼ Рарог</a> </td> <td>  									25. <a class="link-in-top" href="#id-25" style="font-size: 14px;">▼ Клык</a> </td> </tr> <tr> <td>  									6. <a class="link-in-top" href="#id-6" style="font-size: 14px;">▼ Королева Мав</a> </td> <td>  									16. <a class="link-in-top" href="#id-16" style="font-size: 14px;">▼ Король Ракум</a> </td> <td>  									26. <a class="link-in-top" href="#id-26" style="font-size: 14px;">▼ Лесной куролиск</a> </td> </tr> <tr> <td>  									7. <a class="link-in-top" href="#id-7" style="font-size: 14px;">▼ Чабон</a> </td> <td>  									17. <a class="link-in-top" href="#id-17" style="font-size: 14px;">▼ Большой тролль-воин</a> </td> <td>  									27. <a class="link-in-top" href="#id-27" style="font-size: 14px;">▼ Хранитель Вулкана</a> </td> </tr> <tr> <td>  									8. <a class="link-in-top" href="#id-8" style="font-size: 14px;">▼ Паук-птицеед</a> </td> <td>  									18. <a class="link-in-top" href="#id-18" style="font-size: 14px;">▼ Дикий орк</a> </td> <td>  									28. <a class="link-in-top" href="#id-28" style="font-size: 14px;">▼ Сирена</a> </td> </tr> <tr> <td>  									9. <a class="link-in-top" href="#id-9" style="font-size: 14px;">▼ Гигантский василиск</a> </td> <td>  									19. <a class="link-in-top" href="#id-19" style="font-size: 14px;">▼ Королева гарпий</a> </td> <td>  									29. <a class="link-in-top" href="#id-29" style="font-size: 14px;">▼ Куру</a> </td> </tr> <tr> <td>  									10. <a class="link-in-top" href="#id-10" style="font-size: 14px;">▼ Флинд мечник</a> </td> <td>  									20. <a class="link-in-top" href="#id-20" style="font-size: 14px;">▼ Золотой скорпион</a> </td> <td>  									30. <a class="link-in-top" href="#id-30" style="font-size: 14px;">▼ Минотавр-воин</a> </td> </tr> <tr> <td> </td> <td> </td> <td>  									31. <a class="link-in-top" href="#id-31" style="font-size: 14px;">▼ Вождь гигантов</a> </td> </tr> </tbody></table> </div> <div class="table-container"> <table class="table table-quest" style="max-width: 500px"> <tbody><tr class="tr-header tr-odd"> <td>  								Босс  							</td> <td>  								Карта  							</td> </tr> <tr class="tr-alt-even"> <td> <span id="id-1" style="font-size: 18px;">1.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/706/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огр-воин" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/28/98248fc655c70ba46471f644f3dec6b5.png" title="Огр-воин"/>
+</span>
+<span class="item-text"> Огр-воин</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-706.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-706.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-2" style="font-size: 18px;">2.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/705/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стальной жук" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/63e36791893658436ccf67884f1865c4.jpg" title="Стальной жук"/>
+</span>
+<span class="item-text"> Стальной жук</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-705.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-705.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-3" style="font-size: 18px;">3.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Адская гончая" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/sGVXYs8bavTLJkRALJxmPID8n8hfAlmbbh1VdF9f.jpg" title="Адская гончая"/>
+</span>
+<span class="item-text"> Адская гончая</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20006.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20006.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-4" style="font-size: 18px;">4.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/578/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кабалло" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/56e1b36a7e5b477ad607ef8bd71f042b.jpg" title="Кабалло"/>
+</span>
+<span class="item-text"> Кабалло</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-578.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-578.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-5" style="font-size: 18px;">5.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/371/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шрам" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/41ab9a1aaa37ebdecb40d0cea5bd0c3a.png" title="Шрам"/>
+</span>
+<span class="item-text"> Шрам</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-371.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-371.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-6" style="font-size: 18px;">6.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/702/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Королева Мав" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/28/38be19dea72270eb38bfc0ecf4eda28f.png" title="Королева Мав"/>
+</span>
+<span class="item-text"> Королева Мав</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-702.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-702.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-7" style="font-size: 18px;">7.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чабон" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/0f149fdd7b39ae3355404a87a60122c9.png" title="Чабон"/>
+</span>
+<span class="item-text"> Чабон</span>
+</a>
+</td> <td>  								 <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-389.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-389.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-8" style="font-size: 18px;">8.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/365/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Паук-птицеед" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/1718cdfd65cde85f1e2cfc872d737f96.png" title="Паук-птицеед"/>
+</span>
+<span class="item-text"> Паук-птицеед</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-365.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-365.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-9" style="font-size: 18px;">9.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/703/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Гигантский василиск" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/0f86e52ad9cb12c0bca2c6e581f7ee06.png" title="Гигантский василиск"/>
+</span>
+<span class="item-text"> Гигантский василиск</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-703.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-703.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-10" style="font-size: 18px;">10.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/701/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Флинд мечник" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/19/b412babe81dd9681caa4193de1f31015.png" title="Флинд мечник"/>
+</span>
+<span class="item-text"> Флинд мечник</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-701.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-701.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-11" style="font-size: 18px;">11.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сибарида" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/LSM1OVvL36DGlfv6rKRinL7JYF5UvfK7t4VSuStU.jpg" title="Сибарида"/>
+</span>
+<span class="item-text"> Сибарида</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20008.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20008.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-12" style="font-size: 18px;">12.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/369/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Гигантский тритон" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/d449aabf608e471b67ee5b88adc61795.png" title="Гигантский тритон"/>
+</span>
+<span class="item-text"> Гигантский тритон</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-369.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-369.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-13" style="font-size: 18px;">13.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/364/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руум" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/03/09/545f125e051c2ec098e4efea3d11b6b1.png" title="Руум"/>
+</span>
+<span class="item-text"> Руум</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-364.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-364.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-14" style="font-size: 18px;">14.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Финфолк" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/2pgDNQyrPaQkKkgIeXaAy9TRiutWde4W1L9N7lLn.jpg" title="Финфолк"/>
+</span>
+<span class="item-text"> Финфолк</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20010.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20010.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-15" style="font-size: 18px;">15.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рарог" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/To4Xe2D6NgZGBPcKBn4NVIs3Xzw159o982EJktuJ.jpg" title="Рарог"/>
+</span>
+<span class="item-text"> Рарог</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20009.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20009.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-16" style="font-size: 18px;">16.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/704/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Король Ракум" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3a595521d1e3689bf75a82b4a2d43e5b.jpg" title="Король Ракум"/>
+</span>
+<span class="item-text"> Король Ракум</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-704.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-704.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-17" style="font-size: 18px;">17.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/579/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Большой тролль-воин" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/067654bc7962cc55c653c75e755cb631.jpg" title="Большой тролль-воин"/>
+</span>
+<span class="item-text"> Большой тролль-воин</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-579.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-579.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-18" style="font-size: 18px;">18.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Дикий орк" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/SwHntj80AI1J63pQSregySJTHTPziMylKUXu9ORv.jpg" title="Дикий орк"/>
+</span>
+<span class="item-text"> Дикий орк</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20014.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20014.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-19" style="font-size: 18px;">19.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/363/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Королева гарпий" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/097b267716825bcb32e5a920fc429e33.jpg" title="Королева гарпий"/>
+</span>
+<span class="item-text"> Королева гарпий</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-363.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-363.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-20" style="font-size: 18px;">20.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20007/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Золотой скорпион" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/1e6817v5D8Jr5Om5rIw4F0vfbYcwpDksrp7EjZxN.jpg" title="Золотой скорпион"/>
+</span>
+<span class="item-text"> Золотой скорпион</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20007.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20007.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-21" style="font-size: 18px;">21.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/362/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Командир кобольдов" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/f27caf600241b5391ea0006a7faa91d8.png" title="Командир кобольдов"/>
+</span>
+<span class="item-text"> Командир кобольдов</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-362.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-362.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-22" style="font-size: 18px;">22.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20005/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Владычица Озера" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/kX4LW1nmj1I1NR0M9NMay5oao1KxBt16PCRQuPY2.jpg" title="Владычица Озера"/>
+</span>
+<span class="item-text"> Владычица Озера</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/photos/16/vladichiza.jpg"><img alt="" src="https://r2online.ru/storage/photos/16/vladichiza.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-23" style="font-size: 18px;">23.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/359/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Крепкий скелет" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/5f546feae3e16cf3cfb1b15455a73ac5.png" title="Крепкий скелет"/>
+</span>
+<span class="item-text"> Крепкий скелет</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-359.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-359.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-24" style="font-size: 18px;">24.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мудрый Древень" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/OVttgWgm6DIT1XW4EYJrQVZF9ICjJUJQ553Tyn81.jpg" title="Мудрый Древень"/>
+</span>
+<span class="item-text"> Мудрый Древень</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20013.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20013.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-25" style="font-size: 18px;">25.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Клык" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/AbBTNmuDezsCSLOiBHBxeR9nTioxgZ1fw7rtBjQU.jpg" title="Клык"/>
+</span>
+<span class="item-text"> Клык</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20011.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20011.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-26" style="font-size: 18px;">26.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/361/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лесной куролиск" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/051778e8141878aa2f65fe8787cfd734.png" title="Лесной куролиск"/>
+</span>
+<span class="item-text"> Лесной куролиск</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-361.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-361.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-27" style="font-size: 18px;">27.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель Вулкана" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/8xHcdVutuIvnZICOWmmHYL97oLb3j28SGnFYqAFI.jpg" title="Хранитель Вулкана"/>
+</span>
+<span class="item-text"> Хранитель Вулкана</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20012.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-20012.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-28" style="font-size: 18px;">28.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/35/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сирена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/09/07/45bc97a2b33bbdf017a17401d3e1f999.png" title="Сирена"/>
+</span>
+<span class="item-text"> Сирена</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-35.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-35.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-29" style="font-size: 18px;">29.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/360/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Куру" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/06/26/311e483d77aa33257792a07621c7df75.png" title="Куру"/>
+</span>
+<span class="item-text"> Куру</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-360.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-360.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-even"> <td> <span id="id-30" style="font-size: 18px;">30.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Минотавр-воин" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/5780013e7577c56c98d5b7e844b1e657.jpg" title="Минотавр-воин"/>
+</span>
+<span class="item-text"> Минотавр-воин</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-154.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-154.jpg" style="max-width: 150px;"/> </a> </td> </tr> <tr class="tr-alt-even"> <td> <span id="id-31" style="font-size: 18px;">31.</span> <a class="catalog-item" href="https://r2online.ru/wiki/locations/120/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вождь гигантов" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/8d8b8c94c1b3f02f07c101dc23e38da1.png" title="Вождь гигантов"/>
+</span>
+<span class="item-text"> Вождь гигантов</span>
+</a>
+</td> <td> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-120.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%98%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/2-120.jpg" style="max-width: 150px;"/> </a> </td> </tr> </tbody></table> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шансы усиления предметов — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="craft.html">Изготовление</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Шансы усиления предметов</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Виды свитков усиления</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Благословенные и проклятые предметы</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Усиление защитной экипировки</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Усиление оружия</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Усиление бижутерии слияния</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Усиление рун</a></li> <li><a class="link-in-top" href="#id-7" style="font-size: 14px;">Усиление сфер</a></li> <li><a class="link-in-top" href="#id-8" style="font-size: 14px;">Усиление особых сфер</a></li> </ol> <h2 id="id-1">Виды свитков усиления</h2> <p>Каждый следующий свиток имеет больше шансов усилить (заточить) предмет.</p> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr> <td>  						Для оружия и снаряжения  					</td> <td>  						Для предметов защиты  					</td> <td>  						Для <a href="https://r2online.ru/wiki/guids/craft/slitaya-bija/" target="_blank">бижутерии слияния</a> </td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12254/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления бижутерии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/z51rYvvS5AeuktSJaRCcosQkr1PZ4F3epSZBKHJF.webp" title="Свиток усиления бижутерии"/>
+</span>
+<span class="item-text"> Свиток усиления бижутерии</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12255/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Улучшенный свиток усиления бижутерии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/hXFhAsdILPnwZKi7e4aRXLF8v1mfhzgwQeTLKhTQ.webp" title="Улучшенный свиток усиления бижутерии"/>
+</span>
+<span class="item-text"> Улучшенный свиток усиления бижутерии</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленный свиток усиления бижутерии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1FW0PI1RrFQqiw5mUs6Kcy2UWVEdFsUCoXcp7swd.webp" title="Усиленный свиток усиления бижутерии"/>
+</span>
+<span class="item-text"> Усиленный свиток усиления бижутерии</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Блестящий свиток усиления оружия</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/2821ae1a68bf13f62b4912e8efec851e.png" title="Блестящий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Блестящий свиток усиления доспехов</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленный свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+<span class="item-text"> Усиленный свиток усиления оружия</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленный свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/bb26e8997c47c7c0c98629b3af20afc4.jpg" title="Усиленный свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Усиленный свиток усиления доспехов</span>
+</a>
+</td> </tr> </tbody></table> </div> <p>  		В случае неудачного усиления любым свитком есть небольшой шанс сохранения предмета.  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1623/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Оберег Метеоса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/917079dad8e53cdbe55be81850d7f89b.jpg" title="Оберег Метеоса"/>
+</span>
+<span class="item-text"> Оберег Метеоса</span>
+</a>
+ значительно увеличивает шанс сохранения.  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6283/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нестабильный оберег Метеоса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/e943f0e233de1caa3d74a991471e1b9e.jpg" title="Нестабильный оберег Метеоса"/>
+</span>
+<span class="item-text"> Нестабильный оберег Метеоса</span>
+</a>
+ может сохранить предмет от поломки, но в этом случае ранг предмета понизится на 1 уровень.  	</p> <h2 id="id-5">Благословенные и проклятые предметы</h2> <p>  		Предмет может стать благословенным, если использовать на него <a class="catalog-item" href="https://r2online.ru/wiki/base/view/354/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Святая вода" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/2B1dVyFr7DpVKjPhbmzyM35UU8LjQxMM4AHALAxO.jpg" title="Святая вода"/>
+</span>
+<span class="item-text"> Святая вода</span>
+</a>
+. У благословенных свитков усиления шанс усилить предмет выше, чем у обычных, и некоторые уровни усиления становятся безопасными.  		<br/>Благословенные предметы усиливаются также, как обычные, при этом значительно увеличиваетcя шанс сохранения, при неудачном усилении.  		<br/>Создают святую воду через меню создания предметов. Ингредиенты добываются в Море чудовищ на острове Акра.  	</p> <div class="spoiler"> <div class="spoiler__title">Создание Святой воды</div> <div class="spoiler__content"> <div class="text-box">  				Святая вода:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11124/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сгусток священной магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/3NSW0EwT8i7meUp9QdiceNaoPpdoyWUn37CBFKZi.jpg" title="Сгусток священной магии"/>
+</span>
+<span class="item-text"> Сгусток священной магии</span>
+</a>
+, 1 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капля чистоты" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/8vd3TVVGmsA68o8MIvGwcrcXJeNe2jZMgmkY5bsA.png" title="Капля чистоты"/>
+</span>
+<span class="item-text"> Капля чистоты</span>
+</a>
+, 3 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11125/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Настой ангельской крови" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/V4FNW20O7QgCnqVY56T4bKZafYVzEbYfwfani65L.jpg" title="Настой ангельской крови"/>
+</span>
+<span class="item-text"> Настой ангельской крови</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11127/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сердце чудовища" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/lr3UHRBB39OilVJeJ25mDf0ogrkCHft1MpcYSpNl.jpg" title="Сердце чудовища"/>
+</span>
+<span class="item-text"> Сердце чудовища</span>
+</a>
+, 1000 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 5,000,000 шт.  				<br/> <br/>Создание Сгустка священной магии:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 1000 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+, 150 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+, 150 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок силы стихий" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aEiVTxHffNnPEmX0qC4fOQ2Z4ZTwbpjQCZXaV1s0.webp" title="Порошок силы стихий"/>
+</span>
+<span class="item-text"> Порошок силы стихий</span>
+</a>
+, 1 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 1,000,000 шт.  				<br/> <br/>Создание Порошка силы стихий:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Атака)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/N0ZwLkezcxpIvueXsGiF2rIVdMkE5LbpagklQx0m.jpg" title="Стихийная пыльца (Атака)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Атака)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12037/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Защита)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Qgjx6Kf24NZWpo8n0DdAoNnhIJxk0OD8LYbJPBPX.jpg" title="Стихийная пыльца (Защита)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Защита)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 150,000 шт.  			</div> </div> </div> <h2 id="id-2">Усиление защитной экипировки</h2> <p> <strong>Любая защитная экипировка:</strong> <br/>До +1 усиливается безопасно любым свитком усиления доспехов.  		<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/353999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/a50e0df1661c0ee062592b5476d644d8.png" title="Свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/SmsZInNRY3GQuzJP5VxJ1EkC1EtaAO4W4sUV0lgn.jpg" title="Светлый свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/353999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/a50e0df1661c0ee062592b5476d644d8.png" title="Свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/2df66b94096c3649857bd85fd45993e9.jpg" title="Сияющий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/2821ae1a68bf13f62b4912e8efec851e.png" title="Блестящий свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/OLUwVSqwb6Ph1IPwa0R0UyQ4MrQhKs4gN6FwONuO.jpg" title="Блестящий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/bb26e8997c47c7c0c98629b3af20afc4.jpg" title="Усиленный свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/353999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/a50e0df1661c0ee062592b5476d644d8.png" title="Свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/2df66b94096c3649857bd85fd45993e9.jpg" title="Сияющий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/OLUwVSqwb6Ph1IPwa0R0UyQ4MrQhKs4gN6FwONuO.jpg" title="Блестящий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/2df66b94096c3649857bd85fd45993e9.jpg" title="Сияющий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/OLUwVSqwb6Ph1IPwa0R0UyQ4MrQhKs4gN6FwONuO.jpg" title="Блестящий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/OLUwVSqwb6Ph1IPwa0R0UyQ4MrQhKs4gN6FwONuO.jpg" title="Блестящий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+</p> <blockquote>Колчаны, Камни души, Браслеты убийцы и Бафомета имеют такие же шансы усиления и безопасные проточки, но при этом усилияваются свитками усиления оружия.</blockquote> <p>  		Шансы усиления экипировки любого ранга одинаковые. Например, шанс усиления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1525/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шлем Ифрита" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a6e816687989cb10b93f72be28a5071f.jpg" title="Шлем Ифрита"/>
+</span>
+<span class="item-text">+5  Шлем Ифрита</span>
+</a>
+ такой же, как у <a class="catalog-item" href="https://r2online.ru/wiki/base/view/465/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стальной шлем" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/41c525bd0f81b714e2f130338cc09297.jpg" title="Стальной шлем"/>
+</span>
+<span class="item-text">+5  Стальной шлем</span>
+</a>
+. Браслеты убийцы, колчаны, камни души и фолианты усиливаются свитками усиления оружия, с такими же шансами как и остальная защитная экипировка.  		<br/>Экипировку четвертого ранга (Ифрит и Бафомет) c заточкой +3 и выше можно усилить только с помощью усиленных свитков: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/2821ae1a68bf13f62b4912e8efec851e.png" title="Блестящий свиток усиления доспехов"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/bb26e8997c47c7c0c98629b3af20afc4.jpg" title="Усиленный свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/2df66b94096c3649857bd85fd45993e9.jpg" title="Сияющий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/OLUwVSqwb6Ph1IPwa0R0UyQ4MrQhKs4gN6FwONuO.jpg" title="Блестящий свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gr7vQ5OwVoUJzTp2B3xNK0e7qjbYWPd7lzRxePYt.jpg" title="Усиленный свиток усиления доспехов (благ.)"/>
+</span>
+</a>
+</p> <h2 id="id-3">Усиление оружия</h2> <p>  		Оружие можно разделить на 6 рангов:  	</p> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td style="width: 5%">Ранг</td> <td style="width: 19%">Рыцарь</td> <td style="width: 19%">Рейнджер</td> <td style="width: 19%">Маг</td> <td style="width: 19%">Ассасин</td> <td style="width: 19%">Призыватель</td> </tr> <tr> <td>I</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1096/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/7d9a0819675274d487199e4a7107bdb2.jpg" title="Боевой топор"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1332/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/3Npn1pi2KDcemVsqx64MMAasqkVUiBXRyEqi52Zr.jpg" title="Длинный лук ворона"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/757/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a97ba7759f84aa236c854d11915ed61f.jpg" title="Охотничий лук"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13576/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13576.jpg" title="Стальное ружье"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2255/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/65ecc7df7d65b07e6dfd84dbbd9a0d17.jpg" title="Хитиновая сабля"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10112/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/tLEBVs0pt0zLPqa877AGhlPTIbl5DiSYu1zuq7An.jpg" title="Скипетр Мудрости"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1278/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/19c03b01a6bd64b1d1761b5defbff882.jpg" title="Кровавые джамадхары"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1302/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/941cf308e6b24640195900263dbea458.jpg" title="Кровавый клинок"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2649/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/fea10d6a371b42bc85a2ad77936d7ef3.jpg" title="Орб души Гайи"/>
+</span>
+</a>
+</td> </tr> <tr> <td>II</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1657/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/5ec9f0a960af5a7acd27bb53e7d26a63.jpg" title="Морглай"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3686/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4800f79743bfcb51c4ea1f42257f8ba3.jpg" title="Копье гвардейца"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/797/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/NpNLUFcBMZxBGAFULwFwRT9waGiSwMSPN0jO8cOV.jpg" title="Лук гнома"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13590/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13590.jpg" title="Бронебойное ружье"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1677/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0fc0f07e09a7d396d92ee9c6875153f7.jpg" title="Англахель"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/aLh9asAlfIEkXuLyh4E6BO3kfQT7Pi2HtGcU0Kdi.jpg" title="Посох Литейн"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1312/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/266a3c68d87071a9b993456df1beb9ce.jpg" title="Клинок отражения"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2679/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a98273ab5a72a4568132486c29347e87.jpg" title="Орб призывателя"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1647/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/511dc2dc8b5896b17da20f8ce3ba9b97.jpg" title="Аронди"/>
+</span>
+</a>
+</td> </tr> <tr> <td>III</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3dcc411f0a3fb9928928be20187503a5.jpg" title="Двуручный меч"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1637/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/96a7ba878bfeef87d03e05c111c0d12b.jpg" title="Железная алебарда"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/784/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d842253c9fb897629d80198ad5cf84bc.jpg" title="Эльфийский лук"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13604/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13604.jpg" title="Громовое ружье"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/727/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/e06e5fec86765f4618bd9bb7d36d7523.jpg" title="Эльфийский меч"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10140/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/WmIK9B5HoEgeEXzKxb21wYmTvs8ViTgCZXQv9KW4.jpg" title="Посох Аллатариэль"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1697/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a9d398a9e2477797f0fb989a8de7d4c2.jpg" title="Адские катары"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1687/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a6c02ec95155ed66a99d7fb1760a1330.jpg" title="Адский клинок"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2659/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/ccc9bab0f0be2247c9c74e4ea2e6d213.jpg" title="Орб Зефироса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6477/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/tenbS5oI48zy9hPyUcJwWDvptjYtHD96ztJeXTQ1.png" title="Меч лунного света"/>
+</span>
+</a>
+</td> </tr> <tr> <td>IV</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3862/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/05c498bb606a718fbcb36d785e1ec291.jpg" title="Меч Правосудия"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13618.jpg" title="Кремниевое ружье"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/10154/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/zPh5ncQiqQayheAH9GEiKQfO6AI54sjsYiVbZVHt.jpg" title="Посох Югенеса"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a7f046199534000b4054636e15052f6c.jpg" title="Крис"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2669/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/989a1fb6e989a4fced98ed616e90db4f.jpg" title="Орб Юпитера"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6491/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/aec377296dce715b3e5b6a33223a35f0.jpg" title="Меч точности Рарки"/>
+</span>
+</a>
+</td> </tr> <tr> <td>V</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1627/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YzQjprsjkD9KIasvZlVlAvhcipXcXq1psVQbwscA.webp" title="Дамасская алебарда"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7037/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/tvrbOAz5eHrM2nMkfH3vtQPXf0ZCrSIrTectVIp9.jpg" title="Слэшер"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3890/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a52a4f3a4f7d5c7efa71f611a718035d.jpg" title="Композитный лук"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13632/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13632.jpg" title="Карабин гномов"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1133/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/7c22bdd5f22d18737cef995129bc113c.jpg" title="Меч жреца"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10168/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/RtX9Jn7mJ0e9563AHtvRaFlG9WI0fMKKDr3orYDH.jpg" title="Скипетр жреца"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3946/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/31f06570355be090b10b6a3451676e76.jpg" title="Джамадхары убийцы "/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7065/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/I3jel45mVU0OzHBf7ePdwWZYu4xF6oYCcMkIV2ih.jpg" title="Клинок убийцы"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3904/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d24b4af60549fa9068fc6ffd458f38fe.jpg" title="Орб воды"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8087/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d9598a5072b174071ae33bb2fab35f4d.jpg" title="Блестящий меч Солнца"/>
+</span>
+</a>
+</td> </tr> <tr> <td>VI</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8129/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/erQZjMqeDeT07cHKYicGBWfm2OoPTtfHrsyZ9w5J.webp" title="Стальная алебарда Метеоса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7051/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/kWBzt1ZmaA7fm28HQQl1geSolXvytz8CRBWVGqEW.jpg" title="Пылающий двуручный меч Метеоса"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8171/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/XNphxx3YPtNP3nnD8l1cuxTSD1FkAR2yfhxLMxGn.jpg" title="Огневой лук Метеоса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13646/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/13646.jpg" title="Вулканический мушкет Метеоса"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/zbKStGrYhqbTRTFWEUS2ie5R0jDtN1ZVQ79x1zVQ.webp" title="Огненный клеймор Метеоса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10182/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/4fJ7dj3sFvpkWrQIv6cJuK2F49VXgaNj9W5f63pD.jpg" title="Священный скипетр Метеоса"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8185/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QGxt4N9qyFGqAiM0rnND2UMqhkkZPhUuIBDHN4e1.webp" title="Огненные катары Метеоса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7079/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/cDWcNrQqw46s2vc6KS9xMg0KxuJ2PM1z3TINvavm.jpg" title="Раскаленный ятаган Метеоса"/>
+</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8143/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-8143.webp" title="Магмовый орб Метеоса"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7094/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/Dc3ohsswpxazQ4lgU0VOaglXwXSyOr83kNH1tyZT.jpg" title="Пламенная рапира Метеоса"/>
+</span>
+</a>
+</td> </tr> </tbody></table> </div> <p>  		Ранги оружия показывают прежде всего сложность усиления. Выше ранг – сложнее усилить. Нет четкой зависимости силы оружия от ранга. На разных заточках оружие ведет себя по разному. Если вы начнете сравнивать оружие II ранга с III рангом, то на одних заточках III ранг намного сильнее, чем II, а на других разница будет незначительной.  		<br/>   	</p> <p> <strong>Оружие VI ранга (Метеоса):</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11272/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11272.png" title="Сияющий свиток усиления оружия Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11272999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/mReIyMZDHw4bHUs4CYRMACJZ0IPyasz9SPVaYzaW.png" title="Сияющий свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11273/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11273.png" title="Блестящий свиток усиления оружия Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11273999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/XFFCoZOpsrOra4DDc7U3jMGm9Y92fzR60wx36IFt.png" title="Блестящий свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11274.png" title="Усиленный свиток усиления оружия Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/KrfBHoyXC5JQl5QoUiqDq0Mm6rnYOJvCXy2b6Q53.png" title="Усиленный свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11272999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/mReIyMZDHw4bHUs4CYRMACJZ0IPyasz9SPVaYzaW.png" title="Сияющий свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11273/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11273.png" title="Блестящий свиток усиления оружия Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11273999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/XFFCoZOpsrOra4DDc7U3jMGm9Y92fzR60wx36IFt.png" title="Блестящий свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11274.png" title="Усиленный свиток усиления оружия Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/KrfBHoyXC5JQl5QoUiqDq0Mm6rnYOJvCXy2b6Q53.png" title="Усиленный свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11273999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/XFFCoZOpsrOra4DDc7U3jMGm9Y92fzR60wx36IFt.png" title="Блестящий свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/KrfBHoyXC5JQl5QoUiqDq0Mm6rnYOJvCXy2b6Q53.png" title="Усиленный свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11274999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/KrfBHoyXC5JQl5QoUiqDq0Mm6rnYOJvCXy2b6Q53.png" title="Усиленный свиток усиления оружия Метеоса (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Оружие V ранга:</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+</p> <p> <strong>Оружие IV ранга:</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+</p> <p> <strong>Оружие III ранга:</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +8 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+</p> <p> <strong>Оружие II ранга:</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +8 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+</p> <p> <strong>Оружие I ранга:</strong> <br/>До +3 усиливается безопасно любым свитком усиления оружия.  		<br/>До +4 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/351999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/62166bbcdf8de5dc4d6a9a93111193c2.png" title="Свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +5 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +6 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2SD3aIhpph6NcixdnK5WNO1XnFn9CKHRwG1OxYUI.jpg" title="Светлый свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +7 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/03d664da712d1369f96c63aedc6aff7c.jpg" title="Сияющий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +8 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/2F7oy4B1FpVoCzLXW2tcnposdU1Ist78mqAAdZxU.jpg" title="Блестящий свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+<br/>До +9 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/C0WqP2A3TztkFMJnydGJ1PWCCv8h2sV0E6L1W4YE.jpg" title="Усиленный свиток усиления оружия (благ.)"/>
+</span>
+</a>
+</p> <h2 id="id-4">Усиление бижутерии слияния</h2> <p>  	Бижутерия на защиту усиливается лучше, чем бижутерия на атаку.  	</p> <p> <strong>Бижутерия на защиту:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12255/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/hXFhAsdILPnwZKi7e4aRXLF8v1mfhzgwQeTLKhTQ.webp" title="Улучшенный свиток усиления бижутерии"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12255999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gu0B0oQJ3xOkcVMobudC2LoYDRwhw1BPJ7np9jJu.jpg" title="Улучшенный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1FW0PI1RrFQqiw5mUs6Kcy2UWVEdFsUCoXcp7swd.webp" title="Усиленный свиток усиления бижутерии"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gQg5Xn43ak0AtQWZCoptOglLPyeEWzKGMnSucQd5.jpg" title="Усиленный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12255999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gu0B0oQJ3xOkcVMobudC2LoYDRwhw1BPJ7np9jJu.jpg" title="Улучшенный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1FW0PI1RrFQqiw5mUs6Kcy2UWVEdFsUCoXcp7swd.webp" title="Усиленный свиток усиления бижутерии"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gQg5Xn43ak0AtQWZCoptOglLPyeEWzKGMnSucQd5.jpg" title="Усиленный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gQg5Xn43ak0AtQWZCoptOglLPyeEWzKGMnSucQd5.jpg" title="Усиленный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Бижутерия на атаку и любые серьги:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12255999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gu0B0oQJ3xOkcVMobudC2LoYDRwhw1BPJ7np9jJu.jpg" title="Улучшенный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1FW0PI1RrFQqiw5mUs6Kcy2UWVEdFsUCoXcp7swd.webp" title="Усиленный свиток усиления бижутерии"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gQg5Xn43ak0AtQWZCoptOglLPyeEWzKGMnSucQd5.jpg" title="Усиленный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12256999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gQg5Xn43ak0AtQWZCoptOglLPyeEWzKGMnSucQd5.jpg" title="Усиленный свиток усиления бижутерии (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <h2 id="id-6">Усиление рун</h2> <p>  		Для усиления <a href="" target="_blank">рун</a> используют <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12166/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления руны" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/8rN6BNSPWR5kzaxLOrArnqcxuitkHInKZxTYck3y.jpg" title="Свиток усиления руны"/>
+</span>
+<span class="item-text"> Свиток усиления руны</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления руны" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/KKCe8vGJmmLrh7nwNw12fM8V5V7MEEqVeqkmzbFZ.webp" title="Светлый свиток усиления руны"/>
+</span>
+<span class="item-text"> Светлый свиток усиления руны</span>
+</a>
+, шанс усиления светлым свитком выше. Свитки можно получить путем обмена свитков усиления оружия или доспехов на свиток усиления руны. Для этого обратитесь к Ювелиру.  	</p> <p> <strong>Постоянные руны в экипировку:</strong> <br/>До II уровня усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12166999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/zb2qE15Dk7gfIG65iHww2Ssulyn7hUIrtzbHNqmW.jpg" title="Свиток усиления руны (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/egZXmtL62pDjIetMBcXmV59cZklzh50Rr6M2VKSf.jpg" title="Светлый свиток усиления руны (благ.)"/>
+</span>
+</a>
+<br/>До III уровня усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/egZXmtL62pDjIetMBcXmV59cZklzh50Rr6M2VKSf.jpg" title="Светлый свиток усиления руны (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Временные руны в бижутерию:</strong> <br/>До II уровня усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/egZXmtL62pDjIetMBcXmV59cZklzh50Rr6M2VKSf.jpg" title="Светлый свиток усиления руны (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Особые руны:</strong> <br/>До III уровня усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12166999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/zb2qE15Dk7gfIG65iHww2Ssulyn7hUIrtzbHNqmW.jpg" title="Свиток усиления руны (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/egZXmtL62pDjIetMBcXmV59cZklzh50Rr6M2VKSf.jpg" title="Светлый свиток усиления руны (благ.)"/>
+</span>
+</a>
+<br/>До IV уровня усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/egZXmtL62pDjIetMBcXmV59cZklzh50Rr6M2VKSf.jpg" title="Светлый свиток усиления руны (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <h2 id="id-7">Усиление сфер</h2> <p>  		Сферы усиливаются: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+<span class="item-text"> Сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+<span class="item-text"> Сияющая сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+<span class="item-text"> Блестящая сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленная сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+<span class="item-text"> Усиленная сфера усиления</span>
+</a>
+.  	</p> <div class="spoiler"> <div class="spoiler__title">Создание Сфер усиления</div> <div class="spoiler__content"> <div class="text-box">  				Усиленная сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+<span class="item-text"> Блестящая сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 8 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 90 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок силы стихий" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aEiVTxHffNnPEmX0qC4fOQ2Z4ZTwbpjQCZXaV1s0.webp" title="Порошок силы стихий"/>
+</span>
+<span class="item-text"> Порошок силы стихий</span>
+</a>
+, 3 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 4,000,000 шт.  				<br/> <br/>Блестящая сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+<span class="item-text"> Сияющая сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 4 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 30 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок силы стихий" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aEiVTxHffNnPEmX0qC4fOQ2Z4ZTwbpjQCZXaV1s0.webp" title="Порошок силы стихий"/>
+</span>
+<span class="item-text"> Порошок силы стихий</span>
+</a>
+, 1 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 2,000,000 шт.  				<br/> <br/>Сияющая сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+<span class="item-text"> Сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 1,000,000 шт.  				<br/> <br/>Создание Порошка силы стихий:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Атака)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/N0ZwLkezcxpIvueXsGiF2rIVdMkE5LbpagklQx0m.jpg" title="Стихийная пыльца (Атака)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Атака)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12037/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Защита)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Qgjx6Kf24NZWpo8n0DdAoNnhIJxk0OD8LYbJPBPX.jpg" title="Стихийная пыльца (Защита)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Защита)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 150,000 шт.  			</div> </div> </div> <p> <br/><strong>Сферы 1 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 2 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 3 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 4 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 5 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <h2 id="id-8">Усиление особых сфер</h2> <p>Особые сферы усиливает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5573/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна усиления особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/28f150f6143495ad020055a1acf1abd2.jpg" title="Руна усиления особой сферы"/>
+</span>
+<span class="item-text"> Руна усиления особой сферы</span>
+</a>
+, которая продается за 500 очков хаоса у NPC &lt;Торговец очками хаоса&gt; Рудольф.    	</p> <p> <strong>Сферы характеристик и алчности:</strong> <br/>До 5 уровня усиливается безопасно <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5573999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/Lj8VHaLkn9bFpu1Y1KrqZ17ApG3Fbxbtns1Ap0c1.jpg" title="Руна усиления особой сферы (благ.)"/>
+</span>
+</a>
+.  		<br/>   	</p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

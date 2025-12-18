@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личные билды — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="other.html">Другое</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Личные билды</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Сброс личного дерева</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Быстрая смена билдов</a></li> </ol> <p>  		Билд — вариант распределения очков личного дерева умений. Часто игроки выбирают несколько любимых билдов для игры. Для PvP-сражений обычно очки распределяются иначе, чем для PvE.  	</p> <p>На мероприятиях нужны разные билды: призыватель может ставить тотемы, усиливающие союзников, а маг может восстанавливать HP, но в одиночной игре такие билды будут проигрывать.  	</p> <h2 id="id-1">Сброс личного дерева</h2> <p>  		Личное дерево [K] сбрасывает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5688/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок иллюзии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/02/06/f0e4570a98353c4ecf399dcd3bf72bc4.png" title="Порошок иллюзии"/>
+</span>
+<span class="item-text"> Порошок иллюзии</span>
+</a>
+. Его можно купить в премиум магазине, в <a href="https://r2online.ru/wiki/quests/daily/korolevskie/" target="_blank">магазине у Констанции за королевские монеты</a> или достать из <a href="https://r2online.ru/wiki/pets/charge" target="_blank">сундуков поручений питомцев</a>.  	</p> <h2 id="id-2">Быстрая смена билдов</h2> <p>  		Билды можно сохранять и мгновенно изучать. Для этого суещствует два способа: через NPC или через команды в чате. При изучении сохраненного билда требуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5688/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок иллюзии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/02/06/f0e4570a98353c4ecf399dcd3bf72bc4.png" title="Порошок иллюзии"/>
+</span>
+<span class="item-text"> Порошок иллюзии</span>
+</a>
+.  	</p> <div class="spoiler"> <div class="spoiler__title">Способ №1 – NPC</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box">  		В каждой деревне доступен NPC для управления билдами – &lt;Личные билды&gt; Захариас.  		<div class="spoiler" style="margin-bottom: 15px; margin-top: 15px;"> <div class="spoiler__title">&lt;Личные билды&gt; Захариас</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds1.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div>  		Для сохранения нового билда перейдите в соответствующий диалог, введите название и нажмите «Сохранить билд».  		<a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds2.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px; margin-top: 15px"/> </a> <br/>Название билда может содержать только русские, латинские буквы и цифры (без пробелов).  		<br/><br/>Теперь изученный билд доступен для быстрого изучения в любой момент. Перейдите в диалог «Изучение билда» и нажмите на нужный билд – изучение навыков произойдет мгновенно.  		<br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds3.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/builds3.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px; margin-top: 15px"/> </a> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Способ №2 – команды в чате</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box">  		Управление билдами можно осуществлять с помощью команд непосредственно в обычный чат в игре.  		<br/>   		<table class="table table-quest"> <tbody><tr class="tr-header tr-odd"> <td>  						Команда  					</td> <td>  						Что делает  					</td> </tr> <tr> <td>  						!билд сохранить «название»  					</td> <td>  						Сохраняет новый билд с текущим распределением очков.  					</td> </tr> <tr> <td>  						!билд «название»  					</td> <td>  						Изучает ранее сохраненный билд (расходуется порошок).  					</td> </tr> <tr> <td>  						!билд  					</td> <td>  						Показывает список всех сохраненных билдов.  					</td> </tr> <tr> <td>  						!билд удалить «название»  					</td> <td>  						Удаляет билд с таким названием.  					</td> </tr> <tr> <td>  						!билд очистить  					</td> <td>  						Удаляет все сохраненные билды.  					</td> </tr> <tr> <td>  						!билд инфо  					</td> <td>  						Показывает все доступные команды.  					</td> </tr> </tbody></table> <br/>Вместо «название» – пишите свое название билда русскими, латинскими буквами и цифрами (без пробелов).  	</div> </div> </div> </div> <p> </p> <blockquote>Быстро изучить личный билд с помощью команды можно только в безопасной зоне.</blockquote> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

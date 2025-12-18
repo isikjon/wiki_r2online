@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Склеп короля — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Склеп короля</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/1.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/1.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> <h3 id="list"><br/>Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О склепе короля</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Сокровищница короля</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Амулет короля</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Босс – Пламенный дракон</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Перевоплощение Даркиэля</a></li> </ol> <h2 id="id-1">О склепе короля</h2> <p>  		В Склепе короля обитают последователи короля, его стражи.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Карта склепа короля</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/11.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/11.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Войти в Склеп можно через <a href="/iki/locations/kolfort/dungeon/grobnica-korolya/3/" target="_blank">Гробницу короля, ур. 3</a>. За вход придется заплатить 35,000 серебра.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Вход в склеп короля (снаружи)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/2.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/2.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Место входа и выхода в локацию (внутри)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/13.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/13.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Свитки телепортации в склепе не работают.  		<br/><br/>Обитатели склепа:  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Драконьер короля</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Драконьер короля" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/Sh89jtvnOXuHnoLt27NyUwRkgULRriOzubO5UJYP.png" title="Драконьер короля"/>
+</span>
+<span class="item-text"> Драконьер короля</span>
+</a>
+<br/><br/> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/3.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/3.png" style="max-width: 100%; cursor: zoom-in;"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/811/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зуб дракона" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/811.jpg" title="Зуб дракона"/>
+</span>
+<span class="item-text"> Зуб дракона</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Свеча черного огня" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13431.jpg" title="Свеча черного огня"/>
+</span>
+<span class="item-text"> Свеча черного огня</span>
+</a>
+ (3 минуты)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13492/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Амулет короля" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13492.jpg" title="Амулет короля"/>
+</span>
+<span class="item-text"> Амулет короля</span>
+</a>
+ (5 минут)  					</p> </div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Пепельная ведьма короля</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2451/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пепельная ведьма короля" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/S8Lpuic6dLYvNGzNrsMU0RfRWZWrOrKXPgApjtrJ.png" title="Пепельная ведьма короля"/>
+</span>
+<span class="item-text"> Пепельная ведьма короля</span>
+</a>
+<br/><br/> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/4.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/4.png" style="max-width: 100%; cursor: zoom-in;"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист</div> <div class="spoiler__content"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/811/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зуб дракона" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/811.jpg" title="Зуб дракона"/>
+</span>
+<span class="item-text"> Зуб дракона</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Свеча черного огня" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13431.jpg" title="Свеча черного огня"/>
+</span>
+<span class="item-text"> Свеча черного огня</span>
+</a>
+ (3 минуты)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13492/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Амулет короля" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13492.jpg" title="Амулет короля"/>
+</span>
+<span class="item-text"> Амулет короля</span>
+</a>
+ (5 минут)  					</p> </div> </div> </div> </div> <p>  		Дополнительно в локацию можно телепортироваться с помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7243/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/1b0e0cf2b946d2f3758177e39600f870.jpg" title="Кольцо телепортации (легендарное)"/>
+</span>
+</a>
+ Легендарного кольца телепортации. Для этого также необходима <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13454/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Склеп короля [Печать]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13454.jpg" title="Склеп короля [Печать]"/>
+</span>
+<span class="item-text"> Склеп короля [Печать]</span>
+</a>
+.		  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Точка телепортации печати легендарного кольца</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/12.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/12.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <h2 id="id-2">Сокровищница короля</h2> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/17.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/17.png" style="max-width: 50%; cursor: zoom-in;"/> </a> <p> <br/>В центральной части склепа короля распологается вход в сокровищницу.   	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Вход в сокровищницу</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/14.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/14.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Для открытия сокровищницы необходима <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свеча черного огня" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13431.jpg" title="Свеча черного огня"/>
+</span>
+<span class="item-text"> Свеча черного огня</span>
+</a>
+. Сокровищница открывается на 2 минуты. В сокровищницу могут войти любые другие игроки. После закрытия сокровищницы, сундуки исчезнут, а персонаж переместится в город, если сокровищницу откроют повторно.    		<br/><br/>Внутри находятся множество сундуков разной редкости и разных типов наполнения.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Сундуки сокровищницы короля</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/15.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/15.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Сигвард Драконоборец обменят три <a class="catalog-item" href="https://r2online.ru/wiki/base/view/811/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/811.jpg" title="Зуб дракона"/>
+</span>
+</a>
+ Зуба дракона обменяет на один из Костяных ключей случайной редкости: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13433.jpg" title="Легендарный костяной ключ"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13434.jpg" title="Эпический костяной ключ"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13435/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13435.jpg" title="Редкий костяной ключ"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13491/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13491.jpg" title="Костяной ключ"/>
+</span>
+</a>
+ ключи хранятся 2 минуты. Можно несколько раз обменять Зубы дракона, чтобы получить несколько ключей.    		<br/><br/>Чтобы открыть сундук, редкость сундука и костяного ключа должны совпадать. Проверьте наполнение сундука, перед открытием, сундуки одной редкости различаются типами наполнения.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Легендарный сундук сокровищ короля</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13445/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Низара" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13445.jpg" title="Свиток Низара"/>
+</span>
+<span class="item-text"> Свиток Низара</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13446/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Тирадора" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13446.jpg" title="Свиток Тирадора"/>
+</span>
+<span class="item-text"> Свиток Тирадора</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13443/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Драконианца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13443.jpg" title="Свиток Драконианца"/>
+</span>
+<span class="item-text"> Свиток Драконианца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13444/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Некев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13444.jpg" title="Свиток Некев"/>
+</span>
+<span class="item-text"> Свиток Некев</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Эльвина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13441.jpg" title="Свиток Эльвина"/>
+</span>
+<span class="item-text"> Свиток Эльвина</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13442/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Каспер" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13442.jpg" title="Свиток Каспер"/>
+</span>
+<span class="item-text"> Свиток Каспер</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Эпический сундук сокровищ короля</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">I тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13445/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Низара" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13445.jpg" title="Свиток Низара"/>
+</span>
+<span class="item-text"> Свиток Низара</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">II тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13446/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Тирадора" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13446.jpg" title="Свиток Тирадора"/>
+</span>
+<span class="item-text"> Свиток Тирадора</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">III тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чешуйчатая кожа дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13436.jpg" title="Чешуйчатая кожа дракона"/>
+</span>
+<span class="item-text"> Чешуйчатая кожа дракона</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">IV тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13437/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийный оникс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13437.jpg" title="Стихийный оникс"/>
+</span>
+<span class="item-text"> Стихийный оникс</span>
+</a>
+ (до 25 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/918/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Жемчужина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/619212dfc0704141f8c0b834f140ab20.gif" title="Жемчужина"/>
+</span>
+<span class="item-text"> Жемчужина</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/919/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Аметист" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/bf8766986c6525845393ab9e7062d5e8.jpg" title="Аметист"/>
+</span>
+<span class="item-text"> Аметист</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/920/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Топаз" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/3f566688be2cdc67e160c4fed0ec711e.jpg" title="Топаз"/>
+</span>
+<span class="item-text"> Топаз</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/922/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бриллиант" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/c21cffbecc25b4856b93e23e37579635.jpg" title="Бриллиант"/>
+</span>
+<span class="item-text"> Бриллиант</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/923/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рубин" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/0ffgty382dba999ae1c7d47egbq0aa7d.jpg" title="Рубин"/>
+</span>
+<span class="item-text"> Рубин</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/924/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Изумруд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/de2cc26409a7d3a4945e8aad08f050e5.gif" title="Изумруд"/>
+</span>
+<span class="item-text"> Изумруд</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/925/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапфир" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/74e2ba4d6d4accb05dcc91c224bcbbbf.jpg" title="Сапфир"/>
+</span>
+<span class="item-text"> Сапфир</span>
+</a>
+ (3 шт.)  					</div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Редкий сундук сокровищ короля</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">I тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13443/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Драконианца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13443.jpg" title="Свиток Драконианца"/>
+</span>
+<span class="item-text"> Свиток Драконианца</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">II тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13444/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Некев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13444.jpg" title="Свиток Некев"/>
+</span>
+<span class="item-text"> Свиток Некев</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">III тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чешуйчатая кожа дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13436.jpg" title="Чешуйчатая кожа дракона"/>
+</span>
+<span class="item-text"> Чешуйчатая кожа дракона</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">IV тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13437/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийный оникс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13437.jpg" title="Стихийный оникс"/>
+</span>
+<span class="item-text"> Стихийный оникс</span>
+</a>
+ (до 25 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/918/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Жемчужина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/619212dfc0704141f8c0b834f140ab20.gif" title="Жемчужина"/>
+</span>
+<span class="item-text"> Жемчужина</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/919/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Аметист" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/bf8766986c6525845393ab9e7062d5e8.jpg" title="Аметист"/>
+</span>
+<span class="item-text"> Аметист</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/920/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Топаз" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/3f566688be2cdc67e160c4fed0ec711e.jpg" title="Топаз"/>
+</span>
+<span class="item-text"> Топаз</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/922/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бриллиант" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/c21cffbecc25b4856b93e23e37579635.jpg" title="Бриллиант"/>
+</span>
+<span class="item-text"> Бриллиант</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/923/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рубин" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/0ffgty382dba999ae1c7d47egbq0aa7d.jpg" title="Рубин"/>
+</span>
+<span class="item-text"> Рубин</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/924/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Изумруд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/de2cc26409a7d3a4945e8aad08f050e5.gif" title="Изумруд"/>
+</span>
+<span class="item-text"> Изумруд</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/925/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапфир" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/74e2ba4d6d4accb05dcc91c224bcbbbf.jpg" title="Сапфир"/>
+</span>
+<span class="item-text"> Сапфир</span>
+</a>
+ (3 шт.)  					</div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Сундук сокровищ короля</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">I тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Эльвина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13441.jpg" title="Свиток Эльвина"/>
+</span>
+<span class="item-text"> Свиток Эльвина</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">II тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13442/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Каспер" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13442.jpg" title="Свиток Каспер"/>
+</span>
+<span class="item-text"> Свиток Каспер</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">III тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чешуйчатая кожа дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13436.jpg" title="Чешуйчатая кожа дракона"/>
+</span>
+<span class="item-text"> Чешуйчатая кожа дракона</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">IV тип</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13437/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийный оникс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13437.jpg" title="Стихийный оникс"/>
+</span>
+<span class="item-text"> Стихийный оникс</span>
+</a>
+ (до 25 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/918/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Жемчужина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/619212dfc0704141f8c0b834f140ab20.gif" title="Жемчужина"/>
+</span>
+<span class="item-text"> Жемчужина</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/919/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Аметист" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/bf8766986c6525845393ab9e7062d5e8.jpg" title="Аметист"/>
+</span>
+<span class="item-text"> Аметист</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/920/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Топаз" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/3f566688be2cdc67e160c4fed0ec711e.jpg" title="Топаз"/>
+</span>
+<span class="item-text"> Топаз</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/922/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бриллиант" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/c21cffbecc25b4856b93e23e37579635.jpg" title="Бриллиант"/>
+</span>
+<span class="item-text"> Бриллиант</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/923/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рубин" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/0ffgty382dba999ae1c7d47egbq0aa7d.jpg" title="Рубин"/>
+</span>
+<span class="item-text"> Рубин</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/924/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Изумруд" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/de2cc26409a7d3a4945e8aad08f050e5.gif" title="Изумруд"/>
+</span>
+<span class="item-text"> Изумруд</span>
+</a>
+ (3 шт.)  						<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/925/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапфир" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/04/74e2ba4d6d4accb05dcc91c224bcbbbf.jpg" title="Сапфир"/>
+</span>
+<span class="item-text"> Сапфир</span>
+</a>
+ (3 шт.)  					</div> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13441.jpg" title="Свиток Эльвина"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13442/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13442.jpg" title="Свиток Каспер"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13443/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13443.jpg" title="Свиток Драконианца"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13444/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13444.jpg" title="Свиток Некев"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13445/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13445.jpg" title="Свиток Низара"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13446/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/items/13446.jpg" title="Свиток Тирадора"/>
+</span>
+</a>
+ – уникальные ингредиенты для создания книг перевоплощений.  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чешуйчатая кожа дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13436.jpg" title="Чешуйчатая кожа дракона"/>
+</span>
+<span class="item-text"> Чешуйчатая кожа дракона</span>
+</a>
+ – используется при создании книг перевоплощений: Низар, Тирадор, Драконианец, Некев, Эльвин, Каспер.  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13437/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийный оникс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13437.jpg" title="Стихийный оникс"/>
+</span>
+<span class="item-text"> Стихийный оникс</span>
+</a>
+ – используется при создании книг перевоплощений: Низар, Тирадор, Драконианец, Некев, Эльвин, Каспер и стихийных перевоплощений.  		</p> <h2 id="id-3">Амулет короля</h2> <p>  		При нахождении <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13492/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Амулет короля" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13492.jpg" title="Амулет короля"/>
+</span>
+<span class="item-text"> Амулет короля</span>
+</a>
+ в инвентаре урон по монстрам Склепа короля увеличивается на 15%. Продлить срок действия амулета можно с помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+.  	</p> <h2 id="id-4">Босс – Пламенный дракон</h2> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/5.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/5.png" style="max-width: 100%; cursor: zoom-in;"/> </a> <p>  		В склепе возрождается босс <a class="catalog-item" href="https://r2online.ru/wiki/mobs/4773/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пламенный дракон" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/sOKpxiGWXVq2c5EDhha8JbrS2WF05ruOUVwZIBTj.png" title="Пламенный дракон"/>
+</span>
+<span class="item-text"> Пламенный дракон</span>
+</a>
+. Пока Пламенный Дракон жив, пламя его ярости пропитывает воздух, превращая склеп в пылающий ад. На всех игроков в локации накладывается огненное проклятие дракона, непрерывно выжигающее их силы, отнимая 50 HP в секунду. Время возрождения 15-21 часов.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Точки возрождения</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/16.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/16.png" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист Пламенного дракона</div> <div class="spoiler__content"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (легендарный)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/0d0871f0806eae32d30983b62252da50.jpg" title="Камень перевоплощения (легендарный)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (легендарный)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d045c59a90d7587d8d671b5f5aec4e7c.jpg" title="Камень перевоплощения (эпический)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (эпический)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Камень перевоплощения (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/1f4477bad7af3616c1f933a02bfabe4e.jpg" title="Камень перевоплощения (редкий)"/>
+</span>
+<span class="item-text"> Камень перевоплощения (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Легендарный костяной ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13433.jpg" title="Легендарный костяной ключ"/>
+</span>
+<span class="item-text"> Легендарный костяной ключ</span>
+</a>
+ (1 час)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Эпический костяной ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13434.jpg" title="Эпический костяной ключ"/>
+</span>
+<span class="item-text"> Эпический костяной ключ</span>
+</a>
+ (1 час)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13435/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Редкий костяной ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13435.jpg" title="Редкий костяной ключ"/>
+</span>
+<span class="item-text"> Редкий костяной ключ</span>
+</a>
+  (1 час) (до 2 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13491/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Костяной ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13491.jpg" title="Костяной ключ"/>
+</span>
+<span class="item-text"> Костяной ключ</span>
+</a>
+  (1 час) (до 3 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свеча черного огня" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13431.jpg" title="Свеча черного огня"/>
+</span>
+<span class="item-text"> Свеча черного огня</span>
+</a>
+ (3 минуты)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13492/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Амулет короля" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13492.jpg" title="Амулет короля"/>
+</span>
+<span class="item-text"> Амулет короля</span>
+</a>
+ (15 минут, до 2 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+  (до 5 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12067/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (эпический)</span>
+</a>
+  (до 2 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12069/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шкатулка с бижутерией" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fG5CPEwQ2lr7t4z3zOcGfJbCJddm3HZ1NW80HZtC.jpg" title="Шкатулка с бижутерией"/>
+</span>
+<span class="item-text"> Шкатулка с бижутерией</span>
+</a>
+  (до 8 шт.)  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/811/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зуб дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/811.jpg" title="Зуб дракона"/>
+</span>
+<span class="item-text"> Зуб дракона</span>
+</a>
+  (до 19 шт.)  			</div> </div> <h2 id="id-5">Перевоплощение Даркиэля</h2> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sklep-korolya/18.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sklep-korolya/18.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 10px"/> </a> <p>  		В локации доступно <a href="https://r2online.ru/wiki/quests/epic/hard/sklep" target="_blank">сложное эпическое задание</a>, с помощью которого можно изготовить <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11282/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Даркиэля (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11282.png" title="Книга Даркиэля (легендарное)"/>
+</span>
+<span class="item-text"> Книга Даркиэля (легендарное)</span>
+</a>
+. При улучшении <a href="https://r2online.ru/wiki/morphs/show/6061/" target="_blank">перевоплощения Даркиэля</a>, персонаж <a href="https://r2online.ru/wiki/morphs/improved" target="_blank">получит пассивный бонус</a>, который увеличит урон против монстров Склепа короля на +5.		  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11302/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток Даркиэля" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11302.png" title="Свиток Даркиэля"/>
+</span>
+<span class="item-text"> Свиток Даркиэля</span>
+</a>
+, 1 шт. (выдается в награду за выполнение <a href="https://r2online.ru/wiki/quests/epic/hard/sklep/" target="_blank">задания</a>)<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13438/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Письмена о трансформации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13438.jpg" title="Письмена о трансформации"/>
+</span>
+<span class="item-text"> Письмена о трансформации</span>
+</a>
+, 30 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13439/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Обложка из кожи дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13439.jpg" title="Обложка из кожи дракона"/>
+</span>
+<span class="item-text"> Обложка из кожи дракона</span>
+</a>
+, 15 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13440/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ониксовая инкрустация" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13440.jpg" title="Ониксовая инкрустация"/>
+</span>
+<span class="item-text"> Ониксовая инкрустация</span>
+</a>
+, 1 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000,000 шт.  					</p> </div> </div> </div> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Залы Метеоса — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Залы Метеоса</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list"><br/>Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О Залах Метеоса</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Обитатели зала Метеоса</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Особенности зала Метеоса</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Архонты</a></li> </ol> <p>  		Глубоко под землёй, под Башней Метеоса, скрыты зеркальные чертоги, выточенные из камня и металла. По легендам, их воздвиг сам Метеос, заключивший силу земли, воздуха, воды и солнца в безголовых стражей. Каждый зал – отражение одной из этих сил, а центральный чертог служит местом явления Вестников, несущих волю своего создателя.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/7.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/7.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <h2 id="id-1">О Залах Метеоса</h2> <p>  		После смерти боссов <a class="catalog-item" href="https://r2online.ru/wiki/locations/1636/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Властитель континента" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/aecfeb3e79d6e11f025166f1fbed6bf7.png" title="Властитель континента"/>
+</span>
+<span class="item-text"> Властитель континента</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1640/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель сильного яда" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/c6c6f825a42e13fa26e2691ff6804a50.png" title="Хранитель сильного яда"/>
+</span>
+<span class="item-text"> Хранитель сильного яда</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1644/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Завоеватель океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/dc11d06ef6bf7553d55abd47fbde28ed.png" title="Завоеватель океана"/>
+</span>
+<span class="item-text"> Завоеватель океана</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1648/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный тиран" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/3451d1f32301262493aa5db7402439a3.png" title="Огненный тиран"/>
+</span>
+<span class="item-text"> Огненный тиран</span>
+</a>
+ на соответствующем этаже в течение 60 минут с некоторым шансом появляются два портала. За 3 минуты до появления порталов приходит оповещение в системный чат. Каждый этаж ведёт в свою версию Залов Метеоса, всего доступно четыре локации.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид портала</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/2.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/2.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Расположение порталов</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/3.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/3.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> <p>  		Локация представляет собой цепочку из пяти зеркальных залов. Порталы телепортируют в крайние противоположные друг другу залы. Одновременно внутри могут быть только 10 игроков (условно игроки делятся на две команды: по 5 игроков с каждой стороны). У каждого портала 5 слотов. Одновременно внутри может находиться не более десяти игроков – по 5 с каждой стороны. Занятый слот не освобождается, пока игрок находится внутри. Если игрок покидает локацию, слот освобождается через 20 секунд. При входе в локацию на игрока накладывается эффект “Обнаружение невидимого (Теперь вы можете видеть невидимое)” на 4 минуты.  	</p> <blockquote>  		В Залах Метеоса нет штрафов при смерти.  	</blockquote> <p>  		Через 3 минуты порталы исчезают, а в крайних залах появляются монстры.  	</p> <h2 id="id-2">Обитатели зала Метеоса</h2> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Монстры земли</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6024/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Гул Земли] Безголовый лучник" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/LyUHfCKVHl3atWrxYbR4euKEKB1ufR5iq0dXGyVB.jpg" title="[Гул Земли] Безголовый лучник"/>
+</span>
+<span class="item-text"> [Гул Земли] Безголовый лучник</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/4.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/4.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен земли" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11291.png" title="Люмен земли"/>
+</span>
+<span class="item-text"> Люмен земли</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6025/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Гул Земли] Безголовый рыцарь" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/Q1Ge2GmezIzM3htwkXHHTet1mYsJ8HgwrHPEvQD0.jpg" title="[Гул Земли] Безголовый рыцарь"/>
+</span>
+<span class="item-text"> [Гул Земли] Безголовый рыцарь</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/5.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/5.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен земли" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11291.png" title="Люмен земли"/>
+</span>
+<span class="item-text"> Люмен земли</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6026/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Гул Земли] Вестник Метеоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/eLCy8RfmcsISsfYciydvNRPTgSK8aZdl3YNP74ZU.jpg" title="[Гул Земли] Вестник Метеоса"/>
+</span>
+<span class="item-text"> [Гул Земли] Вестник Метеоса</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/6.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/6.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен земли" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11291.png" title="Люмен земли"/>
+</span>
+<span class="item-text"> Люмен земли</span>
+</a>
+ (5-100 шт.)  							</p> </div> </div> </div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Монстры воздуха</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Дыхание Ветра] Безголовый лучник" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/LYcVLNO7eYCrAHGV7AmcwnGPsJZ4ZhYoiqAyINZC.jpg" title="[Дыхание Ветра] Безголовый лучник"/>
+</span>
+<span class="item-text"> [Дыхание Ветра] Безголовый лучник</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/8.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/8.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен воздуха" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11293.png" title="Люмен воздуха"/>
+</span>
+<span class="item-text"> Люмен воздуха</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6031/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Дыхание Ветра] Безголовый рыцарь" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/TdUHeQdzOdSGilA5yOlEnxUdKnAj1y4NN6VCndCG.jpg" title="[Дыхание Ветра] Безголовый рыцарь"/>
+</span>
+<span class="item-text"> [Дыхание Ветра] Безголовый рыцарь</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/9.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/9.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен воздуха" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11293.png" title="Люмен воздуха"/>
+</span>
+<span class="item-text"> Люмен воздуха</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6032/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Дыхание Ветра] Вестник Метеоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/jen2qm0ganKXXRHoGOyRVfU2qdl8wDSW8330kd8W.jpg" title="[Дыхание Ветра] Вестник Метеоса"/>
+</span>
+<span class="item-text"> [Дыхание Ветра] Вестник Метеоса</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/10.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/10.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен воздуха" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11293.png" title="Люмен воздуха"/>
+</span>
+<span class="item-text"> Люмен воздуха</span>
+</a>
+ (5-100 шт.)  							</p> </div> </div> </div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Монстры воды</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6027/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Глубины Воды] Безголовый лучник" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/85VVHEAtjYaWBSEVmv1G3sdrumWsRmEWoKRncoPU.jpg" title="[Глубины Воды] Безголовый лучник"/>
+</span>
+<span class="item-text"> [Глубины Воды] Безголовый лучник</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/11.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/11.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен океана" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11292.png" title="Люмен океана"/>
+</span>
+<span class="item-text"> Люмен океана</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Глубины Воды] Безголовый рыцарь" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/PdoIU0IZBaQIiX35ApgN0sSnS6OJgLg9KcLonVVR.jpg" title="[Глубины Воды] Безголовый рыцарь"/>
+</span>
+<span class="item-text"> [Глубины Воды] Безголовый рыцарь</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/12.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/12.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен океана" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11292.png" title="Люмен океана"/>
+</span>
+<span class="item-text"> Люмен океана</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6029/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Глубины Воды] Вестник Метеоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/gBzknDE8g6wiBJ2F9EveJdbFXNKmfOGHfViuxTal.jpg" title="[Глубины Воды] Вестник Метеоса"/>
+</span>
+<span class="item-text"> [Глубины Воды] Вестник Метеоса</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/13.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/13.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен океана" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11292.png" title="Люмен океана"/>
+</span>
+<span class="item-text"> Люмен океана</span>
+</a>
+ (5-100 шт.)  							</p> </div> </div> </div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Монстры солнца</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6033/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Сияние Солнца] Безголовый лучник" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/ZggO8oqksfxOud2CifrCsm1JbVl7UR1NR7hGssgQ.jpg" title="[Сияние Солнца] Безголовый лучник"/>
+</span>
+<span class="item-text"> [Сияние Солнца] Безголовый лучник</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/14.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/14.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен солнца" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11294.png" title="Люмен солнца"/>
+</span>
+<span class="item-text"> Люмен солнца</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6034/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Сияние Солнца] Безголовый рыцарь" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/dRHcXUpU1tO4AEtMW3OAbBaeq61feSX0IJG1RSzl.jpg" title="[Сияние Солнца] Безголовый рыцарь"/>
+</span>
+<span class="item-text"> [Сияние Солнца] Безголовый рыцарь</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/15.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/15.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен солнца" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11294.png" title="Люмен солнца"/>
+</span>
+<span class="item-text"> Люмен солнца</span>
+</a>
+ (5-10 шт.)  							</p> </div> </div> </div> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6035/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="[Сияние Солнца] Вестник Метеоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/WZMeicNckUBzN7DlHsZxDy2Yqhy82jrEaNa8t7qx.jpg" title="[Сияние Солнца] Вестник Метеоса"/>
+</span>
+<span class="item-text"> [Сияние Солнца] Вестник Метеоса</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/16.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/16.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Выпадаемые предметы</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен солнца" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/11294.png" title="Люмен солнца"/>
+</span>
+<span class="item-text"> Люмен солнца</span>
+</a>
+ (5-100 шт.)  							</p> </div> </div> </div> </div> </div> </div> <h2 id="id-3">Обитатели зала Метеоса</h2> <p>Каждому игроку, который находится внутри локации, выдаётся <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11246/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье телепортации Залов Метеоса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11246.png" title="Зелье телепортации Залов Метеоса"/>
+</span>
+<span class="item-text"> Зелье телепортации Залов Метеоса</span>
+</a>
+ в количестве 3 шт. Это зелье позволяет повторно телепортироваться в крайний зал своей стороны. При смерти игрока в Залах Метеоса одно зелье изымается. Если в момент смерти у персонажа нет зелья, он появляется в деревне. Вернуться в локацию невозможно.</p> <p>Игрокам необходимо уничтожить всех монстров в первом зале. После этого откроются ворота в следующий зал. Когда игроки противоположной стороны уничтожат монстров в своём зале, в системном чате появится уведомление.</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/17.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/17.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p>В следующем зале также необходимо уничтожить всех монстров. После этого откроются ворота в центральный зал, где обитает <a class="catalog-item" href="https://r2online.ru/wiki/locations/6026/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/eLCy8RfmcsISsfYciydvNRPTgSK8aZdl3YNP74ZU.jpg" title="[Гул Земли] Вестник Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/locations/6032/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/jen2qm0ganKXXRHoGOyRVfU2qdl8wDSW8330kd8W.jpg" title="[Дыхание Ветра] Вестник Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/locations/6029/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/gBzknDE8g6wiBJ2F9EveJdbFXNKmfOGHfViuxTal.jpg" title="[Глубины Воды] Вестник Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/locations/6035/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/WZMeicNckUBzN7DlHsZxDy2Yqhy82jrEaNa8t7qx.jpg" title="[Сияние Солнца] Вестник Метеоса"/>
+</span>
+</a>
+ <strong>Вестник смерти</strong>.</p> <p>Будьте осторожны – игроки противоположной стороны тоже могут войти в центральный зал. Чтобы войти в зал, необходимо пересечь зелёные лучи.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Зеленые лучи</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/18.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/18.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <p>Ключевая особенность центрального зала в том, что после входа выйти из него уже нельзя. Зелёные лучи сменяются красными, через которые пройти невозможно.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Красные лучи</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/19.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/19.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <p>Если в центральном зале одновременно находятся игроки с обеих сторон, босс исчезает. Он снова становится виден только тогда, когда в зале остаются игроки одной сторон. После смерти босса локация закрывается через 3 минуты.</p> <h2 id="id-4">Архонты</h2> <p>На каждом этаже Башни Метеоса располагаются Архонты, которые продают за <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11291.png" title="Люмен земли"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11292.png" title="Люмен океана"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11293.png" title="Люмен воздуха"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11294.png" title="Люмен солнца"/>
+</span>
+</a>
+ <strong>Люмены</strong> различные товары.</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/20.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/20.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Расположение архонтов</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/meteos-halls/21.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/meteos-halls/21.jpg" style="max-width: 100%; margin-bottom: 15px; cursor: zoom-in;"/> </a> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Архонт земли</div> <div class="spoiler__content"> <div class="text-box">  			Стоимость указана в <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен земли" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11291.png" title="Люмен земли"/>
+</span>
+<span class="item-text"> Люмен земли</span>
+</a>
+.    			<br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Закалённое метеоритное железо" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11295.png" title="Закалённое метеоритное железо"/>
+</span>
+<span class="item-text"> Закалённое метеоритное железо</span>
+</a>
+ – 50  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11298/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Денев" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11298.png" title="Свиток Денев"/>
+</span>
+<span class="item-text"> Свиток Денев</span>
+</a>
+ – 100  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11287/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица земли" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11287.png" title="Частица земли"/>
+</span>
+<span class="item-text"> Частица земли</span>
+</a>
+ – 1  			<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4967/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Корень дерева" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/06/000a912842c0e15ba33ffd6c64a4863c.jpg" title="Корень дерева"/>
+</span>
+<span class="item-text"> Корень дерева</span>
+</a>
+ – 2  			</div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Архонт воздуха</div> <div class="spoiler__content"> <div class="text-box">  	Стоимость указана в <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен воздуха" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11293.png" title="Люмен воздуха"/>
+</span>
+<span class="item-text"> Люмен воздуха</span>
+</a>
+.    	<br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Закалённое метеоритное железо" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11295.png" title="Закалённое метеоритное железо"/>
+</span>
+<span class="item-text"> Закалённое метеоритное железо</span>
+</a>
+ – 50  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11297/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Мирии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11297.png" title="Свиток Мирии"/>
+</span>
+<span class="item-text"> Свиток Мирии</span>
+</a>
+ – 100  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11289/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица воздуха" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11289.png" title="Частица воздуха"/>
+</span>
+<span class="item-text"> Частица воздуха</span>
+</a>
+ – 1  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4969/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Облако воздуха" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/06/8e84179cbb85e5317654f4a7c8e36c59.jpg" title="Облако воздуха"/>
+</span>
+<span class="item-text"> Облако воздуха</span>
+</a>
+ – 2  			</div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Архонт воды</div> <div class="spoiler__content"> <div class="text-box">  	Стоимость указана в <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11292.png" title="Люмен океана"/>
+</span>
+<span class="item-text"> Люмен океана</span>
+</a>
+.    	<br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Закалённое метеоритное железо" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11295.png" title="Закалённое метеоритное железо"/>
+</span>
+<span class="item-text"> Закалённое метеоритное железо</span>
+</a>
+ – 50  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11296/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Клэр" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11296.png" title="Свиток Клэр"/>
+</span>
+<span class="item-text"> Свиток Клэр</span>
+</a>
+ – 100  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11288/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11288.png" title="Частица океана"/>
+</span>
+<span class="item-text"> Частица океана</span>
+</a>
+ – 5  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4966/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вода океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/06/7a09d3b15c190fbfe37acdb506cccabe.jpg" title="Вода океана"/>
+</span>
+<span class="item-text"> Вода океана</span>
+</a>
+ – 2  			</div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Архонт солнца</div> <div class="spoiler__content"> <div class="text-box">  	Стоимость указана в <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11294/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Люмен солнца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11294.png" title="Люмен солнца"/>
+</span>
+<span class="item-text"> Люмен солнца</span>
+</a>
+.    	<br/><br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Закалённое метеоритное железо" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11295.png" title="Закалённое метеоритное железо"/>
+</span>
+<span class="item-text"> Закалённое метеоритное железо</span>
+</a>
+ – 50  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11299/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Галатеи" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11299.png" title="Свиток Галатеи"/>
+</span>
+<span class="item-text"> Свиток Галатеи</span>
+</a>
+ – 100  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11290/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица солнца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11290.png" title="Частица солнца"/>
+</span>
+<span class="item-text"> Частица солнца</span>
+</a>
+ – 5  	<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4968/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искра солнца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/4e7c53ec3502cc7e8e0bf5393dd039f4.jpg" title="Искра солнца"/>
+</span>
+<span class="item-text"> Искра солнца</span>
+</a>
+ – 2  			</div> </div> </div> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

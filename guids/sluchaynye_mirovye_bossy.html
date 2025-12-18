@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайные мировые боссы — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="boss.html">Боссы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Случайные мировые боссы</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <p id="list">  		Случайные мировые боссы – боссы, которые не имеют четкого времени возрождения. Содержат ценные предметы в дроп-листе. Большинство таких боссов невозможно убить в одиночку.  	</p> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td style="width: 5%">  									Босс  								</td> <td style="width: 30%">  									Место возрождения  								</td> <td style="width: 20%">  									Время возрождения  								</td> <td>  									Особенности  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/854/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Астарот" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/835c6e1a80597788aec932199de88021.png" title="Астарот"/>
+</span>
+<span class="item-text"> Астарот</span>
+</a>
+<br/> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/855/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лилит" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/18d375e07d0824b5197ad931196e903e.png" title="Лилит"/>
+</span>
+<span class="item-text"> Лилит</span>
+</a>
+</td> <td>  									В любом из подземелий в нескольких местах в каждом:  									<br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/bashnya-ognya/3/" target="_blank">Башня огня ур. 3</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/temnye-peshchery/3/" target="_blank">Темные пещеры ур. 3</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podzemele-nejiti/2/" target="_blank">Подземелье нежити ур. 2</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/boloto-chernogo-drakona/3/" target="_blank">Болото Черного дракона ур. 3</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/grobnica-korolya/2/" target="_blank">Гробница Короля ур. 2</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/logovo-jukov/2/" target="_blank">Логово жуков ур. 2</a> <br/><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podvodnaya-peshchera-egira/2/" target="_blank">Подводная пещера Эгира ур. 2</a> </td> <td>  									6-10 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/498/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/da4b4e80d5c28f89663855c564f05c6f.jpg" title="Кольцо телепортации"/>
+</span>
+<span class="item-text"> Кольцо телепортации</span>
+</a>
+   									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ невидимости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0348d73b30b3309c49c20202fbb24624.jpg" title="Плащ невидимости"/>
+</span>
+<span class="item-text"> Плащ невидимости</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/661/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Королева горишей" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/f37f8c8a1e78e6162653c540df1b5fc2.png" title="Королева горишей"/>
+</span>
+<span class="item-text"> Королева горишей</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/logovo-jukov/3/" target="_blank">Логово жуков ур. 3</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-661.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-661.jpg" style="max-width: 150px;"/> </a> </td> <td>  									День: c 6:00 до 16:00  									Вечер: с 18:30 до 19:00  									<br/><br/>Если босса не убить за это время – он пропадет через 30 минут после окончания времени рес.  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/498/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/da4b4e80d5c28f89663855c564f05c6f.jpg" title="Кольцо телепортации"/>
+</span>
+<span class="item-text"> Кольцо телепортации</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/84/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Спектр" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/3866082ffc0f4f1436d31e186673119a.png" title="Спектр"/>
+</span>
+<span class="item-text"> Спектр</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podvodnaya-peshchera-egira/3/" target="_blank">Пещера Эгира ур. 3</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-84.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-84.jpg" style="max-width: 150px;"/> </a> </td> <td>  									День: c 6:00 до 16:00  									Вечер: с 18:30 до 19:00  									<br/><br/>Если босса не убить за это время – он пропадет через 30 минут после окончания времени рес.  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6309/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ смотрителя" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2390e38ab7623ce7143dc5c8482bd727.jpg" title="Плащ смотрителя"/>
+</span>
+<span class="item-text"> Плащ смотрителя</span>
+</a>
+</td> </tr><tr> </tr><tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/121/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Снежная королева" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/07/13/78c3cd6d8c8805352397b867a0c8d4d2.png" title="Снежная королева"/>
+</span>
+<span class="item-text"> Снежная королева</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/bezymyannaya-peshchera/2/" target="_blank">Безымянная пещера ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-121.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-121.jpg" style="max-width: 150px;"/> </a> </td> <td>  									День: c 6:00 до 16:00  									Вечер: с 18:30 до 19:00  									<br/><br/>Если босса не убить за это время – он пропадет.  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ невидимости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0348d73b30b3309c49c20202fbb24624.jpg" title="Плащ невидимости"/>
+</span>
+<span class="item-text"> Плащ невидимости</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/871/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Наездница на виверне" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/c6c88c08903fcb54daa569777d4bfcda.png" title="Наездница на виверне"/>
+</span>
+<span class="item-text"> Наездница на виверне</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/1/" target="_blank">Храм Метеоса ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-871.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-871.jpg" style="max-width: 150px;"/> </a> </td> <td>  									1 минута – 24 часа  								</td> <td>Может возродиться через 1 минуту после смерти.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/895/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Страж Метеоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/7bf66bd57ed2420f7a2d1c59a6eb6d5c.jpg" title="Страж Метеоса"/>
+</span>
+<span class="item-text"> Страж Метеоса</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/2/" target="_blank">Храм Метеоса ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-895.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-895.jpg" style="max-width: 150px;"/> </a> </td> <td>  									0-24 часов  								</td> <td>  									Всего 4 стража, они возрождаются независимо друг от друга.  									<br/>Не восстанавливают HP.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1636/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Властитель континента" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/aecfeb3e79d6e11f025166f1fbed6bf7.png" title="Властитель континента"/>
+</span>
+<span class="item-text"> Властитель континента</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/bashnya-meteosa/1" target="_blank">Башня Метеоса ур. 1</a> </td> <td>  									10-14 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7802/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток снятия печати земли" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/133d9aad42b94641f13bfe460db1cf27.jpg" title="Свиток снятия печати земли"/>
+</span>
+<span class="item-text"> Свиток снятия печати земли</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1640/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель сильного яда" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/c6c6f825a42e13fa26e2691ff6804a50.png" title="Хранитель сильного яда"/>
+</span>
+<span class="item-text"> Хранитель сильного яда</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/bashnya-meteosa/2" target="_blank">Башня Метеоса ур. 2</a> </td> <td>  									10-14 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7803/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток снятия печати воздуха" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c8efbbc44493b3ad41deb76973df729c.jpg" title="Свиток снятия печати воздуха"/>
+</span>
+<span class="item-text"> Свиток снятия печати воздуха</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1644/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Завоеватель океана" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/dc11d06ef6bf7553d55abd47fbde28ed.png" title="Завоеватель океана"/>
+</span>
+<span class="item-text"> Завоеватель океана</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/bashnya-meteosa/3" target="_blank">Башня Метеоса ур. 3</a> </td> <td>  									10-14 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7804/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток снятия печати океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/ed955ad974806150d776dfaaf7253c8d.jpg" title="Свиток снятия печати океана"/>
+</span>
+<span class="item-text"> Свиток снятия печати океана</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1648/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный тиран" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/3451d1f32301262493aa5db7402439a3.png" title="Огненный тиран"/>
+</span>
+<span class="item-text"> Огненный тиран</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/bashnya-meteosa/4" target="_blank">Башня Метеоса ур. 4</a> </td> <td>  									10-14 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7805/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток снятия печати солнца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/2c4541caa2ca5f90353500da6c99cb7d.jpg" title="Свиток снятия печати солнца"/>
+</span>
+<span class="item-text"> Свиток снятия печати солнца</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капитан корабля скелетов" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/njbergLH1uzj7yzFujRFipKFIooeXd9QkWsZx1aQ.jpg" title="Капитан корабля скелетов"/>
+</span>
+<span class="item-text"> Капитан корабля скелетов</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov/0/" target="_blank">Катакомбы пиратов</a> </td> <td>  									10-14 часов  								</td> <td>  									Может выпасть:  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/498/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/da4b4e80d5c28f89663855c564f05c6f.jpg" title="Кольцо телепортации"/>
+</span>
+<span class="item-text"> Кольцо телепортации</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ невидимости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0348d73b30b3309c49c20202fbb24624.jpg" title="Плащ невидимости"/>
+</span>
+<span class="item-text"> Плащ невидимости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6309/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ смотрителя" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2390e38ab7623ce7143dc5c8482bd727.jpg" title="Плащ смотрителя"/>
+</span>
+<span class="item-text"> Плащ смотрителя</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Танатос" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/d80b550e5fec0a90775305e73be6bbc3.png" title="Танатос"/>
+</span>
+<span class="item-text"> Танатос</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/rp/ruiny-polnoluniya/" target="_blank">Руины Полнолуния</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2000.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2000.jpg" style="max-width: 150px;"/> </a> </td> <td>  									В любое время  									<br/>дневной смены  								</td> <td>  									Исчезает с наступлением ночной смены.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капитан рыцарей Рарки" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/bf466c8aeec48107a123bfc93317426b.png" title="Капитан рыцарей Рарки"/>
+</span>
+<span class="item-text"> Капитан рыцарей Рарки</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/rp/ruiny-polnoluniya/" target="_blank">Руины Полнолуния</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-1999.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-1999.jpg" style="max-width: 150px;"/> </a> </td> <td>  									В любое время  									<br/>ночной смены  								</td> <td>  									Исчезает с наступлением дневной смены.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Танатос" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/0fad1eaa9eae192ff5f7b542d454310b.png" title="Кровавый Танатос"/>
+</span>
+<span class="item-text"> Кровавый Танатос</span>
+</a>
+</td> <td>  									В центре <a href="https://r2online.ru/wiki/locations/rp/ozero-polnoy-luny/" target="_blank">Озера Полнолуния</a> </td> <td>  									В любое время  									<br/>дневной смены  								</td> <td>  									Призывает <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">свои проекции</a>.  									<br/>Исчезает с наступлением ночной смены.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Рарка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/4c6e0958679ac36806c76f114fda63a4.png" title="Кровавый Рарка"/>
+</span>
+<span class="item-text"> Кровавый Рарка</span>
+</a>
+</td> <td>  									В центре <a href="https://r2online.ru/wiki/locations/rp/ozero-polnoy-luny/" target="_blank">Озера Полнолуния</a> </td> <td>  									В любое время  									<br/>ночной смены  								</td> <td>  									Призывает <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">свои проекции</a>.  									<br/>Исчезает с наступлением ночной смены.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2318/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Злые мысли Юпитера" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/adac79e790dd63018284e4833bb33ff5.png" title="Злые мысли Юпитера"/>
+</span>
+<span class="item-text"> Злые мысли Юпитера</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/ground/jupiter/" target="_blank">Святилище Юпитера</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2318.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2318.jpg" style="max-width: 150px;"/> </a> </td> <td>  									8-12 часов  								</td> <td>  									С некоторой вероятностью после смерти может призвать <a class="catalog-item" href="https://r2online.ru/wiki/locations/20068/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проклятые злые мысли Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/20068p.jpg" title="Проклятые злые мысли Юпитера"/>
+</span>
+<span class="item-text"> Проклятые злые мысли Юпитера</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20068/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проклятые злые мысли Юпитера" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/20068p.jpg" title="Проклятые злые мысли Юпитера"/>
+</span>
+<span class="item-text"> Проклятые злые мысли Юпитера</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/ground/jupiter/" target="_blank">Святилище Юпитера</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2318.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2318.jpg" style="max-width: 150px;"/> </a> </td> <td>  									Возрождается с некоторой вероятностью после смерти <a class="catalog-item" href="https://r2online.ru/wiki/locations/2318/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Злые мысли Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/adac79e790dd63018284e4833bb33ff5.png" title="Злые мысли Юпитера"/>
+</span>
+<span class="item-text"> Злые мысли Юпитера</span>
+</a>
+</td> <td>  									После смерти все монстры <a href="https://r2online.ru/wiki/guids/locations/elter/" target="_blank">Святилища Юпитера</a> становятся <a href="https://r2online.ru/wiki/locations/elter/ground/baalbek/" target="_blank">проклятыми</a>.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2319/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Командир Баальбека" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/4a48760a2a3ad035210a49a89a5a5736.png" title="Командир Баальбека"/>
+</span>
+<span class="item-text"> Командир Баальбека</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/ground/baalbek/" target="_blank">Святилище Баалбека</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2319.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2319.jpg" style="max-width: 150px;"/> </a> </td> <td>  									8-12 часов  								</td> <td>  									С некоторой вероятностью после смерти может призвать <a class="catalog-item" href="https://r2online.ru/wiki/locations/20065/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проклятый Командир Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/20065p.jpg" title="Проклятый Командир Баалбека"/>
+</span>
+<span class="item-text"> Проклятый Командир Баалбека</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/20065/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проклятый Командир Баалбека" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/20065p.jpg" title="Проклятый Командир Баалбека"/>
+</span>
+<span class="item-text"> Проклятый Командир Баалбека</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/ground/baalbek/" target="_blank">Святилище Баалбека</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2319.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-2319.jpg" style="max-width: 150px;"/> </a> </td> <td>  									Возрождается с некоторой вероятностью после смерти <a class="catalog-item" href="https://r2online.ru/wiki/locations/2319/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Командир Баальбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/4a48760a2a3ad035210a49a89a5a5736.png" title="Командир Баальбека"/>
+</span>
+<span class="item-text"> Командир Баальбека</span>
+</a>
+</td> <td>  									После смерти все монстры <a href="https://r2online.ru/wiki/guids/locations/elter/" target="_blank">Святилища Баалбека</a> становятся <a href="https://r2online.ru/wiki/locations/elter/ground/baalbek/" target="_blank">проклятыми</a>.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/4100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Людоед Варкан" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/U3qky07ShTsel22vWrFpzexkUTbhqgrdMq0swA5V.jpg" title="Людоед Варкан"/>
+</span>
+<span class="item-text"> Людоед Варкан</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/krepost-abellusa/1/" target="_blank">Храм Абеллуса</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-4100.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%91%D0%BE%D1%81%D1%81%D1%8B/%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5/2-4100.webp" style="max-width: 150px;"/> </a> </td> <td>  									Через 10-12 часов  									<br/>после смерти  								</td> <td>  									Босс <a href="https://r2online.ru/wiki/guids/locations/hramabellusa/" target="_blank">может телепортироваться</a> по всему подземелью  									<br/>Выпадают сферы.  									<br/>После смерти <a href="https://r2online.ru/wiki/guids/locations/hramabellusa/#id-3" target="_blank">звери захватывают Храм Абеллуса</a>.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/mobs/1011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нага-владычица" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/XJyxoWvMdghuNa6eGV3yojsRJZeXGReiiRJcHuvS.jpg" title="Нага-владычица"/>
+</span>
+<span class="item-text"> Нага-владычица</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/sunken/" target="_blank">Затонувший храм</a> <br/><a data-fancybox="gallery" href="/storage/wiki/upload/guides/location/sunkenbosspoint.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/location/sunkenbosspoint.webp" style="max-width: 150px;"/> </a> </td> <td>  									4-8 часов  								</td> <td>  									С некоторой вероятностью после смерти может призвать <a class="catalog-item" href="https://r2online.ru/wiki/mobs/3040/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нага-королева" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/bGlpownKSz7wUZGUyiQ6WkOzpJIIwjGsnrUYHwn2.jpg" title="Нага-королева"/>
+</span>
+<span class="item-text"> Нага-королева</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/mobs/3040/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нага-королева" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/bGlpownKSz7wUZGUyiQ6WkOzpJIIwjGsnrUYHwn2.jpg" title="Нага-королева"/>
+</span>
+<span class="item-text"> Нага-королева</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/sunken/" target="_blank">Затонувший храм</a> <br/><a data-fancybox="gallery" href="/storage/wiki/upload/guides/location/sunkenbosspoint.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/location/sunkenbosspoint.webp" style="max-width: 150px;"/> </a> </td> <td>  									Возрождается с некоторой вероятностью после смерти <a class="catalog-item" href="https://r2online.ru/wiki/mobs/1011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нага-владычица" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/XJyxoWvMdghuNa6eGV3yojsRJZeXGReiiRJcHuvS.jpg" title="Нага-владычица"/>
+</span>
+<span class="item-text"> Нага-владычица</span>
+</a>
+</td> <td>  									При возрождении отправляется серверное оповещение.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/3200/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель времени" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/ecGMvvmf7lLGPaXJ6DiGDtlNfGlOKTv5v4wJxSXS.jpg" title="Хранитель времени"/>
+</span>
+<span class="item-text"> Хранитель времени</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/bosses/random-world/1.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/bosses/random-world/1.png" style="max-width: 150px;"/> </a> </td> <td>  									10-14 часов  								</td> <td>  									Когда Хранитель возрождается, все персонажи, находящиеся на острове, получают эффект "Эхо времени", который оповещает их о возвращении босса. Хранитель времени может наложить эффект "Возвращение в прошлое"" на тех, кто посмеет на него напасть, возвращая их на некоторое время в прошлое.  									<br/>Выпадает особый предмет <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13320/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Часы Хроноса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IEm5aOIoRVCwg5GkKJXVC8xp5OCBPstDrYm569Zp.jpg" title="Часы Хроноса"/>
+</span>
+<span class="item-text"> Часы Хроноса</span>
+</a>
+ (6 часов).  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Командующий копейщиков" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/babd54b10b8476aae57cf7cb62750194.png" title="Командующий копейщиков"/>
+</span>
+<span class="item-text"> Командующий копейщиков</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/bosses/random-world/3.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/bosses/random-world/3.png" style="max-width: 150px;"/> </a> </td> <td>  									0-24 часов  								</td> <td>  									Босс возрождается в случайной точке и патрулирует весь остров Акра.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/mobs/4773/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пламенный дракон" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/sOKpxiGWXVq2c5EDhha8JbrS2WF05ruOUVwZIBTj.png" title="Пламенный дракон"/>
+</span>
+<span class="item-text"> Пламенный дракон</span>
+</a>
+</td> <td> <a href="/wwiki/locations/kolfort/dungeon/grobnica-korolya/sklep-korolya/" target="_blank">Склеп короля</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/bosses/random-world/4.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/bosses/random-world/4.png" style="max-width: 150px;"/> </a> </td> <td>  									15-21 часов  								</td> <td>  									Пока Пламенный Дракон жив, пламя его ярости пропитывает воздух, превращая склеп в пылающий ад. На всех игроков в локации накладывается "Огненное проклятие дракона", непрерывно выжигающее их силы, отнимая 50 HP в секунду.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2407/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный костяной дракон" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/f0e83d845a1f286cf9b3c3b35d5a3a85.png" title="Искаженный костяной дракон"/>
+</span>
+<span class="item-text"> Искаженный костяной дракон</span>
+</a>
+</td> <td>  									Крепость Фуриэ  								</td> <td>  									15-19 часов  								</td> <td>  									Есть оповещение, когда начинает атаку.  									<br/>Не восстанавливает HP.  									<br/>После смерти может запуститься <a href="https://r2online.ru/wiki/guids/locations/distorted-event/">искаженное событие</a>.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2406/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженная Королева личей" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/64c4145c09fc1963ae91c7cd9d715f89.png" title="Искаженная Королева личей"/>
+</span>
+<span class="item-text"> Искаженная Королева личей</span>
+</a>
+</td> <td>  									Крепость Черные земли  								</td> <td>  									15-19 часов  								</td> <td>  									Есть оповещение, когда начинает атаку.  									<br/>Не восстанавливает HP.  									<br/>После смерти может запуститься <a href="https://r2online.ru/wiki/guids/locations/distorted-event/">искаженное событие</a>.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2405/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный рахан" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/934c4ca73a5b0daf42de10197b973764.png" title="Искаженный рахан"/>
+</span>
+<span class="item-text"> Искаженный рахан</span>
+</a>
+</td> <td>  									Крепость Байрон  								</td> <td>  									15-19 часов  								</td> <td>  									Есть оповещение, когда начинает атаку.  									<br/>Не восстанавливает HP.  									<br/>После смерти может запуститься <a href="https://r2online.ru/wiki/guids/locations/distorted-event/">искаженное событие</a>.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2408/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный король огров-зомби" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/e67bab31be4903af5ff8fb7f45c63a80.png" title="Искаженный король огров-зомби"/>
+</span>
+<span class="item-text"> Искаженный король огров-зомби</span>
+</a>
+</td> <td>  									Крепость Роден  								</td> <td>  									15-19 часов  								</td> <td>  									Есть оповещение, когда начинает атаку.  									<br/>Не восстанавливает HP.  									<br/>После смерти может запуститься <a href="https://r2online.ru/wiki/guids/locations/distorted-event/">искаженное событие</a>.  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/3185/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Владыка Ноктур" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/zgpehDaB3LrCMJHMpJaSxJJZKiyaZeWHTzMTqEjp.jpg" title="Владыка Ноктур"/>
+</span>
+<span class="item-text"> Владыка Ноктур</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/dvorec-meteosa/1/" target="_blank">Дворец Метеоса</a> </td> <td>  									15-19 часов  								</td> <td>  									Есть оповещение, когда начинает атаку.  									<br/>После смерти может появиться портал в <a href="https://r2online.ru/wiki/guids/locations/dvorec-meteosa/">Подземелье Метеоса</a>.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Херакен" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/xhNMy9id9ywkt91veJtM8qV321WP1B9vcSjfY3G1.jpg" title="Херакен"/>
+</span>
+<span class="item-text"> Херакен</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/acra/heraken/" target="_blank">Сад Херакена</a> </td> <td>  									18-30 часов  								</td> <td>  									В центре Сада Херакена растёт магическое дерево. При пробуждении Херакена дерево исчезает – об этом сообщается в системном чате. После исчезновения дерева Херакен возрождается в том же месте через 30–60 минут.  									<br/>Все персонажи, находящиеся в Саду Херакена в момент смерти Херакена, получают эффект на 60 минут, который повышает получаемый опыт и шанс выпадения трофеев.  								</td> </tr> </tbody></table> </div> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

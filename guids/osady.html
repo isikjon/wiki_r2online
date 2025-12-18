@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Осады — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="events.html">Мероприятия</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Осады</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<style type="text/css">.table.table-quest td {      vertical-align: middle;      text-align: left;    }      .table.table-quest td:first-child {      text-align: left;    }      .table.table-quest td:not(:first-child) {      text-align: center;    }  </style> <div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Об осаде</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Общие правила осад</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Лидер осады</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Условия уничтожения камня</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Эффект лидера осады</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Условия закрепления точки</a></li> <li><a class="link-in-top" href="#id-7" style="font-size: 14px;">Эффект защитников точки</a></li> <li><a class="link-in-top" href="#id-8" style="font-size: 14px;">Награды за захват</a></li> <li><a class="link-in-top" href="#id-9" style="font-size: 14px;">Разрушенные контрольные точки и крепости</a></li> </ol> <h2 id="id-1">Об осаде</h2> <p>  	Осада - главное крупномасштабное мероприятие, в котором принять участие может любой игрок. Однако только гильдия способна захватить крепость или контрольную точку. Владея крепостями и контрольными точками, гильдии получают ряд преимуществ, которые существенно усиливают их потенциал на поле боя. К таким преимуществам относятся: возможность устанавливать <a href="https://r2online.ru/wiki/guids/guilds/external_nalog/">налоги</a> с игроков, доступ к собственному магазину, получение дополнительных очков для развития <a href="https://r2online.ru/wiki/guids/guilds/tree/">гильдийного дерева</a> и повышение некоторых игровых параметров. Хоть завладеть контрольной точкой и проще, бонусы от неё заметно уступают тем, что предоставляет крепость. </p> <h2 id="id-2">Общие правила осад</h2> <ol> <li>Осада проводится в воскресенье с 18:00 до 19:00.</li> <li>На контрольных точках и крепостях появляются камни, которые нужно разбить.</li> <li>Последний удар по камню может нанести только «Лидер осады».</li> <li>После уничтожения камня контрольная точка или крепость будут не закреплены (на карте значок гильдии в красной рамке).</li> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege2.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px; margin-top: 10px"/> </a> <li>Чтобы закрепить точку, нужно удержать ее 5 минут.</li> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege3.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege3.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px; margin-top: 10px"/> </a> <li>Для захавата точки она должна быть закреплена в момент окончания осады.</li> <li>В начале следующей осады все захваченные КТ и Крепости вновь становятся незакрепленными.</li> </ol> <h2 id="id-3">Лидер осады</h2> <p>  		«Глава гильдии» и «Лидер осады» — две разные роли. Только «Лидер осады» может наносить последний удар по камню. «Глава гильдии» назначает лидера осады у NPC &lt;Управляющий гильдиями&gt; Эмбер.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Месторасположение Эмбер</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ember.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ember.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Важные моменты при назначении лидера:  	  	</p><ul> <li>Любой класс может быть лидером осады. Даже рейнджер или призыватель, при этом атаковать камень они смогут только вблизи.</li> <li>Во время осады нельзя изменить лидера осады.</li> <li>Стоимость услуги – 1,200,000 серебра.</li> <li>Лидер назначается на всё время, пока не будет переназначен или не выйдет с гильдии.</li> <li>По умолчанию лидером осады является глава гильдии.</li> <li>Если лидер осады покинет гильдию, роль лидера автоматически перейдет главе гильдии.</li> </ul> <h2 id="id-4">Условия уничтожения камня</h2> <p>  		«Лидер осады» сможет нанести последний удар по камню только в случае, если на контрольной точке более 5 персонажей из его гильдии. Для крепости требуется 10 персонажей. Пример: ваша гильдия защищает Гнездовье Гарпий, и вам нужно перебить Холм Эльфов, который никто не защищает. Следует отправить лидера осады и еще 4 его согильдийцев, чтобы он смог перебить КТ. Если по дороге к камню вы потеряете хотя бы 1 человека – лидер не сможет нанести последний удар по камню КТ.  	</p> <p>  		Лидер осады всегда может следить за количеством персонажей из его гильдии на точке с помощью эффекта лидера осады.  	</p> <p>  		После уничтожения камня все игроки, кроме союзников лидера телепортируются в деревню.  	</p> <h2 id="id-5">Эффект лидера осады</h2> <p>  		Лидер осады отмечен особым визуальным эффектом.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege4.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege4.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>  		В случае достаточного количество согильдийцев на точке лидер осады получает существенный баф на защиту. Чем больше на точке согильдийцев, тем сильнее баф. Визуальный эффект также меняется в зависимости от силы бафа.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Эффекты лидера осады</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td rowspan="2" style="width: 5%"> <br/>Уровень эффекта  								</td> <td colspan="2">  									Количество согильдийцев  								</td> <td rowspan="2" style="width: 5%"> <br/>Получаемый урон  								</td> <td rowspan="2"> <br/>Визуальный эффект  								</td> </tr> <tr class="tr-header tr-odd"> <td style="width: 12%">  									Крепость  								</td> <td style="width: 12%">  									КТ  								</td> </tr> <tr> <td align="center">  									Ур. 1  								</td> <td align="center">  									10  								</td> <td align="center">  									5  								</td> <td align="center">  									-10%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege5.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege5.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 2  								</td> <td align="center">  									11  								</td> <td align="center">  									6  								</td> <td align="center">  									-11%  								</td> </tr> <tr> <td align="center">  									Ур. 3  								</td> <td align="center">  									12  								</td> <td align="center">  									7  								</td> <td align="center">  									-12%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege6.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege6.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 4  								</td> <td align="center">  									13  								</td> <td align="center">  									8  								</td> <td align="center">  									-13%  								</td> </tr> <tr> <td align="center">  									Ур. 5  								</td> <td align="center">  									14  								</td> <td align="center">  									9  								</td> <td align="center">  									-14%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege7.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege7.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 6  								</td> <td align="center">  									15  								</td> <td align="center">  									10  								</td> <td align="center">  									-15%  								</td> </tr> <tr> <td align="center">  									Ур. 7  								</td> <td align="center">  									16  								</td> <td align="center">  									11  								</td> <td align="center">  									-16%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege8.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege8.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 8  								</td> <td align="center">  									17  								</td> <td align="center">  									12  								</td> <td align="center">  									-17%  								</td> </tr> <tr> <td align="center">  									Ур. 9  								</td> <td align="center">  									18  								</td> <td align="center">  									13  								</td> <td align="center">  									-18%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege9.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege9.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 10  								</td> <td align="center">  									19  								</td> <td align="center">  									14  								</td> <td align="center">  									-19%  								</td> </tr> <tr> <td align="center">  									Ур. 11  								</td> <td align="center">  									20  								</td> <td align="center">  									15  								</td> <td align="center">  									-20%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege10.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege10.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 12  								</td> <td align="center">  									21  								</td> <td align="center">  									16  								</td> <td align="center">  									-21%  								</td> </tr> <tr> <td align="center">  									Ур. 13  								</td> <td align="center">  									22  								</td> <td align="center">  									17  								</td> <td align="center">  									-22%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege11.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege11.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 14  								</td> <td align="center">  									23  								</td> <td align="center">  									18  								</td> <td align="center">  									-23%  								</td> </tr> <tr> <td align="center">  									Ур. 15  								</td> <td align="center">  									24  								</td> <td align="center">  									19  								</td> <td align="center">  									-24%  								</td> <td rowspan="2"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege12.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege12.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 16  								</td> <td align="center">  									25  								</td> <td align="center">  									20  								</td> <td align="center">  									-25%  								</td> </tr> </tbody></table> </div> </div> </div> </div> <h2 id="id-6">Условия закрепления точки</h2> <p>  	После уничтожения камня гильдия должна захватить точку. Для этого ей необходимо в течение 5 минут защищать камень от возможного противника. В случае, если на контрольной точке станет менее 5 персонажей с этой гильдии, то через 30 секунд контрольная точка станет вновь пустой. В случае с крепостью потребуется 10 персонажей.  </p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege13.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege13.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>  	Если контрольная точка или крепость успешно закреплены, то неважно сколько согильдийцев находится на точке – она не станет пустой. Потерять точку в этом случае можно только, если вражеская гильдия уничтожит камень.  </p> <h2 id="id-7">Эффект защитников точки</h2> <p>  	Через 5 минут удержания точки после ее закрепления все согильдийцы получают усиливающий баф. Этот баф активен только на точке: если уйти, то баф пропадет, вернувшись на точку баф накладывается снова. Каждые последующие 5 минут баф усиливается, максимальный уровень – 3. Для получения максимального бафа нужно удерживать точку в течение 20 минут после уничтожения камня.  </p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Эффекты защитников точки</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-quest"> <tbody><tr class="tr-header tr-odd"> <td style="width: 15%">  									Уровень  								</td> <td style="width: 25%">  									Требуемое время удержания после закрепления точки  								</td> <td align="center">  									Бонус  								</td> <td align="center">  									Анимация наложения  								</td> </tr> <tr> <td align="center">  									Ур. 1  								</td> <td align="center">  									5 минут  								</td> <td align="center">  									Уровень всех атак +1  									<br/>Защита +1  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege14.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege14.webp" style="height: 150px; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 2  								</td> <td align="center">  									10 минут  								</td> <td align="center">  									Уровень всех атак +3  									<br/>Защита +3  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege15.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege15.webp" style="height: 150px; cursor: zoom-in;"/> </a> </td> </tr> <tr> <td align="center">  									Ур. 3  								</td> <td align="center">  									15 минут  								</td> <td align="center">  									Уровень всех атак +5  									<br/>Защита +5  								</td> <td align="center"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege16.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege16.webp" style="height: 150px; cursor: zoom-in;"/> </a> </td> </tr> </tbody></table> </div> </div> </div> </div> <h2 id="id-8">Награды за захват</h2> <p>  		В случае, если ваша гильдия сумела удержать точку до конца осады, вы получаете ряд привилегий и уникальных бонусов.  	</p> <ul> <li>В <a href="https://r2online.ru/wiki/guids/guilds/tree" target="_blank">дереве гильдии</a> разблокируется центральная ветка – дерево умений крепостей.</li> <li>Гильдия получит дополнительные очки умений гильдии. За КТ – 10 очков, за Крепость – 20 очков. Ограничений нет, можно захватить несколько КТ и крепостей – очки складываются.</li> <li><a href="https://r2online.ru/wiki/guids/guilds/external_nalog/" target="_blank">Внешний налог</a> на алхимические товары: за КТ – 2%, за Крепость – 10%, вне зависимости от владений в которых они располагаются. Гильдии получают серебро на счет гильдии.</li> <li>Эффект хранителя. Постоянный баф для всех членов гильдии. Зависит от длительности удержания точки после закрепления за вашей гильдией.</li> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Бафы хранителя</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td align="center">Уровень</td> <td align="center">Эффект</td> <td align="center">Время закрепления</td> </tr> <tr> <td align="center">Ур. 1</td> <td align="center">Все параметры +1</td> <td align="center">5 минут после захвата</td> </tr> <tr> <td align="center">Ур. 2</td> <td align="center">Все параметры +1  									<br/>Уровень всех атак +1</td> <td align="center">10 минут после захвата</td> </tr> <tr> <td align="center">Ур. 3</td> <td align="center">Все параметры +1  									<br/>Уровень всех атак +1  									<br/>HP/MP +50</td> <td align="center">15 минут после захвата</td> </tr> <tr> <td align="center">Ур. 4</td> <td align="center">Все параметры +1  									<br/>Уровень всех атак +1  									<br/>HP/MP +50  									<br/>Вес +1000</td> <td align="center">20 минут после захвата</td> </tr> </tbody></table> </div> </div> </div> </div> <li>Лавка контрольной точки или крепости. На всех контрольных точках (КТ) и крепостях находятся торговцы, у которых можно приобрести различные расходники. Если ваша гильдия владеет <a href="https://r2online.ru/wiki/guids/guilds/house" target="_blank">домом гильдии</a>, то, начиная с редкого уровня дома, вам также становится доступен торговец. Он предлагает идентичные расходники по тем же ценам. Однако, при улучшении уровня гильдии, эти расходники можно дополнительно купить в <a href="https://r2online.ru/wiki/guids/guilds/house" target="_blank">лавке дома гильдии</a>. Стоит отметить, что в лавке гильдии цены на товары выше, а их количество ограничено.</li> <div class="spoiler"> <div class="spoiler__title">Ассортимент лавки</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container">  				Длительность всех эффектов: 10 минут  				<br/>   					<table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td style="width: 40%">Предмет</td> <td>Эффект</td> </tr> <tr class="tr-header tr-odd"> <td colspan="2">Контрольная точка</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1403/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Зелье восстановления I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/4fxULUsaHjI937E3CLTCeAj22ZJGjhXt0RZ4tXg1.jpg" title="Зелье восстановления I"/>
+</span>
+<span class="item-text"> Зелье восстановления I</span>
+</a>
+ (1 день)</td> <td>Особое восстановление HP +0,1  								<br/>Особое восстановление MP +0,1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Доспех огра I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15000.jpg" title="Доспех огра I"/>
+</span>
+<span class="item-text"> Доспех огра I</span>
+</a>
+ (1 день)</td> <td>Защита +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток атаки I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15001.jpg" title="Свиток атаки I"/>
+</span>
+<span class="item-text"> Свиток атаки I</span>
+</a>
+ (1 день)</td> <td>Шанс нанести крит. удар +2</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Благословение льва I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15002.jpg" title="Благословение льва I"/>
+</span>
+<span class="item-text"> Благословение льва I</span>
+</a>
+ (1 день)</td> <td>Уровень ближних атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Магический свиток I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15003.jpg" title="Магический свиток I"/>
+</span>
+<span class="item-text"> Магический свиток I</span>
+</a>
+ (1 день)</td> <td>Уровень магических атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крыло феи I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15004.jpg" title="Крыло феи I"/>
+</span>
+<span class="item-text"> Крыло феи I</span>
+</a>
+ (1 день)</td> <td>Уровень дальних атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7035/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Убийца монстров I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/TO8rhh3Sr3xsz6FSFulg9fVKoIpGHD5lStlqw9tF.jpg" title="Убийца монстров I"/>
+</span>
+<span class="item-text"> Убийца монстров I</span>
+</a>
+ (1 день)</td> <td>Против монстров:  								<br/>Уровень всех атак +2  								<br/>Точность всех атак +2</td> </tr> <tr class="tr-header tr-odd"> <td colspan="2">Крепость</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1855/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Зелье восстановления II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/fA7Q2bbgKK6EMLD2H1LGujTYwXWWjTYfDHFoU1G1.jpg" title="Зелье восстановления II"/>
+</span>
+<span class="item-text"> Зелье восстановления II</span>
+</a>
+ (1 день)</td> <td>Особое восстановление HP +0,2  								<br/>Особое восстановление MP +0,2</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1867/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Доспех огра II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3pHXoyRoz5wcnLzARLQMhjOL6TaLyfh2UBVok52s.jpg" title="Доспех огра II"/>
+</span>
+<span class="item-text"> Доспех огра II</span>
+</a>
+ (1 день)</td> <td>Защита +2</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1407/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток атаки II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/4vyxDa4lBo7hYXkrrF30gmmcKGuwH2mqVJalujWN.jpg" title="Свиток атаки II"/>
+</span>
+<span class="item-text"> Свиток атаки II</span>
+</a>
+ (1 день)</td> <td>Шанс нанести крит. удар +3</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1857/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Благословение льва II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/iS4TeDC2tRRTgd260VT7uGaTsfguRCgUpnR4xv9X.jpg" title="Благословение льва II"/>
+</span>
+<span class="item-text"> Благословение льва II</span>
+</a>
+ (1 день)</td> <td>Уровень ближних атак +1  									<br/>Точность ближних атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1863/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Магический свиток II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/9ssfHVRvZR8CmPVmnIUWvqUgcdaZScz3Zc0730ue.jpg" title="Магический свиток II"/>
+</span>
+<span class="item-text"> Магический свиток II</span>
+</a>
+ (1 день)</td> <td>Уровень магических атак +1  									<br/>Точность магических атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1860/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крыло феи II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/dHhsaJqIOYJIBgygzYixZdLbtvadoMxhVfHrIRcE.jpg" title="Крыло феи II"/>
+</span>
+<span class="item-text"> Крыло феи II</span>
+</a>
+ (1 день)</td> <td>Уровень дальних атак +1  									<br/>Точность дальних атак +1</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Убийца монстров II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/zVpgFZFnMeDuDpqyRloJAyWDnTvQ1HKOy0O4m2Ka.jpg" title="Убийца монстров II"/>
+</span>
+<span class="item-text"> Убийца монстров II</span>
+</a>
+ (1 день)</td> <td>Против монстров:  								<br/>Уровень всех атак +3  								<br/>Точность всех атак +3</td> </tr> </tbody></table> </div> </div> </div> </div> </ul> <h2 id="id-9">Разрушенные контрольные точки и крепости</h2> <p>  	Если в конце осады у контрольной точки или крепости нет владельца (она пустая или в красной рамке), то точка может стать разрушенной. Максимально может быть 11 разрушенных контрольных точек или крепостей. На следующей осаде разрушенные точки нельзя захватить. Одни и те же точки могут быть разрушенными несколько осад подряд.  </p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege17.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/siege17.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>  	Дополнительно разрушенная точка может быть захвачена монстрами. На <a href="https://r2online.ru/wiki/guids/locations/destroyed-event/" target="_blank">разрушенных контрольных точках</a> можно выполнять <a href="https://r2online.ru/wiki/quests/daily/exp/razrushennie/" target="_blank">ежедневное задание на опыт</a>, а на <a href="https://r2online.ru/wiki/guids/locations/destroyed-castle-event/" target="_blank">разрушенных крепостях</a> добывать материалы для изготовления книг перевоплощения. Такие точки подсвечены красным.  </p> <p>  	   </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

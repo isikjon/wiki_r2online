@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Храм Темных жрецов — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Храм Темных жрецов</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О храме темных жрецов</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Сыворотка веры</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Молитва</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Проповедь</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Кусочки огненной стали и Чешуйки бафомета</a></li> </ol> <h2 id="id-1">О храме темных жрецов</h2> <p> <a href="https://r2online.ru/wiki/locations/illumina/hram-zhrecov-tmy/1" target="_blank">Храм Темных Жрецов (ХТЖ)</a> — подземелье с высоуровневыми монстрами и уникальными событиями – «Молитва» и «Проповедь». Вход в храм находится в <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/">Святых землях Иллюмина</a> слева и справа.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/vhod_htzh.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/vhod_htzh.webp" style="max-width: 100%; margin-bottom: 15px"/> </a> <p>  		В зависимости от входа вы попадете в левую или правую часть подземелья соответственно.   	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Карта Храма темных жрецов</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/htzh_map.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/htzh_map.webp" style="max-width: 100%"/> </a> </div> </div> <p>  		В левой части обитают «служители Ифрита», с них выпадают свитки усиления доспехов, а в правой – «служители Бафомета», с них выпадают свитки усиления оружия. Дополнительно со всех монстров выпадает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12234/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Писание темного жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3TBTRV8y7jeLfC5MJB1NiLke3YGjXAv147uYt3jL.webp" title="Писание темного жреца"/>
+</span>
+<span class="item-text"> Писание темного жреца</span>
+</a>
+, которое потребуется для начала молитвы.  		<br/>В Храме темных жрецов появляется <a href="https://r2online.ru/wiki/guids/locations/bosses/" target="_blank">босс</a> – <a class="catalog-item" href="https://r2online.ru/wiki/locations/111200/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Темный верховный жрец" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/eCFgggqlKhA6AS3X1l8ufP645IU7nhcukOYBT7SU.jpg" title="Темный верховный жрец"/>
+</span>
+<span class="item-text"> Темный верховный жрец</span>
+</a>
+. Здесь можно выполнить очень тяжелое <a href="https://r2online.ru/wiki/quests/epic/very-hard/ohotnik-na-demonov/" target="_blank">эпическое задание - Охотник на демонов</a>.  	</p> <h2 id="id-2">Сыворотка веры</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12415/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сыворотка веры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3ydj0kL9f6VXgVKaOjVzqZ3ADsFOoTktVvfXEG7M.webp" title="Сыворотка веры"/>
+</span>
+<span class="item-text"> Сыворотка веры</span>
+</a>
+ — зелье, накладывающее эффект на 5 минут. Во время действия эффекта все  <a href="https://r2online.ru/wiki/locations/illumina/hram-zhrecov-tmy/1/" target="_blank">монстры храма темных жрецов</a> не будут атаковать персонажа первыми. Зелье изготавливается через меню создания [J], его можно передавать другим игрокам и выставлять на <a href="https://r2online.ru/wiki/guids/other/auction/" target="_blank">аукцион</a>.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12415/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сыворотка веры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3ydj0kL9f6VXgVKaOjVzqZ3ADsFOoTktVvfXEG7M.webp" title="Сыворотка веры"/>
+</span>
+<span class="item-text"> Сыворотка веры</span>
+</a>
+</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9801/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пустая бутылка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Pkov3AuSFOE2NZig4aD75qYaidvGOGKivkraKZQy.png" title="Пустая бутылка"/>
+</span>
+<span class="item-text"> Пустая бутылка</span>
+</a>
+, 1 шт., выпадает с монстров Затонувшего храма, Пещеры пиратов ур. 2, Горизонта полнолуния.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9802/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светящийся кристалл веры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/PVVZRRf8nk6Xlah9a9QXiPaXNhTrjXZ4RV1LU8IQ.png" title="Светящийся кристалл веры"/>
+</span>
+<span class="item-text"> Светящийся кристалл веры</span>
+</a>
+, 3 шт., выпадаемт монстров Храма темных жрецов.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000 шт.  			</div> </div> </div> </div> <h2 id="id-3">Молитва</h2> <p>  		Со всех монстров в Храме темных жрецов можно добыть <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12234/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Писание темного жреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3TBTRV8y7jeLfC5MJB1NiLke3YGjXAv147uYt3jL.webp" title="Писание темного жреца"/>
+</span>
+<span class="item-text"> Писание темного жреца</span>
+</a>
+ – это особый предмет, сроком на 10 минут. Добыв писание нужно найти Крест <a class="catalog-item" href="https://r2online.ru/wiki/locations/6002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Загадочный крест" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Onc7ILxv00bIV2zoC2i2wB4f6AYblGwf8CQgxyZY.webp" title="Загадочный крест"/>
+</span>
+<span class="item-text"> Загадочный крест</span>
+</a>
+, это NPC, который может появиться в любом месте храма в случайное время, независимо от того, есть у кого-то писание или нет.  	</p> <div style="display: flex; align-items: center;"> <blockquote>  		  Крест невозможно уничтожить.  		</blockquote> </div> <p>  		Если вы нашли крест и у вас имеется писание, вы можете начать Молитву, при этом писание остается у вас, а крест пропадет. Запустить молитву без наличия писания невозможно.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Крест</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/krest.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/krest.webp" style="max-width: 100%"/> </a> </div> </div> <div style="display: flex; align-items: center;"> <blockquote>  		  За 15 минут до начала Проповеди и во время проведения Проповеди начать Молитву нельзя.  		</blockquote> </div> <p>	  		Во время молитвы вход в храм закрывается, а по всему храму появляются статуи. Молитва длится 10 минут.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/molitva.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/molitva.webp" style="max-width: 70%; margin-bottom: 15px"/> </a> <p>	  		Задача – найти статую с красным свечением и прочесть писание. Количество статуй с красным свечением может быть от 1 до 5.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Статуя с красным свечением</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/red.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/red.webp" style="max-width: 100%"/> </a> </div> </div> <div style="display: flex; align-items: center;"> <blockquote>  		  Прочесть писание может любой персонаж, у которого есть писание, независимо от того кто начинал Молитву.  		</blockquote> </div> <p>	  		Как только писание будет прочтено, статуя расколется и появится босс <a class="catalog-item" href="https://r2online.ru/wiki/locations/111200/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Темный верховный жрец" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/eCFgggqlKhA6AS3X1l8ufP645IU7nhcukOYBT7SU.jpg" title="Темный верховный жрец"/>
+</span>
+<span class="item-text"> Темный верховный жрец</span>
+</a>
+.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/zhrec.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/zhrec.webp" style="max-width: 70%; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист с Темного верховного жреца</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Темного мечника (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/49d07207b845e07dccf894afddc99e53.png" title="Книга Темного мечника (легендарное)"/>
+</span>
+<span class="item-text"> Книга Темного мечника (легендарное)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20435/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Темной лучницы (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/8cf18b6e3b7cdd4a3e87f3eacf85573e.png" title="Книга Темной лучницы (легендарное)"/>
+</span>
+<span class="item-text"> Книга Темной лучницы (легендарное)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+</div> </div> </div> </div> <p>  	При завершении Молитвы все статуи пропадут, а вход в храм откроется.  	</p> <h2 id="id-4">Проповедь</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проповедник темных жрецов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/26xhrKwF1c1u6xH45zl2y5f08FFKz0kH3h4RD58S.jpg" title="Проповедник темных жрецов"/>
+</span>
+<span class="item-text"> Проповедник темных жрецов</span>
+</a>
+ — <a href="https://r2online.ru/wiki/guids/locations/bosses/" target="_blank">босс</a>, появляется в центре храма. Время возрождения фиксированное – 9 часов после смерти. Когда босс возрождается - начинается «Проповедь», во время которой войти в храм нельзя. «Проповедь» длится 5 минут, но в случае смерти «Проповедника» она завершится раньше. Если босса не убьют и «Проповедь» завершится, босс пропадет.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/boss.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/boss.webp" style="max-width: 70%; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист с Проповедника темных жрецов</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><br/>Часть предметов выпадает в большом количестве.  				</div> </div> </div> </div> <p>  		Проповедник игнорирует эффект от <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12415/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сыворотка веры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3ydj0kL9f6VXgVKaOjVzqZ3ADsFOoTktVvfXEG7M.webp" title="Сыворотка веры"/>
+</span>
+<span class="item-text"> Сыворотка веры</span>
+</a>
+ – он будет нападать на вас первым.  	</p> <div style="display: flex; align-items: center;"> <blockquote>  		  За 15 минут до начала Проповеди и во время проведения Проповеди начать Молитву нельзя.  		</blockquote> </div> <h2 id="id-5">Кусочки огненной стали и Чешуйки бафомета</h2> <p>  			С монстров служителей Ифрита выпадают <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12805/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кусочек огненной стали" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/XBcbOlMFoTO5Aep2SIDjlrlLpR1OhGLJlM07sRms.jpg" title="Кусочек огненной стали"/>
+</span>
+<span class="item-text"> Кусочек огненной стали</span>
+</a>
+, со служителей Бафомета – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12806/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Чешуйка Бафомета" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/9llkOhCYMTjauLDsZDnepIhwGb30mAWM2I9bugoh.jpg" title="Чешуйка Бафомета"/>
+</span>
+<span class="item-text"> Чешуйка Бафомета</span>
+</a>
+. Собрав 100 предметов – необходимо обратиться к NPC &lt;Искатель сокровищ&gt; Леонтий, который обменяет кусочки или чешуйки на случайную одну огненную сталь <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12025/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/WO5UtD2E2rnUfTgMwXXfsNPWbPv9ExKvdIDOIGnY.jpg" title="Кусок огненной стали (Доспех)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12026/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YBNTyaSjdaIAkDGCftM8Am4k2bPLrcBeK043CxrY.jpg" title="Кусок огненной стали (Шлем)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12027/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/UptJip0bf2OypBI4r8i7bWHnYQf3tWWxuRcBkR5L.jpg" title="Кусок огненной стали (Перчатки)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/MZdXpppFWZBCjnDu9BHzD0eAb2CDtLEV6Dk1UYk3.jpg" title="Кусок огненной стали (Сапоги)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12029/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/zV903VAuTaeP4wuQT9x2dMKVgW5zmLELSCeOzKwq.jpg" title="Кусок огненной стали (Плащ)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/FfexGKI9qq16LrPQ49HUNYtRg6rnnD7CawdJCKqm.jpg" title="Кусок огненной стали (Снаряжение)"/>
+</span>
+</a>
+ или чешую Бафомета <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/CiPG0TEwSC8pDFzNtslFHKRNogBtzTP3Jy3qvPyN.jpg" title="Чешуя Бафомета (Доспех)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/oqc0B1kZFWaBkL2b88lsRRfiuKP86dMkdHrr50vw.jpg" title="Чешуя Бафомета (Шлем)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/grkQ4HhxkszpiI3w41kuOuAWkXYZxsoMLMPvGTWC.jpg" title="Чешуя Бафомета (Перчатки)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YyW7Tn8Sro0UaxDgLDtseb85NiuquGm94bVj8In2.jpg" title="Чешуя Бафомета (Сапоги)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12023/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/WRECcDeQyI83waHBYZ2mqiXaSpLY75Hv1UpFKF4B.jpg" title="Чешуя Бафомета (Плащ)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12024/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/m9KEoZQVwx8FzkUQE41fFZzSMOMgmEUYbpyZAZbO.jpg" title="Чешуя Бафомета (Снаряжение)"/>
+</span>
+</a>
+.  		</p> <a data-fancybox="gallery" href="/storage/photos/16/Leontiy.jpg"><img alt="" src="https://r2online.ru/storage/photos/16/Leontiy.jpg" style="max-width: 70%; margin-bottom: 15px"/> </a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

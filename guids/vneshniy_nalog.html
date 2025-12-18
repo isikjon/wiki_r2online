@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внешний налог — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="guilds.html">Гильдии</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Внешний налог</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О внешнем налоге</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Налоги от крепостей и контрольных точек</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Установка внешнего налога</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Пример расчета налога</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Распределение прибыли от налога</a></li> </ol> <h2 id="id-1">О внешнем налоге</h2> <p>Внешний налог — это механика, влияющая на стоимость товаров, продаваемых NPC за серебро. В результате применения этого налога, цены у всех NPC в игре повышаются, исключая товары для новичков от Оружейника. Этот налог прямо связан с осадами: победители получают разницу между базовой стоимостью товара и налоговой добавкой.</p> <h2 id="id-2">Налоги от крепостей и контрольных точек</h2> <p>После <a href="https://r2online.ru/wiki/guids/events/siege/" target="_blank">осады</a>, каждая контрольная точка под управлением гильдии увеличивает стоимость товаров на 2%. В то время как крепость добавляет 10%. Однако максимальный налог от одной гильдии не может превышать 10%. Так, если гильдия управляет крепостью и контрольной точкой одновременно, общий налог составит 10%, а не 12%.</p> <h2 id="id-3">Установка внешнего налога</h2> <p>Установка или изменение величины налога невозможны — процесс происходит полностью автоматически. Половина всех налоговых сборов уходит алхимику. Так, при контроле контрольной точки стоимость товаров увеличивается на 2%. 1% напрямую идет на <a href="https://r2online.ru/wiki/guids/events/siege/" target="_blank">счет гильдии</a>, в то время как алхимик забирает оставшийся 1%.</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/kaznachey.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/kaznachey.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <h2 id="id-4">Пример расчета налога</h2> <p>Рассмотрим ситуацию на конец осады в воскресенье в 20:00:</p> <ul> <li>Гильдия «Мстители» управляет <strong>Крепостью Фуриэ</strong>, что прибавляет 10% налог.</li> <li>«Испанцы» владеют <strong>Холмом эльфов</strong> и <strong>Гнездовьем гарпий</strong>, добавляя по 2% с каждой точки.</li> <li>«Могучие» контролируют <strong>Крепость Роден</strong> с налогом в 10%.</li> </ul> <p>Общая налоговая ставка в этом случае составляет 24%.</p> <h2 id="id-5">Распределение прибыли от налога</h2> <p>Рассмотрим товар <strong>густое зелье здоровья (ср.)</strong> с исходной стоимостью 1,500 серебра. Учитывая налог, его стоимость вырастет до 1,860 серебра. Распределение прибыли от налога будет следующим:</p> <ul> <li>Алхимик получает основную стоимость товара (1,500 серебра) плюс 180 серебра из налога. Это 12% от общего налога (24% / 2).</li> <li>«Мстители» получают 75 серебра, что составляет 5%.</li> <li>«Испанцы» – 30 серебра или 2%.</li> <li>«Могучие» – 75 серебра или 5%.</li> </ul> <p>Таким образом, каждая гильдия и алхимик получают соответствующую долю из наценки на товар.</p> </div> <p><a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script></p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

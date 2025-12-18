@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сет Ифрита — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="unique-items.html">Уникальные предметы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Сет Ифрита</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <div style="text-align: center;"><img alt="" class="float-image-right" src="https://r2online.ru/storage/images/guids/sets/ifrit/ff599eacfe.png" style="max-width: 280px; margin-bottom: 10px"/></div> <h2>Характеристики</h2> <p>Эффективность сета зависит от количества предметов и заточки.<br/>  3 предмета прибавляют только ХП,<br/>  4 предмета – ХП и Защиту,<br/>  5 предметов – ХП, Защиту и Снижение получаемого урона в %.<br/>  Чем выше заточка, тем больше параметров прибавит сет. Экипировка не обязательно должна быть одинаковой заточки, уровень сета определяется по самой низкой заточке среди предметов участвующих в сете.</p> <div class="table-container"> <table class="table table-with-vertical-borders" style="margin-top: 15px"> <tbody> <tr class="tr-header tr-odd"> <td> </td> <td align="center">3 Предмета</td> <td align="center" colspan="2">4 Предмета</td> <td align="center" colspan="3">5 Предметов</td> </tr> <tr class="tr-header tr-odd"> <td>Заточка</td> <td>ХП</td> <td>ХП</td> <td>Защита</td> <td>ХП</td> <td>Защита</td> <td>Весь получаемый урон</td> </tr> <tr align="center" class="tr-alt-even"> <td>4</td> <td>+100</td> <td>+100</td> <td>+1</td> <td>+100</td> <td>+1</td> <td>-1%</td> </tr> <tr align="center" class="tr-even"> <td>5</td> <td>+150</td> <td>+150</td> <td>+2</td> <td>+150</td> <td>+2</td> <td>-2%</td> </tr> <tr align="center" class="tr-alt-even"> <td>6</td> <td>+200</td> <td>+200</td> <td>+3</td> <td>+200</td> <td>+3</td> <td>-3%</td> </tr> <tr align="center" class="tr-even"> <td>7</td> <td>+250</td> <td>+250</td> <td>+4</td> <td>+250</td> <td>+4</td> <td>-4%</td> </tr> <tr align="center" class="tr-alt-even"> <td>8</td> <td>+300</td> <td>+300</td> <td>+5</td> <td>+300</td> <td>+5</td> <td>-5%</td> </tr> <tr align="center" class="tr-even"> <td>9</td> <td>+350</td> <td>+350</td> <td>+6</td> <td>+350</td> <td>+6</td> <td>-6%</td> </tr> <tr align="center" class="tr-alt-even"> <td>10</td> <td>+400</td> <td>+400</td> <td>+7</td> <td>+400</td> <td>+7</td> <td>-7%</td> </tr> <tr align="center" class="tr-even"> <td>11</td> <td>+450</td> <td>+450</td> <td>+8</td> <td>+450</td> <td>+8</td> <td>-8%</td> </tr> <tr align="center" class="tr-alt-even"> <td>12</td> <td>+500</td> <td>+500</td> <td>+9</td> <td>+500</td> <td>+9</td> <td>-9%</td> </tr> <tr align="center" class="tr-even"> <td>13</td> <td>+550</td> <td>+550</td> <td>+10</td> <td>+550</td> <td>+10</td> <td>-10%</td> </tr> </tbody> </table> </div> <h6>Приведем пример:</h6> <p>На персонаже 6 предметов Ифрита:<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Легкий доспех Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/771bcfdf2c563be30fbbbf5a20a91f5b.jpg" title="Легкий доспех Ифрита"/>
+</span>
+<span class="item-text">+8  Легкий доспех Ифрита</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1525/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Шлем Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a6e816687989cb10b93f72be28a5071f.jpg" title="Шлем Ифрита"/>
+</span>
+<span class="item-text">+8  Шлем Ифрита</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1532/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Перчатки Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b4d61c161ad71493caf19b573b9de6da.jpg" title="Перчатки Ифрита"/>
+</span>
+<span class="item-text">+7  Перчатки Ифрита</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1530/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сапоги Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4c3575ab51ccbe5fcd1564fca295de68.jpg" title="Сапоги Ифрита"/>
+</span>
+<span class="item-text">+5  Сапоги Ифрита</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1529/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/51944b1d6e9fa0182c8f703711cafebe.jpg" title="Плащ Ифрита"/>
+</span>
+<span class="item-text">+7  Плащ Ифрита</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/100126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Колчан стрел Ифрита" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/F5IA87Ix4L8xZur5ceQ0BQFTUaCMQ7gFXsnJ2ktB.jpg" title="Колчан стрел Ифрита"/>
+</span>
+<span class="item-text">+6  Колчан стрел Ифрита</span>
+</a>
+</p> <div style="text-align: center;"><img alt="" class="float-image-right" src="https://r2online.ru/storage/images/guids/sets/ifrit/42e2dcb0c1.png" style=""/></div> <p>В сете участвуют 5 предметов наивысшей заточки: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/771bcfdf2c563be30fbbbf5a20a91f5b.jpg" title="Легкий доспех Ифрита"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/1525/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a6e816687989cb10b93f72be28a5071f.jpg" title="Шлем Ифрита"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/1532/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b4d61c161ad71493caf19b573b9de6da.jpg" title="Перчатки Ифрита"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/1529/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/51944b1d6e9fa0182c8f703711cafebe.jpg" title="Плащ Ифрита"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/100126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/F5IA87Ix4L8xZur5ceQ0BQFTUaCMQ7gFXsnJ2ktB.jpg" title="Колчан стрел Ифрита"/>
+</span>
+</a>
+.<br/>  Уровень сета определяется по <strong>самой низшей заточке +6</strong> среди этих предметов - <a class="catalog-item" href="https://r2online.ru/wiki/base/view/100126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Колчан стрел Ифрита" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/F5IA87Ix4L8xZur5ceQ0BQFTUaCMQ7gFXsnJ2ktB.jpg" title="Колчан стрел Ифрита"/>
+</span>
+<span class="item-text">+6  Колчан стрел Ифрита</span>
+</a>
+. Этот пример соответствует 3-му уровню сета из 5-ти предметов и дает +200 ХП, +3 Защиты и -3% Получаемого урона.<br/> <br/>  Если заменить <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1530/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4c3575ab51ccbe5fcd1564fca295de68.jpg" title="Сапоги Ифрита"/>
+</span>
+</a>
+ или <a class="catalog-item" href="https://r2online.ru/wiki/base/view/100126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/F5IA87Ix4L8xZur5ceQ0BQFTUaCMQ7gFXsnJ2ktB.jpg" title="Колчан стрел Ифрита"/>
+</span>
+</a>
+ на <strong>заточку +7</strong>, то сет станет 4-го уровня из 5-ти предметов и уже даст +250 ХП, +4 Защиты и -4% Получаемого урона.</p> <blockquote>Сет Ифрита можно использовать с <a alt="" href="https://r2online.ru/wiki/guids/unique-items/baphomet/" target="_blank">сетом Бафомета</a>. К примеру - экипировать 3 предмета Ифрита и 3 предмета Бафомета.</blockquote> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

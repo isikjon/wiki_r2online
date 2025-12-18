@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Храм Абеллуса — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Храм Абеллуса</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<style type="text/css">    .table.table-quest td {      vertical-align: middle;    }    </style> <div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О храме Абеллуса</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Людоед Варкан</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Особое событие: захват храма</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Зал испытаний</a></li> </ol> <h2 id="id-1">О храме Абеллуса</h2> <p>  		Храм находится на <a href="https://r2online.ru/wiki/locations/elter/dangeon/" target="_blank">небесном острове Эльтер</a> на нейтральной территории.  	</p> <a data-fancybox="gallery" href="/storage/wiki//images/kaOhPjmbQBwgMFMhNXaVQANz1QxboBJaBjhhWHEQ.jpg"><img alt="" src="https://r2online.ru/storage/wiki//images/kaOhPjmbQBwgMFMhNXaVQANz1QxboBJaBjhhWHEQ.jpg" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Расположение храма Абеллуса</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/vhod_abel.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/vhod_abel.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Основную часть времени подземелье наполнено монстрами-людьми. С них выпадают сферы основания и энергия Храма Абеллуса, которая требуется для прохождения испытаний в зале храма.   	</p> <p>  		Зал испытаний — большая круглая арена, похожая на колизей, в которой 1 игрок должен уничтожать волны монстров в течение 60 минут, закончив битву победой над боссом. В процессе сражения с монстрами будут выпадать временные зелья усиления персонажа. Наградой за успешное прохождение испытания являются +0 сферы 1-го уровня любой редкости, а также сферы основания и осколки сияющей сферы усиления.  	</p> <p>  		В храме Абеллуса можно встретить босса <a class="catalog-item" href="https://r2online.ru/wiki/locations/4100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Людоед Варкан" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/U3qky07ShTsel22vWrFpzexkUTbhqgrdMq0swA5V.jpg" title="Людоед Варкан"/>
+</span>
+<span class="item-text"> Людоед Варкан</span>
+</a>
+. Варкан очень сильный, одному с ним не справиться. Пока босса атакуют — он может телепортироваться по храму.  		<br/>После убийства босса на 60 минут запускается событие - монстры зала испытаний захватывают храм. Все монстры-люди пропадают, а на их месте появляются монстры-звери. С них выпадают сферы основания и +0 сферы 1-го уровня любой редкости.  		<br/>В храме выполняется <a href="https://r2online.ru/wiki/quests/epic/hard/varvar/" target="_blank">тяжелое эпическое задание - Варвар</a>.  		<br/><a href="" target="_blank">Ежедневное задание Максимуса</a> дает 5 энергии Абеллуса, для входа в зал испытаний.  	</p> <h2 id="id-2">Людоед Варкан</h2> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/4100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Людоед Варкан" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/U3qky07ShTsel22vWrFpzexkUTbhqgrdMq0swA5V.jpg" title="Людоед Варкан"/>
+</span>
+<span class="item-text"> Людоед Варкан</span>
+</a>
+ возрождается в случайном месте в храме Абеллуса.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/varkan.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/varkan.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Точки возможного возрождения Варкана</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/respawn_point_varkan.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/respawn_point_varkan.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		Минимальное время возрождения — 3 часа, максимальное — 4 часа. Варкан агрессивен, если его начинают атаковать, он может начать телепортироваться по точкам возрождения. Применение телепортации длится 10 секунд, в это время он продолжает атаковать и перемещаться.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Телепортация Варкана</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/varkan_tp.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/varkan_tp.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 20px"> <div class="spoiler__title">Дроп-лист Людоеда Варкана</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40210/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4b1c80d0dd12bda0db2cc362e5e91804.jpg" title="Сфера души ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40120/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/76a74fdd752c8f74b31452056f0b6a67.jpg" title="Сфера души ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40150/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3a4950f80ef752f44dbd4e2b82215c8e.jpg" title="Сфера души ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40180/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d645912382aab7c1c09be02e70bbc70f.jpg" title="Сфера души ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40090/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/02ca81e064e42524119f44f9777759ab.jpg" title="Сфера жизни ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4cbd0a49274b8e5cb871efe6ef1aea26.jpg" title="Сфера жизни ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/93deaf7b6c64023a8325a873fc5f8463.jpg" title="Сфера жизни ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40060/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0c5c022906d2851ff489e91e6fbe86fc.jpg" title="Сфера жизни ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40450/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0549e5e010941d0e72c5ac42340828c9.jpg" title="Сфера защиты ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40360/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2fbf28de5d27c562152455794c5bf5f3.jpg" title="Сфера защиты ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40390/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a56353b162d737fa6e6d13ee895b598b.jpg" title="Сфера защиты ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f374edc8d215808d018cc1fd67e4c4ad.jpg" title="Сфера защиты ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40570/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/936392ac174f4da55c55e60bfe92dcaa.jpg" title="Сфера мастерства ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40480/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/5c1c1e530067d7081c8d480b7a2846eb.jpg" title="Сфера мастерства ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40510/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d916fd77f97ab413f36a7add13c3784e.jpg" title="Сфера мастерства ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40540/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/862ef5c5968d3531330b7df069b92138.jpg" title="Сфера мастерства ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40330/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b6e247c708f1b7c58281f8909d77e207.jpg" title="Сфера разрушения ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40240/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f09c67fbb6f4c9964b11b4c1367f9f53.jpg" title="Сфера разрушения ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40270/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/e2d02ccde392de4422d013f23d4ebd5f.jpg" title="Сфера разрушения ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40300/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2721ee8b315e8d7f4a8b055d9e8736f8.jpg" title="Сфера разрушения ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера основания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c13227a805b5e590e95007304b3bd070.jpg" title="Сфера основания"/>
+</span>
+<span class="item-text"> Сфера основания</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+</div> </div> </div> <h2 id="id-3">Особое событие: захват храма</h2> <p>  		Событие может случайным образом начаться после смерти <a class="catalog-item" href="https://r2online.ru/wiki/locations/4100/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Людоед Варкан" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/U3qky07ShTsel22vWrFpzexkUTbhqgrdMq0swA5V.jpg" title="Людоед Варкан"/>
+</span>
+<span class="item-text"> Людоед Варкан</span>
+</a>
+. Монстры-люди заменяются на более сильных монстров-зверей, с которых выпадают +0 сферы 1-го уровня любой редкости. Длительность события — 60 минут.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Монстры-люди</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ludi.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ludi.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 20px"> <div class="spoiler__title">Монстры-звери</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/zveri.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/zveri.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <h2 id="id-4">Зал испытаний</h2> <p>  		Со всех монстров-людей в храме Абеллуса выпадает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+, с помощью которой можно создать [J] души падших героев: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/U7cUgumK5kH8s8Xe1LDf3kfh9Zxtd6YUcqyqtsCG.webp" title="Душа падшего героя I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/BY7uXkdb8CNxapQmiEWm1yhpQznDKzfT1vTKCe9C.webp" title="Душа падшего героя II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/ZZvJWLx4wdoM9zvWOnZFafCP1tOqpkPzwJopCYkY.webp" title="Душа падшего героя III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12229/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/29uEQ0g2ZDffUvyMTyngWNGPM35tRclwGmBGXf5B.webp" title="Душа падшего героя IV"/>
+</span>
+</a>
+. Души требуются для запуска испытания, различаются уровнем I-IV, чем выше уровень души, тем больше волн с монстрами появится в зале испытаний.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Крафт душ падших героев</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest"> <tbody><tr class="tr-header tr-odd"> <td style="width: 33%">  									Душа  								</td> <td style="width: 33%">  									Ингредиенты  								</td> <td>  									Количество волн  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Душа падшего героя I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/U7cUgumK5kH8s8Xe1LDf3kfh9Zxtd6YUcqyqtsCG.webp" title="Душа падшего героя I"/>
+</span>
+<span class="item-text"> Душа падшего героя I</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+, 40 шт.  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 150,000 шт.  								</td> <td align="center">  									1 волна  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Душа падшего героя II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/BY7uXkdb8CNxapQmiEWm1yhpQznDKzfT1vTKCe9C.webp" title="Душа падшего героя II"/>
+</span>
+<span class="item-text"> Душа падшего героя II</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12226/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Душа падшего героя I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/U7cUgumK5kH8s8Xe1LDf3kfh9Zxtd6YUcqyqtsCG.webp" title="Душа падшего героя I"/>
+</span>
+<span class="item-text"> Душа падшего героя I</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+, 46 шт.  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 250,000 шт.  								</td> <td align="center">  									2 волны  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Душа падшего героя III" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/ZZvJWLx4wdoM9zvWOnZFafCP1tOqpkPzwJopCYkY.webp" title="Душа падшего героя III"/>
+</span>
+<span class="item-text"> Душа падшего героя III</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12227/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Душа падшего героя II" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/BY7uXkdb8CNxapQmiEWm1yhpQznDKzfT1vTKCe9C.webp" title="Душа падшего героя II"/>
+</span>
+<span class="item-text"> Душа падшего героя II</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+, 52 шт.  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 350,000 шт.  								</td> <td align="center">  									3 волны  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12229/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock" style="top: 1px; right: 5px;"></span>
+<img alt="Душа падшего героя IV" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/29uEQ0g2ZDffUvyMTyngWNGPM35tRclwGmBGXf5B.webp" title="Душа падшего героя IV"/>
+</span>
+<span class="item-text"> Душа падшего героя IV</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Душа падшего героя III" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ZZvJWLx4wdoM9zvWOnZFafCP1tOqpkPzwJopCYkY.webp" title="Душа падшего героя III"/>
+</span>
+<span class="item-text"> Душа падшего героя III</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Энергия храма Абеллуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/H5ZpP9TMF0JSoByghD173XDQQ86rpdkk0Ft9Xypg.webp" title="Энергия храма Абеллуса"/>
+</span>
+<span class="item-text"> Энергия храма Абеллуса</span>
+</a>
+, 60 шт.  									<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 450,000 шт.  								</td> <td align="center">  									4 волны + босс <a class="catalog-item" href="https://r2online.ru/wiki/locations/4108/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Судья испытания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/WHTKBo7xy8tomcpRnbG7bmGkUaC3ZQm2N67ItopO.jpg" title="Судья испытания"/>
+</span>
+<span class="item-text"> Судья испытания</span>
+</a>
+</td> </tr> </tbody></table> </div> </div> </div> </div> <p>  		Чтобы начать испытание, обратитесь к стражу зала испытаний «Алин». Максимальная длительность испытания — 60 минут. Это время фиксировано и не зависит от количества волн монстров,однако есть возможность завершить испытание и раньше.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/alinu.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/alinu.webp" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Месторасположение «Алин» на карте</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/alinu_map.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/alinu_map.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		При входе в зал испытаний сразу появляется первая волна. Все волны состоят из монстров-зверей. С каждого из них может выпасть зелье, усиливающее характеристики персонажа на 60 секунд. Зельями можно пользоваться только в зале испытаний, при телепортации из зала они исчезнут.  	</p> <div class="spoiler" style="margin-bottom:15px"> <div class="spoiler__title">Эффект зелий</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest"> <tbody><tr class="tr-odd" style="color: #d7b263;"> <td></td> <td>Первая волна</td> <td>Вторая волна</td> <td>Третья волна</td> <td>Четвертая волна</td> </tr> <tr> <td class="key-title">  									Скорость атаки  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость атаки I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21000.webp" title="Скорость атаки I (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость атаки I (Абеллус)</span>
+</a>
+<br/>Скорость атаки +30%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость атаки II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21001.webp" title="Скорость атаки II (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость атаки II (Абеллус)</span>
+</a>
+<br/>Скорость атаки +60%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость атаки III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21002.webp" title="Скорость атаки III (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость атаки III (Абеллус)</span>
+</a>
+<br/>Скорость атаки +100%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость атаки IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21003.webp" title="Скорость атаки IV (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость атаки IV (Абеллус)</span>
+</a>
+<br/>Скорость атаки +180%  								</td> </tr> <tr> <td class="key-title">  									Все параметры  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Все параметры I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21012.webp" title="Все параметры I (Абеллус)"/>
+</span>
+<span class="item-text"> Все параметры I (Абеллус)</span>
+</a>
+<br/>Параметры +25  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Все параметры II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21013.webp" title="Все параметры II (Абеллус)"/>
+</span>
+<span class="item-text"> Все параметры II (Абеллус)</span>
+</a>
+<br/>Параметры +50  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Все параметры III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21014.webp" title="Все параметры III (Абеллус)"/>
+</span>
+<span class="item-text"> Все параметры III (Абеллус)</span>
+</a>
+<br/>Параметры +75  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Все параметры IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21015.webp" title="Все параметры IV (Абеллус)"/>
+</span>
+<span class="item-text"> Все параметры IV (Абеллус)</span>
+</a>
+<br/>Параметры +100  								</td> </tr> <tr> <td class="key-title">  									Шанс крит. удара  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крит. шанс I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21008.webp" title="Крит. шанс I (Абеллус)"/>
+</span>
+<span class="item-text"> Крит. шанс I (Абеллус)</span>
+</a>
+<br/>Шанс крит. удара +20  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крит. шанс II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21009.webp" title="Крит. шанс II (Абеллус)"/>
+</span>
+<span class="item-text"> Крит. шанс II (Абеллус)</span>
+</a>
+<br/>Шанс крит. удара +30  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крит. шанс III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21010.webp" title="Крит. шанс III (Абеллус)"/>
+</span>
+<span class="item-text"> Крит. шанс III (Абеллус)</span>
+</a>
+<br/>Шанс крит. удара +50  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Крит. шанс IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21011.webp" title="Крит. шанс IV (Абеллус)"/>
+</span>
+<span class="item-text"> Крит. шанс IV (Абеллус)</span>
+</a>
+<br/>Шанс крит. удара +70  								</td> </tr> <tr> <td class="key-title">  									Скорость бега  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость бега I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21004.webp" title="Скорость бега I (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость бега I (Абеллус)</span>
+</a>
+<br/>Скорость бега +400  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21005/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость бега II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21005.webp" title="Скорость бега II (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость бега II (Абеллус)</span>
+</a>
+<br/>Скорость бега +700  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость бега III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21006.webp" title="Скорость бега III (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость бега III (Абеллус)</span>
+</a>
+<br/>Скорость бега +1000  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21007/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Скорость бега IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21007.webp" title="Скорость бега IV (Абеллус)"/>
+</span>
+<span class="item-text"> Скорость бега IV (Абеллус)</span>
+</a>
+<br/>Скорость бега +1300  								</td> </tr> <tr> <td class="key-title">  									Уклонение  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Уклонение I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21016.webp" title="Уклонение I (Абеллус)"/>
+</span>
+<span class="item-text"> Уклонение I (Абеллус)</span>
+</a>
+<br/>Уклонение +25  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21017/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Уклонение II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21017.webp" title="Уклонение II (Абеллус)"/>
+</span>
+<span class="item-text"> Уклонение II (Абеллус)</span>
+</a>
+<br/>Уклонение +50  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Уклонение III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21018.webp" title="Уклонение III (Абеллус)"/>
+</span>
+<span class="item-text"> Уклонение III (Абеллус)</span>
+</a>
+<br/>Уклонение +75  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Уклонение IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21019.webp" title="Уклонение IV (Абеллус)"/>
+</span>
+<span class="item-text"> Уклонение IV (Абеллус)</span>
+</a>
+<br/>Уклонение +100  								</td> </tr> <tr> <td class="key-title">  									Вампиризм  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Вампиризм I (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21020.webp" title="Вампиризм I (Абеллус)"/>
+</span>
+<span class="item-text"> Вампиризм I (Абеллус)</span>
+</a>
+<br/>Вампиризм 5%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Вампиризм II (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21021.webp" title="Вампиризм II (Абеллус)"/>
+</span>
+<span class="item-text"> Вампиризм II (Абеллус)</span>
+</a>
+<br/>Вампиризм 10%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Вампиризм III (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21022.webp" title="Вампиризм III (Абеллус)"/>
+</span>
+<span class="item-text"> Вампиризм III (Абеллус)</span>
+</a>
+<br/>Вампиризм 15%  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21023/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Вампиризм IV (Абеллус)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-21023.webp" title="Вампиризм IV (Абеллус)"/>
+</span>
+<span class="item-text"> Вампиризм IV (Абеллус)</span>
+</a>
+<br/>Вампиризм 20%  								</td> </tr> </tbody></table> </div> </div> </div> </div> <p>  	После уничтожения всех монстров в волне, по всей арене появляются трофеи. У игроков есть всего 60 секунд для их сбора, прежде чем начнется следующая волна. С каждой волной монстров будет больше, а награда лучше. После первой волны выпадают только обычные +0 сферы 1-го уровня, после второй — редкие, третьей — эпические, четвертой - легендарные.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трофеи за победу над волнами монстров</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td>Первая волна</td> <td>Вторая волна</td> <td>Третья волна</td> <td>Четвертая волна</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40240/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f09c67fbb6f4c9964b11b4c1367f9f53.jpg" title="Сфера разрушения ур. 1 (Обычная)"/>
+</span>
+<span class="item-text">+0  Сфера разрушения ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40360/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2fbf28de5d27c562152455794c5bf5f3.jpg" title="Сфера защиты ур. 1 (Обычная)"/>
+</span>
+<span class="item-text">+0  Сфера защиты ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40480/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/5c1c1e530067d7081c8d480b7a2846eb.jpg" title="Сфера мастерства ур. 1 (Обычная)"/>
+</span>
+<span class="item-text">+0  Сфера мастерства ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4cbd0a49274b8e5cb871efe6ef1aea26.jpg" title="Сфера жизни ур. 1 (Обычная)"/>
+</span>
+<span class="item-text">+0  Сфера жизни ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40120/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/76a74fdd752c8f74b31452056f0b6a67.jpg" title="Сфера души ур. 1 (Обычная)"/>
+</span>
+<span class="item-text">+0  Сфера души ур. 1 (Обычная)</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40270/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/e2d02ccde392de4422d013f23d4ebd5f.jpg" title="Сфера разрушения ур. 1 (Редкая)"/>
+</span>
+<span class="item-text">+0  Сфера разрушения ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40390/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a56353b162d737fa6e6d13ee895b598b.jpg" title="Сфера защиты ур. 1 (Редкая)"/>
+</span>
+<span class="item-text">+0  Сфера защиты ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40510/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d916fd77f97ab413f36a7add13c3784e.jpg" title="Сфера мастерства ур. 1 (Редкая)"/>
+</span>
+<span class="item-text">+0  Сфера мастерства ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/93deaf7b6c64023a8325a873fc5f8463.jpg" title="Сфера жизни ур. 1 (Редкая)"/>
+</span>
+<span class="item-text">+0  Сфера жизни ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40150/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3a4950f80ef752f44dbd4e2b82215c8e.jpg" title="Сфера души ур. 1 (Редкая)"/>
+</span>
+<span class="item-text">+0  Сфера души ур. 1 (Редкая)</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40300/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2721ee8b315e8d7f4a8b055d9e8736f8.jpg" title="Сфера разрушения ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text">+0  Сфера разрушения ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f374edc8d215808d018cc1fd67e4c4ad.jpg" title="Сфера защиты ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text">+0  Сфера защиты ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40540/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/862ef5c5968d3531330b7df069b92138.jpg" title="Сфера мастерства ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text">+0  Сфера мастерства ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40060/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0c5c022906d2851ff489e91e6fbe86fc.jpg" title="Сфера жизни ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text">+0  Сфера жизни ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40180/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d645912382aab7c1c09be02e70bbc70f.jpg" title="Сфера души ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text">+0  Сфера души ур. 1 (Эпическая)</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40330/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b6e247c708f1b7c58281f8909d77e207.jpg" title="Сфера разрушения ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text">+0  Сфера разрушения ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40450/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0549e5e010941d0e72c5ac42340828c9.jpg" title="Сфера защиты ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text">+0  Сфера защиты ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40570/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/936392ac174f4da55c55e60bfe92dcaa.jpg" title="Сфера мастерства ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text">+0  Сфера мастерства ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40090/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/02ca81e064e42524119f44f9777759ab.jpg" title="Сфера жизни ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text">+0  Сфера жизни ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40210/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4b1c80d0dd12bda0db2cc362e5e91804.jpg" title="Сфера души ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text">+0  Сфера души ур. 1 (Легендарная)</span>
+</a>
+</td> </tr> </tbody></table> </div>  				Остальной дроп одинаковый, независимо от волны:    				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера основания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c13227a805b5e590e95007304b3bd070.jpg" title="Сфера основания"/>
+</span>
+<span class="item-text"> Сфера основания</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/813/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Древняя монета" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/5c572eca050594c7bc3c36e7e8ab9550.jpg" title="Древняя монета"/>
+</span>
+<span class="item-text"> Древняя монета</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/>Зелья усиления характеристик: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21000.webp" title="Скорость атаки I (Абеллус)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/21004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21004.webp" title="Скорость бега I (Абеллус)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/21008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21008.webp" title="Крит. шанс I (Абеллус)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/21012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21012.webp" title="Все параметры I (Абеллус)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/21016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21016.webp" title="Уклонение I (Абеллус)"/>
+</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/21020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-21020.webp" title="Вампиризм I (Абеллус)"/>
+</span>
+</a>
+. Чем выше уровень волны, тем выше уровень зелья.  				</div> </div> </div> </div> <p>  		Если испытание состоит из четырех волн, то по завершении четвертой волны появляется босс — <a class="catalog-item" href="https://r2online.ru/wiki/locations/4108/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Судья испытания" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/WHTKBo7xy8tomcpRnbG7bmGkUaC3ZQm2N67ItopO.jpg" title="Судья испытания"/>
+</span>
+<span class="item-text"> Судья испытания</span>
+</a>
+.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sudiya.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sudiya.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист с «Судьи испытаний»</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера основания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c13227a805b5e590e95007304b3bd070.jpg" title="Сфера основания"/>
+</span>
+<span class="item-text"> Сфера основания</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40240/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f09c67fbb6f4c9964b11b4c1367f9f53.jpg" title="Сфера разрушения ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40270/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/e2d02ccde392de4422d013f23d4ebd5f.jpg" title="Сфера разрушения ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40300/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2721ee8b315e8d7f4a8b055d9e8736f8.jpg" title="Сфера разрушения ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40330/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера разрушения ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b6e247c708f1b7c58281f8909d77e207.jpg" title="Сфера разрушения ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера разрушения ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40360/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2fbf28de5d27c562152455794c5bf5f3.jpg" title="Сфера защиты ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40390/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a56353b162d737fa6e6d13ee895b598b.jpg" title="Сфера защиты ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/f374edc8d215808d018cc1fd67e4c4ad.jpg" title="Сфера защиты ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40450/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера защиты ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0549e5e010941d0e72c5ac42340828c9.jpg" title="Сфера защиты ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера защиты ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40480/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/5c1c1e530067d7081c8d480b7a2846eb.jpg" title="Сфера мастерства ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40510/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d916fd77f97ab413f36a7add13c3784e.jpg" title="Сфера мастерства ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40540/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/862ef5c5968d3531330b7df069b92138.jpg" title="Сфера мастерства ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40570/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера мастерства ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/936392ac174f4da55c55e60bfe92dcaa.jpg" title="Сфера мастерства ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера мастерства ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4cbd0a49274b8e5cb871efe6ef1aea26.jpg" title="Сфера жизни ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/93deaf7b6c64023a8325a873fc5f8463.jpg" title="Сфера жизни ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40060/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0c5c022906d2851ff489e91e6fbe86fc.jpg" title="Сфера жизни ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40090/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера жизни ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/02ca81e064e42524119f44f9777759ab.jpg" title="Сфера жизни ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера жизни ур. 1 (Легендарная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40120/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Обычная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/76a74fdd752c8f74b31452056f0b6a67.jpg" title="Сфера души ур. 1 (Обычная)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Обычная)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40150/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Редкая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/3a4950f80ef752f44dbd4e2b82215c8e.jpg" title="Сфера души ур. 1 (Редкая)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Редкая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40180/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Эпическая)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d645912382aab7c1c09be02e70bbc70f.jpg" title="Сфера души ур. 1 (Эпическая)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Эпическая)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40210/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера души ур. 1 (Легендарная)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/4b1c80d0dd12bda0db2cc362e5e91804.jpg" title="Сфера души ур. 1 (Легендарная)"/>
+</span>
+<span class="item-text"> Сфера души ур. 1 (Легендарная)</span>
+</a>
+</div> </div> </div> </div> <p>  		Пока в зале испытаний есть игрок, никто другой не может начать новое испытание. Если текущий участник выйдет из зала раньше, то испытание будет считаться не пройденным, и другой игрок сможет сразу запустить новое испытание. Аналогично, если текущее испытание будет успешно завершено досрочно, то следующий игрок также сможет запустить новое испытание.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Видеодемонстрация прохождения максимального испытания</div> <div class="spoiler__content"><a class="video-preview" data-fancybox="gallery" href="https://www.youtube.com/watch?v=EWVibpxUt7o"><img alt="" src="https://img.youtube.com/vi/EWVibpxUt7o/hqdefault.jpg"/> </a></div> </div> <hr/> <h6>Кратко:</h6> <ul> <li>Сферы — основной дроп локации.</li> <li>Обычные монстры-люди - с них выпадает энергия Абеллуса.</li> <li>Энергия Абеллуса используется для крафта душ павших героев.</li> <li>Души павших героев — это ваш пропуск в зал испытаний, где много дропа.</li> <li>Людоед Варкан — сильный босс, после его убийства может начаться особое событие.</li> <li>Особое событие — замена обычных монстров-людей на монстров-зверей. С них выпадают сферы 1+0 любой редкости.</li> <li>Каждый день можно выполнить <a href="https://r2online.ru/wiki/quests/daily/drop/energiya-abelusa/" target="_blank">задание «Максимуса»</a> для получения энергии Абеллуса.</li> </ul> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

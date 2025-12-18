@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запечатанные подземелья — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Запечатанные подземелья</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2>Виды подземелий</h2> <div style="float: right; margin-right: 25px;"><img align="middle" alt="" src="https://r2online.ru/storage/images/guids/uniq/dung/fb01905bfc.png" style="max-width: 100%; height: auto; margin-bottom: 25px; margin-left: 25px;" width="350"/></div> <ol> <li><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/temnye-peshchery/5" target="blank">Темные пещеры ур. 5 (ТП5)</a></li> <li><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/boloto-chernogo-drakona/5" target="blank">Болото черного дракона ур. 5 (БЧД5)</a></li> <li><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podzemele-nejiti/4" target="blank">Подземелье нежити ур. 4 (ПН4)</a></li> <li><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/grobnica-korolya/4" target="blank">Гробница короля ур. 4 (ГК4)</a></li> </ol> <h2>Как попасть в подземелье</h2> <div style="margin-bottom: 20px;"> <p>Чтобы попасть в подземелье, нужно собрать <strong><span style="font-weight: bold;">группу из 3 или более игроков с ядрами</span></strong> выбранного подземелья. Лидер группы запускает подземелье с помощью NPC в конце последнего этажа подземелья. В подземелье одновременно может находиться только одна группа.<br/>  Участники получают <strong><span style="font-weight: bold;">баф на 30 минут</span></strong>; когда он закончится, подземелье закрывается, и все члены группы принудительно телепортируются в город.</p> </div> <div style="display: flex; align-items: center;"> <blockquote>Баф не пропадает при перезаходе в игру и его нельзя развеять</blockquote> </div> <p>В подземелье могут войти только участники группы. Если в подземелье уже кто-то есть, то другой группе запуск подземелья недоступен. Узнать о доступности подземелья можно у NPC.</p> <h2>Как добыть ядра для запуска подземелья</h2> <p>Ядро подземелья крафтится из 4-ёх уникальных частей, которые выпадают из боссов соответствующего подземелья. Дополнительно ядра можно получить с <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+.</p> <div class="spoiler" style="margin-bottom: 20px"> <div class="spoiler__title">Соотношение ядер к боссам</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-quest"> <tbody> <tr class="tr-header tr-odd"> <td>Подземелье</td> <td>Ядро</td> <td>Босс</td> </tr> <tr class="tr-even"> <td><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/temnye-peshchery/5" target="_blank">Темные пещеры ур. 5 (ТП5)</a></td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/LqJRHGUtknsMdoedbKuPJtpTtw8FztJWCxabqqES.jpg" title="Осколок ядра Сеонума (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/Xx2WjOXKwRy0IkT1aZipGqwvGU0tjfLc1ptQKW2y.jpg" title="Осколок ядра Сеонума (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/RoTQhb1eeay10ZWRSevaIhvo7S5iLaiYvJ1BXifP.jpg" title="Осколок ядра Сеонума (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/sZ4BUV8KHzrLYYi7cOxd4dVCFSiyJNvUmutkTdRd.jpg" title="Осколок ядра Сеонума (4/4)"/>
+</span>
+</a>
+ → <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6678/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Сеонума" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ecxqQojsKFidqb1Zh0z7vFUVoF3IirtR68qhGPrV.jpg" title="Ядро Сеонума"/>
+</span>
+<span class="item-text"> Ядро Сеонума</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/540/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Гвардеец ада" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/a1d96135af8f165f49fd41e24cb593cf.png" title="Гвардеец ада"/>
+</span>
+<span class="item-text"> Гвардеец ада</span>
+</a>
+</td> </tr> <tr> <td><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/boloto-chernogo-drakona/5" target="_blank">Болото черного дракона ур. 5 (БЧД5)</a></td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/RLJNyU3Z3CKoDRR2biM4AvACLWovCEEiTZZnmyMf.jpg" title="Осколок ядра Гермеса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/iNaCzai4i8m70aBCpq8MOwnwatThyeh31HYWdpKb.jpg" title="Осколок ядра Гермеса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/gkmNkarEtfH0DFCHJ9f2sWUVBscqnFvpMBWpYQv0.jpg" title="Осколок ядра Гермеса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/BdLaup6c3NBMlKEA22BCSnQIMYs1fZSA6yvrF9Eb.jpg" title="Осколок ядра Гермеса (4/4)"/>
+</span>
+</a>
+ → <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6976/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Гермеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Hgw3dU5ztlZRPrhqvCoHi7ijUTfpN62sh7sp0h75.jpg" title="Ядро Гермеса"/>
+</span>
+<span class="item-text"> Ядро Гермеса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/538/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черная виверна" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/4e50587403eebfdf7b60e5d64d0b8659.png" title="Черная виверна"/>
+</span>
+<span class="item-text"> Черная виверна</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podzemele-nejiti/4" target="_blank">Подземелье нежити ур. 4 (ПН4)</a></td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YFJQh1vXd40eQvPe8HQ2LtDbMR82Z7Jbs1XlAezG.jpg" title="Осколок ядра Хелтеса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/HiepfY3ECZ60c4X73Ow7A2khTB1muTQuFjU8zUb8.jpg" title="Осколок ядра Хелтеса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/M9pJoSfS3n14KMolrTNwR5b4M3LCwrQCC60wHqnF.jpg" title="Осколок ядра Хелтеса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/J34T1sLNeRkNRL18hO5Z9zOFNZ5VlI42femYDlz7.jpg" title="Осколок ядра Хелтеса (4/4)"/>
+</span>
+</a>
+ → <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6679/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Хелтеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/E5pmGRLGSVzVXOQiUQHvPtnsd3AR6ylwZkQmxjuu.jpg" title="Ядро Хелтеса"/>
+</span>
+<span class="item-text"> Ядро Хелтеса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/818/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Король лич" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/9faa74e0e41599cec9a5f6851af4bc71.png" title="Король лич"/>
+</span>
+<span class="item-text"> Король лич</span>
+</a>
+</td> </tr> <tr> <td><a href="https://r2online.ru/wiki/locations/kolfort/dungeon/grobnica-korolya/4" target="_blank">Гробница короля ур. 4 (ГК4)</a></td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/FAxvKJinukBMLn9oDr0xuWRsgQ7XAGsTaqpVFVoG.jpg" title="Осколок ядра Альтенуса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11005/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/du4SFJ3LTViJOnXWKXxgXJy7bHtDKVuipgF4soFf.jpg" title="Осколок ядра Альтенуса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/qyHQSTrhJbenvXmmh0q222dFWuzojnNt8SjXSLqk.jpg" title="Осколок ядра Альтенуса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11007/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/nj5Jzrwu6DFrZ7LTYm6BEGhbNPGo4PoN0qlER4ms.jpg" title="Осколок ядра Альтенуса (4/4)"/>
+</span>
+</a>
+ → <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6977/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Альтенуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/IfiqnxonX81hfeZfkfAoNwa9YTdvCubdBCtS4Xy4.jpg" title="Ядро Альтенуса"/>
+</span>
+<span class="item-text"> Ядро Альтенуса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/536/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бельжевит" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/8bed66c1826d55aca5b91fde53e159dc.png" title="Бельжевит"/>
+</span>
+<span class="item-text"> Бельжевит</span>
+</a>
+</td> </tr> </tbody> </table> </div> </div> </div> </div> <h2>Дроп в подземельях</h2> <p>В запечатанных подземельях можно добыть магические камни для крафта магического мифрила.</p> <div class="spoiler" style="margin-bottom: 20px"> <div class="spoiler__title">Магические камни</div> <div class="spoiler__content"> <div class="text-box"> <p><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Доспех)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/QbjgOXfzlKsr918FeYxXVxjvLVq3kBFQHiduHUv1.jpg" title="Магический камень (Доспех)"/>
+</span>
+<span class="item-text"> Магический камень (Доспех)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Шлем)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/o6D3lkItryr99T0ruixTRWhiJRgRZ7pNpO1NAZPt.jpg" title="Магический камень (Шлем)"/>
+</span>
+<span class="item-text"> Магический камень (Шлем)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Перчатки)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/pywn7S6L0iVBN4Vz22Tb5YbAXpp1Z7ZlL90Fgq1K.jpg" title="Магический камень (Перчатки)"/>
+</span>
+<span class="item-text"> Магический камень (Перчатки)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Сапоги)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/GM6YIWEyMJDXzhaBv9kTMVrMVasUFqpT51Kn7bMO.jpg" title="Магический камень (Сапоги)"/>
+</span>
+<span class="item-text"> Магический камень (Сапоги)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Снаряжение)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/ciFzvDDbUYIrwHlU7B7CpzAEGJ4cSX0iewOwl39K.jpg" title="Магический камень (Снаряжение)"/>
+</span>
+<span class="item-text"> Магический камень (Снаряжение)</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12031/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический камень (Плащ)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/7qZn3mSwj0Iv4bFJ7rSEnldnIIJGJOOmRLQRdMHr.jpg" title="Магический камень (Плащ)"/>
+</span>
+<span class="item-text"> Магический камень (Плащ)</span>
+</a>
+</p> </div> </div> </div> <h2>Особенность подземелья</h2> <p>Монстры после смерти не возрождаются. После убийства всех монстров подземелья появляется босс.<br/>В каждом подземелье находится свой босс.</p> <div class="spoiler"> <div class="spoiler__title">Боссы</div> <div class="spoiler__content"> <div class="text-box"> <p>  				Дроп лист с боссов:  				<br/>Увеличенный шанс получить: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QbjgOXfzlKsr918FeYxXVxjvLVq3kBFQHiduHUv1.jpg" title="Магический камень (Доспех)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/o6D3lkItryr99T0ruixTRWhiJRgRZ7pNpO1NAZPt.jpg" title="Магический камень (Шлем)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/pywn7S6L0iVBN4Vz22Tb5YbAXpp1Z7ZlL90Fgq1K.jpg" title="Магический камень (Перчатки)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/GM6YIWEyMJDXzhaBv9kTMVrMVasUFqpT51Kn7bMO.jpg" title="Магический камень (Сапоги)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/ciFzvDDbUYIrwHlU7B7CpzAEGJ4cSX0iewOwl39K.jpg" title="Магический камень (Снаряжение)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12031/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/7qZn3mSwj0Iv4bFJ7rSEnldnIIJGJOOmRLQRdMHr.jpg" title="Магический камень (Плащ)"/>
+</span>
+</a>
+ Магические камни.  				<br/>Сундуки: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12064/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/wq6BvZlvlKtOGyptdyZA602l43BhsCdk9zPSPxuX.jpg" title="Сундук материалов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12064/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/wq6BvZlvlKtOGyptdyZA602l43BhsCdk9zPSPxuX.jpg" title="Сундук материалов"/>
+</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/1192/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морена" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/WT2ONXB8AURU4zfW6xAlrCF346YbUnfTFIaW1a8h.jpg" title="Морена"/>
+</span>
+<span class="item-text"> Морена</span>
+</a>
+ - Темные пещеры  				<br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sealed-dungeons/MorenaTP.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sealed-dungeons/MorenaTP.webp" style="max-width: 35%;"/> </a> <br/> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/1193/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Костяной дракон" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/XgEtLkoJ1Z3fzbM2yVi5xIU6FT9z0kMD3PeZtW9L.jpg" title="Костяной дракон"/>
+</span>
+<span class="item-text"> Костяной дракон</span>
+</a>
+ - Болото черного дракона  				<br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sealed-dungeons/DrakonBCHD.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sealed-dungeons/DrakonBCHD.webp" style="max-width: 35%;"/> </a> <br/> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/1194/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Король огров-зомби" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/1oAIy75PBPrJUwB9yr4xiEcLh24sI5f0AIY2QAVW.jpg" title="Король огров-зомби"/>
+</span>
+<span class="item-text"> Король огров-зомби</span>
+</a>
+ - Подземелье нежити  				<br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sealed-dungeons/OgrzombiPN.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sealed-dungeons/OgrzombiPN.webp" style="max-width: 35%;"/> </a> <br/> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/1191/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Дюрахан" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/zvSSDjdxh9Q0CAmhctNpBLgT0ip7sOMWmvAEU1tH.jpg" title="Дюрахан"/>
+</span>
+<span class="item-text"> Дюрахан</span>
+</a>
+ - Гробница короля  				<br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/sealed-dungeons/DurhanGK.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/sealed-dungeons/DurhanGK.webp" style="max-width: 35%;"/> </a></p> </div> </div> </div> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

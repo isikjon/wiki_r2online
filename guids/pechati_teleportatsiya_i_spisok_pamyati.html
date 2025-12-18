@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Печати, телепортация и список памяти — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="other.html">Другое</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Печати, телепортация и список памяти</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О телепортации</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Сохранение точки телепортации</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Функция «Поделиться точкой сохранения»</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Печати телепортации</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Как телепортироваться через меню памяти?</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Профили списка памяти</a></li> </ol> <h2 id="id-1">О телепортации</h2> <p>  		Для быстрого перемещения по миру можно использовать телепортацию. Существует несколько вариантов телепортации.  	</p> <ul class="content-list"> <li>Практически в каждой деревне находятся NPC &lt;Мастер перемещений&gt;, который за небольшую плату телепортирует персонажа в другие деревни или локации.</li> <li>Телепортация в случайную точку локации. <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1481/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/acc20ddcd5290b680b4cd464ff953122.jpg" title="Свиток телепортации"/>
+</span>
+<span class="item-text"> Свиток телепортации</span>
+</a>
+ для перемещения по подземельям или <a class="catalog-item" href="https://r2online.ru/wiki/base/view/362/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/cc1aa436277138f61cda703991069eaf.jpg" title="Зелье телепортации"/>
+</span>
+<span class="item-text"> Зелье телепортации</span>
+</a>
+ для перемещения по местностям.</li> <li>С помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2432/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга путешественника" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/YXVoy1ch9Fhx9z06JROPzBfoz6mwv3OLJUeXOBnp.webp" title="Книга путешественника"/>
+</span>
+<span class="item-text"> Книга путешественника</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/357/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье возврата" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/ca75910166da03ff9d4655a0338e6b09.jpg" title="Зелье возврата"/>
+</span>
+<span class="item-text"> Зелье возврата</span>
+</a>
+ можно быстро телепортироваться из любой локации в ближайшую деревню.</li> <li>Телепортации в заранее выбранное место. Для этого используется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/382c8dc5344acbc9c82bfc46e7d84109.jpg" title="Руна телепортации"/>
+</span>
+<span class="item-text"> Руна телепортации</span>
+</a>
+ или кольца телепортации: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/498/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/da4b4e80d5c28f89663855c564f05c6f.jpg" title="Кольцо телепортации"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7241/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/c3339eb6c6d1e489eb4521eb2271d20d.jpg" title="Кольцо телепортации (редкое)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7242/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/d18007edf7606303583e17129be4db76.jpg" title="Кольцо телепортации (эпическое)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7243/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/1b0e0cf2b946d2f3758177e39600f870.jpg" title="Кольцо телепортации (легендарное)"/>
+</span>
+</a>
+. При телепортации расходуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1481/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/acc20ddcd5290b680b4cd464ff953122.jpg" title="Свиток телепортации"/>
+</span>
+<span class="item-text"> Свиток телепортации</span>
+</a>
+.</li> </ul> <h2 id="id-2">Сохранение точки телепортации</h2> <p>  		В большинстве подземелий, а также на контрольных точках, возможность сохранения отсутствует. Таким образом, стоит выбирать места для сохранения, наиболее близкие к вашей целевой локации. Всего можно сохранить до 80 точек.  	</p> <p>На территории Колфорта сохраняться можно на поверхности. Кроме того, сохранение доступно на первых этажах многих подземелий Колфорта: Башни огня, Темных пещер, Подземелий нежити, Болота черного дракона, Логова жуков, Пещеры Эгира, Безымянной пещеры и Гробницы короля. На поверхности Небесного острова Эльтер возможно сохранение, исключая святилища Юпитера и Баалбека, а также врат Храма Абеллуса.  </p> <div class="spoiler"> <div class="spoiler__title">Способ #1</div> <div class="spoiler__content"> <div class="text-box">  					Открыть меню памяти.  					<br/> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B81.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B81.webp" style="max-width: 70%;"/> </a> <br/> <br/>Нажать запомнить. Запись добавится с названием локации.  					<br/> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B82.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B82.webp" style="max-width: 70%;"/> </a> <br/> <br/>Название точки можно переименовать.  					<br/> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B83.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B83.webp" style="max-width: 70%;"/> </a> <br/><span style="color: #d7b263;"></span> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Способ #2</div> <div class="spoiler__content"> <div class="text-box">  					Написать в обычный чат команду «/запомнить "название места"» (без кавычек). Запись появится в списке.  					<br/><br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B84.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B84.webp" style="max-width: 50%;"/> </a> </div> </div> </div> <h2 id="id-3">Функция «Поделиться точкой сохранения»</h2> <p>Глава гильдии или лидер группы может поделиться сохраненной точкой телепортации. Для этого необходимо открыть меню памяти (/запомнить), выбрать точку и нажать «Поделиться».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem1.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>Выбрать с кем хотите поделиться и нажать «Поделиться».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem2.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>Игрокам придет уведомление.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem3.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem3.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>Для получения точки сохранения игроку, получившему уведомление необходимо войти в меню памяти, нажать «Принять».	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem4.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem4.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <p>Появится название сохраненной точки. Необходимо нажать «Принять».</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem5.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem5.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <h2 id="id-4">Печати телепортации</h2> <p>  		Печати после использования добавляют точку телепортации. Такие точки обычно сохраняют места на локации, где недоступно сохранение вручную. Все добавленные печати находятся во вкладке «Печати». Печать можно переименовать, но нельзя удалить.  	</p> <p>  		Печати бывают для редких, эпических и легендарных колец телепортации. Если у вас эпическое кольцо, то можно перемещаться на редкие и эпические печати, легендарные вы можете изучить, но перемещаться без легендарного кольца на них будет нельзя. В случае использования печати, количество расходуемых свитков телепортации зависит от ее редкости: Редкая – 2, Эпическая – 4, Легендарная – 8.  	</p> <div class="spoiler"> <div class="spoiler__title">Редкие печати</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest"> <tbody><tr> <td>Печать</td> <td>Точка телепортации</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7836/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Первобытный лес [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Первобытный лес [Печать]"/>
+</span>
+<span class="item-text"> Акра - Первобытный лес [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Первобытный лес)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/6.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/6.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7837/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Лес измерений [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Лес измерений [Печать]"/>
+</span>
+<span class="item-text"> Акра - Лес измерений [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Лес измерений)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/5.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/5.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8386/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Абеллуса [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/gBIJInR4332QwNuQDkXqD5flxetJu6LkxxFqoetV.jpg" title="Храм Абеллуса [Печать]"/>
+</span>
+<span class="item-text"> Храм Абеллуса [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">Храм Абеллуса</a> <br/><a data-fancybox="gallery" href="/storage/photos/5/abeluspechat.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/abeluspechat.jpg" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8388/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Иллюмина [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/LICtlasG84vKWtW62L9Hd3TiaB5l0ZNMvBKKNLPW.jpg" title="Иллюмина [Печать]"/>
+</span>
+<span class="item-text"> Иллюмина [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/" target="_blank">Иллюмина</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/4.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/4.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7238/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Безымянная пещера ур.1 [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/668a32e9fa5a77830831b121f64433bc.jpg" title="Безымянная пещера ур.1 [Печать]"/>
+</span>
+<span class="item-text"> Безымянная пещера ур.1 [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/bezymyannaya-peshchera/1" target="_blank">Безымянная пещера ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87238.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87238.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7239/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лестница древних ур.2 [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/43858641ca47a49a37e0b87f636e1be6.jpg" title="Лестница древних ур.2 [Печать]"/>
+</span>
+<span class="item-text"> Лестница древних ур.2 [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/lestnica-drevnih/2/" target="_blank">Лестница древних ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87239.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87239.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7235/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Запеч. скала (Ифрит) [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/657d36070aa040887770c2c6aa769897.jpg" title="Запеч. скала (Ифрит) [Печать]"/>
+</span>
+<span class="item-text"> Запеч. скала (Ифрит) [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/furie/" target="_blank">Окрестности Фуриэ: Запечатанная скала</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87235.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87235.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7233/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Мет. ур. 1 Начало [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/02e09eda4fd00488b92b55f9f253c8e2.jpg" title="Храм Мет. ур. 1 Начало [Печать]"/>
+</span>
+<span class="item-text"> Храм Мет. ур. 1 Начало [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/1/" target="_blank">Храм Метеоса ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87233.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87233.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7229/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Мет. ур. 1 Лабиринт [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/99aaccfa76fd5ac3d973fa7f67cb5d47.jpg" title="Храм Мет. ур. 1 Лабиринт [Печать]"/>
+</span>
+<span class="item-text"> Храм Мет. ур. 1 Лабиринт [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/1/" target="_blank">Храм Метеоса ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87229.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87229.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Мет. ур. 1 Конец [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/182ac47a3035dd4bd67b7154951fe9c5.jpg" title="Храм Мет. ур. 1 Конец [Печать]"/>
+</span>
+<span class="item-text"> Храм Мет. ур. 1 Конец [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/1/" target="_blank">Храм Метеоса ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87230.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87230.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7231/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Мет. ур. 2 Начало [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/10d061851bce4032f54e33947bc9e807.jpg" title="Храм Мет. ур. 2 Начало [Печать]"/>
+</span>
+<span class="item-text"> Храм Мет. ур. 2 Начало [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/2/" target="_blank">Храм Метеоса ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87231.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87231.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7232/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм Мет. ур. 2 Конец [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/e5288bdea93d09516ae25d9cb21131b6.jpg" title="Храм Мет. ур. 2 Конец [Печать]"/>
+</span>
+<span class="item-text"> Храм Мет. ур. 2 Конец [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/hram-meteos/hram-meteosa/2/" target="_blank">Храм Метеоса ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87232.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87232.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8385/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Затонувший храм [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/evJOHSeIcX7O3gpw2c1pvJh1Vhvvb1DSmEjy8BLs.png" title="Затонувший храм [Печать]"/>
+</span>
+<span class="item-text"> Затонувший храм [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/" target="_blank">Затонувший храм</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/изображение_2024-04-10_172358477.png"><img alt="" src="https://r2online.ru/storage/photos/16/изображение_2024-04-10_172358477.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8382/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Катакомбы пиратов (снаружи) [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/UiDgKCYJS6wIAdzO6b8mkmabGHfTF2vyJ97xO2qO.png" title="Катакомбы пиратов (снаружи) [Печать]"/>
+</span>
+<span class="item-text"> Катакомбы пиратов (снаружи) [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/" target="_blank">Пещера пиратов ур. 1 – Катакомбы</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/изображение_2024-04-10_172656268.png"><img alt="" src="https://r2online.ru/storage/photos/16/изображение_2024-04-10_172656268.png" style="max-width: 30%;"/> </a> </td> </tr> </tbody></table> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Эпические печати</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-quest"> <tbody><tr> <td>Печать</td> <td>Точка телепортации</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13453/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Гробница короля ур. 2 [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13453.jpg" title="Гробница короля ур. 2 [Печать]"/>
+</span>
+<span class="item-text"> Гробница короля ур. 2 [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Гробница короля, ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/13.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/13.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7833/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Море чудовищ Начало [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Море чудовищ Начало [Печать]"/>
+</span>
+<span class="item-text"> Акра - Море чудовищ Начало [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Море чудовищ, начало)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/9.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/9.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7834/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Лес Валлефора [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Лес Валлефора [Печать]"/>
+</span>
+<span class="item-text"> Акра - Лес Валлефора [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Лес Валлефора)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/8.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/8.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7835/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Ледовитый берег [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Ледовитый берег [Печать]"/>
+</span>
+<span class="item-text"> Акра - Ледовитый берег [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Ледовитый берег)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/7.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/7.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8372/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Иллюмина - Логово драграм [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/acf8da7a6b49c73edf13f1cb0d14f8a8.jpg" title="Иллюмина - Логово драграм [Печать]"/>
+</span>
+<span class="item-text"> Иллюмина - Логово драграм [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/" target="_blank">Святые земли Иллюмина (Логово драграм)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88372.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88372.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8373/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Иллюмина - Ущелье костей [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/a8df24e0ca32e52e61cc134ad8542b91.jpg" title="Иллюмина - Ущелье костей [Печать]"/>
+</span>
+<span class="item-text"> Иллюмина - Ущелье костей [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/svyatye-zemli-illyumina/" target="_blank">Святые земли Иллюмина (Ущелье костей)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88373.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88373.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7240/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руины полнолуния - Форпост [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/725a69ed6fe27d091f0d2a6f633b55de.jpg" title="Руины полнолуния - Форпост [Печать]"/>
+</span>
+<span class="item-text"> Руины полнолуния - Форпост [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/rp/ruiny-polnoluniya/" target="_blank">Окрестности Руин Полнолуния</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87240.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87240.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7237/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пещера пир. ур. 1 Конец [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/fc1deca0ed82bc0fac91f93765c6bc87.jpg" title="Пещера пир. ур. 1 Конец [Печать]"/>
+</span>
+<span class="item-text"> Пещера пир. ур. 1 Конец [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov/1" target="_blank">Пещера древних пиратов ур. 1</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87237.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B87237.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8374/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Подз. Юпитера ур. 2 - Конец [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/217fdadc854ab0aaccec3ef3f0b3bbc1.jpg" title="Подз. Юпитера ур. 2 - Конец [Печать]"/>
+</span>
+<span class="item-text"> Подз. Юпитера ур. 2 - Конец [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-yupitera/2/" target="_blank">Подземелье Юпитера ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/yup2pechat.jpg"><img alt="" src="https://r2online.ru/storage/photos/16/yup2pechat.jpg" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8375/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Подз. Баалбека ур. 2 - Конец [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/b9e8b03c4e8d37136842152bb1459fd2.jpg" title="Подз. Баалбека ур. 2 - Конец [Печать]"/>
+</span>
+<span class="item-text"> Подз. Баалбека ур. 2 - Конец [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/2/" target="_blank">Подземелье Баалбека ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/bek2pechat.jpg"><img alt="" src="https://r2online.ru/storage/photos/16/bek2pechat.jpg" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8369/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Колфорт - Берег ламий [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/e0b97a3c8201a3473ee331239ad2c4d0.jpg" title="Колфорт - Берег ламий [Печать]"/>
+</span>
+<span class="item-text"> Колфорт - Берег ламий [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/ground/bereg-lamiy/" target="_blank">Окрестности Байрона: Берег Ламий</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88369.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88369.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8370/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Колфорт - Водопад гигантов [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/4316307a78e3416dd372b7259cbf427a.jpg" title="Колфорт - Водопад гигантов [Печать]"/>
+</span>
+<span class="item-text"> Колфорт - Водопад гигантов [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/ground/vodopad-gigantov/" target="_blank">Окрестности Родена: Водопад гигантов</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88370.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88370.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8371/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Колфорт - Заброшенный порт [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/d933b539706466901717ab988e6f2ec9.jpg" title="Колфорт - Заброшенный порт [Печать]"/>
+</span>
+<span class="item-text"> Колфорт - Заброшенный порт [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/ground/zabroshennyy-port/" target="_blank">Окрестности Черных земель: Заброшенный Порт</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88371.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88371.webp" style="max-width: 30%;"/> </a> </td> </tr> </tbody></table> </div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Легендарные печати</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-quest"> <tbody><tr> <td>Печать</td> <td>Точка телепортации</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13454/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Склеп короля [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/items/13454.jpg" title="Склеп короля [Печать]"/>
+</span>
+<span class="item-text"> Склеп короля [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">Склеп короля</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/12.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/12.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7831/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Море чудовищ [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Море чудовищ [Печать]"/>
+</span>
+<span class="item-text"> Акра - Море чудовищ [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Море чудовищ)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/11.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/11.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7832/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Акра - Змеиный берег [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/08/15/c229fe1fd1a819e61dc7dda47ce55e76.png" title="Акра - Змеиный берег [Печать]"/>
+</span>
+<span class="item-text"> Акра - Змеиный берег [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра (Змеиный берег)</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/10.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/10.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8368/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пещера пир. ур. 2 середина [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/7d1e4b26f726355d89761605fa38da29.jpg" title="Пещера пир. ур. 2 середина [Печать]"/>
+</span>
+<span class="item-text"> Пещера пир. ур. 2 середина [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov/2" target="_blank">Пещера древних пиратов ур. 2</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88368.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B5/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B88368.webp" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8383/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Храм темных жрецов [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/MUOrvDIVIFuRLco6DvPb4TzzYIW7jIZqSt59OIg5.png" title="Храм темных жрецов [Печать]"/>
+</span>
+<span class="item-text"> Храм темных жрецов [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/hram-temnyh-jrecov/" target="_blank">Храм Темных жрецов</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/изображение_2024-04-10_170541848.png"><img alt="" src="https://r2online.ru/storage/photos/16/изображение_2024-04-10_170541848.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8384/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горизонт полнолуния [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/DkXixDsli8bSxe52uFNElsGy6cVxt0Jr0kXJh7mW.png" title="Горизонт полнолуния [Печать]"/>
+</span>
+<span class="item-text"> Горизонт полнолуния [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">Горизонт полнолуния</a> <br/><a data-fancybox="gallery" href="/storage/photos/16/изображение_2024-04-10_174140627.png"><img alt="" src="https://r2online.ru/storage/photos/16/изображение_2024-04-10_174140627.png" style="max-width: 30%;"/> </a> </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8387/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Дворец Метеоса II [Печать]" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/hKQRqqjO2JKBXQMdKsfVhv9SG0cIVQhiaa0SDhdY.jpg" title="Дворец Метеоса II [Печать]"/>
+</span>
+<span class="item-text"> Дворец Метеоса II [Печать]</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/gorizon-polnoluniya/" target="_blank">Дворец Метеоса</a> <br/><a data-fancybox="gallery" href="/storage/photos/5/dvorecpechat.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/dvorecpechat.jpg" style="max-width: 30%;"/> </a> </td> </tr> </tbody></table> </div> </div> </div> </div> <h2 id="id-5">Как телепортироваться через меню памяти?</h2> <p>  		Меню памяти можно открыть тремя способами:  		<br/>1. Надеть кольцо телепортации.  		<br/>2. Использовать <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1481/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/acc20ddcd5290b680b4cd464ff953122.jpg" title="Свиток телепортации"/>
+</span>
+<span class="item-text"> Свиток телепортации</span>
+</a>
+ или <a class="catalog-item" href="https://r2online.ru/wiki/base/view/362/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/cc1aa436277138f61cda703991069eaf.jpg" title="Зелье телепортации"/>
+</span>
+<span class="item-text"> Зелье телепортации</span>
+</a>
+ при экипированом кольце телепортации.  		<br/>3. Открыть список через меню в левом углу экрана.  		<br/>4. Написать в обычный чат «/запомнить» (без ковычек).  		  	</p> <p>  		Для перемещения напротив нужной точки нажмите «Перемещение».		  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem6.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/spisok_mem6.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px;"/> </a> <h2 id="id-6">Профили списка памяти</h2> <p>  	С помощью NPC <strong>&lt;Дополнительный сервис&gt; Лора</strong> можно сохранить актуальный список точек сохранения в отдельный профиль и при необходимости загрузить нужный профиль.  </p> <blockquote>  	Данный функционал позволяет удобно и быстро изменять список меню памяти в зависимости от игровой ситуации: осада, охота в определённых локациях или поиск боссов.  </blockquote> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/telegram-bot/telegrambot0.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/telegram-bot/telegrambot0.webp" style="max-width: 50%; margin-bottom: 15px; margin-top: 5px"/> </a> <p>  	Выберите соответствующий пункт меню <strong>[Профили для меню памяти]</strong>.  </p> <div class="spoiler"> <div class="spoiler__title">Спойлер</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/1.webp" style="max-width: 70%;"/> </a> </div> </div> </div> <p> <br/>Далее доступны три функции: создание, удаление и загрузка профилей. Создайте новый профиль. Стоимость создания – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 150,000 серебра.  </p> <div class="spoiler"> <div class="spoiler__title">Спойлер</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/2.webp" style="max-width: 70%;"/> </a> </div> </div> </div> <p> <br/>Теперь вы можете загрузить нужный профиль списка памяти через соответствующий пункт <strong>[Загрузка профиля]</strong> за <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 10,000 серебра.  </p> <div class="spoiler"> <div class="spoiler__title">Спойлер</div> <div class="spoiler__content"> <div class="text-box"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/profiles-menu-memory/3.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/profiles-menu-memory/3.webp" style="max-width: 70%;"/> </a> </div> </div> </div> <p> <br/> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горизонт полнолуния — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Горизонт полнолуния</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2>О Горизонте Полнолуния</h2> <p>  		Вход в <a href="https://r2online.ru/wiki/locations/rp/gorizont-polnoy-luny" target="_blank">Горизонт</a> находится в <a href="https://r2online.ru/wiki/locations/rp" target="_blank">Руинах Полнолуния</a>. Подземелье похоже на лабиринт, вы телепортируетесь в его центр, а на концах находятся перехожы на следующий уровень – <a href="https://r2online.ru/wiki/locations/rp/ozero-polnoy-luny" target="_blank">Озеро Полнолуния</a>. На обоих уровнях обитают одинаковые монстры, с них выпадают оружие и книги для <a href="https://r2online.ru/wiki/morphs/collections" target="_blank">коллекций 2 уровня</a>. В зависимости от времени суток в игре – монстры меняются, Воины Рарки появляются - ночью, а воины Танатоса - днем.  		<br/>В Озере Полнолуния возрождаются боссы – <a class="catalog-item" href="https://r2online.ru/wiki/locations/2619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Рарка" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/4c6e0958679ac36806c76f114fda63a4.png" title="Кровавый Рарка"/>
+</span>
+<span class="item-text"> Кровавый Рарка</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/2618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Танатос" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/0fad1eaa9eae192ff5f7b542d454310b.png" title="Кровавый Танатос"/>
+</span>
+<span class="item-text"> Кровавый Танатос</span>
+</a>
+.  		<br/>В Горизонте и Озере выполняется очень тяжелое <a href="https://r2online.ru/wiki/quests/epic/very-hard/elementalist/" target="_blank">эпическое задание – Элементалистка</a>.  	</p> <h2>Особенности локации</h2> <p>  		Монстры в подземелье меняются каждые два часа, отсчитывая от старта сервера. В течение двух часов дневной смены действуют силы Танатоса, а в течение двух часов ночной смены — силы Рарки. Узнать текущее время суток можно на карте, нажав на значок с солнцем.   	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/map-gorizont.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/map-gorizont.webp" style="margin-bottom: 15px; max-width: 50%"/> </a> <p>  		В подземелье выпадает оружие на все классы. Со всех монстров может выпасть <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8367/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Бутылка с водой из озера полнолуния" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/2a27b8144ac02f67687f76782a3b5d8f.jpg" title="Бутылка с водой из озера полнолуния"/>
+</span>
+<span class="item-text"> Бутылка с водой из озера полнолуния</span>
+</a>
+ . Это расходник, который накладывает эффект на 20 минут: защиту, атаку и точность против всех монстров Руин, Горизонта и Озера Полнолуния, включая боссов. В подземелье нет карты, и свитки телепортации не работают. Лабиринт заключен в квадрат, и вы телепортируетесь в центр, в одну из двух случайных зеркальных точек входа. Рядом стоят NPC, которые могут вернуть вас в форпост.   	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Дроп-лист основного дропа дневных и ночных монстров</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest"> <tbody><tr class="tr-header tr-odd"> <td>Монстр</td> <td>Основной дроп</td> </tr> <tr class="tr-alt-even" style="color: #d7b263;"> <td colspan="2" style="text-align: center;">День</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Солдат Танатоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/7e472e865834b79a3f059d3d6fc801ac.png" title="Солдат Танатоса"/>
+</span>
+<span class="item-text"> Солдат Танатоса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/ebb9883baa6c419276ad542ae74b99ff.png" title="Книга Шута (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3904/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d24b4af60549fa9068fc6ffd458f38fe.jpg" title="Орб воды"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2613/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Маг Танатоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/680a2207c9c0338bfbc180b0237ce8e9.png" title="Маг Танатоса"/>
+</span>
+<span class="item-text"> Маг Танатоса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/ebb9883baa6c419276ad542ae74b99ff.png" title="Книга Шута (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8087/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d9598a5072b174071ae33bb2fab35f4d.jpg" title="Блестящий меч Солнца"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2611/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Боец Танатоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/00f0ef2771ef8ea045c5c784ad9adeec.png" title="Боец Танатоса"/>
+</span>
+<span class="item-text"> Боец Танатоса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/ebb9883baa6c419276ad542ae74b99ff.png" title="Книга Шута (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1627/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//images/YzQjprsjkD9KIasvZlVlAvhcipXcXq1psVQbwscA.webp" title="Дамасская алебарда"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2612/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стрелок Танатоса" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/21b8df146546b1be226f57865e28afcf.png" title="Стрелок Танатоса"/>
+</span>
+<span class="item-text"> Стрелок Танатоса</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/ebb9883baa6c419276ad542ae74b99ff.png" title="Книга Шута (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/813/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/5c572eca050594c7bc3c36e7e8ab9550.jpg" title="Древняя монета"/>
+</span>
+</a>
+ </td> </tr> <tr class="tr-alt-even" style="color: #d7b263;"> <td colspan="2" style="text-align: center;">Ночь</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2614/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Рыцарь-гвардеец Рарки" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/fd18812d42d16f397002a03fc267b974.png" title="Рыцарь-гвардеец Рарки"/>
+</span>
+<span class="item-text"> Рыцарь-гвардеец Рарки</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/af314103ccda53a97c2fd9d2f28a87e6.png" title="Книга Сильфид (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1133/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/7c22bdd5f22d18737cef995129bc113c.jpg" title="Меч жреца"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2617/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Советник Рарки" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/830b78cb84bc4cdb8ccb90df9fd77251.png" title="Советник Рарки"/>
+</span>
+<span class="item-text"> Советник Рарки</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/af314103ccda53a97c2fd9d2f28a87e6.png" title="Книга Сильфид (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3946/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/31f06570355be090b10b6a3451676e76.jpg" title="Джамадхары убийцы "/>
+</span>
+</a>
+ </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2615/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Верховный рыцарь Рарки" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/193266d8a912118ea1aeb69d1887055f.png" title="Верховный рыцарь Рарки"/>
+</span>
+<span class="item-text"> Верховный рыцарь Рарки</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/af314103ccda53a97c2fd9d2f28a87e6.png" title="Книга Сильфид (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/3890/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a52a4f3a4f7d5c7efa71f611a718035d.jpg" title="Композитный лук"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13632/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/13632.jpg" title="Карабин гномов"/>
+</span>
+</a>
+ </td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/locations/2616/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Снайпер Рарки" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/5158e6f17afd62a820aa609955bbbaeb.png" title="Снайпер Рарки"/>
+</span>
+<span class="item-text"> Снайпер Рарки</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/af314103ccda53a97c2fd9d2f28a87e6.png" title="Книга Сильфид (эпическое)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/813/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/5c572eca050594c7bc3c36e7e8ab9550.jpg" title="Древняя монета"/>
+</span>
+</a>
+ </td> </tr> </tbody></table> </div> </div> </div> </div> <h2>Озеро Полнолуния и кровавые боссы</h2> <p>  		В озеро Полнолуния есть 4 входа, они расположены на концах лабиринта. Озеро представляет собой квадратную арену. При входе вас телепортирует на одну из двух случайных точек входа. В центре арены появляются кровавые боссы: <a class="catalog-item" href="https://r2online.ru/wiki/locations/2618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Танатос" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/0fad1eaa9eae192ff5f7b542d454310b.png" title="Кровавый Танатос"/>
+</span>
+<span class="item-text"> Кровавый Танатос</span>
+</a>
+ – днем и <a class="catalog-item" href="https://r2online.ru/wiki/locations/2619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кровавый Рарка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/4c6e0958679ac36806c76f114fda63a4.png" title="Кровавый Рарка"/>
+</span>
+<span class="item-text"> Кровавый Рарка</span>
+</a>
+ – ночью. Из озера нет выхода, можно только телепортироваться книгой, зельем или кольцом. Во время смены дня и ночи вас телепортирует из озера в форпост.   	</p> <p>  		При убийстве кровавого босса он может 3 раза призывать свои проекции. Пока живы проекции босс неуязвим. На 70% HP – призывается 1 проекция, на 40% HP – 2 проекции, на 10% HP – 3 проекции. Количество призывов случайно.  	</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

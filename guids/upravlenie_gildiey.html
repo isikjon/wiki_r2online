@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление гильдией — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="guilds.html">Гильдии</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Управление гильдией</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Роли гильдии</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Изменение названия гильдии</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Поменять главу гильдии</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Установить значок гильдии</a></li> </ol> <p>  		Гильдия – это сообщество игроков, объединенных одной целью или идеей. Главой гильдии может быть любой класс, начиная с 50 уровня. Гильдия создается бесплатно. С помощью гильдии можно получать различные бонусы, увеличивая <a href="https://r2online.ru/wiki/quests/daily/guild/" target="_blank">уровень гильдии</a>, <a href="https://r2online.ru/wiki/guids/guilds/tree/" target="_blank">изучая дерево</a> и используя <a href="https://r2online.ru/wiki/quests/daily/guild/#id-44" target="_blank">эффекты гильдий</a>. Если вы все-таки решились создать гильдию, то в этом вам поможет &lt;Управляющий гильдиями&gt; Эмбер. Гильдия ограничена 30-тью участниками.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule.webp" style="max-width: 75%;"/> </a> <h2 id="id-1">Роли гильдии</h2> <ul> <li><strong>Глава гильдии</strong></li> <p>Может быть любой персонаж. Класс не имеет значения.</p> <li><strong>0 ранг</strong></li> <p>Нет привилегий.</p> <li><strong>1 ранг</strong></li> <p>Доступ к хранилищу первого уровня, нужно знать пароль.</p> <li><strong>2 ранг</strong></li> <p>Доступ к хранилищу первого и второго уровня, нужно знать пароли.</p> <li><strong>Заместитель</strong></li> <p>Изменение рангов членов гильдии.  				<br/>Открытие набора в гильдию.  				<br/>Прием игроков в гильдию.  				<br/>Изгнание игроков из гильдии.  				<br/>Изменение объявления гильдии.  				<br/>Регистрация на Битву гильдий.  				<br/>Изучение умений в дереве гильдий.  				<br/>Открытие и закрытие врат на Битве гильдий.  				<br/>Возможность делать ставки на аукционе домов гильдий.  				<br/>Сдача миссий гильдии.  			</p> <li><strong>Лидер осады</strong></li> <p>Разбивание камней контрольных точек и крепостей.  				<br/>Лидера назначает глава у NPC Эмбер, стоимость услуги – 1,200,000 серебра.  				<br/>Любой класс может быть лидером осады.  				<br/>Во время осады нельзя изменить лидера осады.  				<br/>Лидер назначается на всё время, пока не будет переназначен или не выйдет с гильдии.  				<br/>По умолчанию лидером осады является глава гильдии, если лидер покинет гильдию - роль перейдет главе.</p> </ul> <p>Любой член гильдии с рангом выше 0 – может использовать в обычном чате команду !инвайт, чтобы приглавить всех членов гильдии в группу. Команда !инвайт_союз – приглашает всех членов гильдии и союзников.</p> <h2 id="id-2">Изменение названия гильдии</h2> <p>Нужно:</p> <ul> <li>Купить в премиум магазине <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1484/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Документ Гильдии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/j26VOBsSHI5PoSdnhw57HsfGQFasX99QWj8vPkRT.webp" title="Документ Гильдии"/>
+</span>
+<span class="item-text"> Документ Гильдии</span>
+</a>
+.</li> <li>Сменить название гильдии у NPC &lt;Управляющий гильдиями&gt; Эмбер.</li> <li>Все члены гильдии будут отключены от сервера.</li> </ul> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule1.webp" style="max-width: 75%;"/> </a> <p>Условия:</p> <ul> <li>Владея контрольной точкой можно менять название гильдии.</li> <li>Во время осады нельзя менять название гильдии.</li> </ul> <h2 id="id-3">Поменять главу гильдии</h2> <p>Нужно:</p> <ul> <li>Купить в премиум магазине <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1484/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Документ Гильдии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/j26VOBsSHI5PoSdnhw57HsfGQFasX99QWj8vPkRT.webp" title="Документ Гильдии"/>
+</span>
+<span class="item-text"> Документ Гильдии</span>
+</a>
+</li> <li>Передать права другому члену гильдии</li> </ul> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule2.webp" style="max-width: 75%; margin-bottom: 15px;"/> </a> <h2 id="id-4">Установить значок гильдии</h2> <p>  		Значок гильдии – файл размером 24х24 пикселя, формата .BMP (24-bit) с названием gmark.bmp.  	</p> <p><strong>Шаг 1</strong> – создание значка</p> <p>Открываем любой графический редактор, который работает с bmp. Мы будем работать в простом графическом редакторе Paint. Нажимаем на основную кнопку в Paint, которая выделена на скриншоте, выбираем раздел "Свойства" (либо просто нажимаем Ctrl+E).</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule3.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule3.webp" style="max-width: 75%; margin-bottom: 15px;"/> </a> <p>  			Указываем размеры 24 на 24 и нажимаем ОК.  		</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule4.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule4.webp" style="max-width: 75%; margin-bottom: 15px;"/> </a> <p>Рисуем логотип (или вставляем готовую картинку). Для того, чтобы логотип был прозрачным, необходимо закрасить те места, которые должны быть прозрачным, розовым цветом (шестнадцатеричный код #FF00FF или аналог в RGB 255, 0, 255).</p> <p>  			Сохраняем в формате 24-разрядный рисунок (*.bmp) в папку gmark, которая расположена в папке с игрой, с названием gmark.  		</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule5.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule5.webp" style="max-width: 75%; margin-bottom: 15px;"/> </a> <p><strong>Шаг 2</strong> – установка значка в игре</p> <p>  	Заходим в игру. Добавить или сменить логотип гильдии может только глава. Нажимаете кнопку [C], переходим в Гильдия/Гильдия, как на скрине, и нажимаем кнопку "Загрузить". <strong>Менять логотип можно не чаще одного раза в минуту.</strong> </p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/other/guildrule/guildrule6.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/other/guildrule/guildrule6.webp" style="max-width: 75%; margin-bottom: 15px;"/> </a> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

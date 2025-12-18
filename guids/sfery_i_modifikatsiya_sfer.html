@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сферы и модификация сфер — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="unique-items.html">Уникальные предметы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Сферы и модификация сфер</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <div style="float: right;"> <img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/inventory-sphere.webp" style="max-width: 100%; margin-bottom: 5px; height: auto; margin-left: 25px;"/> </div> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Виды сфер</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Как добыть сферы?</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Модификация сфер</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Усиление сфер</a></li> <li><a class="link-in-top" href="#id-8" style="font-size: 14px;">Усиление особых сфер</a></li> </ol> <h2 id="id-1">Виды сфер</h2> <p>  		Сферы — дополнительная экипировка персонажа. Окно сфер находится в инвентаре [I], вкладка «Сферы». Всего существует пять слотов для пяти видов сфер и три слота для трех видов <a href="https://r2online.ru/wiki/guids/other/special-spheres" target="_blank">особых сфер</a>. В этой статье рассматриваются только обычные сферы.  	</p> <p>  		Характеристики сферы зависят от уровня сферы (1 – 5 ур.), редкости (обычная, редкая, эпическая, легендарная) и усиления (+0 – +5).  	</p> <p> <a href="https://r2online.ru/wiki/base/list/35/" target="_blank"><img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/cZm5bElHFoGfEWh4rqY9hUavfoafZBy3x5j2zBmh.jpg" style="margin-bottom: 5px; margin-top: 5px;"/> Сферы разрушения</a> — атака, точность, шанс крит. удара.<br/> <a href="https://r2online.ru/wiki/base/list/36/" target="_blank"><img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/GVZ5kXGgFlJ9jgVmkxlUGWCsdsNNk2PbNnkT9MRC.jpg" style="margin-bottom: 5px; margin-top: 5px;"/> Сферы защиты</a> — защита, уменьшение получаемого крит. урона.<br/> <a href="https://r2online.ru/wiki/base/list/37/" target="_blank"><img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/zyLIyan0OLR1etvkx9Wc9EURTnQ07g5CX5S79V0R.jpg" style="margin-bottom: 5px; margin-top: 5px;"/> Сферы мастерства</a> — сила, ловкость, интеллект, урон при крит. ударе.<br/> <a href="https://r2online.ru/wiki/base/list/34/" target="_blank"><img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/R9W18KXgaxrT6xnjFy21i4HRdwJpH22ZcSfc5WQc.jpg" style="margin-bottom: 5px; margin-top: 5px;"/> Сферы жизни</a> — HP, восстановление HP, эффективность зелий.<br/> <a href="https://r2online.ru/wiki/base/list/33/" target="_blank"><img align="middle" alt="" src="https://r2online.ru/storage/wiki/images/l4DOKY3FkcbgeTvZ8i7uAtGSXrszSkAZChAwT5w7.jpg" style="margin-bottom: 5px; margin-top: 5px;"/> Сферы души</a> — MP, восстановление MP, уменьшение расхода MP.<br/> </p> <h2 id="id-2">Как добыть сферы?</h2> <p>  		В <a href="https://r2online.ru/wiki/locations/elter/dangeon/krepost-abellusa/1/" target="_blank">Храме Абеллуса</a> во время события <a href="https://r2online.ru/wiki/guids/locations/hramabellusa/" target="_blank">«Захват храма монстрами»</a> и в <a href="https://r2online.ru/wiki/locations/elter/dangeon/krepost-abellusa/2/" target="_blank">Зале испытаний</a> выпадают сферы 1-го уровня различной редкости.   	</p> <p>  		Дополнительно сферы можно получить путем обмена <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера основания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c13227a805b5e590e95007304b3bd070.jpg" title="Сфера основания"/>
+</span>
+<span class="item-text"> Сфера основания</span>
+</a>
+ у NPC «Медея». Выпадает случайная сфера случайной редкости (редкие, эпические, легендарные), уровня и усиления.  		<br/>Сферы основания выпадают из монстров в <a href="https://r2online.ru/wiki/locations/elter/dangeon/krepost-abellusa/1/" target="_blank">Храме Абеллуса</a> и продаются в премиум магазине [B].  	</p> <p>  		Также сферы основания обмениваются на особые сферы:  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40600/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера алчности ур. 1" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/bf7d28851cfd09038a368c6a39bc932c.png" title="Сфера алчности ур. 1"/>
+</span>
+<span class="item-text"> Сфера алчности ур. 1</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40606/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера героя ур. 1" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/5e8c4bfbc1e3c930cf6ce7c7619c665c.png" title="Сфера героя ур. 1"/>
+</span>
+<span class="item-text"> Сфера героя ур. 1</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40607/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера охотника ур. 1" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/476daed1dc85a75c74ca79ad9295d8db.png" title="Сфера охотника ур. 1"/>
+</span>
+<span class="item-text"> Сфера охотника ур. 1</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера ярости ур. 1" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/81b46c02627904a77623552141fafe99.png" title="Сфера ярости ур. 1"/>
+</span>
+<span class="item-text"> Сфера ярости ур. 1</span>
+</a>
+</p> <h2 id="id-3">Модификация сфер</h2> <p>  		Уровень сферы можно увеличить с помощью модификации сфер. «Окно модификации» открывается с помощью кнопки в инвентаре [I], вкладка «Сферы»  	</p> <a data-fancybox="gallery" href="/storage/wiki//images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sphere-modifier.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sphere-modifier.webp" style="max-width: 100%; margin-bottom: 15px;"/> </a> <p>  		Для модификации требуются четыре сферы одного уровня и вида. Если модификация прошла успешно – уровень сферы повышается. Заточка будет выбрана случайно среди заточек сфер, участвующих в модификации.   		<br/>Чем больше сфер одной заточки, тем выше шанс получить эту заточку, при этом всегда есть вероятность получить сферу +0. Редкость получается случайным образом, но чем больше сфер в модификации высокой редкости – тем больше шанс получить высокую редкость.   		<br/>Если модифицируются 4 редких сферы, то получится редкая или выше, 4 эпических – эпическая или легендарная, 4 легендарных сферы – только легендарная.  		<br/>Если модификация неудачна – сохранится самая лучшая сфера, остальные пропадут.  	</p> <a data-fancybox="gallery" href="/storage/wiki//images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window-modifier.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window-modifier.webp" style="max-width: 100%; margin-bottom: 15px;"/> </a> <p>  		При модификации взимается серебро. Количество требуемого серебра зависит от уровня модифицируемых сфер:  		<br/>1 уровень — бесплатно;  		<br/>2 уровень — <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 50,000 серебра;  		<br/>3 уровень — <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 150,000 серебра;  		<br/>4 уровень — <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 500,000 серебра.  	</p> <h2 id="id-4">Усиление сфер</h2> <p>  		Сферы усиливаются: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+<span class="item-text"> Сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+<span class="item-text"> Сияющая сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+<span class="item-text"> Блестящая сфера усиления</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Усиленная сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+<span class="item-text"> Усиленная сфера усиления</span>
+</a>
+.  	</p> <div class="spoiler"> <div class="spoiler__title">Создание Сфер усиления</div> <div class="spoiler__content"> <div class="text-box">  				Усиленная сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Блестящая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+<span class="item-text"> Блестящая сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 8 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 90 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок силы стихий" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aEiVTxHffNnPEmX0qC4fOQ2Z4ZTwbpjQCZXaV1s0.webp" title="Порошок силы стихий"/>
+</span>
+<span class="item-text"> Порошок силы стихий</span>
+</a>
+, 3 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 4,000,000 шт.  				<br/> <br/>Блестящая сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющая сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+<span class="item-text"> Сияющая сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 4 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 30 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12249/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Порошок силы стихий" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/aEiVTxHffNnPEmX0qC4fOQ2Z4ZTwbpjQCZXaV1s0.webp" title="Порошок силы стихий"/>
+</span>
+<span class="item-text"> Порошок силы стихий</span>
+</a>
+, 1 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 2,000,000 шт.  				<br/> <br/>Сияющая сфера усиления:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+<span class="item-text"> Сфера усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/5608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Осколок сияющей сферы усиления" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/64d62238ec5c598a0612ab12275b836d.jpg" title="Осколок сияющей сферы усиления"/>
+</span>
+<span class="item-text"> Осколок сияющей сферы усиления</span>
+</a>
+, 2 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12940/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Мерцающий песок" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/NY8tJWN0DRvNDEVzMGQqIMVhqOpDetR8Wt66ayxF.jpg" title="Мерцающий песок"/>
+</span>
+<span class="item-text"> Мерцающий песок</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 1,000,000 шт.  				<br/> <br/>Создание Порошка силы стихий:  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+, 50 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Атака)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/N0ZwLkezcxpIvueXsGiF2rIVdMkE5LbpagklQx0m.jpg" title="Стихийная пыльца (Атака)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Атака)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12037/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Стихийная пыльца (Защита)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Qgjx6Kf24NZWpo8n0DdAoNnhIJxk0OD8LYbJPBPX.jpg" title="Стихийная пыльца (Защита)"/>
+</span>
+<span class="item-text"> Стихийная пыльца (Защита)</span>
+</a>
+, 10 шт.  				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 150,000 шт.  			</div> </div> </div> <p> <br/><strong>Сферы 1 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/813cfcc6b154c2b46220d0c5ec529b32.png" title="Сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 2 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +3 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 3 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40610999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/60c2a483545171162201ab55d6f68e17.png" title="Сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aGlfs0yjimHcoCJsMEjoKRqGtVpVzOQ6Pv2n4lCX.webp" title="Сияющая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 4 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12230999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/gfwlObj9kqGeaXmYBfvo9esnFeE2vaBLlIIotMlh.jpg" title="Сияющая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <p> <strong>Сферы 5 уровня:</strong> <br/>До +1 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/1cABBY27oAksGpuUcW72S8H1mySbQdCitsvtqiRT.jpg" title="Блестящая сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9990999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/jjuTyULgGBlD8xrAFWX9G26O2uzkJIGFOPuHF0oD.jpg" title="Блестящая сфера усиления (благ.)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/xszK4xIYzU199YDUCWLmqNFB5i4d5AJRpNYyorS5.jpg" title="Усиленная сфера усиления"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>До +2 усиливается безопасно: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9989999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/JFygeNGbfzw6Y23PQJqErZWk4P8do55nUN98RguX.jpg" title="Усиленная сфера усиления (благ.)"/>
+</span>
+</a>
+<br/>   	</p> <h2 id="id-8">Усиление особых сфер</h2> <p>Особые сферы усиливает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5573/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна усиления особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/28f150f6143495ad020055a1acf1abd2.jpg" title="Руна усиления особой сферы"/>
+</span>
+<span class="item-text"> Руна усиления особой сферы</span>
+</a>
+, которая продается за 500 очков хаоса у NPC &lt;Торговец очками хаоса&gt; Рудольф.    	</p> <p> <strong>Сферы характеристик и алчности:</strong> <br/>До 5 уровня усиливается безопасно <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5573999/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="item-other-status item-blessed item-other-status-small" style="left: 0px; top: 2px; right: 4px; width: 33px; height: 33px;"></span>
+<img alt="Icon" class="base-item-icon item-blessed small-icon" src="https://r2online.ru/storage/wiki/images/Lj8VHaLkn9bFpu1Y1KrqZ17ApG3Fbxbtns1Ap0c1.jpg" title="Руна усиления особой сферы (благ.)"/>
+</span>
+</a>
+.  		<br/>   	</p> </div> <p><a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script></p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

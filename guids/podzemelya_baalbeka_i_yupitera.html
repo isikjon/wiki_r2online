@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подземелья Баалбека и Юпитера — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Подземелья Баалбека и Юпитера</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О подземельях Баалбека и Юпитера</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Ларцы Баалбека и Юпитера</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Дроп из ларцов Баалбека и Юпитера</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Зелья безмятежности и небесной защиты</a></li> </ol> <h2 id="id-1">О подземельях Баалбека и Юпитера</h2> <p>  		Подземелья <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-yupitera/1" target="_blank">Юпитера</a> и <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/1" target="_blank">Баалбека</a> находятся на <a href="https://r2online.ru/wiki/locations/elter/dangeon/" target="_blank">небесном острове Эльтер</a>. Они очень похожи друг на друга и связаны между собой, причем некоторые монстры встречаются в обоих подземельях. Каждое из подземелий имеет два уровня: на первых уровнях трофеев выпадает мало, но можно выполнить <a href="https://r2online.ru/wiki/quests/daily/exp/elterbek1/" target="_blank">ежедневные задания на опыт</a> и сложные задания на опыт <a href="https://r2online.ru/wiki/quests/exp/95" target="_blank">95+ Гайя</a> и <a href="https://r2online.ru/wiki/quests/exp/99/" target="_blank">99+ Хронос</a>.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Вход в подземелье Баалбека и Юпитера</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ostrov.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/ostrov.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		С монстров выпадают ключи Юпитера и Баалбека, которые можно использовать для открытия сундуков, расположенных на пьедесталах по всему подземелью. С сундуков могут выпасть книги перевоплощения: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20425/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/fa344cf672578caacb945b62611987d7.png" title="Книга Гнева Юпитера (легендарное)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/20426/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/482f89b888fef6358ad046c7691f702f.png" title="Книга Командира Баалбека (легендарное)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/20434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/egLaSQGyfMjiAgO6Neve8JFtHTTIbVbIi1u0Z9yg.webp" title="Книга Ангелис (легендарное)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/20433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/gQb3jNVvuhfsha4J2BpiQWjBv9J1h5uvzQzTQ8Rc.webp" title="Книга Дьяволис (легендарное)"/>
+</span>
+</a>
+.  		<br/>На втором уровне трофеев выпадает значительно больше. С монстров выпадают магические сердца и кровь, а также ключи, но уже сияющие, ими можно открывать сундуки на 2-ом уровне подземелья. Из этих сундуков можно получить книги Ангелис и Дьяволис, необходимые для коллекций 3-го уровня.   		<br/>На втором уровне выполняются сложные эпические задания <a href="https://r2online.ru/wiki/quests/epic/very-hard/witch/" target="_blank">Колдуньи</a> и <a href="https://r2online.ru/wiki/quests/epic/very-hard/priestess-cutie/" target="_blank">Жрицы милашки</a>.   		<br/>Боссов в подземельях нет, их можно найти снаружи на святилищах Юпитера и Баалбека.  	</p> <h2 id="id-2">Ларцы Баалбека и Юпитера</h2> <p>  		Со всех монстров подземелий Юпитера и Баалбека выпадают ключи для открытия определенного ларца.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sunduk_jup.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sunduk_jup.webp" style="max-width: 70%; cursor: zoom-in; margin-top: 15px"/> </a> <div class="spoiler" style="margin-bottom: 30px"> <div class="spoiler__title">Расположение ларцов Юпитера</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/jupiter1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/jupiter1.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/jupiter2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/jupiter2.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sunduk_bek.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sunduk_bek.webp" style="max-width: 70%; cursor: zoom-in;"/> </a> <div class="spoiler" style="margin-bottom: 30px"> <div class="spoiler__title">Расположение ларцов Баалбека</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/baalbek1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/baalbek1.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/baalbek2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/baalbek2.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td>  						Подземелье  					</td> <td>  						Ключ  					</td> <td>  						Ларец  					</td> <td>  						Уникальный дроп  					</td> </tr> <tr class="tr-alt-even"> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-yupitera/1" target="_blank">Юпитера, ур. 1</a> </td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7596/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ключ Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/e75053b6deccdf9c7f7d56caebf443f0.jpg" title="Ключ Юпитера"/>
+</span>
+<span class="item-text"> Ключ Юпитера</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2467/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ларец Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/1b2a42e4a76ecb39f05579cc2e3558d6.png" title="Ларец Юпитера"/>
+</span>
+<span class="item-text"> Ларец Юпитера</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20425/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Гнева Юпитера (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/fa344cf672578caacb945b62611987d7.png" title="Книга Гнева Юпитера (легендарное)"/>
+</span>
+<span class="item-text"> Книга Гнева Юпитера (легендарное)</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-yupitera/2" target="_blank">Юпитера, ур. 2</a> </td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7646/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ключ Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/d1447613785c9737da1f8680eea06ccb.png" title="Сияющий ключ Юпитера"/>
+</span>
+<span class="item-text"> Сияющий ключ Юпитера</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2506/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ларец Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/04/17/fe25f69929ef22d206f069f6194acbc7.png" title="Сияющий ларец Юпитера"/>
+</span>
+<span class="item-text"> Сияющий ларец Юпитера</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Ангелис (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/egLaSQGyfMjiAgO6Neve8JFtHTTIbVbIi1u0Z9yg.webp" title="Книга Ангелис (легендарное)"/>
+</span>
+<span class="item-text"> Книга Ангелис (легендарное)</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/1" target="_blank">Баалбека, ур. 1</a> </td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7597/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ключ Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c77d4837a93419b39b52ad2f58e36364.jpg" title="Ключ Баалбека"/>
+</span>
+<span class="item-text"> Ключ Баалбека</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2468/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ларец Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/3450e59cff383685641129ef2fbd18e8.png" title="Ларец Баалбека"/>
+</span>
+<span class="item-text"> Ларец Баалбека</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20426/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Командира Баалбека (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/482f89b888fef6358ad046c7691f702f.png" title="Книга Командира Баалбека (легендарное)"/>
+</span>
+<span class="item-text"> Книга Командира Баалбека (легендарное)</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td> <a href="https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/2/" target="_blank">Баалбека, ур. 2</a> </td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7647/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ключ Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/038eea43888753744341d362b4a730e0.png" title="Сияющий ключ Баалбека"/>
+</span>
+<span class="item-text"> Сияющий ключ Баалбека</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2507/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ларец Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/04/17/d4e7a5173ac171dbc147d6fb4ec50f2a.png" title="Сияющий ларец Баалбека"/>
+</span>
+<span class="item-text"> Сияющий ларец Баалбека</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Дьяволис (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/gQb3jNVvuhfsha4J2BpiQWjBv9J1h5uvzQzTQ8Rc.webp" title="Книга Дьяволис (легендарное)"/>
+</span>
+<span class="item-text"> Книга Дьяволис (легендарное)</span>
+</a>
+</td> </tr> </tbody></table> </div> <p>  		Некоторые монстры есть и в Юпитере и в Баалбеке — это означает, что в Юпитере можно выбить ключ Баалбека, и чтобы открыть сундук придется отправиться в Баалбек и наоборот.  	</p> <p>  		На 1 уровне подземелий может появиться только один сундук. На 2 уровне — 2 сундука. Сундук будет стоять на своем месте пока его кто-то не откроет, самопроизвольно сундуки не открываются. После открытия сундука этот же сундук появится в промежутке времени <strong>от 1 до 15 минут</strong>. Сундук может открыть только один игрок.  	</p> <h2 id="id-3">Дроп из ларцов Баалбека и Юпитера</h2> <div class="spoiler" style="margin-bottom: 25px; margin-top: 25px"> <div class="spoiler__title">Выпадаемые предметы из ларцов (1 уровень)</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td>  									Юпитер, ур. 1  								</td> <td>  									Баалбек, ур. 1  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20425/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Гнева Юпитера (легендарное)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/fa344cf672578caacb945b62611987d7.png" title="Книга Гнева Юпитера (легендарное)"/>
+</span>
+<span class="item-text"> Книга Гнева Юпитера (легендарное)</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20426/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Командира Баалбека (легендарное)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/482f89b888fef6358ad046c7691f702f.png" title="Книга Командира Баалбека (легендарное)"/>
+</span>
+<span class="item-text"> Книга Командира Баалбека (легендарное)</span>
+</a>
+</td> </tr> </tbody></table> </div>  				Остальной дроп одинаковый и в Юпитере и в Баалбеке.					    				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1637/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Железная алебарда" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/96a7ba878bfeef87d03e05c111c0d12b.jpg" title="Железная алебарда"/>
+</span>
+<span class="item-text"> Железная алебарда</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/784/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Эльфийский лук" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d842253c9fb897629d80198ad5cf84bc.jpg" title="Эльфийский лук"/>
+</span>
+<span class="item-text"> Эльфийский лук</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/727/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Эльфийский меч" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/e06e5fec86765f4618bd9bb7d36d7523.jpg" title="Эльфийский меч"/>
+</span>
+<span class="item-text"> Эльфийский меч</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1697/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Адские катары" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/a9d398a9e2477797f0fb989a8de7d4c2.jpg" title="Адские катары"/>
+</span>
+<span class="item-text"> Адские катары</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2659/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Орб Зефироса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/ccc9bab0f0be2247c9c74e4ea2e6d213.jpg" title="Орб Зефироса"/>
+</span>
+<span class="item-text"> Орб Зефироса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1522/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство увеличения магии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/96ea64f3a1aa2fd00c72faacf0cb8ac9.jpg" title="Средство увеличения магии"/>
+</span>
+<span class="item-text"> Средство увеличения магии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для смешения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/i0izOKLnZ5plJbsvNOfOVocokhqszFkg3lPQzouh.webp" title="Средство для смешения"/>
+</span>
+<span class="item-text"> Средство для смешения</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/974/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Средство для полировки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/xU0nYK0OryjWNhr0KYjs6LnYWzp3bNZJAd4mmRw0.webp" title="Средство для полировки"/>
+</span>
+<span class="item-text"> Средство для полировки</span>
+</a>
+</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Выпадаемые предметы из ларцов (2 уровень)</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td>  									Юпитер, ур. 2  								</td> <td>  									Баалбек, ур. 2  								</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Ангелис (легендарное)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/egLaSQGyfMjiAgO6Neve8JFtHTTIbVbIi1u0Z9yg.webp" title="Книга Ангелис (легендарное)"/>
+</span>
+<span class="item-text"> Книга Ангелис (легендарное)</span>
+</a>
+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Дьяволис (легендарное)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/gQb3jNVvuhfsha4J2BpiQWjBv9J1h5uvzQzTQ8Rc.webp" title="Книга Дьяволис (легендарное)"/>
+</span>
+<span class="item-text"> Книга Дьяволис (легендарное)</span>
+</a>
+</td> </tr> </tbody></table> </div>  				  				Остальной дроп одинаковый и в Юпитере и в Баалбеке.    				<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Сияющий свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2448/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическая кровь" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/d58072be2820e8682c0a27c0518e805e.jpg" title="Магическая кровь"/>
+</span>
+<span class="item-text"> Магическая кровь</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2447/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магическое сердце" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6e7b33fdea3adc80ebd648fffb665bb8.jpg" title="Магическое сердце"/>
+</span>
+<span class="item-text"> Магическое сердце</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+<span class="item-text"> Светлый свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Светлый свиток усиления доспехов</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления оружия" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+<span class="item-text"> Свиток усиления оружия</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления доспехов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+<span class="item-text"> Свиток усиления доспехов</span>
+</a>
+</div> </div> </div> <h2 id="id-4">Зелья безмятежности и небесной защиты</h2> <p>В подземельях Юпитера и Баалбека ур. 2 нельзя использовать <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1481/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток телепортации" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/acc20ddcd5290b680b4cd464ff953122.jpg" title="Свиток телепортации"/>
+</span>
+<span class="item-text"> Свиток телепортации</span>
+</a>
+. Для легкого перемещения в подземельях можно использовать зелья: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9804/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье безмятежности" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/q3BXezXCAQaO1EB8fZ8jfxICzgQCMeW0ynUWAyMl.png" title="Зелье безмятежности"/>
+</span>
+<span class="item-text"> Зелье безмятежности</span>
+</a>
+ в Баалбеке и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9803/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье небесной защиты" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/O8TbmqDw4fI5b2BI3h27bvt3KXnBNEMfC8LTjQMk.png" title="Зелье небесной защиты"/>
+</span>
+<span class="item-text"> Зелье небесной защиты</span>
+</a>
+ в Юпитере, накладывающее эффект на 5 минут. Во время действия эффекта монстры соответствующего подземелья не будут атаковать персонажа первыми. Зелье изготавливается через меню создания [J], их можно передавать другим игрокам и выставлять на <a href="https://r2online.ru/wiki/guids/other/auction/" target="_blank">аукцион</a>.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9804/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье безмятежности" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/q3BXezXCAQaO1EB8fZ8jfxICzgQCMeW0ynUWAyMl.png" title="Зелье безмятежности"/>
+</span>
+<span class="item-text"> Зелье безмятежности</span>
+</a>
+</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9801/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пустая бутылка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Pkov3AuSFOE2NZig4aD75qYaidvGOGKivkraKZQy.png" title="Пустая бутылка"/>
+</span>
+<span class="item-text"> Пустая бутылка</span>
+</a>
+, 1 шт., выпадает с монстров [Затонувшего храма](https://r2online.ru/wiki/locations/hram-meteos/sunken-temple/0), [Пещеры пиратов ур. 2](https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov/2), [Горизонта полнолуния](https://r2online.ru/wiki/locations/rp/gorizont-polnoy-luny/).<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7649/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Крылья Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/ndZnDUhR2hefQz8YJZRovZVxEWgwpfy0FU4c6As4.png" title="Крылья Баалбека"/>
+</span>
+<span class="item-text"> Крылья Баалбека</span>
+</a>
+, 3 шт., выпадает с монстров [Подземелья Баалбека ур. 2](https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/2).<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000 шт.  		</div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Изготовление <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9803/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье небесной защиты" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/O8TbmqDw4fI5b2BI3h27bvt3KXnBNEMfC8LTjQMk.png" title="Зелье небесной защиты"/>
+</span>
+<span class="item-text"> Зелье небесной защиты</span>
+</a>
+</div> <div class="spoiler__content"> <div class="text-box"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9801/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Пустая бутылка" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/Pkov3AuSFOE2NZig4aD75qYaidvGOGKivkraKZQy.png" title="Пустая бутылка"/>
+</span>
+<span class="item-text"> Пустая бутылка</span>
+</a>
+, 1 шт., выпадает с монстров [Затонувшего храма](https://r2online.ru/wiki/locations/hram-meteos/sunken-temple/0), [Пещеры пиратов ур. 2](https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov/2), [Горизонта полнолуния](https://r2online.ru/wiki/locations/rp/gorizont-polnoy-luny/).<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7648/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Крылья Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/GnKSmv65mVFx9Xg2SKh6ABDSTss9ib7DE86F1LeC.png" title="Крылья Юпитера"/>
+</span>
+<span class="item-text"> Крылья Юпитера</span>
+</a>
+, 3 шт., выпадает с монстров [Подземелья Баалбека ур. 2](https://r2online.ru/wiki/locations/elter/dangeon/podzemele-baalbeka/2).<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+, 10,000 шт.  		</div> </div> </div> <p> </p> </div>
+</div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

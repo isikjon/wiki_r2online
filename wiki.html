@@ -15,9 +15,14 @@
     <meta name="keywords"
         content="rise wiki, rise база, р2 вики, r2 base, р2 база, база знаний, r2 online wiki, дроп, гайды, питомцы, дерево, руны">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="./css/wiki.css" rel="stylesheet">
     <link href="./css/core.css" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <link href="./css/fancybox.min.css" rel="stylesheet">
     <link href="/plugins/slick/slick.css" rel="stylesheet">
     <link href="/plugins/slick/slick-theme.css" rel="stylesheet">
@@ -47,52 +52,18 @@
                         <h1 class="inner-page__title-text">База знаний</h1>
                         <div class="inner-page__title-subtext"></div>
                     </div>
-                    <div class="wiki__nav flex-sbc">
-                        <div class="wiki__nav-links flex-sc">
-                            <div class="wiki__nav-group has-items">
-                                <div class="wiki__nav-group-title flex-sc"><span>Локации и монстры</span></div>
-                                <div class="wiki__nav-group-items">
-                                    <a href="./colfort/colfort.html" class="wiki__nav-group-item">Колфорт</a>
-                                    <a href="/wiki/locations/elter" class="wiki__nav-group-item">Небесный остров
-                                        Эльтер</a>
-                                    <a href="/wiki/locations/rp" class="wiki__nav-group-item">Руины
-                                        Полнолуния</a>
-                                    <a href="/wiki/locations/illumina" class="wiki__nav-group-item">Святые земли
-                                        Иллюмина</a>
-                                    <a href="/wiki/locations/hram-meteos" class="wiki__nav-group-item">Храм Метеоса</a>
-                                    <a href="/wiki/locations/acra" class="wiki__nav-group-item">Остров Акра</a>
-                                    <a href="/wiki/locations/locality" class="wiki__nav-group-item">Деревни и
-                                        поселения</a>
-                                </div>
-                            </div>
-                            <div class="wiki__nav-group has-items">
-                                <div class="wiki__nav-group-title flex-sc"><span>Предметы</span></div>
-                                <div class="wiki__nav-group-items">
-                                    <a href="/wiki/base/section/15" class="wiki__nav-group-item">Экипировка</a>
-                                    <a href="/wiki/base/section/1" class="wiki__nav-group-item">Материалы</a>
-                                    <a href="/wiki/base/section/12" class="wiki__nav-group-item">Книги</a>
-                                    <a href="/wiki/base/section/17" class="wiki__nav-group-item">Руны</a>
-                                    <a href="/wiki/base/section/7" class="wiki__nav-group-item">Другое</a>
-                                    <a href="/wiki/base/section/8" class="wiki__nav-group-item">Ивенты</a>
-                                </div>
-                            </div>
-                            <div class="wiki__nav-group has-items">
-                                <div class="wiki__nav-group-title flex-sc"><span>Гайды</span></div>
-                                <div class="wiki__nav-group-items">
-                                    <a href="/wiki/guids/locations" class="wiki__nav-group-item">Особенности локаций</a>
-                                    <a href="/wiki/guids/boss" class="wiki__nav-group-item">Боссы</a>
-                                    <a href="/wiki/guids/unique-items" class="wiki__nav-group-item">Уникальные
-                                        предметы</a>
-                                    <a href="/wiki/guids/craft" class="wiki__nav-group-item">Изготовление</a>
-                                    <a href="/wiki/guids/guilds" class="wiki__nav-group-item">Гильдии</a>
-                                    <a href="/wiki/guids/events" class="wiki__nav-group-item">Мероприятия</a>
-                                    <a href="/wiki/guids/trade" class="wiki__nav-group-item">Торговля</a>
-                                    <a href="/wiki/guids/client" class="wiki__nav-group-item">Функционал клиента</a>
-                                    <a href="/wiki/guids/account" class="wiki__nav-group-item">Аккаунт и
-                                        безопасность</a>
-                                    <a href="/wiki/guids/other" class="wiki__nav-group-item">Другое</a>
-                                </div>
-                            </div>
+
+                    <!-- Поиск -->
+                    <div class="wiki-search">
+                        <div class="wiki-search__container">
+                            <input type="text" id="wikiSearchInput" class="wiki-search__input" placeholder="Поиск по базе знаний..." autocomplete="off">
+                            <button class="wiki-search__btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </button>
+                            <div id="wikiSearchResults" class="wiki-search__results"></div>
                         </div>
                     </div>
 
@@ -111,17 +82,17 @@
                                     <div class="text-box">
                                         <h2>Локации и монстры</h2>
                                         <ul>
-                                            <li><a href="/wiki/locations/kolfort">Колфорт</a></li>
-                                            <li><a href="/wiki/locations/elter">Небесный остров
+                                            <li><a href="./colfort/colfort.html">Колфорт</a></li>
+                                            <li><a href="./elter/elter.html">Небесный остров
                                                     Эльтер</a></li>
-                                            <li><a href="/wiki/locations/rp">Руины Полнолуния</a>
+                                            <li><a href="./rp/rp.html">Руины Полнолуния</a>
                                             </li>
-                                            <li><a href="/wiki/locations/illumina">Святые земли
+                                            <li><a href="./illumina/illumina.html">Святые земли
                                                     Иллюмина</a></li>
-                                            <li><a href="/wiki/locations/hram-meteos">Храм
+                                            <li><a href="./hram-meteos/hram-meteos.html">Храм
                                                     Метеоса</a></li>
-                                            <li><a href="/wiki/locations/acra">Остров Акра</a></li>
-                                            <li><a href="/wiki/locations/locality">Деревни и
+                                            <li><a href="./acra/acra.html">Остров Акра</a></li>
+                                            <li><a href="./locality/locality.html">Деревни и
                                                     поселения</a></li>
                                         </ul>
                                     </div>
@@ -130,12 +101,12 @@
                                     <div class="text-box">
                                         <h2>Предметы</h2>
                                         <ul>
-                                            <li><a href="/wiki/base/section/15">Экипировка</a></li>
-                                            <li><a href="/wiki/base/section/1">Материалы</a></li>
-                                            <li><a href="/wiki/base/section/12">Книги</a></li>
-                                            <li><a href="/wiki/base/section/17">Руны</a></li>
-                                            <li><a href="/wiki/base/section/7">Другое</a></li>
-                                            <li><a href="/wiki/base/section/8">Ивенты</a></li>
+                                            <li><a href="./items/ekipirovka.html">Экипировка</a></li>
+                                            <li><a href="./items/materialy.html">Материалы</a></li>
+                                            <li><a href="./items/knigi.html">Книги</a></li>
+                                            <li><a href="./items/runy.html">Руны</a></li>
+                                            <li><a href="./items/drugoe.html">Другое</a></li>
+                                            <li><a href="./items/iventy.html">Ивенты</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -143,20 +114,20 @@
                                     <div class="text-box">
                                         <h2>Гайды</h2>
                                         <ul>
-                                            <li><a href="/wiki/guids/locations">Особенности
+                                            <li><a href="./guids/locations.html">Особенности
                                                     локаций</a></li>
-                                            <li><a href="/wiki/guids/boss">Боссы</a></li>
-                                            <li><a href="/wiki/guids/unique-items">Уникальные
+                                            <li><a href="./guids/boss.html">Боссы</a></li>
+                                            <li><a href="./guids/unique-items.html">Уникальные
                                                     предметы</a></li>
-                                            <li><a href="/wiki/guids/craft">Изготовление</a></li>
-                                            <li><a href="/wiki/guids/guilds">Гильдии</a></li>
-                                            <li><a href="/wiki/guids/events">Мероприятия</a></li>
-                                            <li><a href="/wiki/guids/trade">Торговля</a></li>
-                                            <li><a href="/wiki/guids/client">Функционал клиента</a>
+                                            <li><a href="./guids/craft.html">Изготовление</a></li>
+                                            <li><a href="./guids/guilds.html">Гильдии</a></li>
+                                            <li><a href="./guids/events.html">Мероприятия</a></li>
+                                            <li><a href="./guids/trade.html">Торговля</a></li>
+                                            <li><a href="./guids/client.html">Функционал клиента</a>
                                             </li>
-                                            <li><a href="/wiki/guids/account">Аккаунт и
+                                            <li><a href="./guids/account.html">Аккаунт и
                                                     безопасность</a></li>
-                                            <li><a href="/wiki/guids/other">Другое</a></li>
+                                            <li><a href="./guids/other.html">Другое</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -185,6 +156,81 @@
     <script src="/libs/js/locations.js"></script>
     <script src="/libs/plugins/datatables/dataTables.min.js"></script>
     <script src="/libs/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    
+    <!-- Wiki Search -->
+    <script src="./search-index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('wikiSearchInput');
+        const results = document.getElementById('wikiSearchResults');
+        
+        if (!input || !results) return;
+
+        input.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            
+            if (query.length < 2) {
+                results.style.display = 'none';
+                results.innerHTML = '';
+                return;
+            }
+
+            const matches = wikiSearchIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query)
+            ).slice(0, 10);
+
+            if (matches.length === 0) {
+                results.innerHTML = '<div class="wiki-search__no-results">Ничего не найдено</div>';
+                results.style.display = 'block';
+                return;
+            }
+
+            results.innerHTML = matches.map(item => `
+                <a href="${item.url}" class="wiki-search__result-item">
+                    <span class="wiki-search__result-title">${item.title}</span>
+                    <span class="wiki-search__result-category">${item.category}</span>
+                </a>
+            `).join('');
+            results.style.display = 'block';
+        });
+
+        // Закрыть результаты при клике вне
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.wiki-search')) {
+                results.style.display = 'none';
+            }
+        });
+
+        // Навигация клавишами
+        input.addEventListener('keydown', function(e) {
+            const items = results.querySelectorAll('.wiki-search__result-item');
+            const active = results.querySelector('.wiki-search__result-item.active');
+            let index = Array.from(items).indexOf(active);
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (active) active.classList.remove('active');
+                index = (index + 1) % items.length;
+                items[index]?.classList.add('active');
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (active) active.classList.remove('active');
+                index = index <= 0 ? items.length - 1 : index - 1;
+                items[index]?.classList.add('active');
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (active) {
+                    window.location.href = active.href;
+                } else if (items.length > 0) {
+                    window.location.href = items[0].href;
+                }
+            } else if (e.key === 'Escape') {
+                results.style.display = 'none';
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>

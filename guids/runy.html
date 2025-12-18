@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Руны — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="unique-items.html">Уникальные предметы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Руны</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О рунах</a></li> <li><a class="link-in-top" href="#id-10" style="font-size: 14px;">Об особых рунах Херакена</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Как добыть руны?</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Усиление рун</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Установка рун</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Закрытие ячеек и извлечение рун</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Описание рун</a></li> </ol> <h2 id="id-1">О рунах</h2> <p>  		В экипировке есть закрытые ячейки, их можно открыть и вставить руны. Руны усилят предмет или добавят новые особые свойства. Предметы без рун могут значительно уступать в силе, чем полностью «заруненные».  	</p> <a data-fancybox="gallery" href="/storage/photos/5/rune11.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/rune11.jpg" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		Для каждого типа экипировки существует 5 видов уникальных рун. У каждой руны 5 грейдов усиления. Всего доступно пять ячеек в каждом типе экипировки. Дополнительно в Оружии, Перчатках, Шлеме, Доспехе и Сапогах есть по одной ячейке для особых рун. Особые руны временные и устанавливаются в отдельную ячейку, не занимая место основных рун. У каждой руны 5 грейдов усиления.  	</p> <p>  		В бужитерии (кольцо, ремень, ожерелье) доступна только одна ячейка, у <a href="https://r2online.ru/wiki/guids/craft/slitaya-bija/" target="_blank">бижутерии слияния</a> – две ячейки. Руны в бижутерию временные и бывают только I и II грейдов.  	</p> <p>  		Все операции с рунами выполняет &lt;Ювелир&gt; Сэм.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%A3%D0%BD%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B/%D0%A0%D1%83%D0%BD%D1%8B/rune1.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%A3%D0%BD%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B/%D0%A0%D1%83%D0%BD%D1%8B/rune1.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <h2 id="id-10">Об особых рунах Херакена</h2> <p>  		Руны Херакена являются постоянными и изготавлиаются безопасно через крафт [J], но имеют ограниченную прочность, которая постепенно снижается в бою. После вставки руна имеет 0 из 10 единиц прочности. Чтобы восстановить прочность, обратитесь к NPC Рональд Сатч, расположенному в <a href="https://r2online.ru/wiki/locations/acra/heraken" target="_blank">Саду Херакена</a>.  		<br/>Всего существует четыре вида рун:  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11262/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11262.png" title="Руна сердца Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11263/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11263.png" title="Руна сердца Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11264/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11264.png" title="Руна сердца Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11265/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11265.png" title="Руна сердца Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11266/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сердца Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11266.png" title="Руна сердца Херакена V"/>
+</span>
+<span class="item-text"> Руна сердца Херакена V</span>
+</a>
+ (Доспех)  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11252/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11252.png" title="Руна воли Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11253/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11253.png" title="Руна воли Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11254/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11254.png" title="Руна воли Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11255/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11255.png" title="Руна воли Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна воли Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11256.png" title="Руна воли Херакена V"/>
+</span>
+<span class="item-text"> Руна воли Херакена V</span>
+</a>
+ (Перчатки)  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11257/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11257.png" title="Руна гнева Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11258/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11258.png" title="Руна гнева Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11259/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11259.png" title="Руна гнева Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11260/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11260.png" title="Руна гнева Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11261/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна гнева Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11261.png" title="Руна гнева Херакена V"/>
+</span>
+<span class="item-text"> Руна гнева Херакена V</span>
+</a>
+ (Шлем)  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/11267/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11267.png" title="Руна славы Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11268/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11268.png" title="Руна славы Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11269/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11269.png" title="Руна славы Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11270/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11270.png" title="Руна славы Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11271/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна славы Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11271.png" title="Руна славы Херакена V"/>
+</span>
+<span class="item-text"> Руна славы Херакена V</span>
+</a>
+ (Сапоги)  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/unique-items/runes/2.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/unique-items/runes/2.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		Рональд выполняет починку рун за <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Серебро" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+<span class="item-text"> Серебро</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11251/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Семя Херакена" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11251.png" title="Семя Херакена"/>
+</span>
+<span class="item-text"> Семя Херакена</span>
+</a>
+. Обратите внимание: при снижении прочности до 5 и ниже на характеристики руны накладывается штраф. Стоимость починки зависит от уровня руны – чем выше уровень, тем выше цена.  	</p> <h2 id="id-2">Как добыть руны?</h2> <p>  		Обычные руны достаются из сундуков: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6630/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/SfZgxccejFnYgC1idLkq0fKRVewXhXWRKl8Nuva6.jpg" title="Сундук с рунами в оружие"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6634/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/b0iUdmTYfPZYMtjXpnX7vwe1iTpzTDGSVmwVNpjr.jpg" title="Сундук с рунами в доспех"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6632/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/kFNX5tXE6QXEvQxbHy4UdHOvvmyxHigYRk6uvicv.jpg" title="Сундук с рунами в шлем"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6636/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/L1nhlxz3h0BN40HZItdPOaUD2rDFBCCauwOLYygp.jpg" title="Сундук с рунами в перчатки"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6638/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/Ixh9p7SCDEkAscA7Ez1ViYPMUKYniCylQCVXg4S8.jpg" title="Сундук с рунами в сапоги"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6642/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/xWn8ZR4Vk6AXgiHLX05k458Rx4S4InOX23vv085B.jpg" title="Сундук с рунами в снаряжение"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6640/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/0IGJFyma34QOh5tSBeyAeubec5SSzUcmMerNwXlq.jpg" title="Сундук с рунами в плащ"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7184/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/IIibWcwMyWXSgX7LxFx16X1rwy44G7ttyqc9LsWN.jpg" title="Сундук с рунами в кольцо"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7187/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/nVjuqXYXPvyZlr4xZxoDlxeyGhzYTNmqpX8PSofG.jpg" title="Сундук с рунами в ожерелье"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7188/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/eDu57Bir8AbvQszhsns7WxlyXOHu19uauh1rACAi.jpg" title="Сундук с рунами в ремень"/>
+</span>
+</a>
+</p> <p>Сундуки привязаны к типу. Для каждого типа экипировки свой сундук: оружия, доспехов, шлема и тд. Сундуки покупаются у &lt;Торговца очками хаоса&gt; Рудольф за очки хаоса (ОХ) (зарабатываются на <a href="https://r2online.ru/wiki/guids/events/bg/" target="_blank">битве гильдий</a> и <a href="https://r2online.ru/wiki/guids/events/bc/" target="_blank">битве команд</a> и продаются в <a href="https://r2online.ru/wiki/guids/trade/premium" target="_blank">премиум-магазине</a>).  	</p><p>Стоимость сундука рун экипировки – 350 ОХ, а сундука рун бижутерии – 500 ОХ.  	<br/>Из сундука случайно выпадает одна из пяти рун I грейда для соответствующего типа экипировки.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Наполнение сундуков</div> <div class="spoiler__content"> <div class="text-box"> <div class="table-container"> <table class="table table-quest not-bordered"> <tbody><tr class="tr-odd"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6630/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в оружие" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/SfZgxccejFnYgC1idLkq0fKRVewXhXWRKl8Nuva6.jpg" title="Сундук с рунами в оружие"/>
+</span>
+<span class="item-text"> Сундук с рунами в оружие</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6634/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в доспех" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/b0iUdmTYfPZYMtjXpnX7vwe1iTpzTDGSVmwVNpjr.jpg" title="Сундук с рунами в доспех"/>
+</span>
+<span class="item-text"> Сундук с рунами в доспех</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6642/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в снаряжение" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/xWn8ZR4Vk6AXgiHLX05k458Rx4S4InOX23vv085B.jpg" title="Сундук с рунами в снаряжение"/>
+</span>
+<span class="item-text"> Сундук с рунами в снаряжение</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительной активации I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/df589486d63a08addd3038632938139b.jpg" title="Руна дополнительной активации I"/>
+</span>
+<span class="item-text"> Руна дополнительной активации I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6370/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смягчения удара I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/22d82e65dfc3de69d86d340f78e0045f.jpg" title="Руна смягчения удара I"/>
+</span>
+<span class="item-text"> Руна смягчения удара I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6439/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна рассеивания урона I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/736e91eef896371fb9f68fcf7d9712cd.jpg" title="Руна рассеивания урона I"/>
+</span>
+<span class="item-text"> Руна рассеивания урона I</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6346/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна опасного яда I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a3ff0e5d90810fcb762b45c356ef0612.jpg" title="Руна опасного яда I"/>
+</span>
+<span class="item-text"> Руна опасного яда I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6376/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сокращения времени I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/6b79dbc9549c62144cd2ab165d57c34f.jpg" title="Руна сокращения времени I"/>
+</span>
+<span class="item-text"> Руна сокращения времени I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6430/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна уязвимости I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1a4686f2672b3b69cb6508b145d4a359.jpg" title="Руна уязвимости I"/>
+</span>
+<span class="item-text"> Руна уязвимости I</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6352/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельной атаки I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9bdb1ec6f11754a6430d393c3f54f764.jpg" title="Руна смертельной атаки I"/>
+</span>
+<span class="item-text"> Руна смертельной атаки I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6373/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна регенерации жизни I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8353677cfc9fca20823dde318fba22cb.jpg" title="Руна регенерации жизни I"/>
+</span>
+<span class="item-text"> Руна регенерации жизни I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна твердости I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3847e0e4f97caff841b41cdbb7eff97f.jpg" title="Руна твердости I"/>
+</span>
+<span class="item-text"> Руна твердости I</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6343/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительного удара I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5d7c76571861094a20eb651ae081f533.jpg" title="Руна дополнительного удара I"/>
+</span>
+<span class="item-text"> Руна дополнительного удара I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6379/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительной защиты I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/47dab0d243d9009bd59d1c552978aa71.jpg" title="Руна дополнительной защиты I"/>
+</span>
+<span class="item-text"> Руна дополнительной защиты I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6442/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна снижения урона I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0b08698baaa2bbbd844bd162837c5658.jpg" title="Руна снижения урона I"/>
+</span>
+<span class="item-text"> Руна снижения урона I</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6349/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна усиления удара I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/544c60e1f99261f8e9b0ed70608c8210.jpg" title="Руна усиления удара I"/>
+</span>
+<span class="item-text"> Руна усиления удара I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6382/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна магической эффективности I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d22ed64f8f87c10aa2dfb561f0e2b5d6.jpg" title="Руна магической эффективности I"/>
+</span>
+<span class="item-text"> Руна магической эффективности I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна воодушевления I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f821589064edbe109098832b6047062a.jpg" title="Руна воодушевления I"/>
+</span>
+<span class="item-text"> Руна воодушевления I</span>
+</a>
+</td> </tr> <tr> <td></td> <td></td> <td></td> </tr> <tr class="tr-odd"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6632/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в шлем" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/kFNX5tXE6QXEvQxbHy4UdHOvvmyxHigYRk6uvicv.jpg" title="Сундук с рунами в шлем"/>
+</span>
+<span class="item-text"> Сундук с рунами в шлем</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6636/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в перчатки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/L1nhlxz3h0BN40HZItdPOaUD2rDFBCCauwOLYygp.jpg" title="Сундук с рунами в перчатки"/>
+</span>
+<span class="item-text"> Сундук с рунами в перчатки</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6638/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в сапоги" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Ixh9p7SCDEkAscA7Ez1ViYPMUKYniCylQCVXg4S8.jpg" title="Сундук с рунами в сапоги"/>
+</span>
+<span class="item-text"> Сундук с рунами в сапоги</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6355/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна идеального уклонения I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f0a6750f0b48aa485294f207e5256a7c.jpg" title="Руна идеального уклонения I"/>
+</span>
+<span class="item-text"> Руна идеального уклонения I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6388/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна стремительности I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/51c8c84518e95c9769dd9557dc6a5719.jpg" title="Руна стремительности I"/>
+</span>
+<span class="item-text"> Руна стремительности I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6403/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна повышения выносливости I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/209205e16d91724d79ebcdf00071cf1f.jpg" title="Руна повышения выносливости I"/>
+</span>
+<span class="item-text"> Руна повышения выносливости I</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6364/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельного удара I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/13053b8bc68dd23708dd83da42ead075.jpg" title="Руна смертельного удара I"/>
+</span>
+<span class="item-text"> Руна смертельного удара I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6385/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна предчувствия I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1c2a61350b5bb71ce828c624483ad21f.jpg" title="Руна предчувствия I"/>
+</span>
+<span class="item-text"> Руна предчувствия I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6400/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна отступления I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3dde3b2a7ddd38938e48bc9d55519b78.jpg" title="Руна отступления I"/>
+</span>
+<span class="item-text"> Руна отступления I</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6367/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельного контрудара I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1c761eeb0beb93e0d2498366a436fc61.jpg" title="Руна смертельного контрудара I"/>
+</span>
+<span class="item-text"> Руна смертельного контрудара I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6397/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна контратаки I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4a040445da66dce1509c4d7c72e4bc42.jpg" title="Руна контратаки I"/>
+</span>
+<span class="item-text"> Руна контратаки I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6427/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна поступи ветерана I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9496ceed463d63cf5788d710c2599930.jpg" title="Руна поступи ветерана I"/>
+</span>
+<span class="item-text"> Руна поступи ветерана I</span>
+</a>
+</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6358/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна уменьшения урона I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f662ed09fae5b3929cce3e7f4fef1c33.jpg" title="Руна уменьшения урона I"/>
+</span>
+<span class="item-text"> Руна уменьшения урона I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6391/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сосредоточения I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/64c56dba681c042a8665b8e2213f77db.jpg" title="Руна сосредоточения I"/>
+</span>
+<span class="item-text"> Руна сосредоточения I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6406/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна быстроходности I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/cd82ae07127fb01151a515887622a4b9.jpg" title="Руна быстроходности I"/>
+</span>
+<span class="item-text"> Руна быстроходности I</span>
+</a>
+</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6361/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна отваги I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3213f576d6b6783a47412377a0405492.jpg" title="Руна отваги I"/>
+</span>
+<span class="item-text"> Руна отваги I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6394/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ускорения атаки I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/bda6eb0ff1f093b3d46112d6c5cd38e1.jpg" title="Руна ускорения атаки I"/>
+</span>
+<span class="item-text"> Руна ускорения атаки I</span>
+</a>
+</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6412/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ловкости I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/494bc5bee06225759d2c38c80c1a22d5.jpg" title="Руна ловкости I"/>
+</span>
+<span class="item-text"> Руна ловкости I</span>
+</a>
+</td> </tr> <tr> <td></td> <td></td> <td></td> </tr> <tr class="tr-odd"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6640/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в плащ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/0IGJFyma34QOh5tSBeyAeubec5SSzUcmMerNwXlq.jpg" title="Сундук с рунами в плащ"/>
+</span>
+<span class="item-text"> Сундук с рунами в плащ</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6418/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна спасения I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7d2222c636b678f43f7fdd0c1adcb3c0.jpg" title="Руна спасения I"/>
+</span>
+<span class="item-text"> Руна спасения I</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6424/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна регенерации энергии I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8d3c104a4d7aa7fe35d1ff39134d64cb.jpg" title="Руна регенерации энергии I"/>
+</span>
+<span class="item-text"> Руна регенерации энергии I</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6415/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ветерана I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/41a857777dab9d23fb75e97906092cd8.jpg" title="Руна ветерана I"/>
+</span>
+<span class="item-text"> Руна ветерана I</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6421/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна неуловимости I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4d7d3ed8818fb04f737512455b5e88f1.jpg" title="Руна неуловимости I"/>
+</span>
+<span class="item-text"> Руна неуловимости I</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна стойкости к яду I" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/73cfcc7ed92d0a41fe7f229946c72c89.jpg" title="Руна стойкости к яду I"/>
+</span>
+<span class="item-text"> Руна стойкости к яду I</span>
+</a>
+</td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> </tr> <tr class="tr-odd"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7184/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в кольцо" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/IIibWcwMyWXSgX7LxFx16X1rwy44G7ttyqc9LsWN.jpg" title="Сундук с рунами в кольцо"/>
+</span>
+<span class="item-text"> Сундук с рунами в кольцо</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7187/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в ожерелье" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/nVjuqXYXPvyZlr4xZxoDlxeyGhzYTNmqpX8PSofG.jpg" title="Сундук с рунами в ожерелье"/>
+</span>
+<span class="item-text"> Сундук с рунами в ожерелье</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7188/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук с рунами в ремень" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/eDu57Bir8AbvQszhsns7WxlyXOHu19uauh1rACAi.jpg" title="Сундук с рунами в ремень"/>
+</span>
+<span class="item-text"> Сундук с рунами в ремень</span>
+</a>
+, 14 дн.</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение урона I [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/12btszmaxcEF31bvzcqDaqIVRPXPWMaOjxekku3T.jpg" title="Увеличение урона I [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение урона I [Кольцо]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы I [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/0iexhWJCoPgHkX55GUL9TKtT6Ia3ifPJd435NGux.jpg" title="Увеличение силы I [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение силы I [Ожерелье]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение урона I [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/gVCZhKIRNvK1ZHBdT2TAM9dAALVDoXvT1hxfZ4MF.jpg" title="Увеличение урона I [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение урона I [Ремень]</span>
+</a>
+, 14 дн.</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7129/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение точности I [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yj0yvLFdCMnfQ2HhVfiWiDmJ1XQQmqB8DpAuRrTs.jpg" title="Увеличение точности I [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение точности I [Кольцо]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение ловкости I [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/HGBDsY59LYoL2bnjp5wXNKybO70EMbj5ImGqGAlx.jpg" title="Увеличение ловкости I [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение ловкости I [Ожерелье]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение точности I [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/y8maStZmLBnCqV8d1xSGGnDEGpGKRK9ACQPFg41O.jpg" title="Увеличение точности I [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение точности I [Ремень]</span>
+</a>
+, 14 дн.</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение шанса крит. удара I [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/dU08dQtJvhyA2ZP3bZ7l06JrW6fWdUVSk3EH5HDp.jpg" title="Увеличение шанса крит. удара I [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение шанса крит. удара I [Кольцо]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение интеллекта I [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/lFjchikM3Tk1MZLDaKLEeUBU1ijYcrs8kxrDjEKd.jpg" title="Увеличение интеллекта I [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение интеллекта I [Ожерелье]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение шанса крит. удара I [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/HUXCr25E9LvA31JNWfCfBBkxvA7lc1DWSwrCCJ4j.jpg" title="Увеличение шанса крит. удара I [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение шанса крит. удара I [Ремень]</span>
+</a>
+, 14 дн.</td> </tr> <tr class="tr-alt-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы крит. удара I [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/LmfQ2V8XCxj5BFNH3InGduX7t8IIxxk7A1f6YT0z.jpg" title="Увеличение силы крит. удара I [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение силы крит. удара I [Кольцо]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение HP I [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Wlorzm2hBvWPrRNHUE66lO1VrbFdaAdu0uUyKewU.jpg" title="Увеличение HP I [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение HP I [Ожерелье]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы крит. удара I [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/WA6TQRjWW6hsLkU9sGmlQda8F0CAnIxYXdsdVIyd.jpg" title="Увеличение силы крит. удара I [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение силы крит. удара I [Ремень]</span>
+</a>
+, 14 дн.</td> </tr> <tr class="tr-even"> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение защиты I [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/RKmpXBccBJ198NUziNkYXdVoAOSDGjJSiPVD17eH.jpg" title="Увеличение защиты I [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение защиты I [Кольцо]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13024/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение MP I [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/bNsPEmWPX0hzD6d0VYWFbnHWzmlFCdbFl0Zx2Hp5.jpg" title="Увеличение MP I [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение MP I [Ожерелье]</span>
+</a>
+, 14 дн.</td> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение защиты I [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/h2uTjmFe5jlhRbc8Fxvebdhyb1WxhLhLMkffitZq.jpg" title="Увеличение защиты I [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение защиты I [Ремень]</span>
+</a>
+, 14 дн.</td> </tr> </tbody></table> </div> </div> </div> </div> <p>В <a href="https://r2online.ru/wiki/quests/daily/korolevskie/" target="_blank">магазине у Констанции</a> можно купить комплекты рун в бижутерию за королевские монеты.</p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11023/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Особая руна охоты [Опечатано]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/23JBdTmhcGcXVwnvmzzYVuVFswSFYMObQDwaRDol.jpg" title="Особая руна охоты [Опечатано]"/>
+</span>
+<span class="item-text"> Особая руна охоты [Опечатано]</span>
+</a>
+, которая устанавливается в слот особой руны оружия выпадет из <a class="catalog-item" href="https://r2online.ru/wiki/locations/2506/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ларец Юпитера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/04/17/fe25f69929ef22d206f069f6194acbc7.png" title="Сияющий ларец Юпитера"/>
+</span>
+<span class="item-text"> Сияющий ларец Юпитера</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/locations/2507/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сияющий ларец Баалбека" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/04/17/d4e7a5173ac171dbc147d6fb4ec50f2a.png" title="Сияющий ларец Баалбека"/>
+</span>
+<span class="item-text"> Сияющий ларец Баалбека</span>
+</a>
+. При получении – руна опечатана и без срока действия, двойным кликом ЛКМ печать снимется, у руны начнется отсчет времени и ее можно будет усилить.  	</p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11256.png" title="Руна воли Херакена V"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11261/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11261.png" title="Руна гнева Херакена V"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11266/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11266.png" title="Руна сердца Херакена V"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11271/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11271.png" title="Руна славы Херакена V"/>
+</span>
+</a>
+ <a class="link-in-top" href="#id-10" style="font-size: 14px;">Особые руны Херакена</a> добываются путем изготовления [J].  	</p> <h2 id="id-3">Усиление рун</h2> <p>  		Все руны, за исключением <a class="link-in-top" href="#id-10" style="font-size: 14px;">рун Херакена</a>, усиливаются с помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12166/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток усиления руны" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/8rN6BNSPWR5kzaxLOrArnqcxuitkHInKZxTYck3y.jpg" title="Свиток усиления руны"/>
+</span>
+<span class="item-text"> Свиток усиления руны</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12449/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Светлый свиток усиления руны" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/KKCe8vGJmmLrh7nwNw12fM8V5V7MEEqVeqkmzbFZ.webp" title="Светлый свиток усиления руны"/>
+</span>
+<span class="item-text"> Светлый свиток усиления руны</span>
+</a>
+, шанс усиления светлым свитком выше. Свитки можно получить путем обмена свитков усиления оружия или доспехов на свиток усиления руны. Для этого обратитесь к Ювелиру.  	</p> <a data-fancybox="gallery" href="/storage/photos/5/rune12.jpg"><img alt="" src="https://r2online.ru/storage/photos/5/rune12.jpg" style="max-height: 400px; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		У рун нет безопасных усилений. Оберег Метеоса не работает при усилении рун. В случае неудачного усиления есть небольшой шанс, что руна сохранится.   	</p> <p> <a class="link-in-top" href="#id-10" style="font-size: 14px;">Руны Херакена</a> усиляются с помощью изготовления [J].  	</p> <h2 id="id-4">Установка рун</h2> <p>  		Сперва необходимо открыть в предмете ячейки. Для этого у Ювелира нужно купить один из свитков:  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6328/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток для открытия одной ячейки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/99gJ9w08ex7gCn1qg9n8jAMRIFgQNgCG52vE2QbD.webp" title="Свиток для открытия одной ячейки"/>
+</span>
+<span class="item-text"> Свиток для открытия одной ячейки</span>
+</a>
+ — 150,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/6330/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток для открытия пяти ячеек" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/N5dlJ6utsc1YBCTL49GWv2cKwogVqPXiyJF1s076.webp" title="Свиток для открытия пяти ячеек"/>
+</span>
+<span class="item-text"> Свиток для открытия пяти ячеек</span>
+</a>
+ — 500,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/9805/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток для открытия особой ячейки" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/f8P3rQpmbzb6uG7KyUBATZsG1kAM4Bp0zKK7jVbO.jpg" title="Свиток для открытия особой ячейки"/>
+</span>
+<span class="item-text"> Свиток для открытия особой ячейки</span>
+</a>
+ — 30,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+</p> <p>  		Далее у Ювелира выберете «Операции с рунами». В открывшемся окне разместите нужный предмет и свиток, предназначенный для открытия ячеек. Если у вас открыта одна ячейка, или ваш предмет уже содержит руну с оставшимися закрытыми ячейками, открыть дополнительные ячейки не удастся. Сперва потребуется закрыть ранее открытые ячейки.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune5.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune5.webp" style="max-height: 400px; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		Ячейки открываются безопасно.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune6.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune6.webp" style="max-height: 400px; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		В этом же окне теперь можно установить руну. Вставьте руну в ячейку и нажмите «Установить руну».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune7.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune7.webp" style="max-height: 400px; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		Все руны вставляются безопасно, независимо от грейда и от количества уже установленных рун.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune8.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/rune8.webp" style="max-height: 400px; cursor: zoom-in; margin-bottom: 15px"/> </a> <div style="display: flex; align-items: center;"> <blockquote>        Нельзя вставить две одинаковые руны в один предмет.      </blockquote> </div> <h2 id="id-5">Закрытие ячеек и извлечение рун</h2> <p>  		Закрытием ячеек и извлечение рун из ячейки занимается Ювелир.  	</p> <h6>Извлечение обычных рун</h6> <p>  		Чтобы освободить обычную ячейку от руны нужно купить у Ювелира <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6332/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток восстановления руны" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/gRO7WnIgqsunOLgizLGOWtSRrghZ3hzigYMJi7so.png" title="Свиток восстановления руны"/>
+</span>
+<span class="item-text"> Свиток восстановления руны</span>
+</a>
+ (стоимость 1,000,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+). Свиток освободит ячейку, но руна <strong><span style="font-weight: bolder;">может сломаться</span></strong> при извлечении.  	</p> <h6>Закрытие ячеек</h6>  		Чтобы закрыть обычные ячейки нужно купить у Ювелира <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6331/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток закрытия ячеек" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/WqIpk5soIMuafVSCZAmNYeQPHnSfx4jjb2LhcM5F.webp" title="Свиток закрытия ячеек"/>
+</span>
+<span class="item-text"> Свиток закрытия ячеек</span>
+</a>
+ (стоимость 50,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+), а для закрытия особых ячеек – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/9799/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток для закрытия особых ячеек" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/2EDuDJQ7lrFFuBk1jYPUtB6tyWk5vVecEWLJGYHq.jpg" title="Свиток для закрытия особых ячеек"/>
+</span>
+<span class="item-text"> Свиток для закрытия особых ячеек</span>
+</a>
+ (стоимость 90,000 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+). Обычные руны, которые были в предмете после закрытия пропадают, а особые выпадают в инвентарь персонажа без повреждения.  	<p></p> <h2 id="id-6">Описание рун</h2> <p>  		Экипировка:  	</p> <div class="spoiler"> <div class="spoiler__title">Руны оружия</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6340/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/df589486d63a08addd3038632938139b.jpg" title="Руна дополнительной активации I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6341/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e5f672483fe56b211a80e4ad033f0e7b.jpg" title="Руна дополнительной активации II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6342/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d737e74a7cf4dcec8d8fde1012a00217.jpg" title="Руна дополнительной активации III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6560/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8133bf8fe7614980f97f0a34be4eef88.jpg" title="Руна дополнительной активации IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6561/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительной активации V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/495fe82e904f1e9f63be01b15a24320f.jpg" title="Руна дополнительной активации V"/>
+</span>
+<span class="item-text"> Руна дополнительной активации V</span>
+</a>
+<br/>Во время атаки есть вероятность активировать умение в зависимости от класса: Мощный удар, Мощный выстрел, Смертельный удар, Сильный выстрел, Духовный удар.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6343/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5d7c76571861094a20eb651ae081f533.jpg" title="Руна дополнительного удара I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6344/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8a583b390a03e97c1939d73ead7a5685.jpg" title="Руна дополнительного удара II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6345/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c51d97468f3edb3200391036b694da78.jpg" title="Руна дополнительного удара III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6562/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0bb95c8d0aef33db9fbb6efec79c682f.jpg" title="Руна дополнительного удара IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6563/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительного удара V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/aeb25f5e8d2ecad8a7eb41b3cdbf8af6.jpg" title="Руна дополнительного удара V"/>
+</span>
+<span class="item-text"> Руна дополнительного удара V</span>
+</a>
+<br/>С некоторым шансом наносит дополнительный урон при использовании умений: Мощный удар, Мощный выстрел, Смертельный удар, Сильный выстрел, Духовный удар.  				<br/>Чем выше уровень руны, тем больше дополнительного урона.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6349/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/544c60e1f99261f8e9b0ed70608c8210.jpg" title="Руна усиления удара I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6350/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/6941320f3dcd541e21f9d1306f85263b.jpg" title="Руна усиления удара II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4e8b2cfde644e4316b0e515cf7dbd4ef.jpg" title="Руна усиления удара III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6566/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3812787407041ae16534d03e37236a38.jpg" title="Руна усиления удара IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6567/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна усиления удара V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/28e6860aaa69cb698631be6473ec773d.jpg" title="Руна усиления удара V"/>
+</span>
+<span class="item-text"> Руна усиления удара V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить временный эффект: уровень всех атак +3.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6352/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9bdb1ec6f11754a6430d393c3f54f764.jpg" title="Руна смертельной атаки I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1d8091791d76e8886d7a693de7b0da41.jpg" title="Руна смертельной атаки II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6354/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5a19fbce6591941c8f1c79dbf58f7030.jpg" title="Руна смертельной атаки III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6568/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e43b254f89dd5571cdd0e30508a48833.jpg" title="Руна смертельной атаки IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6569/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельной атаки V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0f372ae64753590c24c792acac0196da.jpg" title="Руна смертельной атаки V"/>
+</span>
+<span class="item-text"> Руна смертельной атаки V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить временный эффект: шанс нанести критический удар +10.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6346/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a3ff0e5d90810fcb762b45c356ef0612.jpg" title="Руна опасного яда I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6347/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f42a5df4ce66d3e6457b17eeb59cc0c4.jpg" title="Руна опасного яда II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6348/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1cc5b151705042420738aa7ea9c67e8e.jpg" title="Руна опасного яда III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6564/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/6a5284e5dc9763f6b856ca70b8e971b9.jpg" title="Руна опасного яда IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6565/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна опасного яда V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/43a2d68dc6f74e1741f24b7c6d460726.jpg" title="Руна опасного яда V"/>
+</span>
+<span class="item-text"> Руна опасного яда V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить временный эффект, который увеличивает шанс ядовитого удара на 10%.  				<br/>Чем выше уровень руны, тем выше вероятность.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны доспехов</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6370/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/22d82e65dfc3de69d86d340f78e0045f.jpg" title="Руна смягчения удара I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6371/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ab887cdd40d5934aac71963e549534fa.jpg" title="Руна смягчения удара II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6372/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/440aced82271ddc6020264a1055ff4e1.jpg" title="Руна смягчения удара III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6580/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e87b1ee43a5206ae023bfc5287685166.jpg" title="Руна смягчения удара IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6581/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смягчения удара V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8f60b63b577c50fa8d8c88a412a3f602.jpg" title="Руна смягчения удара V"/>
+</span>
+<span class="item-text"> Руна смягчения удара V</span>
+</a>
+<br/>С определенной вероятностью снижает получаемый урон на 1/2/3/4/5 единиц от одного удара.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6379/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/47dab0d243d9009bd59d1c552978aa71.jpg" title="Руна дополнительной защиты I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6380/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4838fe35df2012b4bfb64793a1fbd65c.jpg" title="Руна дополнительной защиты II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6381/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d58f8e935f253fd59b9dc1ad2a3f6a59.jpg" title="Руна дополнительной защиты III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6586/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/96830e8ff11c79cbb0b37308f3d81c7f.jpg" title="Руна дополнительной защиты IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6587/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна дополнительной защиты V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c2513f6ed6c8618f3e4500c56b8d354b.jpg" title="Руна дополнительной защиты V"/>
+</span>
+<span class="item-text"> Руна дополнительной защиты V</span>
+</a>
+<br/>Если на персонажа накладывается положительный эффект, увеличивающий защиту, то защита дополнительно увеличивается на 1/2/3/4/5 единицы на 30 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6382/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d22ed64f8f87c10aa2dfb561f0e2b5d6.jpg" title="Руна магической эффективности I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6383/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f9f2db62f1747ec7517a82cc072bda1b.jpg" title="Руна магической эффективности II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6384/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/2bfa2ca51bc1d14cf7986743c3a9947e.jpg" title="Руна магической эффективности III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6588/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ac51579340cafcb7ed918540c23602c4.jpg" title="Руна магической эффективности IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6589/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна магической эффективности V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d0a3aca509bd0781d8b399995f03bb2d.jpg" title="Руна магической эффективности V"/>
+</span>
+<span class="item-text"> Руна магической эффективности V</span>
+</a>
+<br/>При наложении любого благословения мага, время эффекта увеличивается на 1/2/3/4/5 минут.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6373/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8353677cfc9fca20823dde318fba22cb.jpg" title="Руна регенерации жизни I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6374/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/240d741d16d21b18534102ba56218826.jpg" title="Руна регенерации жизни II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6375/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3efba802a140d9ee3d473d0924ac7057.jpg" title="Руна регенерации жизни III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6582/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7e1ac79d0480bc91b9abb994307f7ae2.jpg" title="Руна регенерации жизни IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6583/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна регенерации жизни V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c97c8bc007bb8aac64913d34acb86a8d.jpg" title="Руна регенерации жизни V"/>
+</span>
+<span class="item-text"> Руна регенерации жизни V</span>
+</a>
+<br/>При получении урона есть вероятность наложить эффект на 5 секунд, который ежесекундно восстанавливает 4/8/12/16/20 HP.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6376/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/6b79dbc9549c62144cd2ab165d57c34f.jpg" title="Руна сокращения времени I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6377/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/2743e6c5b602e9af8f9a5bad35ebecfa.jpg" title="Руна сокращения времени II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6378/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/b17f527729814ad890217626e9bb2d27.jpg" title="Руна сокращения времени III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6584/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9c285109a12eb16a944e98323e4852e0.jpg" title="Руна сокращения времени IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6585/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сокращения времени V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/61a36cc27fff919330039d73d8337fee.jpg" title="Руна сокращения времени V"/>
+</span>
+<span class="item-text"> Руна сокращения времени V</span>
+</a>
+<br/>Если к персонажу применится умение (Проклятие, Огненная стрела, Огонь преисподней, Прицельный выстрел), время негативного эффекта уменьшится на 1/2/3/4/5 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны снаряжения</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6439/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/736e91eef896371fb9f68fcf7d9712cd.jpg" title="Руна рассеивания урона I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6440/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4ddddcb22803dd7a314c3915cee1348b.jpg" title="Руна рассеивания урона II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/17c46f22df7f54bb3216e93b198c7b76.jpg" title="Руна рассеивания урона III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6626/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7807d82c05039f37bdcfbf720fcb7400.jpg" title="Руна рассеивания урона IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6627/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна рассеивания урона V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e56bbaad9c5d9dcf2a678e6341773981.jpg" title="Руна рассеивания урона V"/>
+</span>
+<span class="item-text"> Руна рассеивания урона V</span>
+</a>
+<br/>С определенной вероятностью снижает получаемый урон на 2/4/6/8/10 единиц от одного удара. (Вероятность выше, чем у руны снижения урона)  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6442/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0b08698baaa2bbbd844bd162837c5658.jpg" title="Руна снижения урона I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6443/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/fd4d51933b845b447948df46deba64b2.jpg" title="Руна снижения урона II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6444/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/516bc878572ddb3f0f1089286752a37c.jpg" title="Руна снижения урона III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6628/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a1878434c170c0566f693bacca3f2e12.jpg" title="Руна снижения урона IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6629/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна снижения урона V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/19f9a60c8968a5398f07247a3f93c70c.jpg" title="Руна снижения урона V"/>
+</span>
+<span class="item-text"> Руна снижения урона V</span>
+</a>
+<br/>С определенной вероятностью снижает получаемый урон на 3/6/9/12/15 единиц от одного удара. (Вероятность срабатывания ниже, чем у руны рассеивания урона)  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6436/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f821589064edbe109098832b6047062a.jpg" title="Руна воодушевления I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6437/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4c7e68e5001f5e43aa8c73f7162de1f3.jpg" title="Руна воодушевления II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6438/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c5614dd19af44d19cd605c2a82383e8b.jpg" title="Руна воодушевления III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6624/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7b50cb46ff6a1a302c77d9c083bb86c1.jpg" title="Руна воодушевления IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6625/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна воодушевления V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7bc7382cb4880748913c9505c0c7ef22.jpg" title="Руна воодушевления V"/>
+</span>
+<span class="item-text"> Руна воодушевления V</span>
+</a>
+<br/>При получении урона есть вероятность наложить временный эффект, который уменьшает шанс получить критический удар -1/2/3/4/5.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6433/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3847e0e4f97caff841b41cdbb7eff97f.jpg" title="Руна твердости I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6434/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/33fe07ff78e94491fa0b76612e57a842.jpg" title="Руна твердости II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6435/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8b352177d4fc5be7ea9583699f44eb06.jpg" title="Руна твердости III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6622/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/92aa330baba21948b9790305ecf96a5f.jpg" title="Руна твердости IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6623/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна твердости V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/dbc5e47b3f4c67f7c92402d030d79a8e.jpg" title="Руна твердости V"/>
+</span>
+<span class="item-text"> Руна твердости V</span>
+</a>
+<br/>При получении урона есть вероятность наложить временный эффект, который уменьшает силу получаемого критического удара -1/2/3/4/5.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6430/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1a4686f2672b3b69cb6508b145d4a359.jpg" title="Руна уязвимости I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6431/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4cc6fd643b207540bf1950adbe358f8c.jpg" title="Руна уязвимости II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6432/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ecef4168fe0873c30a33485e0abe32ac.jpg" title="Руна уязвимости III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6620/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0869201b789ad16880952f99ca44d457.jpg" title="Руна уязвимости IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна уязвимости V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/cd102c8e6fc05c8235a174a88cdca3cf.jpg" title="Руна уязвимости V"/>
+</span>
+<span class="item-text"> Руна уязвимости V</span>
+</a>
+<br/>Во время атаки есть вероятность повысить шанс критического удара до максимума.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<hr/> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны шлема</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6355/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f0a6750f0b48aa485294f207e5256a7c.jpg" title="Руна идеального уклонения I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6356/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/32ea82bf76a5f15ecdef54a5dd97cd53.jpg" title="Руна идеального уклонения II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6357/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/db575cd03038d2d541528edfa360abab.jpg" title="Руна идеального уклонения III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6570/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0d4b736581aace22eb1c56084aa9fca4.jpg" title="Руна идеального уклонения IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6571/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна идеального уклонения V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/23db9f02aab4a9c7b8123a52d926c7a1.jpg" title="Руна идеального уклонения V"/>
+</span>
+<span class="item-text"> Руна идеального уклонения V</span>
+</a>
+<br/>С некоторой вероятностью позволяет уклониться от Мощного удара, Мощного выстрела, Смертельного удара, Сильного выстрела, Духовного удара.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6358/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f662ed09fae5b3929cce3e7f4fef1c33.jpg" title="Руна уменьшения урона I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6359/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3709f0da239e4819e76177a5cac2f6d2.jpg" title="Руна уменьшения урона II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6360/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5cecd2de8b5a7b2ca81db375c2cda114.jpg" title="Руна уменьшения урона III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6572/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/021a706f604def2d2e8d407110de2629.jpg" title="Руна уменьшения урона IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6573/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна уменьшения урона V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d3a25c88db5cf0c56766fded01cc8471.jpg" title="Руна уменьшения урона V"/>
+</span>
+<span class="item-text"> Руна уменьшения урона V</span>
+</a>
+<br/>С определенной вероятностью сокращает получаемый урон от Мощного удара, Мощного выстрела, Смертельного удара, Сильного выстрела, Духовного удара на 1/2/3/4/5 единицу.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6361/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3213f576d6b6783a47412377a0405492.jpg" title="Руна отваги I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6362/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/97cfb895e06df5f95e1102d94cd594d4.jpg" title="Руна отваги II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6363/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e958c5bff75a32635825bc7a23b85aff.jpg" title="Руна отваги III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6574/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/607c0fc30d480ffe7456e30ec6404d82.jpg" title="Руна отваги IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6575/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна отваги V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0bd3867fa48bc6d2b6d11b9cd2363da7.jpg" title="Руна отваги V"/>
+</span>
+<span class="item-text"> Руна отваги V</span>
+</a>
+<br/>Если на силу, ловкость или интеллект персонажа накладывается положительный эффект, то все параметры увеличиваются на 1/2/3/4/5 единиц на 30 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6367/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1c761eeb0beb93e0d2498366a436fc61.jpg" title="Руна смертельного контрудара I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6368/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/02f61e235b654f7f355f29d9dcfeb815.jpg" title="Руна смертельного контрудара II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6369/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/b95426bd851838259cab3fdd187845e3.jpg" title="Руна смертельного контрудара III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6578/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/6c3531e0e1a570162c043d514facfcd6.jpg" title="Руна смертельного контрудара IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6579/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельного контрудара V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/065313712f712751d2b6ecbd80af68c9.jpg" title="Руна смертельного контрудара V"/>
+</span>
+<span class="item-text"> Руна смертельного контрудара V</span>
+</a>
+<br/>При получении урона есть вероятность наложить временный эффект, который увеличивает силу критического удара на 1/2/3/4/5. Работает, когда атакуют вас.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6364/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/13053b8bc68dd23708dd83da42ead075.jpg" title="Руна смертельного удара I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6365/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a915d36634bc4760a894c9a668333be8.jpg" title="Руна смертельного удара II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6366/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d948efa582e5e1117c5445b27d3aada6.jpg" title="Руна смертельного удара III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6576/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ebf3cb2f32a469d99e785cc19ac875f3.jpg" title="Руна смертельного удара IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6577/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна смертельного удара V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3e9abf76d3a1c1cebfe3e8511f628828.jpg" title="Руна смертельного удара V"/>
+</span>
+<span class="item-text"> Руна смертельного удара V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить временный эффект, который увеличивает силу критического удара на 1/2/3/4/5. Работает, когда вы атакуете.  				<br/>Чем выше уровень руны, тем выше эффект.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны перчаток</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6394/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/bda6eb0ff1f093b3d46112d6c5cd38e1.jpg" title="Руна ускорения атаки I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6395/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/dd361b8f370fae2ee6c1a8048bc77c34.jpg" title="Руна ускорения атаки II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6396/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/270c8e6da1874deacd185c98a6767273.jpg" title="Руна ускорения атаки III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6596/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/00ed51a7caf9ca150eae8f363a3b92c2.jpg" title="Руна ускорения атаки IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6597/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ускорения атаки V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/459f947685d915916c645b117955c5d1.jpg" title="Руна ускорения атаки V"/>
+</span>
+<span class="item-text"> Руна ускорения атаки V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить эффект на 2/4/6/8/10 секунд, который увеличивает скорость атаки на 15%. Работает, когда вы атакуете.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6388/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/51c8c84518e95c9769dd9557dc6a5719.jpg" title="Руна стремительности I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6389/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1d371881ff6e4ac9d83939e0970ee9dd.jpg" title="Руна стремительности II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6390/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/76b397b2f685aa71ec4e74af8d2d3e66.jpg" title="Руна стремительности III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6592/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/581a18ca12759b883192f22fead216a4.jpg" title="Руна стремительности IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6593/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна стремительности V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/340bae8e3b8cb76433aee18ada654d87.jpg" title="Руна стремительности V"/>
+</span>
+<span class="item-text"> Руна стремительности V</span>
+</a>
+<br/>При получении урона есть вероятность наложить эффект на 2/4/6/8/10 секунд, который увеличивает скорость атаки на 15%. Работает, когда атакуют вас.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6391/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/64c56dba681c042a8665b8e2213f77db.jpg" title="Руна сосредоточения I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6392/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/e4ec4cf283567b26776dcbca79ee8c09.jpg" title="Руна сосредоточения II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6393/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9a4840f7a8e340ded26824eebc480664.jpg" title="Руна сосредоточения III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6594/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/90f7338ca01f8c8dd6ec57c5037a0c38.jpg" title="Руна сосредоточения IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6595/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сосредоточения V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/b9b39d26f12b098a6dbc7889a3848cac.jpg" title="Руна сосредоточения V"/>
+</span>
+<span class="item-text"> Руна сосредоточения V</span>
+</a>
+<br/>Во время атаки есть вероятность наложить эффект на 12 секунд, который увеличивает точность всех атак на 1/2/3/4/5. Работает, когда вы атакуете.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6397/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4a040445da66dce1509c4d7c72e4bc42.jpg" title="Руна контратаки I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6398/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/aa4011b5bf2e83051a5a15864f25ed4e.jpg" title="Руна контратаки II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6399/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7fbdb4a80ee92d1bec5b6cea2587399a.jpg" title="Руна контратаки III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6598/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/44efc191d9cea2eed40a54fffd6622e1.jpg" title="Руна контратаки IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6599/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна контратаки V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ccb50f249db23486d5b7a3f40220497f.jpg" title="Руна контратаки V"/>
+</span>
+<span class="item-text"> Руна контратаки V</span>
+</a>
+<br/>При получении урона, есть вероятность наложить эффект на 12 секунд, который увеличивает точность всех атак на 1/2/3/4/5. Работает, когда атакуют вас.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6385/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1c2a61350b5bb71ce828c624483ad21f.jpg" title="Руна предчувствия I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6386/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/18fe047f2ee09210f748e4a7b6758e38.jpg" title="Руна предчувствия II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6387/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3f687ce1615265422f043c3248fb97a1.jpg" title="Руна предчувствия III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6590/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5410ad9b738cb481442b7049089539f4.jpg" title="Руна предчувствия IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6591/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна предчувствия V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/5815447e5e091fd5bc44186903cc43a5.jpg" title="Руна предчувствия V"/>
+</span>
+<span class="item-text"> Руна предчувствия V</span>
+</a>
+<br/>С определенной вероятностью снижает получаемый урон на 1/2/3/4/5 единиц от одного удара.  				<br/>Чем выше уровень руны, тем выше эффект.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны сапог</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6403/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/209205e16d91724d79ebcdf00071cf1f.jpg" title="Руна повышения выносливости I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6404/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c3fb64a9fea94bf453243381f46ae425.jpg" title="Руна повышения выносливости II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6405/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/b6b08cf476fdf4eb20760cdb7792f9ec.jpg" title="Руна повышения выносливости III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6602/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/48fe498015a4bf958af5d1110af3c58a.jpg" title="Руна повышения выносливости IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6603/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна повышения выносливости V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/96585c5c781a4b32603a2d3914190d21.jpg" title="Руна повышения выносливости V"/>
+</span>
+<span class="item-text"> Руна повышения выносливости V</span>
+</a>
+<br/>При использовании Зелья скорости, Зелья боевого духа, Маленького секретного зелья, Большого секретного зелья время эффекта увеличивается на 1/2/3/4/5 минут.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6406/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/cd82ae07127fb01151a515887622a4b9.jpg" title="Руна быстроходности I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6408/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1e0384640d30962b95ec9ce213a05fa7.jpg" title="Руна быстроходности III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/73cfcc7ed92d0a41fe7f229946c72c89.jpg" title="Руна стойкости к яду I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6604/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/aae48a5b31dbac4aeaf1e859a5abe838.jpg" title="Руна быстроходности IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6605/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна быстроходности V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4f1d3930a7fdd258446a46146296ecf9.jpg" title="Руна быстроходности V"/>
+</span>
+<span class="item-text"> Руна быстроходности V</span>
+</a>
+<br/>Если на персонажа накладывается положительный эффект, увеличивающий скорость бега, то скорость бега дополнительно увеличивается на 1/2/3/4/6 на 20 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6412/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/494bc5bee06225759d2c38c80c1a22d5.jpg" title="Руна ловкости I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6413/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/f840807b1a50d47e0e1c3eb45b2f9c1c.jpg" title="Руна ловкости II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6414/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/98b23ab8a4b1535ca2c63177bbc0229c.jpg" title="Руна ловкости III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/06a2d0119b3f4bcddef72525addaf1ff.jpg" title="Руна ловкости IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ловкости V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/31d1c6aa1f346ea71d89e487159f7006.jpg" title="Руна ловкости V"/>
+</span>
+<span class="item-text"> Руна ловкости V</span>
+</a>
+<br/>С некоторой вероятностью позволяет уклониться от удара.  				<br/>Чем выше уровень руны, тем выше вероятность.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6427/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9496ceed463d63cf5788d710c2599930.jpg" title="Руна поступи ветерана I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6428/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ac6fa41efba8d51dc2fefea2370a00a6.jpg" title="Руна поступи ветерана II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6429/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d0e34e9278355a2a7e63ff2e2ad5d03b.jpg" title="Руна поступи ветерана III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/141961337447b27fcdc938c3578eaab0.jpg" title="Руна поступи ветерана IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна поступи ветерана V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/1f956d7067f99b958ef2f7af1ce426dc.jpg" title="Руна поступи ветерана V"/>
+</span>
+<span class="item-text"> Руна поступи ветерана V</span>
+</a>
+<br/>При использовании умения Невидимость, накладывается эффект, который увеличивает скорость бега на 2/4/6/8/10.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6400/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/3dde3b2a7ddd38938e48bc9d55519b78.jpg" title="Руна отступления I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6401/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9d89dc74e977f2454373f18c07e56d9a.jpg" title="Руна отступления II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6402/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7960481a6eb8c8af8135a922cba99e13.jpg" title="Руна отступления III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6600/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/acf774301667cc86eb33c856ffdda706.jpg" title="Руна отступления IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6601/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна отступления V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/783c7f34d1d6f90891f6bfde80e0023b.jpg" title="Руна отступления V"/>
+</span>
+<span class="item-text"> Руна отступления V</span>
+</a>
+<br/>При получении урона, есть вероятность наложить эффект на 6 секунд, который увеличивает уклонение на 3.  				<br/>Чем выше уровень руны, тем выше вероятность.  			</div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Руны плаща</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6418/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7d2222c636b678f43f7fdd0c1adcb3c0.jpg" title="Руна спасения I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6419/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0701a0bae737965073f38c15bf87f6ee.jpg" title="Руна спасения II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6420/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d4b87b84ab3f278638ad1d3757b722c8.jpg" title="Руна спасения III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6612/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a80424d352c572d7c1b70aa3c6f65da9.jpg" title="Руна спасения IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6613/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна спасения V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/a75347a13cebf852339a84ea3edb0dd8.jpg" title="Руна спасения V"/>
+</span>
+<span class="item-text"> Руна спасения V</span>
+</a>
+<br/>При получении урона есть вероятность наложить эффект, который увеличивает эффективность зелий здоровья +5 на 6/7/8/9/10 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6421/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/4d7d3ed8818fb04f737512455b5e88f1.jpg" title="Руна неуловимости I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6422/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/00592b9dd05e370159a610f8a1a1221c.jpg" title="Руна неуловимости II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6423/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/9c3fd0d7a5ec7d5d828761286f3d8007.jpg" title="Руна неуловимости III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6614/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/58c50b6a19b937580383a624ee95c096.jpg" title="Руна неуловимости IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6615/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна неуловимости V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c73a08d2564eed0ddd0dbb0373ea3555.jpg" title="Руна неуловимости V"/>
+</span>
+<span class="item-text"> Руна неуловимости V</span>
+</a>
+<br/>При получении урона есть вероятность наложить эффект на 12 секунд, который увеличивает уклонение на 1/2/3/4/5.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/73cfcc7ed92d0a41fe7f229946c72c89.jpg" title="Руна стойкости к яду I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6410/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ac6f735a6c6f1462862dd001b7a93a5e.jpg" title="Руна стойкости к яду II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6411/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/23b9d1d78f8ce059ec7fa260feb3357b.jpg" title="Руна стойкости к яду III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6606/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/b3476a6abac6ed1ba0946f337f98b79b.jpg" title="Руна стойкости к яду IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6607/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна стойкости к яду V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/773aa014c73736b89e2c709913158def.jpg" title="Руна стойкости к яду V"/>
+</span>
+<span class="item-text"> Руна стойкости к яду V</span>
+</a>
+<br/>При получении урона есть вероятность наложить эффект, который уменьшает шанс получить ядовитый удар на 4% на 5/10/15/20/25 секунд.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6415/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/41a857777dab9d23fb75e97906092cd8.jpg" title="Руна ветерана I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6416/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/c54ae12fec8dfd008bbc83ecba1b485e.jpg" title="Руна ветерана II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6417/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/d0c5df2847f4334ad88bd816fd769e5f.jpg" title="Руна ветерана III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6610/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/0075c4c72aa7ba7e2bcacff0bd2ee80a.jpg" title="Руна ветерана IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6611/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна ветерана V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/301f1c9d13428765c4685b01a929357d.jpg" title="Руна ветерана V"/>
+</span>
+<span class="item-text"> Руна ветерана V</span>
+</a>
+<br/>Понижает время негативных эффектов Обнаружение (на 5/10/15/20/25 секунд) и Атака запрещена (на 1/1/1/2/3 секунд), который накладывается после снятия Плаща невидимости.  				<br/>Чем выше уровень руны, тем выше эффект.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6424/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/8d3c104a4d7aa7fe35d1ff39134d64cb.jpg" title="Руна регенерации энергии I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6425/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/841ace4eeb127b1ff2b8df915d39bb71.jpg" title="Руна регенерации энергии II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6426/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/7f7fdf5faa506a700e824a10806a8ef2.jpg" title="Руна регенерации энергии III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6616/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/be96b817816012acb59531183945b843.jpg" title="Руна регенерации энергии IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6617/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна регенерации энергии V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/11/28/ad60de082d8fd3e588802d0d473c83eb.jpg" title="Руна регенерации энергии V"/>
+</span>
+<span class="item-text"> Руна регенерации энергии V</span>
+</a>
+<br/>Во время атаки есть вероятность восстановить 10/20/30/40/50 MP  				<br/>Чем выше уровень руны, тем выше эффект.  			</div> </div> </div> <p>  		Бижутерия:  	</p> <div class="spoiler"> <div class="spoiler__title">Руны кольца</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7126/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/12btszmaxcEF31bvzcqDaqIVRPXPWMaOjxekku3T.jpg" title="Увеличение урона I [Кольцо]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7127/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение урона II [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/2d85pw6hSU4D8LQH58EsrPucNa8s7CY2WvDd1eDj.jpg" title="Увеличение урона II [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение урона II [Кольцо]</span>
+</a>
+<br/>Уровень всех атак +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7129/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/yj0yvLFdCMnfQ2HhVfiWiDmJ1XQQmqB8DpAuRrTs.jpg" title="Увеличение точности I [Кольцо]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7130/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение точности II [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/7hsnAS3uC7fFflMBP5Q5XlNSgUdXhuGj9aikdOP9.jpg" title="Увеличение точности II [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение точности II [Кольцо]</span>
+</a>
+<br/>Точность всех атак +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/dU08dQtJvhyA2ZP3bZ7l06JrW6fWdUVSk3EH5HDp.jpg" title="Увеличение шанса крит. удара I [Кольцо]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение шанса крит. удара II [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Dro3E5LXzb4BhD8s4j1StfJyzw4qkMjmTePYMwzk.jpg" title="Увеличение шанса крит. удара II [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение шанса крит. удара II [Кольцо]</span>
+</a>
+<br/>Шанс нанести критический удар +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/LmfQ2V8XCxj5BFNH3InGduX7t8IIxxk7A1f6YT0z.jpg" title="Увеличение силы крит. удара I [Кольцо]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы крит. удара II [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/3DQCgtHYW0P7HmnYHZSD5d4SeVCKrRqrD6UxgkmV.jpg" title="Увеличение силы крит. удара II [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение силы крит. удара II [Кольцо]</span>
+</a>
+<br/>Дополнительный урон при критическом ударе +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/RKmpXBccBJ198NUziNkYXdVoAOSDGjJSiPVD17eH.jpg" title="Увеличение защиты I [Кольцо]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13005/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение защиты II [Кольцо]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/L5j62wlesHqhpIW1mjUN96CfchFieIllqBDWCA1Z.jpg" title="Увеличение защиты II [Кольцо]"/>
+</span>
+<span class="item-text"> Увеличение защиты II [Кольцо]</span>
+</a>
+<br/>Защита +1/2. Эффект постоянный.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны ожерелья</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13016/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/0iexhWJCoPgHkX55GUL9TKtT6Ia3ifPJd435NGux.jpg" title="Увеличение силы I [Ожерелье]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13017/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы II [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/uI91AhWqYe61CutdXIiuRrTvgE3gwaCNi7IO10la.jpg" title="Увеличение силы II [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение силы II [Ожерелье]</span>
+</a>
+<br/>Сила +2/3. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/HGBDsY59LYoL2bnjp5wXNKybO70EMbj5ImGqGAlx.jpg" title="Увеличение ловкости I [Ожерелье]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение ловкости II [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ykPEvslJx6KSZUrLeVoCGSzQvvMEuwwVn5VFUAzn.jpg" title="Увеличение ловкости II [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение ловкости II [Ожерелье]</span>
+</a>
+<br/>Ловкость +2/3. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/lFjchikM3Tk1MZLDaKLEeUBU1ijYcrs8kxrDjEKd.jpg" title="Увеличение интеллекта I [Ожерелье]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение интеллекта II [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Wsx1Sg92BQuwETFhqJzaqrQSkpXiBpW0zbuC8z91.jpg" title="Увеличение интеллекта II [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение интеллекта II [Ожерелье]</span>
+</a>
+<br/>Интеллект +2/3. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/Wlorzm2hBvWPrRNHUE66lO1VrbFdaAdu0uUyKewU.jpg" title="Увеличение HP I [Ожерелье]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13023/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение HP II [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/DUeZBZcNt5fAZXAoZhj3RJ9OxcJ4l2hocNc0oAns.jpg" title="Увеличение HP II [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение HP II [Ожерелье]</span>
+</a>
+<br/>HP +100/150. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13024/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/bNsPEmWPX0hzD6d0VYWFbnHWzmlFCdbFl0Zx2Hp5.jpg" title="Увеличение MP I [Ожерелье]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13025/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение MP II [Ожерелье]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/sRndh0gZYUjVzflZNm9RusQ4bfk66Sh0WJY8IkuV.jpg" title="Увеличение MP II [Ожерелье]"/>
+</span>
+<span class="item-text"> Увеличение MP II [Ожерелье]</span>
+</a>
+<br/>MP +100/150. Эффект постоянный.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руны ремня</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/gVCZhKIRNvK1ZHBdT2TAM9dAALVDoXvT1hxfZ4MF.jpg" title="Увеличение урона I [Ремень]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13007/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение урона II [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/HqSc5tpF4JSLmpt91Mk6tiSQ3G1njMN7QQSGAN5N.jpg" title="Увеличение урона II [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение урона II [Ремень]</span>
+</a>
+<br/>Уровень всех атак +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/y8maStZmLBnCqV8d1xSGGnDEGpGKRK9ACQPFg41O.jpg" title="Увеличение точности I [Ремень]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение точности II [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ddfiG5nJXkENRxjXq0IY1At36Nc5VATKQhnEvxGh.jpg" title="Увеличение точности II [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение точности II [Ремень]</span>
+</a>
+<br/>Точность всех атак +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/HUXCr25E9LvA31JNWfCfBBkxvA7lc1DWSwrCCJ4j.jpg" title="Увеличение шанса крит. удара I [Ремень]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение шанса крит. удара II [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ulwuEcT9JOMJN4vx5vK4qXVMi8QjP6DBJZMEoBhl.jpg" title="Увеличение шанса крит. удара II [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение шанса крит. удара II [Ремень]</span>
+</a>
+<br/>Шанс нанести критический удар +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/WA6TQRjWW6hsLkU9sGmlQda8F0CAnIxYXdsdVIyd.jpg" title="Увеличение силы крит. удара I [Ремень]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение силы крит. удара II [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/PMNp6a660LwXn7eXfSWecukQ4EjCwEqTWXGSMX8d.jpg" title="Увеличение силы крит. удара II [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение силы крит. удара II [Ремень]</span>
+</a>
+<br/>Дополнительный урон при критическом ударе +1/2. Эффект постоянный.  				<br/>   				<hr/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/13014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/h2uTjmFe5jlhRbc8Fxvebdhyb1WxhLhLMkffitZq.jpg" title="Увеличение защиты I [Ремень]"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/13015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Увеличение защиты II [Ремень]" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/u9zKaLOl4NCkuY67EAK6bKbxJgLtCNp9NIKzoWez.jpg" title="Увеличение защиты II [Ремень]"/>
+</span>
+<span class="item-text"> Увеличение защиты II [Ремень]</span>
+</a>
+<br/>Защита +1/2. Эффект постоянный.  			</div> </div> </div> <p>  	   	</p> <p>  		Особые руны:  	</p> <div class="spoiler"> <div class="spoiler__title">Руна Охоты (Оружие)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11018/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/SfTop5P54hVUK660OKEPc05atTI9NDSxVq5meOOS.jpg" title="Особая руна охоты I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/9qiQkre6yfi9fV3fTYfu53JGFpX6aXPhO0Ks5PGS.jpg" title="Особая руна охоты II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/56ssvUMmpV04CnZZk5Bq68bdaDeahaxDzUm6NRLF.jpg" title="Особая руна охоты III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/5a2vYzXKrA0CZvX4sPzHsmkrc3WEuYQ0OPqQ6sTW.jpg" title="Особая руна охоты IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Особая руна охоты V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/W6bGzQN1d0XMrkbcqfb3eHWMOc8Z27UGH8jeC1JQ.jpg" title="Особая руна охоты V"/>
+</span>
+<span class="item-text"> Особая руна охоты V</span>
+</a>
+<br/>Получаемый опыт: +5%/10%/15%/20%/30%  				<br/>Вероятность выпадения трофеев: 0%/0%/+2%/+5%/+10%  				<br/>По монстрам: Уровень всех атак: 0/0/0/+1/+2  				<br/>Чем выше уровень руны, тем выше эффект.  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руна сердца Херакена (Доспех)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11262/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11262.png" title="Руна сердца Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11263/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11263.png" title="Руна сердца Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11264/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11264.png" title="Руна сердца Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11265/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11265.png" title="Руна сердца Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11266/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна сердца Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11266.png" title="Руна сердца Херакена V"/>
+</span>
+<span class="item-text"> Руна сердца Херакена V</span>
+</a>
+<br/>Все параметры: +1/+1/+2/+2/+3  				<br/>Защита: +1/+2/+3/+4/+5  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руна сердца Херакена (Перчатки)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11252/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11252.png" title="Руна воли Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11253/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11253.png" title="Руна воли Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11254/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11254.png" title="Руна воли Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11255/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11255.png" title="Руна воли Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11256/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна воли Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11256.png" title="Руна воли Херакена V"/>
+</span>
+<span class="item-text"> Руна воли Херакена V</span>
+</a>
+<br/>Шанс нанести крит. удар: +1/+2/+3/+3/+4  				<br/>Получаемый крит. удар: -1/-2/-4/-5/-6  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руна гнева Херакена (Шлем)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11257/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11257.png" title="Руна гнева Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11258/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11258.png" title="Руна гнева Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11259/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11259.png" title="Руна гнева Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11260/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11260.png" title="Руна гнева Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11261/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна гнева Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11261.png" title="Руна гнева Херакена V"/>
+</span>
+<span class="item-text"> Руна гнева Херакена V</span>
+</a>
+<br/>Доп. урон при крит. ударе: +1/+2/+4/+5/+6  				<br/>Шанс получить крит. удар: -1/-2/-3/-3/-4  			</div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Руна славы Херакена (Сапоги)</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11267/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11267.png" title="Руна славы Херакена I"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11268/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11268.png" title="Руна славы Херакена II"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11269/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11269.png" title="Руна славы Херакена III"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11270/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11270.png" title="Руна славы Херакена IV"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11271/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна славы Херакена V" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11271.png" title="Руна славы Херакена V"/>
+</span>
+<span class="item-text"> Руна славы Херакена V</span>
+</a>
+<br/>Против монстров:  				<br/>Уровень всех атак: +1/+1/+2/+2/+3  				<br/>Защита: +0/+1/+1/+2  			</div> </div> </div> <p>  	   	</p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

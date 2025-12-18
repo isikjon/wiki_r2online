@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разрушенные крепости — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Разрушенные крепости</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О разрушенных крепостях</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Разрушение крепости</a></li> </ol> <h2 id="id-1">О разрушенных крепостях</h2> <p>  		На карте разрушенные крепости представлены в виде ромба. Если на них обитают монстры, ромб окрашивается в красный цвет.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/guids/locations/destroyed-castle/1.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/locations/destroyed-castle/1.png" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  			На каждой крепости появляется свой тип монстров:  		<br/>• Крепость Фуриэ – вулканические  		<br/>• Крепость Черных земель – горные  		<br/>• Крепость Байрон – морские  		<br/>• Крепость Роден ­– небесные  	</p> <div style="display: flex; align-items: center;"> <blockquote>  		  Монстры не просто бродят по руинам крепостей, а несут службу. Каждый из них выполняет роль стража, сменяя друг друга каждый час.  		</blockquote> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Вулканические монстры крепости Фуриэ</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Фенис (I)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4778.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4778.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3311/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Фенис" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3311.jpg" title="Свиток Фенис"/>
+</span>
+<span class="item-text"> Свиток Фенис</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Фиера (II)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4782.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4782.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3323/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Фиеры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3323.jpg" title="Свиток Фиеры"/>
+</span>
+<span class="item-text"> Свиток Фиеры</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Файра (III)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4786.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4786.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3327/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Файры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3327.jpg" title="Свиток Файры"/>
+</span>
+<span class="item-text"> Свиток Файры</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Ифрит (IV)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4790.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4790.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3473/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Ифрита" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3473.jpg" title="Свиток Ифрита"/>
+</span>
+<span class="item-text"> Свиток Ифрита</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Фурия (V)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4791.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4791.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3474/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Фурии" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3474.jpg" title="Свиток Фурии"/>
+</span>
+<span class="item-text"> Свиток Фурии</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Хильк (VI)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4792.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4792.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3475/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Хилька" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3475.jpg" title="Свиток Хилька"/>
+</span>
+<span class="item-text"> Свиток Хилька</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13493/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Вулканическое сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13493.jpg" title="Вулканическое сукно"/>
+</span>
+<span class="item-text"> Вулканическое сукно</span>
+</a>
+</div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Горные монстры крепости Черных земель</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Нейт (I)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4780.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4780.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3313/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Нейты" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3313.jpg" title="Свиток Нейты"/>
+</span>
+<span class="item-text"> Свиток Нейты</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Гранда (II)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4784.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4784.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3325/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Гранды" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3325.jpg" title="Свиток Гранды"/>
+</span>
+<span class="item-text"> Свиток Гранды</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Татен (III)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4788.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4788.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3329/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Татены" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3329.jpg" title="Свиток Татены"/>
+</span>
+<span class="item-text"> Свиток Татены</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Ноасс (IV)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4796.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4796.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3479/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Ноасса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3479.jpg" title="Свиток Ноасса"/>
+</span>
+<span class="item-text"> Свиток Ноасса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Сиаф (V)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4797.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4797.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3480/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Сиаф" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3480.jpg" title="Свиток Сиаф"/>
+</span>
+<span class="item-text"> Свиток Сиаф</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Лилианс (VI)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4798.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4798.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3481/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Лилианс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3481.jpg" title="Свиток Лилианс"/>
+</span>
+<span class="item-text"> Свиток Лилианс</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13496/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Горное сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13496.jpg" title="Горное сукно"/>
+</span>
+<span class="item-text"> Горное сукно</span>
+</a>
+</div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Морские монстры крепости Байрон</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Ондин (I)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4781.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4781.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3314/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Ондина" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3314.jpg" title="Свиток Ондина"/>
+</span>
+<span class="item-text"> Свиток Ондина</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Аквос (II)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4785.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4785.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3326/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Аквоса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3326.jpg" title="Свиток Аквоса"/>
+</span>
+<span class="item-text"> Свиток Аквоса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Ликвелл (III)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4789.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4789.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3330/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Ликвела" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3330.jpg" title="Свиток Ликвела"/>
+</span>
+<span class="item-text"> Свиток Ликвела</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Эллайм (IV)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4799.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4799.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3482/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Эллайм" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3482.jpg" title="Свиток Эллайм"/>
+</span>
+<span class="item-text"> Свиток Эллайм</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Лайкер (V)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4800.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4800.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3483/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Лейкера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3483.jpg" title="Свиток Лейкера"/>
+</span>
+<span class="item-text"> Свиток Лейкера</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Фриза (VI)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4801.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4801.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3484/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Фризы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3484.jpg" title="Свиток Фризы"/>
+</span>
+<span class="item-text"> Свиток Фризы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Небесные монстры крепости Роден</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Кронус (I)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4779.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4779.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3312/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Кронус" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3312.jpg" title="Свиток Кронус"/>
+</span>
+<span class="item-text"> Свиток Кронус</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Сильф (II)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4783.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4783.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3324/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Сильф" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3324.jpg" title="Свиток Сильф"/>
+</span>
+<span class="item-text"> Свиток Сильф</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Хатор (III)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4787.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4787.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3328/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Хатор" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3328.jpg" title="Свиток Хатор"/>
+</span>
+<span class="item-text"> Свиток Хатор</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Игалс (IV)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4793.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4793.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3476/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Игалса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3476.jpg" title="Свиток Игалса"/>
+</span>
+<span class="item-text"> Свиток Игалса</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Риттер (V)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4794.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4794.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3477/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Риттера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3477.jpg" title="Свиток Риттера"/>
+</span>
+<span class="item-text"> Свиток Риттера</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Флайт (VI)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/icons/full/4795.jpg"><img alt="" src="https://r2online.ru/storage/wiki/upload/icons/full/4795.jpg" style="max-width: 30%; margin-bottom: 10px;"/> </a> <br/>Дроп-лист:  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/3478/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток Флайта" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/3478.jpg" title="Свиток Флайта"/>
+</span>
+<span class="item-text"> Свиток Флайта</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/13494/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Морское сукно" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/items/13494.jpg" title="Морское сукно"/>
+</span>
+<span class="item-text"> Морское сукно</span>
+</a>
+</div> </div> </div> </div> <h2 id="id-2">Разрушение крепости</h2> <p>  		Если в конце осады у крепости нет владельца (она пустая или в красной рамке), то крепость может стать разрушенной. На следующей осаде разрушенные крепости нельзя захватить. Однако, не на всех разрушенных крепостях появляются монстры, а только на определенных, которые подсвечены красным.	  	</p> <p>  		Одни и те же крепости могут быть разрушенными несколько осад подряд. Подробнее в <a href="https://r2online.ru/wiki/guids/events/siege/" target="_blank">статье про осады</a>.  	</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

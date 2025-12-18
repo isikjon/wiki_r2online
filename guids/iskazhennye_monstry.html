@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Искаженные монстры — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Искаженные монстры</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h2>О событии</h2> <p>  		Во время события «Искаженные монстры» часть монстров на разных территориях Колфорта меняют свой облик и становятся значительно сильнее. С искаженных монстров добываются материалы для крафта легендарных <a href="https://r2online.ru/wiki/base/list/7/" target="_blank">камней питомцев</a>.   		<br/>Всего существует 4 искаженных события: <a href="https://r2online.ru/wiki/locations/ground/distorted/">Фуриэ</a>, <a href="https://r2online.ru/wiki/locations/ground/distorted2/">Черные земли</a>, <a href="https://r2online.ru/wiki/locations/ground/distorted3/">Байрон</a> и <a href="https://r2online.ru/wiki/locations/ground/distorted4/">Роден</a>.  	</p> <a data-fancybox="gallery" href="/storage/wiki//images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/territoryes.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/territoryes.webp" style="max-width: 50%; margin-bottom: 15px;"/> </a> <p>  		Монстры заполняют всю территорию своих владений, и их большая часть возрождается на контрольных точках. Трофеи с монстров отличаются, как и их сила — у некоторых много урона, другие с большим запасом HP. Каждый раз искажаются разные монстры. Если на прошлом событии вы нашли отличное место для фарма, то в следующий раз монстры в этом месте могут остаться обычными.  	</p> <h2>Запуск события</h2> <p>  		Через 5-60 минут после смерти искаженных боссов, событие может запуситься с некоторым шансом (не 100%). Каждый босс запускает событие только в своих владениях.  	</p> <p> <a class="catalog-item" href="https://r2online.ru/wiki/locations/2407/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный костяной дракон" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/f0e83d845a1f286cf9b3c3b35d5a3a85.png" title="Искаженный костяной дракон"/>
+</span>
+<span class="item-text"> Искаженный костяной дракон</span>
+</a>
+ — <a href="https://r2online.ru/wiki/locations/ground/distorted/">Фуриэ</a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/2406/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженная Королева личей" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/24/64c4145c09fc1963ae91c7cd9d715f89.png" title="Искаженная Королева личей"/>
+</span>
+<span class="item-text"> Искаженная Королева личей</span>
+</a>
+ — <a href="https://r2online.ru/wiki/locations/ground/distorted2/">Черные земли</a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/2405/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный рахан" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/934c4ca73a5b0daf42de10197b973764.png" title="Искаженный рахан"/>
+</span>
+<span class="item-text"> Искаженный рахан</span>
+</a>
+ — <a href="https://r2online.ru/wiki/locations/ground/distorted3/">Байрон</a> <br/><a class="catalog-item" href="https://r2online.ru/wiki/locations/2408/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Искаженный король огров-зомби" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/05/e67bab31be4903af5ff8fb7f45c63a80.png" title="Искаженный король огров-зомби"/>
+</span>
+<span class="item-text"> Искаженный король огров-зомби</span>
+</a>
+ — <a href="https://r2online.ru/wiki/locations/ground/distorted4/">Роден</a> </p> <p>  		Боссы появляются в крепостях Фуриэ, Черные земли, Байрон и Роден в нескольких точках возрождения по всей крепости. После убийства босс сможет возродиться снова через период от 10 до 14 часов. Минимальное время возрождения – 10 часов, максимальное – 14 часов.   		  	</p> <div style="display: flex; align-items: center;"> <blockquote>  			Боссы не агрессивные, первыми не нападут.  			<br/>Босс не может покинуть зону крепости, выйдя за пределы - он телепортируется на свою точку возрождения.  			<br/>Если кто-то начнет атаковать босса, всем игрокам придет уведомление об этом.  		</blockquote> </div> <p>  		На каждой территории можно взять <a href="https://r2online.ru/wiki/quests/epic/hard/">эпический квест</a>.  	</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

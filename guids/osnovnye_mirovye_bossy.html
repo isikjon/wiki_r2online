@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные мировые — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="boss.html">Боссы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Основные мировые</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <p id="list">  		Основные мировые боссы – боссы, которые имеют фиксированное время возрождения или оповещение на весь сервер, когда они атакованы. Они стратегически важны из-за наличия уникальных предметов в их дроп-листе. Боссы могут быть не очень сильными, у некоторых даже нет восстановления HP. Основная сложность заключается в получении трофеев после их убийства, потому что все игроки будут в курсе возрождения или атаки босса.  	</p> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-header tr-odd"> <td style="width: 5%">  									Босс  								</td> <td style="width: 20%">  									Место возрождения  								</td> <td style="width: 20%">  									Время возрождения  								</td> <td>  									Особенности  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/577/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хватафорс" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/571be87100c9d350469ae612db21aa16.png" title="Хватафорс"/>
+</span>
+<span class="item-text"> Хватафорс</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/bashnya-ognya/4/" target="_blank">Башня огня ур. 4</a> </td> <td>  									День: 11:30  									<br/>Вечер: 21:30  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Возрождается одновременной с Урук-хаем.  									<br/>Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12044/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/IbNk4lR0Lns5NJ7OZuTo1gyUfeSOUDuV2EIimHVM.jpg" title="Часть черепа Хватафорса (1/3)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12045/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/uOhMzJcHcIN1013vHn8vhoORJDgvibQEQnHdAwr5.jpg" title="Часть черепа Хватафорса (2/3)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12046/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/dZpaHMgoNVXwxSdgQKS7Bp47wqQTjJEAKQrF2RU5.jpg" title="Часть черепа Хватафорса (3/3)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12047/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/UslIou7qvNAGaw5XaKokUQrv0AieHIFj9VEkwumZ.jpg" title="Энергия Хватафорса"/>
+</span>
+</a>
+ – для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1477/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Череп Хватафорса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/8ff4e5334677625bf299da0303a75dfa.jpg" title="Череп Хватафорса"/>
+</span>
+<span class="item-text"> Череп Хватафорса</span>
+</a>
+ (проходка к <a class="catalog-item" href="https://r2online.ru/wiki/locations/537/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ифрит" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/42e411452773626f395559a04cbc3b4d.png" title="Ифрит"/>
+</span>
+<span class="item-text"> Ифрит</span>
+</a>
+)  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/472/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Урук-хай" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/c38f28464e0ab670619596c34e506640.png" title="Урук-хай"/>
+</span>
+<span class="item-text"> Урук-хай</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/lestnica-drevnih/3/" target="_blank">Лестница древних ур. 3</a> </td> <td>  									День: 11:30  									<br/>Вечер: 21:30  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Возрождается одновременной с Хватафорсом  									<br/>Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12049/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/M8dpTf6Ey0YMCNgLFR9irrNasc4Oowo0Pw30qLPJ.jpg" title="Левая часть амулета Урук-хая"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12050/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/2Wvc1o73TDoMp12Rj0w2Dao5R6jWw27bqLeoztfd.jpg" title="Правая часть амулета Урук-хая"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12051/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aU0ipI7BcWu5gM1s3bpp2prjsTgCxayg51bpghM9.jpg" title="Глаз амулета Урук-хая"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12052/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/2MosiZGZvfqgwZjsyAGD0j2cOvCz3Sv8ICzFsitU.jpg" title="Щипцы для изготовления амулета Урук-хая"/>
+</span>
+</a>
+ – для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12053/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Амулет Урук-хая" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/wnZbawOOAA8dpweNYXxiNHcaQ5OyPdJuP19HLgSL.jpg" title="Амулет Урук-хая"/>
+</span>
+<span class="item-text"> Амулет Урук-хая</span>
+</a>
+ (проходка к <a class="catalog-item" href="https://r2online.ru/wiki/locations/1881/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бафомет" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/491c2127413b94bbd924a9929588f29c.png" title="Бафомет"/>
+</span>
+<span class="item-text"> Бафомет</span>
+</a>
+)  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/540/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Гвардеец ада" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/a1d96135af8f165f49fd41e24cb593cf.png" title="Гвардеец ада"/>
+</span>
+<span class="item-text"> Гвардеец ада</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/temnye-peshchery/4/" target="_blank">Темные пещеры ур. 4</a> </td> <td>  									30 часов  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Может выпасть:  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/LqJRHGUtknsMdoedbKuPJtpTtw8FztJWCxabqqES.jpg" title="Осколок ядра Сеонума (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/Xx2WjOXKwRy0IkT1aZipGqwvGU0tjfLc1ptQKW2y.jpg" title="Осколок ядра Сеонума (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/RoTQhb1eeay10ZWRSevaIhvo7S5iLaiYvJ1BXifP.jpg" title="Осколок ядра Сеонума (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/sZ4BUV8KHzrLYYi7cOxd4dVCFSiyJNvUmutkTdRd.jpg" title="Осколок ядра Сеонума (4/4)"/>
+</span>
+</a>
+ – для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6678/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Сеонума" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/ecxqQojsKFidqb1Zh0z7vFUVoF3IirtR68qhGPrV.jpg" title="Ядро Сеонума"/>
+</span>
+<span class="item-text"> Ядро Сеонума</span>
+</a>
+ (проходка в <a href="https://r2online.ru/wiki/guids/locations/sealed-dungeons/">Темные пещеры ур. 5</a>).  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/818/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Король лич" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/9faa74e0e41599cec9a5f6851af4bc71.png" title="Король лич"/>
+</span>
+<span class="item-text"> Король лич</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/podzemele-nejiti/3/" target="_blank">Подземелье нежити ур. 3</a> </td> <td>  									30 часов, 20 минут  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11008/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YFJQh1vXd40eQvPe8HQ2LtDbMR82Z7Jbs1XlAezG.jpg" title="Осколок ядра Хелтеса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11009/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/HiepfY3ECZ60c4X73Ow7A2khTB1muTQuFjU8zUb8.jpg" title="Осколок ядра Хелтеса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11010/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/M9pJoSfS3n14KMolrTNwR5b4M3LCwrQCC60wHqnF.jpg" title="Осколок ядра Хелтеса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11011/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/J34T1sLNeRkNRL18hO5Z9zOFNZ5VlI42femYDlz7.jpg" title="Осколок ядра Хелтеса (4/4)"/>
+</span>
+</a>
+ для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6679/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Хелтеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/E5pmGRLGSVzVXOQiUQHvPtnsd3AR6ylwZkQmxjuu.jpg" title="Ядро Хелтеса"/>
+</span>
+<span class="item-text"> Ядро Хелтеса</span>
+</a>
+ (проходка в <a href="https://r2online.ru/wiki/guids/locations/sealed-dungeons/">Подземелье нежити ур. 4</a>).  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/536/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бельжевит" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/8bed66c1826d55aca5b91fde53e159dc.png" title="Бельжевит"/>
+</span>
+<span class="item-text"> Бельжевит</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/grobnica-korolya/3/" target="_blank">Гробница Короля ур. 3</a> </td> <td>  									30 часов, 45 минут  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/FAxvKJinukBMLn9oDr0xuWRsgQ7XAGsTaqpVFVoG.jpg" title="Осколок ядра Альтенуса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11005/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/du4SFJ3LTViJOnXWKXxgXJy7bHtDKVuipgF4soFf.jpg" title="Осколок ядра Альтенуса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11006/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/qyHQSTrhJbenvXmmh0q222dFWuzojnNt8SjXSLqk.jpg" title="Осколок ядра Альтенуса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11007/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/nj5Jzrwu6DFrZ7LTYm6BEGhbNPGo4PoN0qlER4ms.jpg" title="Осколок ядра Альтенуса (4/4)"/>
+</span>
+</a>
+ для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6977/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Альтенуса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/IfiqnxonX81hfeZfkfAoNwa9YTdvCubdBCtS4Xy4.jpg" title="Ядро Альтенуса"/>
+</span>
+<span class="item-text"> Ядро Альтенуса</span>
+</a>
+ (проходка в <a href="https://r2online.ru/wiki/guids/locations/sealed-dungeons/">Гробницу короля ур. 4</a>).  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/538/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черная виверна" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/4e50587403eebfdf7b60e5d64d0b8659.png" title="Черная виверна"/>
+</span>
+<span class="item-text"> Черная виверна</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/boloto-chernogo-drakona/4/" target="_blank">Болото Черного дракона ур. 4</a> </td> <td>  									31 часов, 10 минут  								</td> <td>  									Есть оповещение при возрождении.  									<br/>Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11012/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/RLJNyU3Z3CKoDRR2biM4AvACLWovCEEiTZZnmyMf.jpg" title="Осколок ядра Гермеса (1/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11013/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/iNaCzai4i8m70aBCpq8MOwnwatThyeh31HYWdpKb.jpg" title="Осколок ядра Гермеса (2/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11014/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/gkmNkarEtfH0DFCHJ9f2sWUVBscqnFvpMBWpYQv0.jpg" title="Осколок ядра Гермеса (3/4)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/11015/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/BdLaup6c3NBMlKEA22BCSnQIMYs1fZSA6yvrF9Eb.jpg" title="Осколок ядра Гермеса (4/4)"/>
+</span>
+</a>
+ для изготовления <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6976/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ядро Гермеса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/Hgw3dU5ztlZRPrhqvCoHi7ijUTfpN62sh7sp0h75.jpg" title="Ядро Гермеса"/>
+</span>
+<span class="item-text"> Ядро Гермеса</span>
+</a>
+ (проходка в <a href="https://r2online.ru/wiki/guids/locations/sealed-dungeons/">Болото Черного дракона ур. 5</a>).  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/6003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Проповедник темных жрецов" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/26xhrKwF1c1u6xH45zl2y5f08FFKz0kH3h4RD58S.jpg" title="Проповедник темных жрецов"/>
+</span>
+<span class="item-text"> Проповедник темных жрецов</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/locations/illumina/hram-zhrecov-tmy/1/" target="_blank">Храм Темных жрецов</a> </td> <td>  									14 часов  								</td> <td>  									Оповещение при возрождении и при смерти.  									<br/>Не восстанавливает HP.  									<br/>Если босса не убить в течение 5 минут, то он пропадет.  									<br/>На время возрождения босса вход в Храм закрывается.  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/1021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Лорд акрионцев" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/full/2019/10/21/dc7eef21cbb324d86627402892271ef3.png" title="Лорд акрионцев"/>
+</span>
+<span class="item-text"> Лорд акрионцев</span>
+</a>
+</td> <td> <a href="https://r2online.ru/wiki/guids/locations/acra/" target="_blank">Остров Акра</a> <br/><a data-fancybox="gallery" href="/storage/wiki/images/guids/bosses/random-world/1.png"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/bosses/random-world/1.png" style="max-width: 150px;"/> </a> </td> <td>  									32 часа  								</td> <td>  									Может выпасть: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/cbb6a3b884f4f88b3a8e3d44c636cbd8.jpg" title="Камень телепортации (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/72lrb2aqXJD0ATnr1TbbbAL1yLjSEcj6sT1ubNfs.jpg" title="Камень невидимости (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12059/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/AiZACntH07V5biQ6fXdlhdcRFzlujsPDyxmjz1DS.jpg" title="Камень смотрителя (легендарный)"/>
+</span>
+</a>
+</td> </tr> </tbody></table> </div> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

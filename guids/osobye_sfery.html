@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особые сферы — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="unique-items.html">Уникальные предметы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Особые сферы</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">Сферы характеристик</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Сфера алчности</a></li> <li><a class="link-in-top" href="#id-7" style="font-size: 14px;">Сфера гармонии</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Характеристики особых сфер</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Добыча особых сфер</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Усиление особых сфер</a></li> <li><a class="link-in-top" href="#id-6" style="font-size: 14px;">Продление особых сфер</a></li> </ol> <p>Особые сферы, занимают отдельные ячейки в экипировке. Такие сферы всегда временные и бывают 5-ти грейдов.</p> <h2 id="id-1">Сферы характеристик</h2> <p>Сферы характеристик бывают трех видов:    		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50627/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера ярости ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/56fa1c4b95326c99fa50283c1b94053b.png" title="Сфера ярости ур. 5"/>
+</span>
+<span class="item-text"> Сфера ярости ур. 5</span>
+</a>
+ – увеличивает все параметры и уровень всех атак.  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50626/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера охотника ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/a7ee477bb2d7cf1a28b561618769e439.png" title="Сфера охотника ур. 5"/>
+</span>
+<span class="item-text"> Сфера охотника ур. 5</span>
+</a>
+ – увеличивает ловкость и шанс нанести критический удар.  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50625/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера героя ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/fc367c59626f5d61d587449842e6a809.png" title="Сфера героя ур. 5"/>
+</span>
+<span class="item-text"> Сфера героя ур. 5</span>
+</a>
+ – увеличивает силу и дополнительный урон при критическом ударе.  		<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/50659/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера архимага ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/9VDet7IUmpGs6iiAnSWpLvXycLfykIaENmZDajiZ.jpg" title="Сфера архимага ур. 5"/>
+</span>
+<span class="item-text"> Сфера архимага ур. 5</span>
+</a>
+ – увеличивает интеллект и шанс нанести критический удар.  		</p> <p>  		Одновременно можно экипировать только одну сферу характеристик. Занимает нижний слот в экипировке (инвентарь [I], раздел «Сферы»).  		</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/osobye_sphere2.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/osobye_sphere2.webp" style="margin-bottom: 15px; max-width: 100%; cursor: zoom-in;"/> </a> <h2 id="id-2">Сфера алчности</h2> <p>В верхнюю ячейку экипируется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50629/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера алчности ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/75df764921922f5680bb550c819df6e9.png" title="Сфера алчности ур. 5"/>
+</span>
+<span class="item-text"> Сфера алчности ур. 5</span>
+</a>
+ – увеличивает дроп и опыт с монстров.</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/osobye_sphere.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/osobye_sphere.webp" style="margin-bottom: 15px; max-width: 100%; cursor: zoom-in;"/> </a> <h2 id="id-7">Сфера гармонии</h2> <p><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40711/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 12" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/q0ixLDoYaZzT8sfA97uGzKOArueoU4eoBWcqBfFa.jpg" title="Сфера гармонии ур. 12"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 12</span>
+</a>
+ Занимает верхнюю ячейку, вместо сферы алчности. Сфера гармонии доступна во время особых событий, в обычное время ее нельзя получить.  			<br/>Усиливают сферу гармонии любые свитки усиления оружия или защиты: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/351/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/e531749e85de7c147693d8a445d56a9e.jpg" title="Свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/353/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/6018c6e501f21c05749084feb24b23f9.jpg" title="Свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12807/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/zA3Jnx0n1RjhxDpyJyjdjKWKPeJX15r8yziPrNZz.jpg" title="Светлый свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12808/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/wzbMV1zgCaNMonm5VySJyQ5vMAfvRPoPupyuNa2j.jpg" title="Светлый свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3500/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/a8ad2339d6b8afe0d3d50e50af56ef51.jpg" title="Сияющий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/3501/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/59b1e377652fb829402424f86dbf8010.jpg" title="Сияющий свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6932/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/e8893823ca04b05786c6e1b534860795.png" title="Блестящий свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6933/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/23/2821ae1a68bf13f62b4912e8efec851e.png" title="Блестящий свиток усиления доспехов"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6934/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/dda529dcf6cd5394152e2259070c9cf1.png" title="Усиленный свиток усиления оружия"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6935/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/19/bb26e8997c47c7c0c98629b3af20afc4.jpg" title="Усиленный свиток усиления доспехов"/>
+</span>
+</a>
+.  			<br/>Начиная с 5 уровня сферу гармонии продлевает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5572/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна продления особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/d644419235fe39b66adf53f5523bb40c.jpg" title="Руна продления особой сферы"/>
+</span>
+<span class="item-text"> Руна продления особой сферы</span>
+</a>
+ на 25 дней. Сферы ниже уровнем продлеваются также, как и остальные особые сферы.  		</p> <div class="spoiler"> <div class="spoiler__title">Характеристики сферы гармонии</div> <div class="spoiler__content"> <div class="text-box"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40700/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 1" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/H2fv3vJxh0yOZM9DFkPAPQJO3K2oqued6av71O48.jpg" title="Сфера гармонии ур. 1"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 1</span>
+</a>
+<br/>Дроп +5%  					<br/>Опыт +5%  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40701/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 2" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/jYujYPohoU9gH80GTlFRYBpTNZRt5YzlnGZ10p30.jpg" title="Сфера гармонии ур. 2"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 2</span>
+</a>
+<br/>Дроп +10%  					<br/>Опыт +10%  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40702/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 3" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/G8yjZ0SaAAtaQMODiRzpqdlEaB9zuwLBLHEpJog8.jpg" title="Сфера гармонии ур. 3"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 3</span>
+</a>
+<br/>Дроп +15%  					<br/>Опыт +15%  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40703/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 4" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/zkbiYUKEtTf8UAckRpwf28PxtBarvugXjSVhNfSN.jpg" title="Сфера гармонии ур. 4"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 4</span>
+</a>
+<br/>Дроп +20%  					<br/>Опыт +20%  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40704/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 5" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/RrExfEGIs6urawoti5OknNZspV6PqS2PzP1UvorX.jpg" title="Сфера гармонии ур. 5"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 5</span>
+</a>
+<br/>Дроп +25%  					<br/>Опыт +25%  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40705/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 6" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/IhEEBoHpFmxFI9Bi4pshUMHmqhoLDiDOvng5HtPR.jpg" title="Сфера гармонии ур. 6"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 6</span>
+</a>
+<br/>Дроп +30%  					<br/>Опыт +30%  					<br/>Урон по монстрам +1  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40706/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 7" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/GJd1GroHk90AwRhNA4lF8NepFCzGcWxe01J4lBMG.jpg" title="Сфера гармонии ур. 7"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 7</span>
+</a>
+<br/>Дроп +35%  					<br/>Опыт +35%  					<br/>Урон по монстрам +1  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40707/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 8" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/L0E9rjmDlegb7tFaQsf9NgZRR5lHeoj6o11bcui0.jpg" title="Сфера гармонии ур. 8"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 8</span>
+</a>
+<br/>Дроп +40%  					<br/>Опыт +40%  					<br/>Урон по монстрам +1  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40708/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 9" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/s1VMRX3gyhH0LK5RnsT1PMNfpYVB6d5pgf1oCwWa.jpg" title="Сфера гармонии ур. 9"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 9</span>
+</a>
+<br/>Дроп +45%  					<br/>Опыт +45%  					<br/>Урон по монстрам +2  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40709/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 10" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/pFgWgadjVJDdyyevdvfWSNy0RIyCp3Fom0dAXO99.jpg" title="Сфера гармонии ур. 10"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 10</span>
+</a>
+<br/>Дроп +50%  					<br/>Опыт +50%  					<br/>Урон по монстрам +3  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40710/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 11" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/FxPgdCHMMrOT8HEukqsFFJ2xQGVBj3JqXHPC20Or.jpg" title="Сфера гармонии ур. 11"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 11</span>
+</a>
+<br/>Дроп +60%  					<br/>Опыт +60%  					<br/>Урон по монстрам +4  					<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/40711/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера гармонии ур. 12" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/q0ixLDoYaZzT8sfA97uGzKOArueoU4eoBWcqBfFa.jpg" title="Сфера гармонии ур. 12"/>
+</span>
+<span class="item-text"> Сфера гармонии ур. 12</span>
+</a>
+<br/>Дроп +70%  					<br/>Опыт +70%  					<br/>Урон по монстрам +5  				</p> </div> </div> </div> <h2 id="id-3">Характеристики особых сфер</h2> <div class="table-container"> <table class="table table-with-vertical-borders"> <tbody><tr class="tr-alt-odd" style="color: #d7b263;"> <td>  						Сфера героизма  					</td> <td>  						Сфера ярости  					</td> <td>  						Сфера охотника  					</td> <td>  						Сфера архимага  					</td> <td>  						Сфера алчности  					</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40606/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/5e8c4bfbc1e3c930cf6ce7c7619c665c.png" title="Сфера героя ур. 1"/>
+</span>
+</a>
+ ур. 1  						<br/>Сила +6  						<br/>Доп. урон при крит. ударе +1  						<br/>Продление 5 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40608/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/81b46c02627904a77623552141fafe99.png" title="Сфера ярости ур. 1"/>
+</span>
+</a>
+ ур. 1  						<br/>Все параметры +2  						<br/>Уровень всех атак +1  						<br/>Продление 5 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40607/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/476daed1dc85a75c74ca79ad9295d8db.png" title="Сфера охотника ур. 1"/>
+</span>
+</a>
+ ур. 1  						<br/>Ловкость +6  						<br/>Шанс нанести крит. удар +1  						<br/>Продление 5 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50655/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/SbihXrqI49qdFyz20RE6eOrosswf9PbyiCL39E23.jpg" title="Сфера архимага ур. 1"/>
+</span>
+</a>
+ ур. 1  						<br/>Интеллект +6  						<br/>Шанс нанести крит. удар +1  						<br/>Продление 5 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40600/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/bf7d28851cfd09038a368c6a39bc932c.png" title="Сфера алчности ур. 1"/>
+</span>
+</a>
+ ур. 1  						<br/>Дроп +5%  						<br/>Опыт +5%  						<br/>Продление 5 дней  					</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40616/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/1db44aa4a218b13b8f891fcbcd1a1fe2.png" title="Сфера героя ур. 2"/>
+</span>
+</a>
+ ур. 2  						<br/>Сила +7  						<br/>Доп. урон при крит. ударе +2  						<br/>Продление 10 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40618/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/421389d3e315de039343bed6fd0233cd.png" title="Сфера ярости ур. 2"/>
+</span>
+</a>
+ ур. 2  						<br/>Все параметры +3  						<br/>Уровень всех атак +1  						<br/>Продление 10 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40617/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/5044b7eda34dbe811d7ac2f970e96849.png" title="Сфера охотника ур. 2"/>
+</span>
+</a>
+ ур. 2  						<br/>Ловкость +7  						<br/>Шанс нанести крит. удар +2  						<br/>Продление 10 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50656/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/lQ4nOb2BTwxgw3QpUhPInR2CK4TdXDKvyu9k9bnU.jpg" title="Сфера архимага ур. 2"/>
+</span>
+</a>
+ ур. 2  						<br/>Интеллект +7  						<br/>Шанс нанести крит. удар +2  						<br/>Продление 10 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40601/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/e97e8dbd0f925ac53af0aa42e412e625.png" title="Сфера алчности ур. 2"/>
+</span>
+</a>
+ ур. 2  						<br/>Дроп +10%  						<br/>Опыт +10%  						<br/>Продление 10 дней  					</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40619/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/e96cfd5dd5a6ddbb6079d55052ecc4d2.png" title="Сфера героя ур. 3"/>
+</span>
+</a>
+ ур. 3  						<br/>Сила +8  						<br/>Доп. урон при крит. ударе +3  						<br/>Скорость атаки +4%  						<br/>Продление 15 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/8d53b8fdc6910431c4645382c2c461cf.png" title="Сфера ярости ур. 3"/>
+</span>
+</a>
+ ур. 3  						<br/>Все параметры +4  						<br/>Уровень всех атак +2  						<br/>Скорость атаки +4%  						<br/>Продление 15 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40617/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/5044b7eda34dbe811d7ac2f970e96849.png" title="Сфера охотника ур. 2"/>
+</span>
+</a>
+ ур. 3  						<br/>Ловкость +8  						<br/>Шанс нанести крит. удар +3  						<br/>Скорость атаки +4%  						<br/>Продление 15 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50657/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/fFjcJJRmUuLmFMiUsooFy12BZQQmg7gxUKJLpSH7.jpg" title="Сфера архимага ур. 3"/>
+</span>
+</a>
+ ур. 3  						<br/>Интеллект +8  						<br/>Шанс нанести крит. удар +3  						<br/>Скорость атаки +4%  						<br/>Продление 15 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40602/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/39e1f479febc5ce3ce610005f402bf25.png" title="Сфера алчности ур. 3"/>
+</span>
+</a>
+ ур. 3  						<br/>Дроп +15%  						<br/>Опыт +15%  						<br/>Продление 15 дней  					</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50622/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/06/22/002105c5de377f57727e6cd21e4e0bfd.png" title="Сфера героя ур. 4"/>
+</span>
+</a>
+ ур. 4  						<br/>Сила +9  						<br/>Доп. урон при крит. ударе +5  						<br/>Скорость атаки +7%  						<br/>Продление 20 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50624/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/fd960d0c038f517dfc87c20b101a3839.png" title="Сфера ярости ур. 4"/>
+</span>
+</a>
+ ур. 4  						<br/>Все параметры +5  						<br/>Уровень всех атак +2  						<br/>Скорость атаки +7%  						<br/>Продление 20 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50623/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/69a95012d78ef2174b6a4ba7bb045d15.png" title="Сфера охотника ур. 4"/>
+</span>
+</a>
+ ур. 4  						<br/>Ловкость +9  						<br/>Шанс нанести крит. удар +4  						<br/>Скорость атаки +7%  						<br/>Продление 20 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50658/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/err6gLbjU6DtWObVZkUvvlOInELU0SupWKyOVe3r.jpg" title="Сфера архимага ур. 4"/>
+</span>
+</a>
+ ур. 4  						<br/>Интеллект +9  						<br/>Шанс нанести крит. удар +4  						<br/>Скорость атаки +7%  						<br/>Продление 20 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50628/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/f6c0e28da6c23de7ae8d17865f2ad1d0.png" title="Сфера алчности ур. 4"/>
+</span>
+</a>
+ ур. 4  						<br/>Дроп +20%  						<br/>Опыт +20%  						<br/>Продление 20 дней  					</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50625/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/fc367c59626f5d61d587449842e6a809.png" title="Сфера героя ур. 5"/>
+</span>
+</a>
+ ур. 5  						<br/>Сила +10  						<br/>Доп. урон при крит. ударе +7  						<br/>Скорость атаки +10%  						<br/>Продление 25 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50627/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/56fa1c4b95326c99fa50283c1b94053b.png" title="Сфера ярости ур. 5"/>
+</span>
+</a>
+ ур. 5  						<br/>Все параметры +6  						<br/>Уровень всех атак +3  						<br/>Скорость атаки +10%  						<br/>Продление 25 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50626/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/a7ee477bb2d7cf1a28b561618769e439.png" title="Сфера охотника ур. 5"/>
+</span>
+</a>
+ ур. 5  						<br/>Ловкость +10  						<br/>Шанс нанести крит. удар +5  						<br/>Скорость атаки +10%  						<br/>Продление 25 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50659/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/9VDet7IUmpGs6iiAnSWpLvXycLfykIaENmZDajiZ.jpg" title="Сфера архимага ур. 5"/>
+</span>
+</a>
+ ур. 5  						<br/>Интеллект +10  						<br/>Шанс нанести крит. удар +5  						<br/>Скорость атаки +10%  						<br/>Продление 25 дней  					</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/50629/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2020/04/20/75df764921922f5680bb550c819df6e9.png" title="Сфера алчности ур. 5"/>
+</span>
+</a>
+ ур. 5  						<br/>Дроп +30%  						<br/>Опыт +30%  						<br/>Продление 25 дней  					</td> </tr> </tbody></table> </div> <h2 id="id-4">Добыча особых сфер</h2> <p>Добыть особые сферы можно двумя способами:</p> <ol> <li>Обменять <a class="catalog-item" href="https://r2online.ru/wiki/base/view/40609/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сфера основания" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/c13227a805b5e590e95007304b3bd070.jpg" title="Сфера основания"/>
+</span>
+<span class="item-text"> Сфера основания</span>
+</a>
+ на <strong>случайную</strong> особую сферу 1-го уровня на 7 дней. Обмен совершает NPC &lt;Особые сферы&gt; Октавия. </li> <li>Достать случайную особую сферу 1-го уровня, открыв <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12231/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Нестабильная особая сфера" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/8N8RAENhrECl8vpeXbpWKlZpWrSbDYFK3UUmCLgp.webp" title="Нестабильная особая сфера"/>
+</span>
+<span class="item-text"> Нестабильная особая сфера</span>
+</a>
+. Она крафтится из 3 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10707/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Частица особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/1-10707.webp" title="Частица особой сферы"/>
+</span>
+<span class="item-text"> Частица особой сферы</span>
+</a>
+, которые выпадают с сундуков Битвы гильдий и Битвы команд.</li> </ol> <h2 id="id-5">Усиление особых сфер</h2> <p>Сферы усиливает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5573/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна усиления особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/28f150f6143495ad020055a1acf1abd2.jpg" title="Руна усиления особой сферы"/>
+</span>
+<span class="item-text"> Руна усиления особой сферы</span>
+</a>
+, которая продается за 500 очков хаоса у NPC &lt;Торговец очками хаоса&gt; Рудольф. Максимальный уровень сферы - 5-ый. С уровнем увеличиваются характеристики и срок продления сферы.</p> <h2 id="id-6">Продление особых сфер</h2> <p>Сфера продлевается с помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5572/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Руна продления особой сферы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/d644419235fe39b66adf53f5523bb40c.jpg" title="Руна продления особой сферы"/>
+</span>
+<span class="item-text"> Руна продления особой сферы</span>
+</a>
+, которая продается за 5000 очков хаоса у NPC &lt;Торговец очками хаоса&gt; Рудольф. Двойной клик по <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5572/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/d644419235fe39b66adf53f5523bb40c.jpg" title="Руна продления особой сферы"/>
+</span>
+</a>
+ и один клик по нужной сфере. Срок продления зависит от уровня сферы. <br/>1 Уровень - 5 дней. <br/>2 Уровень - 10 дней. <br/>3 Уровень - 15 дней. <br/>4 Уровень - 20 дней. <br/>5 Уровень - 25 дней. <br/></p> <blockquote>Важно! Продлевать сферы можно только сроком менее 1 дня и более 1 часа. Продлить сферу сроком 0 дней 0 часов 59 минут - нельзя.</blockquote> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

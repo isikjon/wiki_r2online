@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Командная битва (КБ) — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="events.html">Мероприятия</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Командная битва (КБ)</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О командной битве (КБ)</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Награды за командную битву</a></li> </ol> <h2 id="id-1">О командной битве (КБ)</h2> <p>Командная битва – это PvP-сражение между двумя случайно сформированными группами из зарегистрировавшихся на битву игроков. Битва проходит на одной из специальных арен. Участвовать в битвах могут персонажи выше 70 уровня.<br/>  Время проведения битв:<br/>  14:05<br/>  18:05 (воскресенье 19:05)<br/>  22:05<br/>  02:05<br/>  06:05<br/>  10:05 (среда 09:00)<br/><br/>  Каждый игрок может участвовать в Командных битвах только <strong>3 раза в день</strong>.</p> <p>За пять минут до начала битвы появится всплывающее окно с предложением принять участие в командной битве. Регистрация бесплатна, зарегистрировавшись – ваш персонаж автоматически перенесется на арену и будет определен в одну из команд: красные или синие. На Командной битве нельзя использовать <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6298/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/c4AGXXkE1agZQYQt2XjNAUmD1yEiQmn3YjH0FTIV.jpg" title="Плащ невидимости (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6297/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/lMfnj0e4UsWR5dsoGnEmR4Dw4ReYzscXW5qfGHR2.jpg" title="Плащ невидимости (эпический)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6296/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/6ZAcZuSd0y2xvwr8joVg2cIr1BYdUG3hI5ahbwGZ.jpg" title="Плащ невидимости (редкий)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/6295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ невидимости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0348d73b30b3309c49c20202fbb24624.jpg" title="Плащ невидимости"/>
+</span>
+<span class="item-text"> Плащ невидимости</span>
+</a>
+.</p> <blockquote>Альтернативный способ регистрации: у NPC &lt;Командные битвы&gt;, который находится в Эшборне, Черных землях, Байроне и Родене.</blockquote> <h2 id="id-2">Награды за командную битву</h2> <p>За участие в командных битвах игроки получают <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Монета чести" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+<span class="item-text"> Монета чести</span>
+</a>
+:<br/>  За победу <strong>60</strong> шт.<br/>  За поражение <strong>30</strong> шт.</p> <p><br/>  Дополнительные <strong>60</strong> монет получат 3 игрока, которые:<br/>  – Убьют больше всех противников<br/>  – Нанесут больше всех урона<br/>  – Больше всех помогут при убийстве противника.</p> <p>Монеты чести можно потратить в магазине у NPC &lt;Командные битвы&gt;.</p> <div class="spoiler"> <div class="spoiler__title">Расходники</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-with-vertical-borders" style="width: 500px"> <tbody> <tr class="tr-header tr-odd"> <td> </td> <td style="width: 20%">Стоимость</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12177/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Зелье счетчика заданий (+1)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/gX9aLe0HokaXDbvmG2wCbUHoCzzMmdQ3Lv05Sdrg.jpg" title="Зелье счетчика заданий (+1)"/>
+</span>
+<span class="item-text"> Зелье счетчика заданий (+1)</span>
+</a>
+ </td> <td>120 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4900/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Большое секретное зелье" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/b865367fc4c0845c0682bd466e6ebf4c.jpg" title="Большое секретное зелье"/>
+</span>
+<span class="item-text"> Большое секретное зелье</span>
+</a>
+ </td> <td>10 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7301/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Маленькое секретное зелье" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/23efc5dcac43f8b7cef8860efed1ec91.png" title="Маленькое секретное зелье"/>
+</span>
+<span class="item-text"> Маленькое секретное зелье</span>
+</a>
+ </td> <td>5 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/2427/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Зелье очищения" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/11/65d2ea03425887a717c435081cfc5dbb.jpg" title="Зелье очищения"/>
+</span>
+<span class="item-text"> Зелье очищения</span>
+</a>
+ </td> <td>3 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> </tbody> </table> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Другое</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-with-vertical-borders" style="width: 500px"> <tbody> <tr class="tr-header tr-odd"> <td> </td> <td style="width: 20%">Стоимость</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/4902/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Награда за завоевание" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/be4456933044a2195590a5b1ce8d25fe.jpg" title="Награда за завоевание"/>
+</span>
+<span class="item-text"> Награда за завоевание</span>
+</a>
+ </td> <td>70 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7293/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Мешочек монет для трофеев (50 шт.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/11/12/819613bc1057d26fce04ec13ca805c11.png" title="Мешочек монет для трофеев (50 шт.)"/>
+</span>
+<span class="item-text"> Мешочек монет для трофеев (50 шт.)</span>
+</a>
+ </td> <td>150 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7292/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Мешочек монет для трофеев (20 шт.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/FkohBzcjzn056DzaE049Ddy3uATAVnyeF1knET7b.webp" title="Мешочек монет для трофеев (20 шт.)"/>
+</span>
+<span class="item-text"> Мешочек монет для трофеев (20 шт.)</span>
+</a>
+ </td> <td>60 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> <tr> <td><a class="catalog-item" href="https://r2online.ru/wiki/base/view/7291/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Мешочек монет для трофеев (10 шт.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/11/12/f4b243be3bf59923f5b574ac88f2c87f.png" title="Мешочек монет для трофеев (10 шт.)"/>
+</span>
+<span class="item-text"> Мешочек монет для трофеев (10 шт.)</span>
+</a>
+ </td> <td>35 <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12893/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hBGEZJBobzFMpghdPmKo9nhfsn375S0XyFgTz4tV.jpg" title="Монета чести"/>
+</span>
+</a>
+</td> </tr> </tbody> </table> </div> </div> </div> </div> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дом гильдии — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="guilds.html">Гильдии</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Дом гильдии</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<style type="text/css">    .table.table-quest td {      vertical-align: middle;      text-align: left;    }      .table.table-quest td:first-child {      text-align: left;    }    .table.table-quest td:not(:first-child) {      text-align: center;      width: 250px;    }  </style> <div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О доме гильдии</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Бонусы домов гильдии</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Лавка гильдии</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Покупка дома гильдии</a></li> <li><a class="link-in-top" href="#id-5" style="font-size: 14px;">Продажа дома гильдии</a></li> </ol> <h2 id="id-1">О доме гильдии</h2> <p>  		Дом гильдии — помещение, принадлежащее членам гильдии. Владельцы дома могут в любой момент переместиться в свой дом, остальным нужно приглашение от владельцев, другим способом в дом не попасть. Используйте эту особенность, чтобы делать гильдийные сборы.  	</p> <h2 id="id-2">Бонусы домов гильдии</h2> <p>  		В зависимости от редкости увеличиваются бонусы от дома гильдии.  	</p> <div class="table-container"> <table class="table table-quest" style="margin-top: 20px; width: 50%;"> <tbody><tr class="tr-odd"> <td style="text-align: left; width: 33%;"> <span style="color: #d7b263;">Редкость дома</span> </td> <td style="text-align: left;"> <span style="color: #d7b263;">Бонусы</span> </td> </tr> <tr class="tr-even"> <td>  									Обычный  								</td> <td style="text-align: left;">  									Лавка гильдии  									<br/>Восстановление <a href="https://r2online.ru/wiki/characters/rest-point" target="_blank">отдыха</a> 100%  								</td> </tr> <tr class="tr-alt-even"> <td>  									Редкий  								</td> <td style="text-align: left;">  									Лавка гильдии									  									<br/>Восстановление <a href="https://r2online.ru/wiki/characters/rest-point" target="_blank">отдыха</a> <strong>130%</strong> <br/><strong>Торговая лавка контрольной точки</strong> </td> </tr> <tr class="tr-even"> <td>  									Эпический  								</td> <td style="text-align: left;">  									Лавка гильдии  									<br/>Восстановление <a href="https://r2online.ru/wiki/characters/rest-point" target="_blank">отдыха</a> <strong>160%</strong> <br/>Торговая лавка контрольной точки  									<br/><strong>Торговая лавка крепости</strong> </td> </tr> <tr class="tr-alt-even"> <td>  									Легендарный  								</td> <td style="text-align: left;">  									Лавка гильдии  									<br/>Восстановление <a href="https://r2online.ru/wiki/characters/rest-point" target="_blank">отдыха</a> <strong>200%</strong> <br/>Торговая лавка контрольной точки  									<br/>Торговая лавка крепости  									<br/><strong>NPC Мастера — <a href="https://r2online.ru/wiki/quests/daily/masters/" target="_blank">ежедневные задания на бафы</a> </strong></td> </tr> </tbody></table> </div> <h2 id="id-3">Лавка гильдии</h2> <p>  		В лавке гильдии продаются приглашения в дом гильдии, а также зелья для контрольных точек и крепостей. Ассортимент лавки зависит от <a href="https://r2online.ru/wiki/guids/guilds/lvl" target="_blank">уровня гильдии</a>. Зелья можно купить максимум по 10 шт. каждого вида в день, сроком на 24 часа. Цены значительно выше, чем в оригинальной торговой лавке.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Состав лавки гильдии</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest" style="width: 100%;"> <tbody><tr> <td style="color: #d7b263; width: 33%;">  									Предмет  								</td> <td style="color: #d7b263;">  									Требуемый уровень гильдии  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Приглашение в дом Гильдии" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/RRY9srtNZ6DXaH0KhH7y7gMBkPyYrTyjXBWk4Nrm.webp" title="Приглашение в дом Гильдии"/>
+</span>
+<span class="item-text"> Приглашение в дом Гильдии</span>
+</a>
+</td> <td>  									Любой уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1058/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Приглашение в дом Гильдии (для Гильдии)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/5Vx5SnwVrTFyOFDbcvbdvJAsLz4gdd3EIhbPojy1.webp" title="Приглашение в дом Гильдии (для Гильдии)"/>
+</span>
+<span class="item-text"> Приглашение в дом Гильдии (для Гильдии)</span>
+</a>
+</td> <td>  									Любой уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1130/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье возврата в дом Гильдии" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/02/06/4cd752e977e2f7c32298d3232b639019.png" title="Зелье возврата в дом Гильдии"/>
+</span>
+<span class="item-text"> Зелье возврата в дом Гильдии</span>
+</a>
+</td> <td>  									Любой уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1403/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье восстановления I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/4fxULUsaHjI937E3CLTCeAj22ZJGjhXt0RZ4tXg1.jpg" title="Зелье восстановления I"/>
+</span>
+<span class="item-text"> Зелье восстановления I</span>
+</a>
+</td> <td>  									1 уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15000/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Доспех огра I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/15000.jpg" title="Доспех огра I"/>
+</span>
+<span class="item-text"> Доспех огра I</span>
+</a>
+</td> <td>  									2 уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток атаки I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/15001.jpg" title="Свиток атаки I"/>
+</span>
+<span class="item-text"> Свиток атаки I</span>
+</a>
+</td> <td>  									3 уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15002/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Благословение льва I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/15002.jpg" title="Благословение льва I"/>
+</span>
+<span class="item-text"> Благословение льва I</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15003/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический свиток I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/15003.jpg" title="Магический свиток I"/>
+</span>
+<span class="item-text"> Магический свиток I</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/15004/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Крыло феи I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/15004.jpg" title="Крыло феи I"/>
+</span>
+<span class="item-text"> Крыло феи I</span>
+</a>
+</td> <td>  									4 уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7035/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца монстров I" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/TO8rhh3Sr3xsz6FSFulg9fVKoIpGHD5lStlqw9tF.jpg" title="Убийца монстров I"/>
+</span>
+<span class="item-text"> Убийца монстров I</span>
+</a>
+</td> <td>  									5 уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1855/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Зелье восстановления II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/fA7Q2bbgKK6EMLD2H1LGujTYwXWWjTYfDHFoU1G1.jpg" title="Зелье восстановления II"/>
+</span>
+<span class="item-text"> Зелье восстановления II</span>
+</a>
+</td> <td>  									6 уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1867/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Доспех огра II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/3pHXoyRoz5wcnLzARLQMhjOL6TaLyfh2UBVok52s.jpg" title="Доспех огра II"/>
+</span>
+<span class="item-text"> Доспех огра II</span>
+</a>
+</td> <td>  									7 уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1407/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток атаки II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/4vyxDa4lBo7hYXkrrF30gmmcKGuwH2mqVJalujWN.jpg" title="Свиток атаки II"/>
+</span>
+<span class="item-text"> Свиток атаки II</span>
+</a>
+</td> <td>  									8 уровень  								</td> </tr> <tr class="tr-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1857/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Благословение льва II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/iS4TeDC2tRRTgd260VT7uGaTsfguRCgUpnR4xv9X.jpg" title="Благословение льва II"/>
+</span>
+<span class="item-text"> Благословение льва II</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1863/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Магический свиток II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/9ssfHVRvZR8CmPVmnIUWvqUgcdaZScz3Zc0730ue.jpg" title="Магический свиток II"/>
+</span>
+<span class="item-text"> Магический свиток II</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1860/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Крыло феи II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/dHhsaJqIOYJIBgygzYixZdLbtvadoMxhVfHrIRcE.jpg" title="Крыло феи II"/>
+</span>
+<span class="item-text"> Крыло феи II</span>
+</a>
+</td> <td>  									9 уровень  								</td> </tr> <tr class="tr-alt-even"> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7036/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Убийца монстров II" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/zVpgFZFnMeDuDpqyRloJAyWDnTvQ1HKOy0O4m2Ka.jpg" title="Убийца монстров II"/>
+</span>
+<span class="item-text"> Убийца монстров II</span>
+</a>
+</td> <td>  									10 уровень  								</td> </tr> </tbody></table> </div> </div> </div> </div> <h2 id="id-4">Покупка дома гильдии</h2> <p>  		Дом гильдии приобретается сроком на 10 дней. Посмотреть список домов можно у риэлторов, они есть в каждом городе: Эшборн, Черные земли, Байрон, Роден. При этом дома у каждого города свои, если в Эшборне у риэлтора нет в наличие домов, то они могут быть в Байроне. Редкие, эпические и легендарные дома арендуются только в Родене.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/buy-house.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/buy-house.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		Для участия в аукционе необходимо иметь определённое количество очков гильдии, в зависимости от редкости дома.  	</p> <p>  		Обычные дома — от 1,000 очков  		<br/>Редкие дома — от 2,000 очков  		<br/>Эпические дома — от 4,000 очков  		<br/>Легендарные дома — от 6,000 очков  		<br/>Заработать очки гильдии можно участвуя в <a href="https://r2online.ru/wiki/guids/events/bg/" target="_blank">битве гильдий</a>.  	</p> <p>  		В колонке «Всего времени» указано время до окончания аукциона. Если ваша гильдия имеет достаточное количество очков, то нажмите на кнопку со знаком плюса.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/auc-hous.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/auc-hous.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		Для участия в аукционе нужно иметь серебро на счете гильдии. Начальная стоимость дома — <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 2,000,000 серебра, минимальный шаг повышения ставки — <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 100,000 серебра. Одновременно можно участвовать только в одном аукционе, при этом можно отменять свою ставку. Аукцион закрывается, если время аукциона становится менее одной минуты.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/stavka-house.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/stavka-house.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		Установите сумму повышения ставки и нажмите «Сделать ставку».  	</p> <h2 id="id-5">Продажа дома гильдии</h2> <p>  		Если ваша гильдия владеет домом, глава гильдии может в любое время выставить дом на продажу и задать минимальную стоимость дома. Для этого обратитесь к «Управляющий дома Гильдии».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/edit_house.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/edit_house.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		Откроется окно управления домом гильдии. Нажмите «Выставить на продажу».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window-edit-house.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/window-edit-house.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		Введите стоимость и нажмите «Да».  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sell-house.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/sell-house.webp" style="margin-bottom: 15px; max-width: 100%"/> </a> <p>  		С этого момента ваш дом будет выставлен на аукцион, и длительность аукциона будет равна оставшемуся сроку действия вашего дома. В случае, если дом купят, вы получите указанную вами начальную стоимость дома. Если покупатель не найдется, то по истечению срока действия начнется новый аукцион с начальной ставкой <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 2,000,000 серебра.  	</p> </div> <p><a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script></p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

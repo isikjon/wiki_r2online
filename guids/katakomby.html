@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катакомбы пиратов — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="locations.html">Особенности локаций</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Катакомбы пиратов</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О катакомбах пиратов</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Чертежи и самоцветы</a></li> <li><a class="link-in-top" href="#id-3" style="font-size: 14px;">Захоронение и сердце пирата</a></li> </ol> <h2 id="id-1">О катакомбах пиратов</h2> <p>  		Вход в катакомбы находится на <a href="https://r2online.ru/wiki/locations/kolfort/dungeon/peshchera-drevnih-piratov1" target="_blank">1 уровне Пещеры древних пиратов</a>, за вход придется заплатить 30,000 серебра.  	</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Вход в катакомбы пиратов</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/location/katakombi1.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/location/katakombi1.webp" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>  		В катакомбах обитает пиратская нежить, с которой выпадают чертежи, нужные для крафта колец, ожерелий и ремней: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12235/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QjylyQRCpC0BMNtffzZIq8v8hyGnXRj3GHebXYgO.webp" title="Чертеж кольца"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12236/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/GmRRqvRdHCBVp36RRo8A3AyRA3r6XD5Oo2UMzZtt.webp" title="Чертеж ремня"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12237/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/phSbgxLqVZ4daErj4Lb5L4C6yWOLfIiX0CGnsxFl.webp" title="Чертеж ожерелья"/>
+</span>
+</a>
+<br/>Также можно добыть <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12238/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Прах пирата" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jP1wEM7wPOVBFz4eldqx6KfcrrhMj0WTLE9nOFLd.webp" title="Прах пирата"/>
+</span>
+<span class="item-text"> Прах пирата</span>
+</a>
+ и затем захоронить его в определенном месте. Через некоторое время на месте захоронения появится босс, с которого выпадают ценные трофеи.   		<br/>Помимо этого, здесь можно встретить <a href="https://r2online.ru/wiki/guids/locations/bosses-random/" target="_blank">рандомного босса</a> – <a class="catalog-item" href="https://r2online.ru/wiki/locations/6019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Капитан корабля скелетов" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/njbergLH1uzj7yzFujRFipKFIooeXd9QkWsZx1aQ.jpg" title="Капитан корабля скелетов"/>
+</span>
+<span class="item-text"> Капитан корабля скелетов</span>
+</a>
+.  	</p> <p>  		Свитки телепортации в катакомбах не работают.   		<br/>Можно выполнить <a href="https://r2online.ru/wiki/quests/epic/hard/knyaginya/" target="_blank">средний эпический квест – Княгиня</a>.  	</p> <h2 id="id-2">Чертежи и самоцветы</h2> <p>  		Основным дропом этой локации являются чертежи <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12235/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QjylyQRCpC0BMNtffzZIq8v8hyGnXRj3GHebXYgO.webp" title="Чертеж кольца"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12236/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/GmRRqvRdHCBVp36RRo8A3AyRA3r6XD5Oo2UMzZtt.webp" title="Чертеж ремня"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12237/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/phSbgxLqVZ4daErj4Lb5L4C6yWOLfIiX0CGnsxFl.webp" title="Чертеж ожерелья"/>
+</span>
+</a>
+. Это основной ингредиент для изготовления бижутерии. Чертеж определяет тип бижутерии, а самоцвет: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12239/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/0I1exjPzG1iYEtimXfEaIKAUOHcEkruuU8XjvcGS.webp" title="Самоцвет силы"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12240/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/hMOxnAUSGHTFsGnE0jsrHAQaFfah1WYMy2Lhad4h.webp" title="Самоцвет ловкости"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12241/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/t6pPma14VZagroZ38yNpiJ2WMdVFXSKgcxmgqYzx.webp" title="Самоцвет интеллекта"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12264/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/b73v9uwSu3bGzYcyEV5AnzxhrRFxBhXLXGpYZU7j.webp" title="Самоцвет критического удара"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12263/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/JeH3A2J9QAyXf3n8TdoRiYG0jlyHr1xdmrNBDR3S.jpg" title="Самоцвет атаки"/>
+</span>
+</a>
+ ее параметр. Чертежи добываются только в катакомбах, а самоцветы можно добыть и в других локациях.  	</p> <h2 id="id-3">Захоронение и сердце пирата</h2> <p>  		Со всех монстров можно добыть <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12238/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Прах пирата" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jP1wEM7wPOVBFz4eldqx6KfcrrhMj0WTLE9nOFLd.webp" title="Прах пирата"/>
+</span>
+<span class="item-text"> Прах пирата</span>
+</a>
+ сроком на 10 минут. Прах нужно принести на захоронение.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/prah.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/prah.webp" style="max-width: 70%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p>  		После использования на месте захоронения появится могила случайной редкости, и вы получите <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12432/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Проклятое сердце пирата" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yJwPhPXEaCKRODiEYiG3ZKhaYfLN1Yi6Iy8o9zye.webp" title="Проклятое сердце пирата"/>
+</span>
+<span class="item-text"> Проклятое сердце пирата</span>
+</a>
+. Дополнительно на вашего персонажа наложится маячок с силуэтом могилы.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/mogila.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/mogila.webp" style="max-width: 70%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <p>  		Всем игрокам в катакомбах придет оповещение о том, что кто-то сделал захоронение. Ваша задача – продержаться в радиусе могилы 1 минуту, чтобы снять проклятие с сердца, которое находится в инвентаре. Из круга можно выходить, тогда счетчик остановится. Вернувшись к могиле, счетчик продолжится с той же секунды. Если в радиусе могилы находится другой игрок – таймер остановится. Могила будет стоять 2 минуты.  	</p> <p>  		При успехе вы получите сердце пирата сроком на 10 минут. Сердце можно использовать в любом месте катакомб, оно призывает босса. С босса можно получить ценные награды. В зависимости от редкости, босс будет светиться определенным цветом.  	</p> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/pirat.webp"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/pirat.webp" style="max-width: 70%; margin-bottom: 15px; cursor: zoom-in;"/> </a> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Видеодемонстрация захоронения и убийства босса</div> <div class="spoiler__content"><a class="video-preview" data-fancybox="gallery" href="https://www.youtube.com/watch?v=HjYNid1LNL8"><img alt="" src="https://img.youtube.com/vi/HjYNid1LNL8/hqdefault.jpg"/> </a></div> </div> <p>  		В случае неудачи на месте могилы появится проклятый босс. Шанс получить трофеи с проклятого босса существенно ниже, чем с обычного босса, призванного с помощью сердца.  	</p> <p>  		Могилы бывают разных типов и редкости. Типы могилы определяют вид трофеев, их можно узнать заранее – точки появления захоронений обозначены римскими цифрами на карте.  	</p> <a data-fancybox="gallery" href="/storage/wiki/upload/guides/location/katakombi2.webp"><img alt="" src="https://r2online.ru/storage/wiki/upload/guides/location/katakombi2.webp" style="max-width: 60%; cursor: zoom-in; margin-bottom: 15px"/> </a> <p>  		Редкость может быть обычной, редкой, эпической и легендарной. <strong>Чем выше редкость, тем выше шанс получить больше трофеев</strong>. Редкость определяется случайно в момент совершения захоронения.  		<br/>В катакомбах всегда есть все 4 типа захоронения. Если на одном из захоронений появляется могила, то следующее захоронение того же типа появится через 2 минуты после исчезновения могилы.  	</p> <p>  		Дроп с боссов одинаковый, за исключением одного предмета, который меняется в зависимости от типа.  	</p> <div class="spoiler"> <div class="spoiler__title">Уникальный дроп с боссов в зависимости от типа</div> <div class="spoiler__content"> <div class="table-container"> <div class="text-box"> <table class="table table-quest"> <tbody><tr class="tr-odd" style="color: #d7b263;"> <td style="width: 5%">  									Тип  								</td> <td align="center">  									Босс  								</td> <td align="center" style="width: 35%">  									Уникальный дроп  								</td> </tr> <tr> <td class="key-title" rowspan="4" style="color: #d7b263;">  									I  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5043/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Эрик (обычный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/F7s8OfA2q9oZYwlVZJAdd7wVichrNBYsHLAe4axw.jpg" title="&lt;Древний пират&gt; Эрик (обычный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Эрик (обычный)</span>
+</a>
+</td> <td class="key-title" rowspan="4"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/498/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо телепортации" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/da4b4e80d5c28f89663855c564f05c6f.jpg" title="Кольцо телепортации"/>
+</span>
+<span class="item-text"> Кольцо телепортации</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5044/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Эрик (редкий)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/8GZhqjAttguadwk1K3pN2xGXtcq5PV6uFTaJ4Zfi.jpg" title="&lt;Древний пират&gt; Эрик (редкий)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Эрик (редкий)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5045/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Эрик (эпический)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/UW48zVtn044XtrQhsQNCZCabvS3qSZgzdFZwgD4I.jpg" title="&lt;Древний пират&gt; Эрик (эпический)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Эрик (эпический)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5046/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Эрик (легендарный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/VRrpKwfRD9Rma7FFMmNlpsMVswN0v6BYDnkI2OYc.jpg" title="&lt;Древний пират&gt; Эрик (легендарный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Эрик (легендарный)</span>
+</a>
+</td> </tr> <tr> <td class="key-title" rowspan="4" style="color: #d7b263;">  									II  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5047/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Рюрик (обычный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/9f7udGzrk2UwVtTFNzaUZq7eBxohtjgF5ogxJB0z.jpg" title="&lt;Древний пират&gt; Рюрик (обычный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Рюрик (обычный)</span>
+</a>
+</td> <td class="key-title" rowspan="4"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6295/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ невидимости" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/0348d73b30b3309c49c20202fbb24624.jpg" title="Плащ невидимости"/>
+</span>
+<span class="item-text"> Плащ невидимости</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5048/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Рюрик (редкий)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/PK0iEotH0gSPza8UDKQebnsX41Oc80ffT4dfjljP.jpg" title="&lt;Древний пират&gt; Рюрик (редкий)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Рюрик (редкий)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5049/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Рюрик (эпический)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/CKbpjF2QY7kRCa9m7kQ6y6BZFEbpNAGy7vmdeu8C.jpg" title="&lt;Древний пират&gt; Рюрик (эпический)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Рюрик (эпический)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5050/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Рюрик (легендарный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/jLRC3x75UoPS9n4ggY0W7CW13LDQcg5Gb7OMxnet.jpg" title="&lt;Древний пират&gt; Рюрик (легендарный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Рюрик (легендарный)</span>
+</a>
+</td> </tr> <tr> <td class="key-title" rowspan="4" style="color: #d7b263;">  									III  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5051/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Лейф (обычный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/MznB9CSppNuhYlPzJ4ziJKgxpzus4EaqEcdtCjMB.jpg" title="&lt;Древний пират&gt; Лейф (обычный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Лейф (обычный)</span>
+</a>
+</td> <td class="key-title" rowspan="4"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6309/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Плащ смотрителя" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/2390e38ab7623ce7143dc5c8482bd727.jpg" title="Плащ смотрителя"/>
+</span>
+<span class="item-text"> Плащ смотрителя</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5052/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Лейф (редкий)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/mnDuTw5dCRyKbSYidbIqLb2vc9dk9VQ3lMpSW0h1.jpg" title="&lt;Древний пират&gt; Лейф (редкий)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Лейф (редкий)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5053/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Лейф (эпический)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/077DDFtELFTaUWIdBJSQADeiXUjtXG61HIA4x7Pg.jpg" title="&lt;Древний пират&gt; Лейф (эпический)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Лейф (эпический)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5054/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Лейф (легендарный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/DuJYg7ARMca9DOxBy4Z7Fif2gOg0LYGbEIPQRQbi.jpg" title="&lt;Древний пират&gt; Лейф (легендарный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Лейф (легендарный)</span>
+</a>
+</td> </tr> <tr> <td class="key-title" rowspan="4" style="color: #d7b263;">  									IV  								</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5055/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Гунхильд (обычный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/L70SBYC5RVDApa6LIcvgmwifU90vFPZ8IeNVc23K.jpg" title="&lt;Древний пират&gt; Гунхильд (обычный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Гунхильд (обычный)</span>
+</a>
+</td> <td class="key-title" rowspan="4"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20424/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Беркоры (эпическое)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/2a032855db679712982446171c69eb0b.png" title="Книга Беркоры (эпическое)"/>
+</span>
+<span class="item-text"> Книга Беркоры (эпическое)</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/20417/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Богини Кали (эпическое)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/d254b4c7b001f03283c88788d6ef3b2b.png" title="Книга Богини Кали (эпическое)"/>
+</span>
+<span class="item-text"> Книга Богини Кали (эпическое)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Гунхильд (редкий)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/7xgfV7m1m3esoDr2s6f3BBn1H9qFvQwvs0qyywd0.jpg" title="&lt;Древний пират&gt; Гунхильд (редкий)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Гунхильд (редкий)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5057/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Гунхильд (эпический)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/z4AwVUAvyuR4TCZ707eEKThEziEiK9URIjqg1HSY.jpg" title="&lt;Древний пират&gt; Гунхильд (эпический)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Гунхильд (эпический)</span>
+</a>
+</td> </tr> <tr> <td> <a class="catalog-item" href="https://r2online.ru/wiki/locations/5058/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="&lt;Древний пират&gt; Гунхильд (легендарный)" class="base-item-icon-name" src="https://r2online.ru/storage/wiki//images/xbY7BcVz8Px6JFaYfDQvljWhoJOmsqS6Yd7f0ZCb.jpg" title="&lt;Древний пират&gt; Гунхильд (легендарный)"/>
+</span>
+<span class="item-text"> &lt;Древний пират&gt; Гунхильд (легендарный)</span>
+</a>
+</td> </tr> </tbody></table> </div> </div> </div> </div> <div class="spoiler"> <div class="spoiler__title">Прочий неуникальный дроп, который выпадает со всех боссов</div> <div class="spoiler__content"> <div class="text-box"> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Золотой ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1848c69f9b5e750222354a850cad3937.jpg" title="Золотой ключ"/>
+</span>
+<span class="item-text"> Золотой ключ</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/1516/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо тайфуна" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/924586b4e4754492777221b04ae01161.jpg" title="Кольцо тайфуна"/>
+</span>
+<span class="item-text"> Кольцо тайфуна</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/12032/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо доблести" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/UVu6ujvIzQ7LiNIVYJeRH1Nw2JTd6RcLnckUflsx.jpg" title="Кольцо доблести"/>
+</span>
+<span class="item-text"> Кольцо доблести</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/718/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо силы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/959779694ea8f8e5ff860155fab1c1d8.jpg" title="Кольцо силы"/>
+</span>
+<span class="item-text"> Кольцо силы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/717/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо ловкости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/9ca4260bf5235d21f19a26cb50e29ff4.jpg" title="Кольцо ловкости"/>
+</span>
+<span class="item-text"> Кольцо ловкости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/782/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо интеллекта" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/c7b7ca85ab3a32287b961468458dcf37.jpg" title="Кольцо интеллекта"/>
+</span>
+<span class="item-text"> Кольцо интеллекта</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/259/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ремень силы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/J3crBh9braAAXut8fJOUl5ynLLGRGrN9QfHrJJEL.webp" title="Ремень силы"/>
+</span>
+<span class="item-text"> Ремень силы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/258/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ремень ловкости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/ebb2dc1bc61874ca6ad6cf81c91ac3fc.jpg" title="Ремень ловкости"/>
+</span>
+<span class="item-text"> Ремень ловкости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/257/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ремень интеллекта" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/d1bd8628b847be60249e89d0a1c0fa2e.jpg" title="Ремень интеллекта"/>
+</span>
+<span class="item-text"> Ремень интеллекта</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/188/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ожерелье силы" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/9b140d8d0e03e3d3bde3dcc4d5aa9104.jpg" title="Ожерелье силы"/>
+</span>
+<span class="item-text"> Ожерелье силы</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/192/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ожерелье ловкости" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/43e951ae56e7792b8efd0e5588cff225.jpg" title="Ожерелье ловкости"/>
+</span>
+<span class="item-text"> Ожерелье ловкости</span>
+</a>
+<br/><a class="catalog-item" href="https://r2online.ru/wiki/base/view/189/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ожерелье интеллекта" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/25f3cda7ed092593af767df9d20fcef8.jpg" title="Ожерелье интеллекта"/>
+</span>
+<span class="item-text"> Ожерелье интеллекта</span>
+</a>
+</div> </div> </div> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a><script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

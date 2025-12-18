@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейдовые боссы — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="boss.html">Боссы</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Рейдовые боссы</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <div style="float: right; margin-right: 25px;"><img align="middle" alt="" src="https://r2online.ru/storage/images/guids/uniq/raid-boss/f2381dd071.png" style="max-width: 100%; height: auto; margin-left: 25px;" width="350"/></div> <p><strong><span style="font-weight: bolder;">Рейдовые боссы</span></strong> - самые сильные боссы в игре. Чтобы получить возможность сразиться с ними, нужны запускающие предметы. Наградой будут уникальные предметы, которые невозможно добыть другими способами.</p> <p>Только с рейдовых боссов можно получить редкие книги мага  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1246/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Обнаружение (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/30/fd624c09096f6e4d9e473df20d523f82.png" title="Обнаружение (I)"/>
+</span>
+<span class="item-text"> Обнаружение (I)</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/828/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Развеивание магии (I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/c31e21127bcb915df4ff14547faa74a6.jpg" title="Развеивание магии (I)"/>
+</span>
+<span class="item-text"> Развеивание магии (I)</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/base/view/418/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Паутина(I)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/76b11cbd047b9da37398fa166534af1d.jpg" title="Паутина(I)"/>
+</span>
+<span class="item-text"> Паутина(I)</span>
+</a>
+, камни для крафта легендарных колец перевоплощения и перемещения, плащей невидимости и смотрителя: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7228/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/0d0871f0806eae32d30983b62252da50.jpg" title="Камень перевоплощения (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/7225/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/09/10/cbb6a3b884f4f88b3a8e3d44c636cbd8.jpg" title="Камень телепортации (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12056/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/72lrb2aqXJD0ATnr1TbbbAL1yLjSEcj6sT1ubNfs.jpg" title="Камень невидимости (легендарный)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12059/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/AiZACntH07V5biQ6fXdlhdcRFzlujsPDyxmjz1DS.jpg" title="Камень смотрителя (легендарный)"/>
+</span>
+</a>
+<br/>  Также, в большом количестве выпадают  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12067/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (эпический)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/yqjhFHCGvAwGqYzqwbs2hOYrwUYITkUuc23fM0ra.jpg" title="Сундук сокровищ (эпический)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (эпический)</span>
+</a>
+.<br/> <br/>  Помимо этого, уникальные предметы для крафта экипировки можно получить из <strong>Ифрита</strong> (на защиту) и <strong>Бафомета</strong> (на атаку), а с <strong>Метеоса</strong> уникальное оружие наивысшего уровня.</p> <h2><a class="catalog-item" href="https://r2online.ru/wiki/locations/537/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Ифрит" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/42e411452773626f395559a04cbc3b4d.png" title="Ифрит"/>
+</span>
+<span class="item-text"> Ифрит</span>
+</a>
+</h2> <p>Для запуска потребуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1477/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Череп Хватафорса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/8ff4e5334677625bf299da0303a75dfa.jpg" title="Череп Хватафорса"/>
+</span>
+<span class="item-text"> Череп Хватафорса</span>
+</a>
+, который крафтится из 4-ех уникальных частей: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12044/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/IbNk4lR0Lns5NJ7OZuTo1gyUfeSOUDuV2EIimHVM.jpg" title="Часть черепа Хватафорса (1/3)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12045/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/uOhMzJcHcIN1013vHn8vhoORJDgvibQEQnHdAwr5.jpg" title="Часть черепа Хватафорса (2/3)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12046/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/dZpaHMgoNVXwxSdgQKS7Bp47wqQTjJEAKQrF2RU5.jpg" title="Часть черепа Хватафорса (3/3)"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12047/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/UslIou7qvNAGaw5XaKokUQrv0AieHIFj9VEkwumZ.jpg" title="Энергия Хватафорса"/>
+</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 1,000,000 серебра. Части черепа выпадают с <a href="https://r2online.ru/wiki/guids/boss/miroviemain/" target="_blank">основного мирового босса</a> <a class="catalog-item" href="https://r2online.ru/wiki/locations/577/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хватафорс" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/571be87100c9d350469ae612db21aa16.png" title="Хватафорс"/>
+</span>
+<span class="item-text"> Хватафорс</span>
+</a>
+.<br/>  Дополнительно части можно получить из <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+.</p> <p>Изготовив <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1477/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Череп Хватафорса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/8ff4e5334677625bf299da0303a75dfa.jpg" title="Череп Хватафорса"/>
+</span>
+<span class="item-text"> Череп Хватафорса</span>
+</a>
+ нужно собрать группу и отправиться в запечатанную скалу к NPC &lt;Мастер печати&gt; Вандер.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">NPC для запуска Ифрита</div> <div class="spoiler__content"><a data-fancybox="gallery" href="/source/guidesTrax/Ifrit.jpg"><img alt="" src="https://r2online.ru/source/guidesTrax/Ifrit.jpg" style="max-width: 100%;"/> </a></div> </div> <p>Только с Ифрита выпадают Куски огненной стали  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12025/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/WO5UtD2E2rnUfTgMwXXfsNPWbPv9ExKvdIDOIGnY.jpg" title="Кусок огненной стали (Доспех)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12027/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/UptJip0bf2OypBI4r8i7bWHnYQf3tWWxuRcBkR5L.jpg" title="Кусок огненной стали (Перчатки)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12029/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/zV903VAuTaeP4wuQT9x2dMKVgW5zmLELSCeOzKwq.jpg" title="Кусок огненной стали (Плащ)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/MZdXpppFWZBCjnDu9BHzD0eAb2CDtLEV6Dk1UYk3.jpg" title="Кусок огненной стали (Сапоги)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12030/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/FfexGKI9qq16LrPQ49HUNYtRg6rnnD7CawdJCKqm.jpg" title="Кусок огненной стали (Снаряжение)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12026/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YBNTyaSjdaIAkDGCftM8Am4k2bPLrcBeK043CxrY.jpg" title="Кусок огненной стали (Шлем)"/>
+</span>
+</a>
+ они нужны для крафта экипировки Ифрита, которая имеет <strong>лучшие защитные характеристики</strong>. Крайне редко выпадает перевоплощение  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20422/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Абиссии (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/baf06a936d47bce19232c68cbec215c6.png" title="Книга Абиссии (легендарное)"/>
+</span>
+<span class="item-text"> Книга Абиссии (легендарное)</span>
+</a>
+.</p> <hr/> <div style="float: left; "><img align="middle" alt="" src="https://r2online.ru/storage/images/guids/uniq/raid-boss/5d6c1b8b0a.png" style="max-width: 100%; height: auto; margin-right: 25px; height: 300px;"/></div> <h2><a class="catalog-item" href="https://r2online.ru/wiki/locations/1881/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Бафомет" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/18/491c2127413b94bbd924a9929588f29c.png" title="Бафомет"/>
+</span>
+<span class="item-text"> Бафомет</span>
+</a>
+</h2> <p>Для запуска потребуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12053/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Амулет Урук-хая" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/wnZbawOOAA8dpweNYXxiNHcaQ5OyPdJuP19HLgSL.jpg" title="Амулет Урук-хая"/>
+</span>
+<span class="item-text"> Амулет Урук-хая</span>
+</a>
+, который крафтится из 4-ех уникальных частей: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12049/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/M8dpTf6Ey0YMCNgLFR9irrNasc4Oowo0Pw30qLPJ.jpg" title="Левая часть амулета Урук-хая"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12050/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/2Wvc1o73TDoMp12Rj0w2Dao5R6jWw27bqLeoztfd.jpg" title="Правая часть амулета Урук-хая"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12051/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/aU0ipI7BcWu5gM1s3bpp2prjsTgCxayg51bpghM9.jpg" title="Глаз амулета Урук-хая"/>
+</span>
+</a>
+ <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12052/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/2MosiZGZvfqgwZjsyAGD0j2cOvCz3Sv8ICzFsitU.jpg" title="Щипцы для изготовления амулета Урук-хая"/>
+</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/409/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/06/13/778a82c393bada171ebfea2b7015c771.jpg" title="Серебро"/>
+</span>
+</a>
+ 1,000,000 серебра.<br/>  Части амулета выпадают с <a class="catalog-item" href="https://r2online.ru/wiki/locations/472/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Урук-хай" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2020/02/22/c38f28464e0ab670619596c34e506640.png" title="Урук-хай"/>
+</span>
+<span class="item-text"> Урук-хай</span>
+</a>
+.<br/>  Дополнительно части можно получить из <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12066/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук сокровищ (редкий)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/jYeMR1KyXveSGHlYuMuZdoDu24XviIUBb70OW1uz.jpg" title="Сундук сокровищ (редкий)"/>
+</span>
+<span class="item-text"> Сундук сокровищ (редкий)</span>
+</a>
+.</p> <p>Изготовив <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12053/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Амулет Урук-хая" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/wnZbawOOAA8dpweNYXxiNHcaQ5OyPdJuP19HLgSL.jpg" title="Амулет Урук-хая"/>
+</span>
+<span class="item-text"> Амулет Урук-хая</span>
+</a>
+ нужно собрать группу и отправиться в центр Святых земель Иллюмина к NPC &lt;Прогрессист&gt; Проекция Ронжель.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">NPC для запуска Бафомета</div> <div class="spoiler__content"><a data-fancybox="gallery" href="/source/guidesTrax/Bafomet.jpg"><img alt="" src="https://r2online.ru/source/guidesTrax/Bafomet.jpg" style="max-width: 100%;"/> </a></div> </div> <p>Только с Бафомета выпадает Чешуя Бафомета  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12019/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/CiPG0TEwSC8pDFzNtslFHKRNogBtzTP3Jy3qvPyN.jpg" title="Чешуя Бафомета (Доспех)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12021/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/grkQ4HhxkszpiI3w41kuOuAWkXYZxsoMLMPvGTWC.jpg" title="Чешуя Бафомета (Перчатки)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12023/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/WRECcDeQyI83waHBYZ2mqiXaSpLY75Hv1UpFKF4B.jpg" title="Чешуя Бафомета (Плащ)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12022/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/YyW7Tn8Sro0UaxDgLDtseb85NiuquGm94bVj8In2.jpg" title="Чешуя Бафомета (Сапоги)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12024/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/m9KEoZQVwx8FzkUQE41fFZzSMOMgmEUYbpyZAZbO.jpg" title="Чешуя Бафомета (Снаряжение)"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/12020/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/oqc0B1kZFWaBkL2b88lsRRfiuKP86dMkdHrr50vw.jpg" title="Чешуя Бафомета (Шлем)"/>
+</span>
+</a>
+ они нужны для крафта экипировки Бафомета, которая имеет <strong>лучшие атакующие характеристики</strong>. Крайне редко выпадает перевоплощение  <a class="catalog-item" href="https://r2online.ru/wiki/base/view/20421/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Книга Ведьмы слёз (легендарное)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2019/03/11/c146ec55c979964c2809513b7dfb9ba7.png" title="Книга Ведьмы слёз (легендарное)"/>
+</span>
+<span class="item-text"> Книга Ведьмы слёз (легендарное)</span>
+</a>
+.</p> <hr/> <div style="float: right; margin-right: 25px;"><img align="middle" alt="" src="https://r2online.ru/storage/images/guids/uniq/raid-boss/bf80b105d9.png" style="max-width: 100%; height: auto; margin-left: 25px;" width="350"/></div> <h2><a class="catalog-item" href="https://r2online.ru/wiki/locations/539/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Метеос" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/02b4d000f631d400b3c4f7b2f6286b44.jpg" title="Метеос"/>
+</span>
+<span class="item-text"> Метеос</span>
+</a>
+</h2> <p>В отличии от Ифрита и Бафомета данный босс является гильдийным. Только лидер гильдии может запустить Метеоса, для запуска потребуется <a class="catalog-item" href="https://r2online.ru/wiki/base/view/11275/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток снятия печати Метеоса" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/11275.png" title="Свиток снятия печати Метеоса"/>
+</span>
+<span class="item-text"> Свиток снятия печати Метеоса</span>
+</a>
+, который выпадает из боссов: <a class="catalog-item" href="https://r2online.ru/wiki/locations/1636/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Властитель континента" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/aecfeb3e79d6e11f025166f1fbed6bf7.png" title="Властитель континента"/>
+</span>
+<span class="item-text"> Властитель континента</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1640/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Хранитель сильного яда" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/c6c6f825a42e13fa26e2691ff6804a50.png" title="Хранитель сильного яда"/>
+</span>
+<span class="item-text"> Хранитель сильного яда</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1644/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Завоеватель океана" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/dc11d06ef6bf7553d55abd47fbde28ed.png" title="Завоеватель океана"/>
+</span>
+<span class="item-text"> Завоеватель океана</span>
+</a>
+, <a class="catalog-item" href="https://r2online.ru/wiki/locations/1648/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Огненный тиран" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/full/2019/07/01/3451d1f32301262493aa5db7402439a3.png" title="Огненный тиран"/>
+</span>
+<span class="item-text"> Огненный тиран</span>
+</a>
+ на 7 дней.<br/>  На защиту Метеоса возродится <a class="catalog-item" href="https://r2online.ru/wiki/locations/2526/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Черный дракон" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/17/b05082af52128a47a9019fea44078947.jpg" title="Черный дракон"/>
+</span>
+<span class="item-text"> Черный дракон</span>
+</a>
+. Если вам удастся его одолеть, то появится Метеос в обличье ангела. Чтобы снять маскировку, используйте <a class="catalog-item" href="https://r2online.ru/wiki/base/view/7806/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Воля Грихентеля" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/slu22MdPeI9WYpQd73woMwVVirlbLAqriEpyeOlC.png" title="Воля Грихентеля"/>
+</span>
+<span class="item-text"> Воля Грихентеля</span>
+</a>
+.<br/> <br/>  Получив необходимые предметы лидер гильдии должен подняться на самый высокий этаж в <a href="https://r2online.ru/wiki/locations/hram-meteos/bashnya-meteosa/1" target="_blank">Башне Метеоса</a> и отдать свитки NPC</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">NPC для запуска Метеоса</div> <div class="spoiler__content"><a data-fancybox="gallery" href="/storage/images/guids/uniq/raid-boss/npc-meteos.jpg"><img alt="" src="https://r2online.ru/storage/images/guids/uniq/raid-boss/npc-meteos.jpg" style="max-width: 100%;"/> </a></div> </div> <p>Только с Метеоса выпадает <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8393/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук Метеоса (оружие)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/ca4fd00124987d040580035bcef4121e.jpg" title="Сундук Метеоса (оружие)"/>
+</span>
+<span class="item-text"> Сундук Метеоса (оружие)</span>
+</a>
+, который содержит в себе высокоуровневое оружие: <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8185/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/QGxt4N9qyFGqAiM0rnND2UMqhkkZPhUuIBDHN4e1.webp" title="Огненные катары Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/8115/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/zbKStGrYhqbTRTFWEUS2ie5R0jDtN1ZVQ79x1zVQ.webp" title="Огненный клеймор Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/8129/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/erQZjMqeDeT07cHKYicGBWfm2OoPTtfHrsyZ9w5J.webp" title="Стальная алебарда Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/8143/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//images/1-8143.webp" title="Магмовый орб Метеоса"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/8171/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/XNphxx3YPtNP3nnD8l1cuxTSD1FkAR2yfhxLMxGn.jpg" title="Огневой лук Метеоса"/>
+</span>
+</a>
+</p> </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гонки драконов — База знаний R2 Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="../css/wiki.css" rel="stylesheet">
+    <link href="../css/core.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/addition.css" rel="stylesheet">
+    
+    <style>
+        .guide-content { padding: 20px 0; line-height: 1.7; color: #ddd; }
+        .guide-content h2 { font-size: 22px; margin: 30px 0 15px; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .guide-content h3 { font-size: 18px; margin: 25px 0 12px; color: #fff; }
+        .guide-content p { margin: 12px 0; }
+        .guide-content ul, .guide-content ol { margin: 12px 0 12px 25px; }
+        .guide-content li { margin: 6px 0; }
+        .guide-content a { color: #4a9eff; }
+        .guide-content a:hover { text-decoration: underline; }
+        .guide-content img { max-width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Спойлеры */
+        .spoiler { margin: 20px 0; background: rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; }
+        .spoiler__title { 
+            padding: 12px 20px; 
+            background: rgba(255,255,255,0.1); 
+            cursor: pointer; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spoiler__title:hover { background: rgba(255,255,255,0.15); }
+        .spoiler__title::after { content: '▼'; font-size: 12px; transition: transform 0.3s; }
+        .spoiler.open .spoiler__title::after { transform: rotate(180deg); }
+        .spoiler__content { display: none; padding: 20px; }
+        .spoiler.open .spoiler__content { display: block; }
+        
+        /* Таблицы */
+        .guide-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .guide-content th, .guide-content td { padding: 10px 12px; border: 1px solid #444; text-align: left; }
+        .guide-content th { background: rgba(255,255,255,0.1); }
+        .guide-content tr:hover { background: rgba(255,255,255,0.03); }
+        .guide-content .tr-header { background: rgba(74, 158, 255, 0.15); }
+        .guide-content .tr-odd { background: rgba(255,255,255,0.05); }
+        
+        /* Item icons */
+        .layout-item-icon { display: inline-flex; align-items: center; margin: 2px; }
+        .layout-item-icon img { width: 32px; height: 32px; border-radius: 4px; }
+        .base-item-icon { width: 32px; height: 32px; }
+        .small-icon { width: 24px; height: 24px; }
+        .item-text { margin-left: 5px; }
+        
+        /* Списки контента */
+        .content-list { list-style: decimal; margin: 15px 0 15px 30px; }
+        .content-list li { margin: 8px 0; }
+        .link-in-top { color: #4a9eff; }
+        
+        /* Таблицы квестов */
+        .table-quest { width: 100%; }
+        .table-quest td { vertical-align: top; }
+        
+        /* Кнопка наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 158, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wrapper--forum">
+        <main class="main">
+            <div class="content-area flex-sbs">
+                <div class="wiki">
+                    <div class="wiki__nav flex-sbc">
+                        <div class="colfort-backlink">
+                            <a href="../wiki.html">База знаний</a> &gt; Гайды &gt; <a href="events.html">Мероприятия</a>
+                        </div>
+                    </div>
+
+                    <div class="inner-page__title wiki-page__title">
+                        <h1 class="inner-page__title-text">Гонки драконов</h1>
+                    </div>
+
+                    <div class="wiki__container flex-sbs">
+                        <div class="wiki__content" style="width: 100%; padding: 20px 30px;">
+                            <div class="guide-content">
+<div class="article__text text-box">
+<div class="col-lg-9 blog-content-page breadcrumb-top"> <h3 id="list">Содержание</h3> <ol class="content-list"> <li><a class="link-in-top" href="#id-1" style="font-size: 14px;">О гонках драконов</a></li> <li><a class="link-in-top" href="#id-2" style="font-size: 14px;">Правила проведения</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Рекордсмены</a></li> <li><a class="link-in-top" href="#id-4" style="font-size: 14px;">Награды за гонки</a></li> </ol> <h2 id="id-1">О гонках драконов</h2> <p>Гонки драконов – это соревнование на скорость и ловкость. Регистрация бесплатна.<br/> <br/>  Время проведения гонок:<br/>  Понедельник – гонки не проводятся<br/>  Вторник – 15:00<br/>  Среда – гонки не проводятся<br/>  Четверт – 21:00<br/>  Пятница – гонки не проводятся<br/>  Суббота – 12:00<br/>  Воскресенье – 23:59<br/></p> <h2 id="id-2">Правила проведения</h2> <p>За пять минут до начала гонки появится всплывающее окно с предложением принять участие в гонке. Регистрация бесплатна. После регистрации ваш персонаж автоматически перенесётся на старт одной из трасс, выбранной случайным образом.</p> <blockquote>Альтернативный способ регистрации: у NPC &lt;Гонки драконов&gt;, который находится в Эшборне, Черных землях, Байроне, Родене, Руинах полнолуния и Эльтере.</blockquote> <p>Скорость всех участников одинакова. Участники гонки неуязвимы. Во время гонки запрещено использовать телепортацию и снимать эффект дракона.</p> <blockquote>Дракон не умеет плавать, поэтому берегитесь воды.</blockquote> <p>Задача — пройти все контрольные точки в заданной последовательности. Контрольная точка, которую необходимо достичь, отмечена красным индикатором. Контрольная точка, которую вы уже достигли, отображается зеленым индикатором. Гонка завершается при достижении финиша всеми участниками либо по истечении 30 минут.</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Индикация контрольной точки, которую нужно достигнуть</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/red.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/red.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Индикация контрольной точки, которую уже достигли</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/green.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/green.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p>На данный момент существует 9 трасс:</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №10 (Гран–при Фуриэ – красная)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/1.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/1.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №11 (Гран–при Байрон – синия)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/2.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/2.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №12 (Гран–при Роден – розовая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/3.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/3.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №13 (Гран–при Черные земли – зеленая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/4.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/4.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №14 (Гран–при Колфорт – желтая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/5.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/5.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №15 (Кубок Лорда Акрионцев – оранжевая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/6.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/6.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №16 (Кубок Хранителя времени – голубая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/7.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/7.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №17 (Гран–при Остров Эльтер – белая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/8.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/8.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса №18 (Гонка Храма Метеоса – фиолетовая)</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/guids/events/race/9.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/guids/events/race/9.jpg" style="max-width: 100%; cursor: zoom-in; margin-bottom: 15px"/> </a> <div class="text-box"> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Старые трассы (до обновления Сад Херакена)</div> <div class="spoiler__content"> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трассы на острове Колфорт</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_kolfort.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_kolfort.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> <div class="text-box"> <p> <br/>– Трасса №1 – оранжевая<br/>  							– Трасса №2 – синяя<br/>  							– Трасса №3 – желтая<br/>  							– Трасса №4 – красная<br/>  							– Трасса №5 – розовая<br/>  							– Трасса №6 – зеленая<br/> </p> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трассы на острове Эльтер</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_elter.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_elter.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> <div class="text-box"> <p> <br/>– Трасса №7 – голубая<br/>  							– Трасса №8 – белая<br/> </p> </div> </div> </div> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Трасса в Руинах полнолуния</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_rp.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/map_rp.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> <div class="text-box"> <p> <br/>– Трасса №9 – фиолетовая<br/> </p> </div> </div> </div> </div> </div> <h2 id="id-3">Рекордсмены</h2> <p>У NPC &lt;Гонки драконов&gt; можно узнать абсолютные рекорды на каждой трассе.</p> <h2 id="id-4">Награды за гонки</h2> <div class="table-container" style="margin-bottom: 20px"> <div class="text-box"> <table class="table table-with-vertical-borders" style="width: 500px"> <tbody> <tr class="tr-header tr-odd"> <td style="width: 20%">Место</td> <td>Награда</td> </tr> <tr> <td style="text-align: center; vertical-align: middle;">1-5</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+, 15 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+, 5 шт.  			</td> </tr> <tr> <td style="text-align: center; vertical-align: middle;">6-10</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+, 10 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+, 4 шт.  			</td> </tr> <tr> <td style="text-align: center; vertical-align: middle;">11-20</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+, 5 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+, 3 шт.  			</td> </tr> <tr> <td style="text-align: center; vertical-align: middle;">21-30</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+, 3 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+, 2 шт.  			</td> </tr> <tr> <td style="text-align: center; vertical-align: middle;">31+</td> <td> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Сундук дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+, 1 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+, 1 шт.  			</td> </tr> </tbody> </table> </div> </div> <blockquote>Для получения награды необходимо достичь финиша.</blockquote> <p>  	В магазине у NPC Менеджер гонок можно приобрести <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1616/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/r5rUMcsanCEdeJeTtVnRSiD8jnH90Lu9sCvh5WBJ.jpg" title="Кольцо огненного дракона"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/1615/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/uwZKdQ2mxxHPJk1NVWj9iKf3xnlEJ3mDQUDApqxE.jpg" title="Кольцо грозового дракона"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/1123/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/6z31FEnAaw4GnaQdifAsqwyYtkNO4TMl0SvabxsT.jpg" title="Кольцо шипастого дракона"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/2441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/11Fkrq71ppDyaUKXd31eRPOZRzUAfVTSDZQk4UBR.jpg" title="Кольцо златорогого дракона"/>
+</span>
+</a>
+<a class="catalog-item" href="https://r2online.ru/wiki/base/view/4167/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<span class="wiki-item-lock-icon wiki-item-lock-icon-small"></span>
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki/images/y9brMACA1AWuzJ7eS264aeFCnxbkhNSsVf7qk54U.jpg" title="Кольцо гривеносного дракона"/>
+</span>
+</a>
+ <strong>Кольца дракона</strong> на 14 дней за <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Медаль" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+<span class="item-text"> Медаль</span>
+</a>
+.  </p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Магазин</div> <div class="spoiler__content"> <div class="text-box" style="margin-bottom: 20px;"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1616/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Кольцо огненного дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/r5rUMcsanCEdeJeTtVnRSiD8jnH90Lu9sCvh5WBJ.jpg" title="Кольцо огненного дракона"/>
+</span>
+<span class="item-text"> Кольцо огненного дракона</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+</a>
+ 30  				<br/>&gt; Скорость бега +60  				<br/>&gt; Иммунитет к замедлению  				<br/>&gt; Иммунитет к опутыванию  				<br/>&gt; Иммунитет к оглушению  				</p><div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top1.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top1.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1615/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Кольцо грозового дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/uwZKdQ2mxxHPJk1NVWj9iKf3xnlEJ3mDQUDApqxE.jpg" title="Кольцо грозового дракона"/>
+</span>
+<span class="item-text"> Кольцо грозового дракона</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+</a>
+ 23  				<br/>&gt; Скорость бега +50  				<br/>&gt; Иммунитет к замедлению  				<br/>&gt; Иммунитет к опутыванию  				<div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top2.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top2.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1123/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Кольцо шипастого дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/6z31FEnAaw4GnaQdifAsqwyYtkNO4TMl0SvabxsT.jpg" title="Кольцо шипастого дракона"/>
+</span>
+<span class="item-text"> Кольцо шипастого дракона</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+</a>
+ 17  				<br/>&gt; Скорость бега +40  				<br/>&gt; Иммунитет к замедлению  				<div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top3.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top3.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2441/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Кольцо златорогого дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/11Fkrq71ppDyaUKXd31eRPOZRzUAfVTSDZQk4UBR.jpg" title="Кольцо златорогого дракона"/>
+</span>
+<span class="item-text"> Кольцо златорогого дракона</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+</a>
+ 12  				<br/>&gt; Скорость бега +30  				<div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top4.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top4.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/4167/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Кольцо гривеносного дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/y9brMACA1AWuzJ7eS264aeFCnxbkhNSsVf7qk54U.jpg" title="Кольцо гривеносного дракона"/>
+</span>
+<span class="item-text"> Кольцо гривеносного дракона</span>
+</a>
+ – <a class="catalog-item" href="https://r2online.ru/wiki/base/view/15028/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0;display: inherit;padding: 15px 0px 17px 0px;">
+<img alt="Icon" class="base-item-icon small-icon" src="https://r2online.ru/storage/wiki//upload/icons/15028.jpg" title="Медаль"/>
+</span>
+</a>
+ 6  				<br/>&gt; Скорость бега +20  				<div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Внешний вид</div> <div class="spoiler__content"> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top5.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/top5.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </div> </div> <p></p> </div> </div> </div> <p><a class="catalog-item" href="https://r2online.ru/wiki/base/view/8952/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Сундук дракона" class="base-item-icon-name" src="https://r2online.ru/storage/wiki/images/rXEx8sJDWZz7zivZGaMSLIuzrxs9wQa9d0jr7oHA.jpg" title="Сундук дракона"/>
+</span>
+<span class="item-text"> Сундук дракона</span>
+</a>
+</p> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Состав сундука дракона</div> <div class="spoiler__content"> <div class="text-box" style="margin-bottom: 20px;"> <p> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5681/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток печати Химеры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/YGfFT6saA88MYPpwcqgVNs362SrRlYwmiJwOGaDI.jpg" title="Свиток печати Химеры"/>
+</span>
+<span class="item-text"> Свиток печати Химеры</span>
+</a>
+ (7 дней)<br/> </p><div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Информация</div> <div class="spoiler__content"> <div class="text-box" style="margin-bottom: 20px;"> <p>  									С помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо боевого дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/KBc54IPjf2N6uvNBVe8INYqqloSIf1mkYMMeTGRy.jpg" title="Кольцо боевого дракона"/>
+</span>
+<span class="item-text"> Кольцо боевого дракона</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5681/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток печати Химеры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/YGfFT6saA88MYPpwcqgVNs362SrRlYwmiJwOGaDI.jpg" title="Свиток печати Химеры"/>
+</span>
+<span class="item-text"> Свиток печати Химеры</span>
+</a>
+ можно получить <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5682/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо химеры" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/7739e483cc5659862d6f12714ee3cc33.jpg" title="Кольцо химеры"/>
+</span>
+<span class="item-text"> Кольцо химеры</span>
+</a>
+ (изменяет внешний вид дракона). Длительность предмета переносится с кольца боевого дракона.<br/><br/> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/himera.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/himera.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </p> </div> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6533/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Свиток печати Грифона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/DNTeIQhyudMO6FRQIBqEST468Qc9LLEzJqufa8Je.jpg" title="Свиток печати Грифона"/>
+</span>
+<span class="item-text"> Свиток печати Грифона</span>
+</a>
+ (7 дней)<br/> <div class="spoiler" style="margin-bottom: 15px"> <div class="spoiler__title">Информация</div> <div class="spoiler__content"> <div class="text-box" style="margin-bottom: 20px;"> <p>  									С помощью <a class="catalog-item" href="https://r2online.ru/wiki/base/view/2001/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо боевого дракона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//images/KBc54IPjf2N6uvNBVe8INYqqloSIf1mkYMMeTGRy.jpg" title="Кольцо боевого дракона"/>
+</span>
+<span class="item-text"> Кольцо боевого дракона</span>
+</a>
+ и <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6533/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Свиток печати Грифона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/DNTeIQhyudMO6FRQIBqEST468Qc9LLEzJqufa8Je.jpg" title="Свиток печати Грифона"/>
+</span>
+<span class="item-text"> Свиток печати Грифона</span>
+</a>
+ можно получить <a class="catalog-item" href="https://r2online.ru/wiki/base/view/6534/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Кольцо грифона" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/18/778564104d9100928760b058b96c532e.jpg" title="Кольцо грифона"/>
+</span>
+<span class="item-text"> Кольцо грифона</span>
+</a>
+ (изменяет внешний вид дракона). Длительность предмета переносится с кольца боевого дракона.<br/><br/> <a data-fancybox="gallery" href="/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/grifon.jpg"><img alt="" src="https://r2online.ru/storage/wiki/images/%D0%93%D0%B0%D0%B9%D0%B4%D1%8B/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F/%D0%93%D0%BE%D0%BD%D0%BA%D0%B8%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2/grifon.jpg" style="max-width: 100%; cursor: zoom-in;"/> </a> </p> </div> </div> </div> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/10704/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Rise Coin (RC)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/32t0SXz6J8QpkAHBPpEhpZ5Ifa4mzFhRsN1r4MW4.png" title="Rise Coin (RC)"/>
+</span>
+<span class="item-text"> Rise Coin (RC)</span>
+</a>
+, 10-1000 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/1621/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<img alt="Золотой ключ" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1848c69f9b5e750222354a850cad3937.jpg" title="Золотой ключ"/>
+</span>
+<span class="item-text"> Золотой ключ</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/4902/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Награда за завоевание" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/be4456933044a2195590a5b1ce8d25fe.jpg" title="Награда за завоевание"/>
+</span>
+<span class="item-text"> Награда за завоевание</span>
+</a>
+<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5574/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Фейерверк героя" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/1d61af15784ef91e3602afff7c2b6272.jpg" title="Фейерверк героя"/>
+</span>
+<span class="item-text"> Фейерверк героя</span>
+</a>
+, 3 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5575/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Фейерверк охотника" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/23aa0bd91893285abbf126b84a23b9ca.jpg" title="Фейерверк охотника"/>
+</span>
+<span class="item-text"> Фейерверк охотника</span>
+</a>
+, 3 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/5576/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Фейерверк мудреца" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki//upload/icons/2018/10/24/faea1e94f07d55d7d86bd78c5b42b39d.jpg" title="Фейерверк мудреца"/>
+</span>
+<span class="item-text"> Фейерверк мудреца</span>
+</a>
+, 3 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12173/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Усиленная манговая конфета (врем.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/XovnX1CsIfjaHFrXCbRLGcOGme9L1CXwL4th25GP.png" title="Усиленная манговая конфета (врем.)"/>
+</span>
+<span class="item-text"> Усиленная манговая конфета (врем.)</span>
+</a>
+ (7 дней), 5 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12174/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Усиленный манговый сок (врем.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/3g1iPMcLiVlyYANcNJVCOSM7hqOE2tRhqqSmJ69g.png" title="Усиленный манговый сок (врем.)"/>
+</span>
+<span class="item-text"> Усиленный манговый сок (врем.)</span>
+</a>
+ (7 дней), 5 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12175/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Улучшенный манговый сок (врем.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/UlmSCQlcMpLc61muTngTwcI0qeCbKuNIsAjUApas.png" title="Улучшенный манговый сок (врем.)"/>
+</span>
+<span class="item-text"> Улучшенный манговый сок (врем.)</span>
+</a>
+ (7 дней), 10 шт.<br/> <a class="catalog-item" href="https://r2online.ru/wiki/base/view/12176/" target="_blank">
+<span class="layout-item-icon main-icon-item" style="margin-top: 0; display: inherit; padding: 15px 0px 17px 0px;">
+<span class="item-underlock item-underlock-small" style="top: 9px; right: 5px; background-size: 100%; width: 10px; height: 10px;"></span>
+<img alt="Улучшенная манговая конфета (врем.)" class="base-item-icon-name small-icon" src="https://r2online.ru/storage/wiki/images/OCPnizPUsUhF72CMGxclhPLGrLSdHHkuXjCFIIxV.png" title="Улучшенная манговая конфета (врем.)"/>
+</span>
+<span class="item-text"> Улучшенная манговая конфета (врем.)</span>
+</a>
+ (7 дней), 10 шт.  			<p></p> </div> </div> </div> <p> </p> </div> <a class="back-to-top" href="#list"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 5v14M5 12l7-7 7 7"></path> </svg> </a> <script src="https://r2online.ru/js/button-up.js"></script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Спойлеры
+        document.querySelectorAll('.spoiler__title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
