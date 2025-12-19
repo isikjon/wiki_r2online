@@ -5064,7 +5064,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-box a {
     color: #bdb0a4;
-    text-decoration: underline;
+    text-decoration: none;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
